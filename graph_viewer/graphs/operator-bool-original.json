@@ -1,0 +1,101 @@
+{
+    "nodes": [
+        {
+            "id": 0,
+            "replacement": "r:::/usr/local/google/home/keishi/chromium2/src/tools/clang/spanify/tests/operator-bool-original.cc:::417:::8:::base::span<Handle>",
+            "is_buffer": "1",
+            "size_info_available": "1",
+            "is_deref_node": "0",
+            "is_data_change": "0",
+            "visited": true,
+            "debug_info": {
+                "added_to_component": true,
+                "original_is_buffer": "0",
+                "original_size_info_available": "0"
+            },
+            "data_change_lhs": -1
+        },
+        {
+            "id": 1,
+            "replacement": "r:::/usr/local/google/home/keishi/chromium2/src/tools/clang/spanify/tests/operator-bool-original.cc:::727:::0:::<empty>",
+            "is_buffer": "0",
+            "size_info_available": "1",
+            "is_deref_node": "0",
+            "is_data_change": "0",
+            "visited": true,
+            "debug_info": {
+                "added_to_component": true,
+                "original_is_buffer": "0",
+                "original_size_info_available": "1"
+            },
+            "data_change_lhs": -1
+        },
+        {
+            "id": 2,
+            "replacement": "r:::/usr/local/google/home/keishi/chromium2/src/tools/clang/spanify/tests/operator-bool-original.cc:::744:::7:::{}",
+            "is_buffer": "0",
+            "size_info_available": "1",
+            "is_deref_node": "0",
+            "is_data_change": "0",
+            "visited": true,
+            "debug_info": {
+                "added_to_component": true,
+                "original_is_buffer": "0",
+                "original_size_info_available": "1"
+            },
+            "data_change_lhs": -1
+        },
+        {
+            "id": 3,
+            "replacement": "r:::/usr/local/google/home/keishi/chromium2/src/tools/clang/spanify/tests/operator-bool-original.cc:::761:::7:::{}",
+            "is_buffer": "0",
+            "size_info_available": "1",
+            "is_deref_node": "0",
+            "is_data_change": "0",
+            "visited": true,
+            "debug_info": {
+                "added_to_component": true,
+                "original_is_buffer": "0",
+                "original_size_info_available": "1"
+            },
+            "data_change_lhs": -1
+        },
+        {
+            "id": 4,
+            "replacement": "r:::/usr/local/google/home/keishi/chromium2/src/tools/clang/spanify/tests/operator-bool-original.cc:::778:::0:::<empty>",
+            "is_buffer": "0",
+            "size_info_available": "1",
+            "is_deref_node": "0",
+            "is_data_change": "0",
+            "visited": true,
+            "debug_info": {
+                "added_to_component": true,
+                "original_is_buffer": "0",
+                "original_size_info_available": "1"
+            },
+            "data_change_lhs": -1
+        }
+    ],
+    "links": [
+        {
+            "source": 0,
+            "target": 4
+        },
+        {
+            "source": 0,
+            "target": 2
+        },
+        {
+            "source": 0,
+            "target": 1
+        },
+        {
+            "source": 0,
+            "target": 3
+        }
+    ],
+    "source": {
+        "content": "// Copyright 2024 The Chromium Authors\n// Use of this source code is governed by a BSD-style license that can be\n// found in the LICENSE file.\n#include <vector>\n\n// Regression tests about `base::span` not supporting operator bool()\n// This is based on `WaitMany` from mojo/public/cpp/system/wait.cc.\n\nusing Handle = int;\n\n// Expected rewrite:\n// void f(const base::span<Handle>& handles, size_t num_handles) {\nvoid f(Handle* handles, size_t num_handles) {\n  // TODO(358306232) operator bool() is not supported by base::span.\n  if (!handles || !num_handles) {\n    return;\n  }\n\n  for (size_t i = 0; i < num_handles; ++i) {\n    // Do something with handles[i]\n    handles[i]++;\n  }\n}\n\nvoid g() {\n  Handle handles[2] = {1, 2};\n  f(handles, 2);\n  f(nullptr, 0);\n  f(nullptr, 2);\n  f(handles, 0);\n}\n",
+        "file_path": "/usr/local/google/home/keishi/chromium2/src/tools/clang/spanify/tests/operator-bool-original.cc"
+    }
+}

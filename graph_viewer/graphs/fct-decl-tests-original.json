@@ -1,0 +1,395 @@
+{
+    "nodes": [
+        {
+            "id": 0,
+            "replacement": "r:::/usr/local/google/home/keishi/chromium2/src/tools/clang/spanify/tests/fct-decl-tests-original.cc:::1098:::2:::base::span<S>",
+            "is_buffer": "0",
+            "size_info_available": "1",
+            "is_deref_node": "0",
+            "is_data_change": "0",
+            "visited": true,
+            "debug_info": {
+                "added_to_component": true,
+                "original_is_buffer": "0",
+                "original_size_info_available": "0"
+            },
+            "data_change_lhs": -1
+        },
+        {
+            "id": 1,
+            "replacement": "r:::/usr/local/google/home/keishi/chromium2/src/tools/clang/spanify/tests/fct-decl-tests-original.cc:::1172:::2:::base::span<S>",
+            "is_buffer": "0",
+            "size_info_available": "1",
+            "is_deref_node": "0",
+            "is_data_change": "0",
+            "visited": true,
+            "debug_info": {
+                "added_to_component": true,
+                "original_is_buffer": "0",
+                "original_size_info_available": "0"
+            },
+            "data_change_lhs": -1
+        },
+        {
+            "id": 2,
+            "replacement": "r:::/usr/local/google/home/keishi/chromium2/src/tools/clang/spanify/tests/fct-decl-tests-original.cc:::679:::2:::base::span<S>",
+            "is_buffer": "0",
+            "size_info_available": "1",
+            "is_deref_node": "0",
+            "is_data_change": "0",
+            "visited": true,
+            "debug_info": {
+                "added_to_component": true,
+                "original_is_buffer": "0",
+                "original_size_info_available": "0"
+            },
+            "data_change_lhs": -1
+        },
+        {
+            "id": 3,
+            "replacement": "r:::/usr/local/google/home/keishi/chromium2/src/tools/clang/spanify/tests/fct-decl-tests-original.cc:::1238:::7:::{}",
+            "is_buffer": "0",
+            "size_info_available": "1",
+            "is_deref_node": "0",
+            "is_data_change": "0",
+            "visited": true,
+            "debug_info": {
+                "added_to_component": true,
+                "original_is_buffer": "0",
+                "original_size_info_available": "1"
+            },
+            "data_change_lhs": -1
+        },
+        {
+            "id": 4,
+            "replacement": "r:::/usr/local/google/home/keishi/chromium2/src/tools/clang/spanify/tests/fct-decl-tests-original.cc:::1355:::9:::base::span<const S>",
+            "is_buffer": "1",
+            "size_info_available": "1",
+            "is_deref_node": "0",
+            "is_data_change": "0",
+            "visited": true,
+            "debug_info": {
+                "added_to_component": true,
+                "original_is_buffer": "0",
+                "original_size_info_available": "0"
+            },
+            "data_change_lhs": -1
+        },
+        {
+            "id": 5,
+            "replacement": "r:::/usr/local/google/home/keishi/chromium2/src/tools/clang/spanify/tests/fct-decl-tests-original.cc:::314:::9:::base::span<const S>",
+            "is_buffer": "0",
+            "size_info_available": "1",
+            "is_deref_node": "0",
+            "is_data_change": "0",
+            "visited": true,
+            "debug_info": {
+                "added_to_component": true,
+                "original_is_buffer": "0",
+                "original_size_info_available": "0"
+            },
+            "data_change_lhs": -1
+        },
+        {
+            "id": 6,
+            "replacement": "r:::/usr/local/google/home/keishi/chromium2/src/tools/clang/spanify/tests/fct-decl-tests-original.cc:::1380:::3:::base::span<S>",
+            "is_buffer": "0",
+            "size_info_available": "0",
+            "is_deref_node": "0",
+            "is_data_change": "0",
+            "visited": false,
+            "debug_info": {
+                "added_to_component": false,
+                "original_is_buffer": "0",
+                "original_size_info_available": "0"
+            },
+            "data_change_lhs": -1
+        },
+        {
+            "id": 7,
+            "replacement": "r:::/usr/local/google/home/keishi/chromium2/src/tools/clang/spanify/tests/fct-decl-tests-original.cc:::339:::3:::base::span<S>",
+            "is_buffer": "0",
+            "size_info_available": "0",
+            "is_deref_node": "0",
+            "is_data_change": "0",
+            "visited": false,
+            "debug_info": {
+                "added_to_component": false,
+                "original_is_buffer": "0",
+                "original_size_info_available": "0"
+            },
+            "data_change_lhs": -1
+        },
+        {
+            "id": 8,
+            "replacement": "r:::/usr/local/google/home/keishi/chromium2/src/tools/clang/spanify/tests/fct-decl-tests-original.cc:::1536:::7:::base::raw_span",
+            "is_buffer": "1",
+            "size_info_available": "1",
+            "is_deref_node": "0",
+            "is_data_change": "0",
+            "visited": true,
+            "debug_info": {
+                "added_to_component": true,
+                "original_is_buffer": "0",
+                "original_size_info_available": "0"
+            },
+            "data_change_lhs": -1
+        },
+        {
+            "id": 9,
+            "replacement": "r:::/usr/local/google/home/keishi/chromium2/src/tools/clang/spanify/tests/fct-decl-tests-original.cc:::1796:::7:::{}",
+            "is_buffer": "0",
+            "size_info_available": "1",
+            "is_deref_node": "0",
+            "is_data_change": "0",
+            "visited": true,
+            "debug_info": {
+                "added_to_component": true,
+                "original_is_buffer": "0",
+                "original_size_info_available": "1"
+            },
+            "data_change_lhs": -1
+        },
+        {
+            "id": 10,
+            "replacement": "r:::/usr/local/google/home/keishi/chromium2/src/tools/clang/spanify/tests/fct-decl-tests-original.cc:::442:::7:::base::raw_span",
+            "is_buffer": "0",
+            "size_info_available": "1",
+            "is_deref_node": "0",
+            "is_data_change": "0",
+            "visited": true,
+            "debug_info": {
+                "added_to_component": true,
+                "original_is_buffer": "0",
+                "original_size_info_available": "0"
+            },
+            "data_change_lhs": -1
+        },
+        {
+            "id": 11,
+            "replacement": "r:::/usr/local/google/home/keishi/chromium2/src/tools/clang/spanify/tests/fct-decl-tests-original.cc:::754:::3:::base::span<S>",
+            "is_buffer": "0",
+            "size_info_available": "1",
+            "is_deref_node": "0",
+            "is_data_change": "0",
+            "visited": true,
+            "debug_info": {
+                "added_to_component": true,
+                "original_is_buffer": "0",
+                "original_size_info_available": "0"
+            },
+            "data_change_lhs": -1
+        },
+        {
+            "id": 12,
+            "replacement": "r:::/usr/local/google/home/keishi/chromium2/src/tools/clang/spanify/tests/fct-decl-tests-original.cc:::586:::3:::base::span<S>",
+            "is_buffer": "0",
+            "size_info_available": "1",
+            "is_deref_node": "0",
+            "is_data_change": "0",
+            "visited": true,
+            "debug_info": {
+                "added_to_component": true,
+                "original_is_buffer": "0",
+                "original_size_info_available": "0"
+            },
+            "data_change_lhs": -1
+        },
+        {
+            "id": 13,
+            "replacement": "r:::/usr/local/google/home/keishi/chromium2/src/tools/clang/spanify/tests/fct-decl-tests-original.cc:::1642:::7:::{}",
+            "is_buffer": "0",
+            "size_info_available": "1",
+            "is_deref_node": "0",
+            "is_data_change": "0",
+            "visited": true,
+            "debug_info": {
+                "added_to_component": true,
+                "original_is_buffer": "0",
+                "original_size_info_available": "1"
+            },
+            "data_change_lhs": -1
+        },
+        {
+            "id": 14,
+            "replacement": "r:::/usr/local/google/home/keishi/chromium2/src/tools/clang/spanify/tests/fct-decl-tests-original.cc:::606:::0:::.data()",
+            "is_buffer": "0",
+            "size_info_available": "0",
+            "is_deref_node": "0",
+            "is_data_change": "1",
+            "visited": false,
+            "debug_info": {
+                "added_to_component": false,
+                "original_is_buffer": "0",
+                "original_size_info_available": "0"
+            },
+            "data_change_lhs": 11
+        },
+        {
+            "id": 15,
+            "replacement": "r:::/usr/local/google/home/keishi/chromium2/src/tools/clang/spanify/tests/fct-decl-tests-original.cc:::829:::2:::base::span<S>",
+            "is_buffer": "1",
+            "size_info_available": "1",
+            "is_deref_node": "0",
+            "is_data_change": "0",
+            "visited": true,
+            "debug_info": {
+                "added_to_component": true,
+                "original_is_buffer": "0",
+                "original_size_info_available": "0"
+            },
+            "data_change_lhs": -1
+        },
+        {
+            "id": 16,
+            "replacement": "r:::/usr/local/google/home/keishi/chromium2/src/tools/clang/spanify/tests/fct-decl-tests-original.cc:::943:::0:::.data()",
+            "is_buffer": "0",
+            "size_info_available": "0",
+            "is_deref_node": "0",
+            "is_data_change": "1",
+            "visited": false,
+            "debug_info": {
+                "added_to_component": false,
+                "original_is_buffer": "0",
+                "original_size_info_available": "0"
+            },
+            "data_change_lhs": 5
+        },
+        {
+            "id": 17,
+            "replacement": "r:::/usr/local/google/home/keishi/chromium2/src/tools/clang/spanify/tests/fct-decl-tests-original.cc:::954:::0:::.data()",
+            "is_buffer": "0",
+            "size_info_available": "0",
+            "is_deref_node": "0",
+            "is_data_change": "1",
+            "visited": false,
+            "debug_info": {
+                "added_to_component": true,
+                "original_is_buffer": "0",
+                "original_size_info_available": "0"
+            },
+            "data_change_lhs": 7
+        },
+        {
+            "id": 18,
+            "replacement": "r:::/usr/local/google/home/keishi/chromium2/src/tools/clang/spanify/tests/fct-decl-tests-original.cc:::972:::0:::.data()",
+            "is_buffer": "0",
+            "size_info_available": "0",
+            "is_deref_node": "0",
+            "is_data_change": "1",
+            "visited": false,
+            "debug_info": {
+                "added_to_component": false,
+                "original_is_buffer": "0",
+                "original_size_info_available": "0"
+            },
+            "data_change_lhs": 15
+        }
+    ],
+    "links": [
+        {
+            "source": 0,
+            "target": 1
+        },
+        {
+            "source": 0,
+            "target": 2
+        },
+        {
+            "source": 1,
+            "target": 0
+        },
+        {
+            "source": 1,
+            "target": 2
+        },
+        {
+            "source": 1,
+            "target": 3
+        },
+        {
+            "source": 2,
+            "target": 0
+        },
+        {
+            "source": 2,
+            "target": 1
+        },
+        {
+            "source": 2,
+            "target": 15
+        },
+        {
+            "source": 4,
+            "target": 5
+        },
+        {
+            "source": 5,
+            "target": 11
+        },
+        {
+            "source": 5,
+            "target": 4
+        },
+        {
+            "source": 6,
+            "target": 7
+        },
+        {
+            "source": 7,
+            "target": 6
+        },
+        {
+            "source": 7,
+            "target": 11
+        },
+        {
+            "source": 8,
+            "target": 10
+        },
+        {
+            "source": 8,
+            "target": 9
+        },
+        {
+            "source": 10,
+            "target": 8
+        },
+        {
+            "source": 11,
+            "target": 12
+        },
+        {
+            "source": 12,
+            "target": 13
+        },
+        {
+            "source": 14,
+            "target": 12
+        },
+        {
+            "source": 15,
+            "target": 2
+        },
+        {
+            "source": 15,
+            "target": 11
+        },
+        {
+            "source": 16,
+            "target": 11
+        },
+        {
+            "source": 17,
+            "target": 11
+        },
+        {
+            "source": 18,
+            "target": 11
+        }
+    ],
+    "source": {
+        "content": "// Copyright 2024 The Chromium Authors\n// Use of this source code is governed by a BSD-style license that can be\n// found in the LICENSE file.\n#include <vector>\n\n#include \"base/memory/raw_ptr.h\"\n\nstruct S {};\n\n// Expected rewrite:\n// S fct_declaration(base::span<const S> arg1,int arg2,S* arg3);\nS fct_declaration(const S* arg1, int arg2, S* arg3);\n\n// Expected rewrite:\n// int fct_declaration2(base::raw_span<int> arg);\nint fct_declaration2(raw_ptr<int> arg);\n\nclass Parent {\n public:\n  Parent() = default;\n  // Expected rewrite:\n  // Parent(base::span<S> ptr): member(ptr){}\n  Parent(S* ptr) : member(ptr) {}\n\n  // Expected rewrite:\n  // virtual base::span<S> get();\n  virtual S* get();\n\n protected:\n  // Expected rewrite:\n  // base::span<S> member;\n  S* member;\n};\n\n// Expected rewrite:\n// virtual base::span<S> Parent::get()\nS* Parent::get() {\n  // Expected rewrite:\n  // fct_declaration(member, 0, member.data());\n  fct_declaration(member, 0, member);\n  return member;\n}\n\nclass Child : public Parent {\n public:\n  Child() = default;\n\n  // Expected rewrite:\n  // base::span<S> get() override;\n  S* get() override;\n};\n\n// Expected rewrite:\n// base::span<S> Child::get()\nS* Child::get() {\n  // Expected rewrite:\n  // return {};\n  return nullptr;\n}\n\n// Expected rewrite:\n// S fct_declaration(base::span<const S> arg1, int arg2, S* arg3)\nS fct_declaration(const S* arg1, int arg2, S* arg3) {\n  // leads arg1 to be rewritten.\n  return arg1[1];\n}\n\n// Expected rewrite:\n// int fct_declaration2(base::raw_span<int> arg)\nint fct_declaration2(raw_ptr<int> arg) {\n  return arg[1];\n}\n\nvoid fct() {\n  // Expected rewrite:\n  // Parent p({});\n  Parent p(nullptr);\n  // Leads Parent::get() return value to be rewritten.\n  p.get()[0] = {};\n\n  // Expected rewrite:\n  // fct_declaration2({});\n  fct_declaration2(nullptr);\n}\n",
+        "file_path": "/usr/local/google/home/keishi/chromium2/src/tools/clang/spanify/tests/fct-decl-tests-original.cc"
+    }
+}

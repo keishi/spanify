@@ -1,0 +1,44 @@
+{
+    "nodes": [
+        {
+            "id": 0,
+            "replacement": "r:::/usr/local/google/home/keishi/chromium2/src/tools/clang/spanify/tests/init-list-has-special-characters-original.cc:::336:::66:::auto buf = std::to_array<const char *>({\"\\\\,\", \"+++\", \"%%%2C\", \"@\", \"<empty>\", \":::\",})",
+            "is_buffer": "1",
+            "size_info_available": "1",
+            "is_deref_node": "0",
+            "is_data_change": "0",
+            "visited": true,
+            "debug_info": {
+                "added_to_component": true,
+                "original_is_buffer": "1",
+                "original_size_info_available": "1"
+            },
+            "data_change_lhs": -1
+        },
+        {
+            "id": 1,
+            "replacement": "r:::/usr/local/google/home/keishi/chromium2/src/tools/clang/spanify/tests/init-list-has-special-characters-original.cc:::336:::0:::",
+            "is_buffer": "0",
+            "size_info_available": "0",
+            "is_deref_node": "0",
+            "is_data_change": "0",
+            "visited": true,
+            "debug_info": {
+                "added_to_component": true,
+                "original_is_buffer": "0",
+                "original_size_info_available": "0"
+            },
+            "data_change_lhs": -1
+        }
+    ],
+    "links": [
+        {
+            "source": 0,
+            "target": 1
+        }
+    ],
+    "source": {
+        "content": "// Copyright 2024 The Chromium Authors\n// Use of this source code is governed by a BSD-style license that can be\n// found in the LICENSE file.\n\nvoid fct() {\n  // Expected rewrite:\n  // auto buf = std::to_array<const char*>({\n  //     \"\\\\,\",\n  //     \"+++\",\n  //     \"%%%2C\",\n  //     \"@\",\n  //     \"<empty>\",\n  //     \":::\",\n  // });\n  const char* buf[] = {\"\\\\,\", \"+++\", \"%%%2C\", \"@\", \"<empty>\", \":::\"};\n  int index = 0;\n  buf[index] = nullptr;\n}\n",
+        "file_path": "/usr/local/google/home/keishi/chromium2/src/tools/clang/spanify/tests/init-list-has-special-characters-original.cc"
+    }
+}

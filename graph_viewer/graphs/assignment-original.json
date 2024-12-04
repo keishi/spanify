@@ -1,0 +1,492 @@
+{
+    "nodes": [
+        {
+            "id": 0,
+            "replacement": "r:::/usr/local/google/home/keishi/chromium2/src/tools/clang/spanify/tests/assignment-original.cc:::1004:::0:::.data()",
+            "is_buffer": "0",
+            "size_info_available": "0",
+            "is_deref_node": "0",
+            "is_data_change": "1",
+            "visited": false,
+            "debug_info": {
+                "added_to_component": false,
+                "original_is_buffer": "0",
+                "original_size_info_available": "0"
+            },
+            "data_change_lhs": 4
+        },
+        {
+            "id": 1,
+            "replacement": "r:::/usr/local/google/home/keishi/chromium2/src/tools/clang/spanify/tests/assignment-original.cc:::681:::5:::base::span<int>",
+            "is_buffer": "1",
+            "size_info_available": "1",
+            "is_deref_node": "0",
+            "is_data_change": "0",
+            "visited": true,
+            "debug_info": {
+                "added_to_component": true,
+                "original_is_buffer": "0",
+                "original_size_info_available": "0"
+            },
+            "data_change_lhs": -1
+        },
+        {
+            "id": 2,
+            "replacement": "r:::/usr/local/google/home/keishi/chromium2/src/tools/clang/spanify/tests/assignment-original.cc:::1127:::5:::base::span<int>",
+            "is_buffer": "1",
+            "size_info_available": "1",
+            "is_deref_node": "0",
+            "is_data_change": "0",
+            "visited": true,
+            "debug_info": {
+                "added_to_component": true,
+                "original_is_buffer": "0",
+                "original_size_info_available": "0"
+            },
+            "data_change_lhs": -1
+        },
+        {
+            "id": 3,
+            "replacement": "r:::/usr/local/google/home/keishi/chromium2/src/tools/clang/spanify/tests/assignment-original.cc:::1137:::7:::{}",
+            "is_buffer": "0",
+            "size_info_available": "1",
+            "is_deref_node": "0",
+            "is_data_change": "0",
+            "visited": true,
+            "debug_info": {
+                "added_to_component": true,
+                "original_is_buffer": "0",
+                "original_size_info_available": "1"
+            },
+            "data_change_lhs": -1
+        },
+        {
+            "id": 4,
+            "replacement": "r:::/usr/local/google/home/keishi/chromium2/src/tools/clang/spanify/tests/assignment-original.cc:::967:::7:::base::raw_span",
+            "is_buffer": "1",
+            "size_info_available": "1",
+            "is_deref_node": "0",
+            "is_data_change": "0",
+            "visited": true,
+            "debug_info": {
+                "added_to_component": true,
+                "original_is_buffer": "0",
+                "original_size_info_available": "0"
+            },
+            "data_change_lhs": -1
+        },
+        {
+            "id": 5,
+            "replacement": "r:::/usr/local/google/home/keishi/chromium2/src/tools/clang/spanify/tests/assignment-original.cc:::1193:::0:::.data()",
+            "is_buffer": "0",
+            "size_info_available": "0",
+            "is_deref_node": "0",
+            "is_data_change": "1",
+            "visited": false,
+            "debug_info": {
+                "added_to_component": false,
+                "original_is_buffer": "0",
+                "original_size_info_available": "0"
+            },
+            "data_change_lhs": 2
+        },
+        {
+            "id": 6,
+            "replacement": "r:::/usr/local/google/home/keishi/chromium2/src/tools/clang/spanify/tests/assignment-original.cc:::1193:::6::: ",
+            "is_buffer": "0",
+            "size_info_available": "0",
+            "is_deref_node": "1",
+            "is_data_change": "0",
+            "visited": false,
+            "debug_info": {
+                "added_to_component": true,
+                "original_is_buffer": "0",
+                "original_size_info_available": "0"
+            },
+            "data_change_lhs": -1
+        },
+        {
+            "id": 7,
+            "replacement": "r:::/usr/local/google/home/keishi/chromium2/src/tools/clang/spanify/tests/assignment-original.cc:::1309:::5:::base::span<int>",
+            "is_buffer": "1",
+            "size_info_available": "1",
+            "is_deref_node": "0",
+            "is_data_change": "0",
+            "visited": true,
+            "debug_info": {
+                "added_to_component": true,
+                "original_is_buffer": "0",
+                "original_size_info_available": "0"
+            },
+            "data_change_lhs": -1
+        },
+        {
+            "id": 8,
+            "replacement": "r:::/usr/local/google/home/keishi/chromium2/src/tools/clang/spanify/tests/assignment-original.cc:::1319:::7:::{}",
+            "is_buffer": "0",
+            "size_info_available": "1",
+            "is_deref_node": "0",
+            "is_data_change": "0",
+            "visited": true,
+            "debug_info": {
+                "added_to_component": true,
+                "original_is_buffer": "0",
+                "original_size_info_available": "1"
+            },
+            "data_change_lhs": -1
+        },
+        {
+            "id": 9,
+            "replacement": "r:::/usr/local/google/home/keishi/chromium2/src/tools/clang/spanify/tests/assignment-original.cc:::279:::2:::base::span<T>",
+            "is_buffer": "0",
+            "size_info_available": "1",
+            "is_deref_node": "0",
+            "is_data_change": "0",
+            "visited": true,
+            "debug_info": {
+                "added_to_component": true,
+                "original_is_buffer": "0",
+                "original_size_info_available": "0"
+            },
+            "data_change_lhs": -1
+        },
+        {
+            "id": 10,
+            "replacement": "r:::/usr/local/google/home/keishi/chromium2/src/tools/clang/spanify/tests/assignment-original.cc:::1346:::0:::.data()",
+            "is_buffer": "0",
+            "size_info_available": "0",
+            "is_deref_node": "0",
+            "is_data_change": "1",
+            "visited": false,
+            "debug_info": {
+                "added_to_component": false,
+                "original_is_buffer": "0",
+                "original_size_info_available": "0"
+            },
+            "data_change_lhs": 7
+        },
+        {
+            "id": 11,
+            "replacement": "r:::/usr/local/google/home/keishi/chromium2/src/tools/clang/spanify/tests/assignment-original.cc:::1447:::5:::base::span<int>",
+            "is_buffer": "1",
+            "size_info_available": "1",
+            "is_deref_node": "0",
+            "is_data_change": "0",
+            "visited": true,
+            "debug_info": {
+                "added_to_component": true,
+                "original_is_buffer": "0",
+                "original_size_info_available": "0"
+            },
+            "data_change_lhs": -1
+        },
+        {
+            "id": 12,
+            "replacement": "r:::/usr/local/google/home/keishi/chromium2/src/tools/clang/spanify/tests/assignment-original.cc:::1457:::7:::{}",
+            "is_buffer": "0",
+            "size_info_available": "1",
+            "is_deref_node": "0",
+            "is_data_change": "0",
+            "visited": true,
+            "debug_info": {
+                "added_to_component": true,
+                "original_is_buffer": "0",
+                "original_size_info_available": "1"
+            },
+            "data_change_lhs": -1
+        },
+        {
+            "id": 13,
+            "replacement": "r:::/usr/local/google/home/keishi/chromium2/src/tools/clang/spanify/tests/assignment-original.cc:::1576:::7::: ",
+            "is_buffer": "0",
+            "size_info_available": "1",
+            "is_deref_node": "0",
+            "is_data_change": "0",
+            "visited": true,
+            "debug_info": {
+                "added_to_component": true,
+                "original_is_buffer": "0",
+                "original_size_info_available": "1"
+            },
+            "data_change_lhs": -1
+        },
+        {
+            "id": 14,
+            "replacement": "r:::/usr/local/google/home/keishi/chromium2/src/tools/clang/spanify/tests/assignment-original.cc:::1590:::7::: ",
+            "is_buffer": "0",
+            "size_info_available": "1",
+            "is_deref_node": "0",
+            "is_data_change": "0",
+            "visited": true,
+            "debug_info": {
+                "added_to_component": true,
+                "original_is_buffer": "0",
+                "original_size_info_available": "1"
+            },
+            "data_change_lhs": -1
+        },
+        {
+            "id": 15,
+            "replacement": "r:::/usr/local/google/home/keishi/chromium2/src/tools/clang/spanify/tests/assignment-original.cc:::338:::7:::{}",
+            "is_buffer": "0",
+            "size_info_available": "1",
+            "is_deref_node": "0",
+            "is_data_change": "0",
+            "visited": true,
+            "debug_info": {
+                "added_to_component": true,
+                "original_is_buffer": "0",
+                "original_size_info_available": "1"
+            },
+            "data_change_lhs": -1
+        },
+        {
+            "id": 16,
+            "replacement": "r:::/usr/local/google/home/keishi/chromium2/src/tools/clang/spanify/tests/assignment-original.cc:::533:::5:::base::span<int>",
+            "is_buffer": "0",
+            "size_info_available": "1",
+            "is_deref_node": "0",
+            "is_data_change": "0",
+            "visited": true,
+            "debug_info": {
+                "added_to_component": true,
+                "original_is_buffer": "0",
+                "original_size_info_available": "0"
+            },
+            "data_change_lhs": -1
+        },
+        {
+            "id": 17,
+            "replacement": "r:::/usr/local/google/home/keishi/chromium2/src/tools/clang/spanify/tests/assignment-original.cc:::543:::7:::{}",
+            "is_buffer": "0",
+            "size_info_available": "1",
+            "is_deref_node": "0",
+            "is_data_change": "0",
+            "visited": true,
+            "debug_info": {
+                "added_to_component": true,
+                "original_is_buffer": "0",
+                "original_size_info_available": "1"
+            },
+            "data_change_lhs": -1
+        },
+        {
+            "id": 18,
+            "replacement": "r:::/usr/local/google/home/keishi/chromium2/src/tools/clang/spanify/tests/assignment-original.cc:::751:::7::: ",
+            "is_buffer": "0",
+            "size_info_available": "1",
+            "is_deref_node": "0",
+            "is_data_change": "0",
+            "visited": true,
+            "debug_info": {
+                "added_to_component": true,
+                "original_is_buffer": "0",
+                "original_size_info_available": "1"
+            },
+            "data_change_lhs": -1
+        },
+        {
+            "id": 19,
+            "replacement": "r:::/usr/local/google/home/keishi/chromium2/src/tools/clang/spanify/tests/assignment-original.cc:::607:::5:::base::span<int>",
+            "is_buffer": "0",
+            "size_info_available": "1",
+            "is_deref_node": "0",
+            "is_data_change": "0",
+            "visited": true,
+            "debug_info": {
+                "added_to_component": true,
+                "original_is_buffer": "0",
+                "original_size_info_available": "0"
+            },
+            "data_change_lhs": -1
+        },
+        {
+            "id": 20,
+            "replacement": "r:::/usr/local/google/home/keishi/chromium2/src/tools/clang/spanify/tests/assignment-original.cc:::617:::7:::{}",
+            "is_buffer": "0",
+            "size_info_available": "1",
+            "is_deref_node": "0",
+            "is_data_change": "0",
+            "visited": true,
+            "debug_info": {
+                "added_to_component": true,
+                "original_is_buffer": "0",
+                "original_size_info_available": "1"
+            },
+            "data_change_lhs": -1
+        },
+        {
+            "id": 21,
+            "replacement": "r:::/usr/local/google/home/keishi/chromium2/src/tools/clang/spanify/tests/assignment-original.cc:::810:::7::: ",
+            "is_buffer": "0",
+            "size_info_available": "1",
+            "is_deref_node": "0",
+            "is_data_change": "0",
+            "visited": true,
+            "debug_info": {
+                "added_to_component": true,
+                "original_is_buffer": "0",
+                "original_size_info_available": "1"
+            },
+            "data_change_lhs": -1
+        },
+        {
+            "id": 22,
+            "replacement": "r:::/usr/local/google/home/keishi/chromium2/src/tools/clang/spanify/tests/assignment-original.cc:::691:::7:::{}",
+            "is_buffer": "0",
+            "size_info_available": "1",
+            "is_deref_node": "0",
+            "is_data_change": "0",
+            "visited": true,
+            "debug_info": {
+                "added_to_component": true,
+                "original_is_buffer": "0",
+                "original_size_info_available": "1"
+            },
+            "data_change_lhs": -1
+        },
+        {
+            "id": 23,
+            "replacement": "r:::/usr/local/google/home/keishi/chromium2/src/tools/clang/spanify/tests/assignment-original.cc:::829:::0:::.data()",
+            "is_buffer": "0",
+            "size_info_available": "0",
+            "is_deref_node": "0",
+            "is_data_change": "1",
+            "visited": false,
+            "debug_info": {
+                "added_to_component": false,
+                "original_is_buffer": "0",
+                "original_size_info_available": "0"
+            },
+            "data_change_lhs": 19
+        },
+        {
+            "id": 24,
+            "replacement": "r:::/usr/local/google/home/keishi/chromium2/src/tools/clang/spanify/tests/assignment-original.cc:::840:::0:::.data()",
+            "is_buffer": "0",
+            "size_info_available": "0",
+            "is_deref_node": "0",
+            "is_data_change": "1",
+            "visited": false,
+            "debug_info": {
+                "added_to_component": false,
+                "original_is_buffer": "0",
+                "original_size_info_available": "0"
+            },
+            "data_change_lhs": 1
+        },
+        {
+            "id": 25,
+            "replacement": "r:::/usr/local/google/home/keishi/chromium2/src/tools/clang/spanify/tests/assignment-original.cc:::985:::7:::{}",
+            "is_buffer": "0",
+            "size_info_available": "1",
+            "is_deref_node": "0",
+            "is_data_change": "0",
+            "visited": true,
+            "debug_info": {
+                "added_to_component": true,
+                "original_is_buffer": "0",
+                "original_size_info_available": "1"
+            },
+            "data_change_lhs": -1
+        }
+    ],
+    "links": [
+        {
+            "source": 0,
+            "target": 1
+        },
+        {
+            "source": 1,
+            "target": 19
+        },
+        {
+            "source": 1,
+            "target": 22
+        },
+        {
+            "source": 2,
+            "target": 3
+        },
+        {
+            "source": 2,
+            "target": 4
+        },
+        {
+            "source": 4,
+            "target": 1
+        },
+        {
+            "source": 4,
+            "target": 25
+        },
+        {
+            "source": 5,
+            "target": 4
+        },
+        {
+            "source": 6,
+            "target": 4
+        },
+        {
+            "source": 7,
+            "target": 9
+        },
+        {
+            "source": 7,
+            "target": 8
+        },
+        {
+            "source": 9,
+            "target": 15
+        },
+        {
+            "source": 10,
+            "target": 9
+        },
+        {
+            "source": 11,
+            "target": 12
+        },
+        {
+            "source": 11,
+            "target": 14
+        },
+        {
+            "source": 11,
+            "target": 13
+        },
+        {
+            "source": 16,
+            "target": 17
+        },
+        {
+            "source": 16,
+            "target": 18
+        },
+        {
+            "source": 19,
+            "target": 21
+        },
+        {
+            "source": 19,
+            "target": 16
+        },
+        {
+            "source": 19,
+            "target": 20
+        },
+        {
+            "source": 23,
+            "target": 16
+        },
+        {
+            "source": 24,
+            "target": 19
+        }
+    ],
+    "source": {
+        "content": "// Copyright 2024 The Chromium Authors\n// Use of this source code is governed by a BSD-style license that can be\n// found in the LICENSE file.\n#include <array>\n#include <vector>\n\n#include \"base/memory/raw_ptr.h\"\n\n// Expected rewrite:\n// base::span<T> get()\ntemplate <typename T>\nT* get() {\n  // Expected rewrite:\n  // return {};\n  return nullptr;\n}\n\nvoid fct() {\n  int index = 1;\n  int value = 11;\n  std::vector<int> ctn1 = {1, 2, 3, 4};\n  std::array<int, 3> ctn2 = {5, 6, 7};\n\n  // Expected rewrite:\n  // base::span<int> aa = {};\n  int* aa = nullptr;\n  // Expected rewrite:\n  // base::span<int> bb = {};\n  int* bb = nullptr;\n  // Expected rewrite:\n  // base::span<int> cc = {};\n  int* cc = nullptr;\n\n  // Expected rewrite:\n  // aa = ctn1;\n  aa = ctn1.data();\n  // Expected rewrite:\n  // bb = ctn2;\n  bb = ctn2.data();\n\n  bb = aa;\n  cc = bb;\n\n  cc[index] = value;  // Buffer usage, leads c to be rewritten.\n\n  // Expected rewrite:\n  // base::raw_span<int> dd = {};\n  raw_ptr<int> dd = nullptr;\n\n  dd = cc;\n\n  dd[index] = value;  // Buffer usage, leads d to be rewritten.\n\n  // Expected rewrite:\n  // base::span<int> ee = {};\n  int* ee = nullptr;\n\n  // Expected rewrite:\n  // ee = dd;\n  ee = dd.get();\n\n  ee++;  // Buffer usage, leads e to be rewritten.\n\n  // Expected rewrite:\n  // base::span<int> ff = {};\n  int* ff = nullptr;\n\n  ff = get<int>();\n\n  ++ff;  // Leads to ff being rewritten.\n\n  // Exptected rewrite:\n  // base::span<int> gg = {};\n  int* gg = nullptr;\n  bool condition = true;\n  // Expected rewrite:\n  // gg = (condition) ? ctn1 : ctn2;\n  gg = (condition) ? ctn1.data() : ctn2.data();\n\n  gg += 1;  // Buffer usage, leads gg to be rewritten.\n}\n",
+        "file_path": "/usr/local/google/home/keishi/chromium2/src/tools/clang/spanify/tests/assignment-original.cc"
+    }
+}

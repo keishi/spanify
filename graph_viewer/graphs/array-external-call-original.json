@@ -1,0 +1,237 @@
+{
+    "nodes": [
+        {
+            "id": 0,
+            "replacement": "r:::/usr/local/google/home/keishi/chromium2/src/tools/clang/spanify/tests/array-external-call-original.cc:::538:::0:::.data()",
+            "is_buffer": "0",
+            "size_info_available": "0",
+            "is_deref_node": "1",
+            "is_data_change": "0",
+            "visited": false,
+            "debug_info": {
+                "added_to_component": true,
+                "original_is_buffer": "0",
+                "original_size_info_available": "0"
+            },
+            "data_change_lhs": -1
+        },
+        {
+            "id": 1,
+            "replacement": "r:::/usr/local/google/home/keishi/chromium2/src/tools/clang/spanify/tests/array-external-call-original.cc:::412:::0:::",
+            "is_buffer": "0",
+            "size_info_available": "0",
+            "is_deref_node": "0",
+            "is_data_change": "0",
+            "visited": true,
+            "debug_info": {
+                "added_to_component": true,
+                "original_is_buffer": "0",
+                "original_size_info_available": "0"
+            },
+            "data_change_lhs": -1
+        },
+        {
+            "id": 2,
+            "replacement": "r:::/usr/local/google/home/keishi/chromium2/src/tools/clang/spanify/tests/array-external-call-original.cc:::543:::0:::.data()",
+            "is_buffer": "0",
+            "size_info_available": "0",
+            "is_deref_node": "1",
+            "is_data_change": "0",
+            "visited": false,
+            "debug_info": {
+                "added_to_component": true,
+                "original_is_buffer": "0",
+                "original_size_info_available": "0"
+            },
+            "data_change_lhs": -1
+        },
+        {
+            "id": 3,
+            "replacement": "r:::/usr/local/google/home/keishi/chromium2/src/tools/clang/spanify/tests/array-external-call-original.cc:::291:::0:::",
+            "is_buffer": "0",
+            "size_info_available": "0",
+            "is_deref_node": "0",
+            "is_data_change": "0",
+            "visited": true,
+            "debug_info": {
+                "added_to_component": true,
+                "original_is_buffer": "0",
+                "original_size_info_available": "0"
+            },
+            "data_change_lhs": -1
+        },
+        {
+            "id": 4,
+            "replacement": "r:::/usr/local/google/home/keishi/chromium2/src/tools/clang/spanify/tests/array-external-call-original.cc:::760:::6:::base::span<char>",
+            "is_buffer": "0",
+            "size_info_available": "0",
+            "is_deref_node": "0",
+            "is_data_change": "0",
+            "visited": false,
+            "debug_info": {
+                "added_to_component": false,
+                "original_is_buffer": "0",
+                "original_size_info_available": "0"
+            },
+            "data_change_lhs": -1
+        },
+        {
+            "id": 5,
+            "replacement": "r:::/usr/local/google/home/keishi/chromium2/src/tools/clang/spanify/tests/array-external-call-original.cc:::986:::0:::<empty>",
+            "is_buffer": "0",
+            "size_info_available": "1",
+            "is_deref_node": "0",
+            "is_data_change": "0",
+            "visited": false,
+            "debug_info": {
+                "added_to_component": false,
+                "original_is_buffer": "0",
+                "original_size_info_available": "1"
+            },
+            "data_change_lhs": -1
+        },
+        {
+            "id": 6,
+            "replacement": "r:::/usr/local/google/home/keishi/chromium2/src/tools/clang/spanify/tests/array-external-call-original.cc:::990:::0:::.data()",
+            "is_buffer": "0",
+            "size_info_available": "0",
+            "is_deref_node": "1",
+            "is_data_change": "0",
+            "visited": false,
+            "debug_info": {
+                "added_to_component": true,
+                "original_is_buffer": "0",
+                "original_size_info_available": "0"
+            },
+            "data_change_lhs": -1
+        },
+        {
+            "id": 7,
+            "replacement": "r:::/usr/local/google/home/keishi/chromium2/src/tools/clang/spanify/tests/array-external-call-original.cc:::858:::0:::",
+            "is_buffer": "0",
+            "size_info_available": "0",
+            "is_deref_node": "0",
+            "is_data_change": "0",
+            "visited": true,
+            "debug_info": {
+                "added_to_component": true,
+                "original_is_buffer": "0",
+                "original_size_info_available": "0"
+            },
+            "data_change_lhs": -1
+        },
+        {
+            "id": 8,
+            "replacement": "r:::/usr/local/google/home/keishi/chromium2/src/tools/clang/spanify/tests/array-external-call-original.cc:::1071:::13:::std::array<char, 10> data",
+            "is_buffer": "1",
+            "size_info_available": "1",
+            "is_deref_node": "0",
+            "is_data_change": "0",
+            "visited": true,
+            "debug_info": {
+                "added_to_component": true,
+                "original_is_buffer": "1",
+                "original_size_info_available": "1"
+            },
+            "data_change_lhs": -1
+        },
+        {
+            "id": 9,
+            "replacement": "r:::/usr/local/google/home/keishi/chromium2/src/tools/clang/spanify/tests/array-external-call-original.cc:::1071:::0:::",
+            "is_buffer": "0",
+            "size_info_available": "0",
+            "is_deref_node": "0",
+            "is_data_change": "0",
+            "visited": true,
+            "debug_info": {
+                "added_to_component": true,
+                "original_is_buffer": "0",
+                "original_size_info_available": "0"
+            },
+            "data_change_lhs": -1
+        },
+        {
+            "id": 10,
+            "replacement": "r:::/usr/local/google/home/keishi/chromium2/src/tools/clang/spanify/tests/array-external-call-original.cc:::291:::24:::auto buf = std::to_array<int>({1, 2, 3, 4})",
+            "is_buffer": "1",
+            "size_info_available": "1",
+            "is_deref_node": "0",
+            "is_data_change": "0",
+            "visited": true,
+            "debug_info": {
+                "added_to_component": true,
+                "original_is_buffer": "1",
+                "original_size_info_available": "1"
+            },
+            "data_change_lhs": -1
+        },
+        {
+            "id": 11,
+            "replacement": "r:::/usr/local/google/home/keishi/chromium2/src/tools/clang/spanify/tests/array-external-call-original.cc:::412:::29:::auto buf2 = std::to_array<char>({'x', 'y', 'z'})",
+            "is_buffer": "1",
+            "size_info_available": "1",
+            "is_deref_node": "0",
+            "is_data_change": "0",
+            "visited": true,
+            "debug_info": {
+                "added_to_component": true,
+                "original_is_buffer": "1",
+                "original_size_info_available": "1"
+            },
+            "data_change_lhs": -1
+        },
+        {
+            "id": 12,
+            "replacement": "r:::/usr/local/google/home/keishi/chromium2/src/tools/clang/spanify/tests/array-external-call-original.cc:::858:::13:::std::array<char, 10> data",
+            "is_buffer": "1",
+            "size_info_available": "1",
+            "is_deref_node": "0",
+            "is_data_change": "0",
+            "visited": true,
+            "debug_info": {
+                "added_to_component": true,
+                "original_is_buffer": "1",
+                "original_size_info_available": "1"
+            },
+            "data_change_lhs": -1
+        }
+    ],
+    "links": [
+        {
+            "source": 0,
+            "target": 1
+        },
+        {
+            "source": 2,
+            "target": 3
+        },
+        {
+            "source": 4,
+            "target": 5
+        },
+        {
+            "source": 6,
+            "target": 7
+        },
+        {
+            "source": 8,
+            "target": 9
+        },
+        {
+            "source": 10,
+            "target": 3
+        },
+        {
+            "source": 11,
+            "target": 1
+        },
+        {
+            "source": 12,
+            "target": 7
+        }
+    ],
+    "source": {
+        "content": "// Copyright 2024 The Chromium Authors\n// Use of this source code is governed by a BSD-style license that can be\n// found in the LICENSE file.\n\n#include <cstdint>\n#include <cstring>\n#include <iterator>\n\nvoid fct() {\n  // Expected rewrite:\n  // auto buf = std::to_array<int>({1, 2, 3, 4});\n  int buf[] = {1, 2, 3, 4};\n  buf[1] = 1;\n\n  // Expected rewrite:\n  // auto buf2 = std::to_array<char>({'x', 'y', 'z'});\n  char buf2[] = {'x', 'y', 'z'};\n  buf2[1] = 'a';\n\n  // Expected rewrite:\n  // memcpy(buf2.data(), buf.data(), 1);\n  memcpy(buf2, buf, 1);\n}\n\n#define UNSAFE_BUFFER_USAGE [[clang::unsafe_buffer_usage]]\n\nclass File {\n public:\n  File() = default;\n  // No rewrite expected because this has UNSAFE_BUFFER_USAGE.\n  UNSAFE_BUFFER_USAGE int ReadAtCurrentPos(char* data, int size);\n};\n\nvoid fct2() {\n  // Expected rewrite:\n  // std::array<char, 10> data;\n  char data[10];\n  data[1] = 'a';\n  File f;\n  // Expected rewrite:\n  // f.ReadAtCurrentPos(data.data(), 10);\n  f.ReadAtCurrentPos(data, 10);\n}\n\nvoid fct3() {\n  // Expected rewrite:\n  // std::array<char, 10> data;\n  char data[10];\n  data[1] = 'a';\n  // No rewrite expected. This is because std::size() etc. accepts std::array.\n  std::ignore = std::size(data);\n  std::ignore = std::begin(data);\n  std::ignore = std::end(data);\n  std::ignore = std::empty(data);\n  std::swap(data, data);\n  std::ranges::find(data, 'a');\n  std::ignore = std::ranges::min(data);\n}\n",
+        "file_path": "/usr/local/google/home/keishi/chromium2/src/tools/clang/spanify/tests/array-external-call-original.cc"
+    }
+}

@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Inspector UI</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="main-panel">
+        <div id="source-code-container">
+            <div id="source-code"></div>
+            <svg id="arrow-container" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; pointer-events: none;"></svg>
+        </div>
+        <div id="toolbar">
+            <div class="toolbar-item">
+                <div class="toolbar-item-label">Show Arrows</div>
+                <select id="arrow-config">
+                    <option selected value="">None</option>
+                    <option value="selected">For Selected Node</option>
+                    <option value="all">All</option>
+                </select>
+            </div>
+        </div>
+    </div>
+    <div id="inspector">
+        <div class="inspector-section">
+            <h2>Inspector</h2>
+            <div id="replacement-info" class="section">
+                <strong>Replacement:</strong>
+                <p id="replacement-text">Select a replacement in the source code.</p>
+                <div id="replacement-preview">
+                    <!-- Preview of the replacement location with surrounding lines -->
+                </div>
+            </div>
+            <div id="incoming-nodes" class="section">
+                <strong>Incoming Nodes:</strong>
+                <ul id="incoming-list">
+                    <li>No incoming nodes.</li>
+                </ul>
+            </div>
+            <div id="outgoing-nodes" class="section">
+                <strong>Outgoing Nodes:</strong>
+                <ul id="outgoing-list">
+                    <li>No outgoing nodes.</li>
+                </ul>
+            </div>
+            <pre id="node-internals"></pre>
+        </div>
+        <div class="legend-section">
+            <h2>Legend</h2>
+            <table>
+                <tr><td><span class="replacement applied">&nbsp;&nbsp;&nbsp;&nbsp;</span></td><td>applied Node</td><td><span class="node-type is-buffer" title="is_buffer">B</span></td><td>is_buffer = 1</td></tr>
+                <tr><td><span class="replacement">&nbsp;&nbsp;&nbsp;&nbsp;</span></td><td>not applied Node</td><td><span class="node-type" title="original_size_info_available">S</span></td><td>original_size_info_available = 1</td></tr>
+                <tr><td><img src="arrow.png" width="30"></td><td>Edge (lhs to rhs)</td><td><span class="node-type" title="visited">V</span></td><td>visited = 1</td></tr>
+                <tr><td><img src="dashed_arrow.png" width="30"></td><td>Deref node edge</td><td><span class="node-type" title="is_deref">DR</span></td><td>is_deref = 1</td></tr>
+                <tr><td><img src="dotted_arrow.png" width="30"></td><td>Data change edge</td><td><span class="node-type" title="is_data_change">DC</span></td><td>is_data_change = 1</td></tr>
+            </table>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

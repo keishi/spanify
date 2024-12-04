@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Sidebar with iFrame</title>
+<style>
+body {
+  margin: 0; /* Remove default body margin */
+  font-family: Arial, sans-serif;
+}
+
+.sidebar {
+  height: 100%;
+  width: 180px;
+  position: fixed;
+  left: 0;
+  top: 0;
+  background-color: #f1f1f1;
+  overflow-x: hidden;
+  padding-top: 16px;
+  border-right: 1px solid #ccc;
+}
+
+.sidebar a {
+  padding: 8px 8px 8px 16px;
+  text-decoration: none;
+  font-size: 14px;
+  color: #333;
+  display: block;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.sidebar a:hover {
+  background-color: #ddd;
+}
+
+.content {
+  margin-left: 180px; /* Same as sidebar width */
+}
+
+iframe {
+  width: 100%;
+  height: 100vh;
+  border: none;
+  display: block;
+}
+</style>
+</head>
+<body>
+
+<div class="sidebar">
+<a href="viewer.html?g=array-external-call-original" target="myiframe">array-external-call-original</a>
+<a href="viewer.html?g=array-tests-original" target="myiframe">array-tests-original</a>
+<a href="viewer.html?g=array-with-init-list-original" target="myiframe">array-with-init-list-original</a>
+<a href="viewer.html?g=assignment-original" target="myiframe">assignment-original</a>
+<a href="viewer.html?g=basics-original" target="myiframe">basics-original</a>
+<a href="viewer.html?g=char-array-with-string-literal-original" target="myiframe">char-array-with-string-literal-original</a>
+<a href="viewer.html?g=deref-expr-original" target="myiframe">deref-expr-original</a>
+<a href="viewer.html?g=fct-decl-tests-original" target="myiframe">fct-decl-tests-original</a>
+<a href="viewer.html?g=header-original" target="myiframe">header-original</a>
+<a href="viewer.html?g=init-list-has-special-characters-original" target="myiframe">init-list-has-special-characters-original</a>
+<a href="viewer.html?g=initializers-original" target="myiframe">initializers-original</a>
+<a href="viewer.html?g=macro-definitions-multiple-files-original" target="myiframe">macro-definitions-multiple-files-original</a>
+<a href="viewer.html?g=operator-bool-original" target="myiframe">operator-bool-original</a>
+<a href="viewer.html?g=raw-ptr-fields-original" target="myiframe">raw-ptr-fields-original</a>
+<a href="viewer.html?g=return-stmts-original" target="myiframe">return-stmts-original</a>
+<a href="viewer.html?g=structs-with-inline-arrays-original" target="myiframe">structs-with-inline-arrays-original</a>
+<a href="viewer.html?g=trailing-comma-original" target="myiframe">trailing-comma-original</a>
+<a href="viewer.html?g=var-construction-original" target="myiframe">var-construction-original</a>
+</div>
+
+<div class="content">
+  <iframe src="/viewer.html?g=basics-original" name="myiframe"></iframe>
+</div>
+
+</body>
+</html>
