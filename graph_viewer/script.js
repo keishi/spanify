@@ -626,12 +626,12 @@ class ArrowDrawer {
             svgContainer.appendChild(defs);
         }
 
-        // Create the line (arrow)
-        const line = document.createElementNS('http://www.w3.org/2000/svg', 'line');
-        line.setAttribute('x1', fromX);
-        line.setAttribute('y1', fromY);
-        line.setAttribute('x2', toX);
-        line.setAttribute('y2', toY);
+        // Create the bezier curve (arrow)
+        const line = document.createElementNS('http://www.w3.org/2000/svg', 'path');
+        const mid_x = (fromX + toX) * 0.5 + (fromY - toY) * 0.1;
+        const mid_y = (fromY + toY) * 0.5 - (fromX - toX) * 0.1;
+        line.setAttribute('d', `M${fromX} ${fromY} Q${mid_x} ${mid_y} ${toX} ${toY}`);
+        line.setAttribute('fill', 'none');
         line.setAttribute('stroke', color); // Arrow color
         if (dashed) {
             line.setAttribute('stroke-dasharray', '4');
