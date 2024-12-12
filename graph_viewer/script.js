@@ -253,16 +253,21 @@ class InspectorUI {
      * Sets up the UI by annotating the source code, adding event listeners, and initializing arrows.
      */
     initializeUI() {
-        // Annotate the source code and display it
-        const annotatedSource = this.annotateSourceCode();
-        this.sourceCodeContainer.innerHTML = annotatedSource;
+        // Load arrow configuration from SettingsStore
+        const savedArrowConfig = SettingsStore.get('arrowConfig') || this.arrowConfigElement.value;
+        this.arrowConfigElement.value = savedArrowConfig;
+        this.arrowConfig = savedArrowConfig;
 
         // Initialize arrow configuration
         this.arrowConfigElement.addEventListener('change', (event) => {
-            this.showArrows = event.target.value;
-            console.log('showArrows', this.showArrows);
+            this.arrowConfig = event.target.value;
+            SettingsStore.set('arrowConfig', this.arrowConfig); // Save setting
             this.updateArrows();
         });
+
+        // Annotate the source code and display it
+        const annotatedSource = this.annotateSourceCode();
+        this.sourceCodeContainer.innerHTML = annotatedSource;
 
         // Initialize event listeners for replacement spans
         this.attachReplacementClickHandlers();
@@ -542,16 +547,15 @@ class InspectorUI {
      * Updates the arrows in the SVG container based on the current arrow configuration and selected node.
      */
     updateArrows() {
-        const showArrows = this.arrowConfigElement.value;
         this.svgContainer.innerHTML = "";
 
-        if (showArrows === "") return;
+        if (this.arrowConfig === "") return;
 
         const selectedNodeId = this.selectedNodeId;
         const { links, nodeMap } = this.graphData;
 
         links.forEach(link => {
-            if (showArrows === 'selected') {
+            if (this.arrowConfig === 'selected') {
                 if (link.source !== selectedNodeId && link.target !== selectedNodeId) {
                     return;
                 }
@@ -566,7 +570,7 @@ class InspectorUI {
             if (node.is_data_change !== true) return;
             let source = node.data_change_lhs;
             let target = node.id;
-            if (showArrows === 'selected') {
+            if (arrowConfig === 'selected') {
                 if (source !== selectedNodeId && target !== selectedNodeId) {
                     return;
                 }
@@ -675,6 +679,38 @@ function escapeHTML(str) {
 function drawArrow(fromElem, toElem, svgContainer, dashed, dotted) {
     // This function is now obsolete as ArrowDrawer handles arrow drawing
     ArrowDrawer.drawArrow(fromElem, toElem, svgContainer, dashed, dotted);
+}
+
+/**
+ * SettingsStore is a simple key-value store that persists data in localStorage.
+ */
+class SettingsStore {
+    /**
+     * Retrieves a value from localStorage.
+     * @param {string} key - The key to retrieve.
+     * @returns {any} - The parsed value from localStorage, or null if not found.
+     */
+    static get(key) {
+        const value = localStorage.getItem(key);
+        return value ? JSON.parse(value) : null;
+    }
+
+    /**
+     * Stores a value in localStorage.
+     * @param {string} key - The key to store.
+     * @param {any} value - The value to store, must be serializable to JSON.
+     */
+    static set(key, value) {
+        localStorage.setItem(key, JSON.stringify(value));
+    }
+
+    /**
+     * Removes a key from localStorage.
+     * @param {string} key - The key to remove.
+     */
+    static remove(key) {
+        localStorage.removeItem(key);
+    }
 }
 
 // Initialize the application once the DOM is fully loaded
