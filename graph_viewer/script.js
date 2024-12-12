@@ -283,66 +283,72 @@ class InspectorUI {
     annotateSourceCode() {
         const { originalSource, nodes } = this.graphData;
 
-        // Sort nodes by offset ascending to process from start to end
+        // Sort nodes by offset ascending and offset+length ascending to process from start to end
         const sortedNodes = nodes.slice().sort((a, b) => {
-            const [offsetA] = this.graphData.extractReplacementInfo(a.replacement);
-            const [offsetB] = this.graphData.extractReplacementInfo(b.replacement);
+            const [offsetA, lengthA] = this.graphData.extractReplacementInfo(a.replacement);
+            const [offsetB, lengthB] = this.graphData.extractReplacementInfo(b.replacement);
+            if (offsetA === offsetB) {
+                return lengthA - lengthB;
+            }
             return offsetA - offsetB;
         });
 
-        let annotatedSource = '';
-        let currentIndex = 0;
-
-        sortedNodes.forEach(node => {
-            const [offset, length, replacementText] = this.graphData.extractReplacementInfo(node.replacement);
-            if (offset === null || length === null) return;
-
-            // Ensure the offset and length are within the source code bounds
-            if (offset < 0 || offset + length > originalSource.length) {
-                console.warn(`Invalid offset/length for node ID ${node.id}`);
-                return;
+        // Check for overlapping nodes.
+        for (let i = 0; i < sortedNodes.length - 1; i++) {
+            const [offsetA, lengthA] = this.graphData.extractReplacementInfo(sortedNodes[i].replacement);
+            const [offsetB, lengthB] = this.graphData.extractReplacementInfo(sortedNodes[i + 1].replacement);
+            if (offsetA + lengthA > offsetB) {
+                console.warn(`Overlapping nodes detected. Node ${sortedNodes[i].id} and ${sortedNodes[i + 1].id}`);
+                console.log(sortedNodes[i]);
+                console.log(sortedNodes[i + 1]);
+                console.log(offsetA, lengthA, offsetB, lengthB);
+                alert("Overlapping nodes detected. Please fix the graph data.");
             }
-
-            // Append the text before the replacement, escaped
-            const textBefore = originalSource.substring(currentIndex, offset);
-            annotatedSource += escapeHTML(textBefore);
-
-            // Extract the text to be replaced
-            const textToReplace = originalSource.substring(offset, offset + length);
-
-            // Escape HTML in textToReplace
-            const escapedTextToReplace = escapeHTML(textToReplace);
-
-            // Determine if the textToReplace is empty
-            const isEmpty = escapedTextToReplace.trim() === '';
-
-            // Check if node has errors
-            const hasError = node.hasError;
-
-            // Create the replacement span
-            let replacementSpan = `<span class="replacement${isEmpty ? ' empty-node' : ''}${node.debug_info?.added_to_component ? ' applied' : ''}${hasError ? ' error-node' : ''}" data-node-id="${node.id}">`;
-            replacementSpan += this.generateNodeTypeHTML(node);
-            if (isEmpty) {
-                // If replacementText is empty, the span will be empty and CSS will insert "∅"
-                replacementSpan += `</span>`;
-            } else {
-                // Insert the escaped replacementText
-                replacementSpan += `${escapedTextToReplace}</span>`;
-            }
-
-            annotatedSource += replacementSpan;
-
-            // Update the current index
-            currentIndex = offset + length;
-        });
-
-        // Append the remaining text after the last replacement, escaped
-        if (currentIndex < originalSource.length) {
-            const remainingText = originalSource.substring(currentIndex);
-            annotatedSource += escapeHTML(remainingText);
         }
 
-        return annotatedSource;
+        let parts = [];
+        let currentNodeIndex = 0;
+
+        for (let offset = 0; offset < originalSource.length; offset++) {
+            //debugger;
+            while (currentNodeIndex < sortedNodes.length) {
+                const node = sortedNodes[currentNodeIndex];
+                const [replacementOffset, replacementLength, replacementText] = this.graphData.extractReplacementInfo(node.replacement);
+                console.assert(replacementOffset !== null && replacementLength !== null, "Invalid replacement info");
+
+                if (offset < replacementOffset) {
+                    // Not in the current node's range
+                    break;
+                }
+                console.log("currentNodeIndex", currentNodeIndex);
+
+                if (offset === replacementOffset) {
+                    // Start of the replacement range
+                    const isEmpty = replacementLength === 0;
+                    parts.push(`<span class="replacement${isEmpty ? ' empty-node' : ''}${node['debug_info']['added_to_component'] ? ' applied' : ''}${node.hasError ? ' error-node' : ''}" data-node-id="${node.id}">`);
+
+                }
+
+                if (offset === replacementOffset + replacementLength) {
+                    // End of the replacement range
+                    parts.push(`</span>`);
+                    currentNodeIndex++;
+                    continue;
+                }
+
+                break;
+            }
+
+            const char = originalSource[offset];
+
+            if (char === '\n') {
+                parts.push('<br>');
+            } else {
+                parts.push(escapeHTML(char));
+            }
+        }
+
+        return parts.join('');
     }
 
     /**
