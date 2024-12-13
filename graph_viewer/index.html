@@ -1,78 +1,130 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
+
 <head>
-<title>Sidebar with iFrame</title>
-<style>
-body {
-  margin: 0; /* Remove default body margin */
-  font-family: Arial, sans-serif;
-}
-
-.sidebar {
-  height: 100%;
-  width: 180px;
-  position: fixed;
-  left: 0;
-  top: 0;
-  background-color: #f1f1f1;
-  overflow-x: hidden;
-  padding-top: 16px;
-  border-right: 1px solid #ccc;
-}
-
-.sidebar a {
-  padding: 8px 8px 8px 16px;
-  text-decoration: none;
-  font-size: 14px;
-  color: #333;
-  display: block;
-  overflow: hidden;
-  text-overflow: ellipsis;
-  white-space: nowrap;
-}
-
-.sidebar a:hover {
-  background-color: #ddd;
-}
-
-.content {
-  margin-left: 180px; /* Same as sidebar width */
-}
-
-iframe {
-  width: 100%;
-  height: 100vh;
-  border: none;
-  display: block;
-}
-</style>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Graph Inspector</title>
+  <link rel="stylesheet" href="styles.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/svg.js/3.2.4/svg.min.js" integrity="sha512-ovlWyhrYXr3HEkGJI5YPXIFYIbHEKs2yfemKVVIIQe9U74tXyTuVdzMlvZlw/0X5lnIDRgtVlckrkeuCrDpq4Q==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <script src="arrowdrawer.js" defer></script>
+  <script src="script.js" defer></script>
 </head>
+
 <body>
+  <div class="app">
+    <aside class="nav-panel">
+      <!-- Nav Panel Content -->
+      <nav>
+        <ul>
+          <li><a href="index.html?g=array-external-call-original">array-external-call-original</a></li>
+          <li><a href="index.html?g=array-tests-original">array-tests-original</a></li>
+          <li><a href="index.html?g=array-with-init-list-original">array-with-init-list-original</a></li>
+          <li><a href="index.html?g=assignment-original">assignment-original</a></li>
+          <li><a href="index.html?g=basics-original">basics-original</a></li>
+          <li><a href="index.html?g=char-array-with-string-literal-original">char-array-with-string-literal-original</a></li>
+          <li><a href="index.html?g=deref-expr-original">deref-expr-original</a></li>
+          <li><a href="index.html?g=fct-decl-tests-original">fct-decl-tests-original</a></li>
+          <li><a href="index.html?g=header-original">header-original</a></li>
+          <li><a href="index.html?g=init-list-has-special-characters-original">init-list-has-special-characters-original</a></li>
+          <li><a href="index.html?g=initializers-original">initializers-original</a></li>
+          <li><a href="index.html?g=macro-definitions-multiple-files-original">macro-definitions-multiple-files-original</a></li>
+          <li><a href="index.html?g=operator-bool-original">operator-bool-original</a></li>
+          <li><a href="index.html?g=raw-ptr-fields-original">raw-ptr-fields-original</a></li>
+          <li><a href="index.html?g=return-stmts-original">return-stmts-original</a></li>
+          <li><a href="index.html?g=structs-with-inline-arrays-original">structs-with-inline-arrays-original</a></li>
+          <li><a href="index.html?g=trailing-comma-original">trailing-comma-original</a></li>
+          <li><a href="index.html?g=var-construction-original">var-construction-original</a></li>
+        </ul>
+      </nav>
+    </aside>
+    <main class="main-panel">
+      <section class="content-panel">
+        <div id="toolbar">
+          <div class="toolbar-item">
+            <div class="icon-button">
+              <img src="images/calls--all.svg">
+              <select id="arrow-config">
+                <option selected value="">None</option>
+                <option value="selected">For Selected Node</option>
+                <option value="all">All</option>
+              </select>
+            </div>
+          </div>
+        </div>
 
-<div class="sidebar">
-<a href="viewer.html?g=array-external-call-original" target="myiframe">array-external-call-original</a>
-<a href="viewer.html?g=array-tests-original" target="myiframe">array-tests-original</a>
-<a href="viewer.html?g=array-with-init-list-original" target="myiframe">array-with-init-list-original</a>
-<a href="viewer.html?g=assignment-original" target="myiframe">assignment-original</a>
-<a href="viewer.html?g=basics-original" target="myiframe">basics-original</a>
-<a href="viewer.html?g=char-array-with-string-literal-original" target="myiframe">char-array-with-string-literal-original</a>
-<a href="viewer.html?g=deref-expr-original" target="myiframe">deref-expr-original</a>
-<a href="viewer.html?g=fct-decl-tests-original" target="myiframe">fct-decl-tests-original</a>
-<a href="viewer.html?g=header-original" target="myiframe">header-original</a>
-<a href="viewer.html?g=init-list-has-special-characters-original" target="myiframe">init-list-has-special-characters-original</a>
-<a href="viewer.html?g=initializers-original" target="myiframe">initializers-original</a>
-<a href="viewer.html?g=macro-definitions-multiple-files-original" target="myiframe">macro-definitions-multiple-files-original</a>
-<a href="viewer.html?g=operator-bool-original" target="myiframe">operator-bool-original</a>
-<a href="viewer.html?g=raw-ptr-fields-original" target="myiframe">raw-ptr-fields-original</a>
-<a href="viewer.html?g=return-stmts-original" target="myiframe">return-stmts-original</a>
-<a href="viewer.html?g=structs-with-inline-arrays-original" target="myiframe">structs-with-inline-arrays-original</a>
-<a href="viewer.html?g=trailing-comma-original" target="myiframe">trailing-comma-original</a>
-<a href="viewer.html?g=var-construction-original" target="myiframe">var-construction-original</a>
-</div>
+        <div id="source-code-panel">
+          <div id="source-code-container">
+            <div id="source-code-line-numbers"></div>
+            <div id="source-code"></div>
+            <svg id="arrow-container"></svg>
+          </div>
+        </div>
+      </section>
+      <aside class="inspector-panel">
 
-<div class="content">
-  <iframe src="/viewer.html?g=basics-original" name="myiframe"></iframe>
-</div>
-
+        <div class="inspector-section">
+          <h2>Inspector</h2>
+          <div id="replacement-info" class="section">
+            <strong>Replacement:</strong>
+            <p id="replacement-text">Select a replacement in the source code.</p>
+            <div id="replacement-preview">
+              <!-- Preview of the replacement location with surrounding lines -->
+            </div>
+          </div>
+          <div id="incoming-nodes" class="section">
+            <strong>Incoming Nodes:</strong>
+            <ul id="incoming-list">
+              <li>No incoming nodes.</li>
+            </ul>
+          </div>
+          <div id="outgoing-nodes" class="section">
+            <strong>Outgoing Nodes:</strong>
+            <ul id="outgoing-list">
+              <li>No outgoing nodes.</li>
+            </ul>
+          </div>
+          <pre id="node-internals"></pre>
+        </div>
+        <div class="legend-section">
+          <h2>Legend</h2>
+          <table>
+            <tr>
+              <td><span class="replacement applied">&nbsp;&nbsp;&nbsp;&nbsp;</span></td>
+              <td>applied Node</td>
+              <td><span class="node-type is-buffer" title="is_buffer">B</span></td>
+              <td>is_buffer = 1</td>
+            </tr>
+            <tr>
+              <td><span class="replacement">&nbsp;&nbsp;&nbsp;&nbsp;</span></td>
+              <td>not applied Node</td>
+              <td><span class="node-type" title="original_size_info_available">S</span></td>
+              <td>original_size_info_available = 1</td>
+            </tr>
+            <tr>
+              <td><img src="arrow.png" width="30"></td>
+              <td>Edge (lhs to rhs)</td>
+              <td><span class="node-type" title="visited">V</span></td>
+              <td>visited = 1</td>
+            </tr>
+            <tr>
+              <td><img src="dashed_arrow.png" width="30"></td>
+              <td>Deref node edge</td>
+              <td><span class="node-type" title="is_deref">DR</span></td>
+              <td>is_deref = 1</td>
+            </tr>
+            <tr>
+              <td><img src="dotted_arrow.png" width="30"></td>
+              <td>Data change edge</td>
+              <td><span class="node-type" title="is_data_change">DC</span></td>
+              <td>is_data_change = 1</td>
+            </tr>
+          </table>
+        </div>
+      </aside>
+    </main>
+  </div>
 </body>
+
 </html>
