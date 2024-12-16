@@ -208,6 +208,10 @@ class InspectorUI {
     this.outgoingListElement = document.getElementById('outgoing-list');
     this.nodeInternalsElement = document.getElementById('node-internals');
     this.sourceCodeLineNumbersElement = document.getElementById('source-code-line-numbers');
+    this.inspectorNothingSelectedElement = document.getElementById('inspector-nothing-selected');
+    this.inspectorContentElement = document.getElementById('inspector-content');
+    this.generatedByElement = document.getElementById('generated-by');
+    this.generatedByLinkElement = document.getElementById('generated-by-link');
 
     this.initializeUI();
   }
@@ -436,6 +440,9 @@ class InspectorUI {
 
     this.updateArrows();
 
+    this.inspectorNothingSelectedElement.style.display = 'none';
+    this.inspectorContentElement.style.display = 'block';
+
     this.hoverNodeDisabledUntilPointerMove = true;
     this.inspectorElement.addEventListener("pointermove", () => {
       this.hoverNodeDisabledUntilPointerMove = false;
@@ -469,6 +476,14 @@ class InspectorUI {
 
     // Update node internals
     this.nodeInternalsElement.textContent = JSON.stringify(node, null, 2);
+
+    if (node['debug_info']['generated_by'] !== undefined) {
+      this.generatedByLinkElement.textContent = node['debug_info']['generated_by'];
+      this.generatedByLinkElement.href = `https://source.chromium.org/search?q="%5C"${encodeURIComponent(node['debug_info']['generated_by'])}"%5C"%20f:Spanifier.cpp&sq=&ss=chromium%2Fchromium%2Fsrc`;
+      this.generatedByElement.style.display = 'block';
+    } else {
+      this.generatedByElement.style.display = 'none';
+    }
 
     // If node has errors, indicate in the UI (future enhancement)
     if (node.hasError) {
@@ -576,10 +591,8 @@ class InspectorUI {
           return;
         }
       }
-      console.log('selectedNodeId', selectedNodeId, link);
       const fromElem = this.sourceCodeContainer.querySelector(`.replacement[data-node-id="${link.source}"]`);
       const toElem = this.sourceCodeContainer.querySelector(`.replacement[data-node-id="${link.target}"]`);
-      console.log('drawArrow', fromElem, toElem);
       let sourceNode = nodeMap[link.source];
       ArrowDrawer.drawArrow(fromElem, toElem, this.svgContainer, sourceNode?.is_deref_node === true, false, window.debug);
     });

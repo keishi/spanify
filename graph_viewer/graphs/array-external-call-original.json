@@ -11,8 +11,7 @@
             "debug_info": {
                 "added_to_component": true,
                 "original_is_buffer": "0",
-                "original_size_info_available": "0",
-                "generated_by": "data_change"
+                "original_size_info_available": "0"
             },
             "data_change_lhs": -1
         },

@@ -23,10 +23,10 @@ class ArrowDrawer {
     const minDistance = 100; // Minimum distance to draw a regular arrow
 
     // Define bounds for dynamic loop curvature and slant offset
-    const minLoopCurvature = 50; // Minimum curvature for looped arrows
-    const maxLoopCurvature = 100; // Maximum curvature for looped arrows
-    const minSlantOffset = 10; // Minimum slant offset in pixels for looped arrows
-    const maxSlantOffset = 30; // Maximum slant offset in pixels for looped arrows
+    const minLoopCurvature = 80; // Minimum curvature for looped arrows
+    const maxLoopCurvature = 160; // Maximum curvature for looped arrows
+    const minSlantOffset = -20; // Minimum slant offset in pixels for looped arrows
+    const maxSlantOffset = 0; // Maximum slant offset in pixels for looped arrows
 
     // Define primary anchor points
     const primaryAnchors = ['top', 'bottom', 'left', 'right'];

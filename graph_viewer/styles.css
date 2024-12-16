@@ -292,6 +292,25 @@ h1, h2, h3, h4, h5, h6 {
   margin-bottom: var(--padding);
 }
 
+.section {
+  margin-bottom: var(--padding);
+}
+
+#inspector-nothing-selected {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  flex: 1;
+  color: #999;
+  font-size: 1.2em;
+  margin: 32px 0;
+}
+
+#inspector-content {
+  display: none;
+}
+
 /* 
 body {
     display: flex;
@@ -352,10 +371,6 @@ body {
 
 .empty-node::before {
     content: "∅";
-}
-
-.section {
-    margin-bottom: 16px;
 }
 
 
