@@ -1,6 +1,10 @@
 // Expose key objects to the global namespace for easy access via DevTools
 window.App = {};
 
+function basename(path) {
+  return path.split('/').pop();
+}
+
 /**
  * GraphLoader is responsible for fetching and parsing graph data from a JSON source.
  */
@@ -235,11 +239,48 @@ class InspectorUI {
     let lineNumberWidth = this.sourceCodeLineNumbersElement.getBoundingClientRect().width;
     this.sourceCodeContainer.style.paddingLeft = `${lineNumberWidth + 8}px`;
 
+    this.addExternalNodes(this.graphData.source);
+
     // Initialize event listeners for replacement spans
     this.attachReplacementClickHandlers();
 
     // Initial arrow rendering
     this.updateArrows();
+  }
+
+  addExternalNodes(source) {
+    let externalNodes = this.graphData.nodes.filter(node => node.filepath !== source.file_path);
+    for (let node of externalNodes) {
+      const element = document.createElement('div');
+      element.classList.add('external-node', 'replacement');
+      element.dataset.nodeId = node.id;
+      element.textContent = `${basename(node.filepath)}:${node.replacementOffset}`;
+      const nodeTypeFrag = document.createRange().createContextualFragment(this.generateNodeTypeHTML(node));
+      element.appendChild(nodeTypeFrag);
+      // Search through links to find a non-external node that it is connected with.
+      let connectedNode = null;
+      for (let link of this.graphData.links) {
+        if (link.source === node.id) {
+          connectedNode = this.graphData.nodeMap[link.target];
+          break;
+        }
+        if (link.target === node.id) {
+          connectedNode = this.graphData.nodeMap[link.source];
+          break;
+        }
+      }
+      if (connectedNode) {
+        console.log('connectedNode', connectedNode);
+        // position the external node close to the connected node
+        const connectedNodeElement = this.sourceCodeContainer.querySelector(`.replacement[data-node-id="${connectedNode.id}"]`);
+        if (connectedNodeElement) {
+          const connectedNodeRect = connectedNodeElement.getBoundingClientRect();
+          element.style.top = `${connectedNodeRect.top}px`;
+          element.style.right = `16px`;
+        }
+        this.sourceCodeContainer.appendChild(element);
+      }
+    }
   }
 
   sortNodesByOffset(nodes) {
@@ -535,8 +576,10 @@ class InspectorUI {
           return;
         }
       }
+      console.log('selectedNodeId', selectedNodeId, link);
       const fromElem = this.sourceCodeContainer.querySelector(`.replacement[data-node-id="${link.source}"]`);
       const toElem = this.sourceCodeContainer.querySelector(`.replacement[data-node-id="${link.target}"]`);
+      console.log('drawArrow', fromElem, toElem);
       let sourceNode = nodeMap[link.source];
       ArrowDrawer.drawArrow(fromElem, toElem, this.svgContainer, sourceNode?.is_deref_node === true, false, window.debug);
     });

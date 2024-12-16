@@ -1,6 +1,6 @@
 /**
-     * ArrowDrawer is responsible for rendering arrows between DOM elements using SVG.
-     */
+ * ArrowDrawer is responsible for rendering arrows between DOM elements using SVG.
+ */
 class ArrowDrawer {
   /**
    * Draws an arrow between two DOM elements within the specified SVG container.
@@ -18,10 +18,15 @@ class ArrowDrawer {
     if (!fromElem || !toElem) return;
 
     const color = 'rgba(98, 0, 238, 0.86)';
-    const k = 0.4; // Curvature scaling factor for regular arrows
-    const maxCurvature = 100; // Maximum curvature in pixels
+    const k = 0.2; // Curvature scaling factor for regular arrows
+    const maxCurvature = 100; // Maximum curvature in pixels for regular arrows
     const minDistance = 100; // Minimum distance to draw a regular arrow
-    const loopCurvature = 50; // Fixed curvature for looped arrows
+
+    // Define bounds for dynamic loop curvature and slant offset
+    const minLoopCurvature = 50; // Minimum curvature for looped arrows
+    const maxLoopCurvature = 100; // Maximum curvature for looped arrows
+    const minSlantOffset = 10; // Minimum slant offset in pixels for looped arrows
+    const maxSlantOffset = 30; // Maximum slant offset in pixels for looped arrows
 
     // Define primary anchor points
     const primaryAnchors = ['top', 'bottom', 'left', 'right'];
@@ -95,7 +100,10 @@ class ArrowDrawer {
      * @returns {string} Selected to anchor.
      */
     const chooseToAnchor = (fromAnchorName, fromAnchorPos, toRect, containerRect) => {
-      // Define normal vectors for each anchor
+      const aspectRatio = toRect.width / toRect.height;
+      const horizontalWeight = aspectRatio > 1 ? aspectRatio : 1;
+      const verticalWeight = aspectRatio < 1 ? 1 / aspectRatio : 1;
+
       const normalVectors = {
         'top': { x: 0, y: -1 },
         'bottom': { x: 0, y: 1 },
@@ -103,28 +111,32 @@ class ArrowDrawer {
         'right': { x: 1, y: 0 }
       };
 
-      // Get potential to anchors
       const potentialToAnchors = primaryAnchors.map(anchor => {
         const anchorPos = getAnchorPoint(toRect, anchor, containerRect);
-        // Direction vector from toAnchor to fromAnchor
         const dirVector = {
           x: fromAnchorPos.x - anchorPos.x,
           y: fromAnchorPos.y - anchorPos.y
         };
-        // Normalize direction vector
         const length = Math.hypot(dirVector.x, dirVector.y);
         const normalizedDir = length === 0 ? { x: 0, y: 0 } : { x: dirVector.x / length, y: dirVector.y / length };
-        // Get normal vector for this anchor
         const normal = normalVectors[anchor];
-        // Calculate dot product
         const dot = normalizedDir.x * normal.x + normalizedDir.y * normal.y;
-        // Calculate angle (in degrees) between direction vector and normal vector
         const angle = Math.acos(Math.min(Math.max(dot, -1), 1)) * (180 / Math.PI);
+
         return { anchor, angle };
       });
 
-      // Select the anchor with the smallest angle
-      potentialToAnchors.sort((a, b) => a.angle - b.angle);
+      const weightedAngle = (anchor) => {
+        const isHorizontal = anchor === 'left' || anchor === 'right';
+        return potentialToAnchors.find(a => a.anchor === anchor).angle * (isHorizontal ? horizontalWeight : verticalWeight);
+      };
+
+      potentialToAnchors.sort((a, b) => {
+        const weightA = weightedAngle(a.anchor);
+        const weightB = weightedAngle(b.anchor);
+        return weightA - weightB;
+      });
+
       return potentialToAnchors[0].anchor;
     };
 
@@ -139,10 +151,10 @@ class ArrowDrawer {
     const chooseAlternativeAnchors = (dominantDirection, dx, dy) => {
       if (dominantDirection === 'horizontal') {
         // For horizontal dominance, determine if toElem is to the right or left
-        return dx > 0 ? { from: 'right', to: 'top' } : { from: 'left', to: 'bottom' };
+        return dx > 0 ? { from: 'top', to: 'top' } : { from: 'bottom', to: 'bottom' };
       } else {
         // For vertical dominance, determine if toElem is below or above
-        return dy > 0 ? { from: 'bottom', to: 'left' } : { from: 'top', to: 'right' };
+        return dy > 0 ? { from: 'left', to: 'left' } : { from: 'right', to: 'right' };
       }
     };
 
@@ -162,6 +174,8 @@ class ArrowDrawer {
     // Variables to store control points for debug mode
     let controlPoint1 = null;
     let controlPoint2 = null;
+    let startAnchor = fromAnchor;
+    let endAnchor = toAnchor;
 
     if (distance < minDistance) {
       // Handle short arrows by creating a loop
@@ -175,32 +189,58 @@ class ArrowDrawer {
       const altFromAnchor = getAnchorPoint(fromRect, altAnchors.from, containerRect);
       const altToAnchor = getAnchorPoint(toRect, altAnchors.to, containerRect);
 
-      // Control points for the looped arrow using cubic Bézier curves
+      // Calculate proportional values for loopCurvature and slantOffset based on distance
+      // Closer distance -> smaller curvature and slant
+      // Farther distance (but < minDistance) -> larger curvature and slant
+      const curvatureRatio = distance / minDistance; // Ranges from 0 to 1
+      const currentLoopCurvature = minLoopCurvature + curvatureRatio * (maxLoopCurvature - minLoopCurvature);
+      const currentSlantOffset = minSlantOffset + curvatureRatio * (maxSlantOffset - minSlantOffset);
+
+      // Determine direction to offset control points based on alternative anchors
+      let control1X, control1Y, control2X, control2Y;
+
       if (dominantDirection === 'horizontal') {
-        // For horizontal dominance, use top and bottom anchors
-        // Control points offset vertically away from the nodes
-        const control1X = altFromAnchor.x;
-        const control1Y = altFromAnchor.y - loopCurvature; // Upwards
-        const control2X = altToAnchor.x;
-        const control2Y = altToAnchor.y - loopCurvature; // Upwards
+        // For horizontal dominance, use top or bottom anchors
+        if (altAnchors.from === 'top') {
+          // Shift control points further upwards
+          control1X = altFromAnchor.x + currentSlantOffset; // Slight right shift
+          control1Y = altFromAnchor.y - currentLoopCurvature - currentSlantOffset; // More upwards
+          control2X = altToAnchor.x - currentSlantOffset; // Slight left shift
+          control2Y = altToAnchor.y - currentLoopCurvature - currentSlantOffset; // More upwards
+        } else {
+          // Shift control points further downwards
+          control1X = altFromAnchor.x + currentSlantOffset; // Slight right shift
+          control1Y = altFromAnchor.y + currentLoopCurvature + currentSlantOffset; // More downwards
+          control2X = altToAnchor.x - currentSlantOffset; // Slight left shift
+          control2Y = altToAnchor.y + currentLoopCurvature + currentSlantOffset; // More downwards
+        }
+
         pathData = `M${altFromAnchor.x} ${altFromAnchor.y} C${control1X} ${control1Y}, ${control2X} ${control2Y}, ${altToAnchor.x} ${altToAnchor.y}`;
 
-        // Store control points for debug
-        controlPoint1 = { x: control1X, y: control1Y };
-        controlPoint2 = { x: control2X, y: control2Y };
       } else {
-        // For vertical dominance, use left and right anchors
-        // Control points offset horizontally away from the nodes
-        const control1X = altFromAnchor.x - loopCurvature; // Leftwards
-        const control1Y = altFromAnchor.y;
-        const control2X = altToAnchor.x - loopCurvature; // Leftwards
-        const control2Y = altToAnchor.y;
-        pathData = `M${altFromAnchor.x} ${altFromAnchor.y} C${control1X} ${control1Y}, ${control2X} ${control2Y}, ${altToAnchor.x} ${altToAnchor.y}`;
+        // For vertical dominance, use left or right anchors
+        if (altAnchors.from === 'left') {
+          // Shift control points further leftwards
+          control1X = altFromAnchor.x - currentLoopCurvature - currentSlantOffset; // More left
+          control1Y = altFromAnchor.y + currentSlantOffset; // Slight downward shift
+          control2X = altToAnchor.x - currentLoopCurvature - currentSlantOffset; // More left
+          control2Y = altToAnchor.y - currentSlantOffset; // Slight upward shift
+        } else {
+          // Shift control points further rightwards
+          control1X = altFromAnchor.x + currentLoopCurvature + currentSlantOffset; // More right
+          control1Y = altFromAnchor.y + currentSlantOffset; // Slight downward shift
+          control2X = altToAnchor.x + currentLoopCurvature + currentSlantOffset; // More right
+          control2Y = altToAnchor.y - currentSlantOffset; // Slight upward shift
+        }
 
-        // Store control points for debug
-        controlPoint1 = { x: control1X, y: control1Y };
-        controlPoint2 = { x: control2X, y: control2Y };
+        pathData = `M${altFromAnchor.x} ${altFromAnchor.y} C${control1X} ${control1Y}, ${control2X} ${control2Y}, ${altToAnchor.x} ${altToAnchor.y}`;
       }
+
+      // Store control points for debug
+      controlPoint1 = { x: control1X, y: control1Y };
+      controlPoint2 = { x: control2X, y: control2Y };
+      startAnchor = altFromAnchor;
+      endAnchor = altToAnchor;
     } else {
       // Handle regular arrows
       // Calculate curvature
@@ -283,10 +323,10 @@ class ArrowDrawer {
       if (isLoop) {
         // For looped arrows, there are two control points
         if (controlPoint1 && controlPoint2) {
-          // Draw lines from start to control1
+          // Draw lines from startAnchor to control1
           const line1 = document.createElementNS('http://www.w3.org/2000/svg', 'line');
-          line1.setAttribute('x1', isLoop ? fromAnchor.x : fromAnchor.x);
-          line1.setAttribute('y1', isLoop ? fromAnchor.y : fromAnchor.y);
+          line1.setAttribute('x1', startAnchor.x);
+          line1.setAttribute('y1', startAnchor.y);
           line1.setAttribute('x2', controlPoint1.x);
           line1.setAttribute('y2', controlPoint1.y);
           debugGroup.appendChild(line1);
@@ -299,12 +339,12 @@ class ArrowDrawer {
           line2.setAttribute('y2', controlPoint2.y);
           debugGroup.appendChild(line2);
 
-          // Draw lines from control2 to end
+          // Draw lines from control2 to endAnchor
           const line3 = document.createElementNS('http://www.w3.org/2000/svg', 'line');
           line3.setAttribute('x1', controlPoint2.x);
           line3.setAttribute('y1', controlPoint2.y);
-          line3.setAttribute('x2', isLoop ? toAnchor.x : toAnchor.x);
-          line3.setAttribute('y2', isLoop ? toAnchor.y : toAnchor.y);
+          line3.setAttribute('x2', endAnchor.x);
+          line3.setAttribute('y2', endAnchor.y);
           debugGroup.appendChild(line3);
 
           // Draw control points as circles
@@ -323,20 +363,20 @@ class ArrowDrawer {
       } else {
         // For regular arrows, there is one control point
         if (controlPoint1) {
-          // Draw line from start to control point
+          // Draw line from startAnchor to control point
           const line1 = document.createElementNS('http://www.w3.org/2000/svg', 'line');
-          line1.setAttribute('x1', fromAnchor.x);
-          line1.setAttribute('y1', fromAnchor.y);
+          line1.setAttribute('x1', startAnchor.x);
+          line1.setAttribute('y1', startAnchor.y);
           line1.setAttribute('x2', controlPoint1.x);
           line1.setAttribute('y2', controlPoint1.y);
           debugGroup.appendChild(line1);
 
-          // Draw line from control point to end
+          // Draw line from control point to endAnchor
           const line2 = document.createElementNS('http://www.w3.org/2000/svg', 'line');
           line2.setAttribute('x1', controlPoint1.x);
           line2.setAttribute('y1', controlPoint1.y);
-          line2.setAttribute('x2', toAnchor.x);
-          line2.setAttribute('y2', toAnchor.y);
+          line2.setAttribute('x2', endAnchor.x);
+          line2.setAttribute('y2', endAnchor.y);
           debugGroup.appendChild(line2);
 
           // Draw control point as a circle
