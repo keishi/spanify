@@ -1,33 +1,175 @@
 /**
+ * SVGCanvas is responsible for initializing and managing the SVG container.
+ * It provides utility methods to create and manipulate SVG elements.
+ */
+class SVGCanvas {
+  /**
+   * Creates an instance of SVGCanvas.
+   * @param {HTMLElement} container - The DOM element to contain the SVG.
+   */
+  constructor(container) {
+    if (!container) {
+      throw new Error('Container element is required to initialize SVGCanvas.');
+    }
+    console.assert(container instanceof SVGElement, 'Container element must be an SVG element.');
+
+    this.svg = container;
+
+    // Initialize <defs> section
+    this.defs = this._createSVGElement('defs');
+    this.svg.appendChild(this.defs);
+  }
+
+  /**
+   * Creates an SVG element with the given tag and attributes.
+   * @param {string} tag - The SVG tag name.
+   * @param {Object} attrs - An object representing SVG attributes.
+   * @returns {SVGElement} The created SVG element.
+   */
+  _createSVGElement(tag, attrs = {}) {
+    const elem = document.createElementNS('http://www.w3.org/2000/svg', tag);
+    for (const [attr, value] of Object.entries(attrs)) {
+      elem.setAttribute(attr, value);
+    }
+    return elem;
+  }
+
+  /**
+   * Adds a marker to the SVG <defs> section.
+   * @param {string} id - The unique identifier for the marker.
+   * @param {string} color - The fill color of the marker.
+   * @param {number} width - The width of the marker.
+   * @param {number} height - The height of the marker.
+   * @returns {SVGMarkerElement} The created marker element.
+   */
+  addMarker(id, color, width = 10, height = 7) {
+    // Check if marker already exists
+    if (this.svg.querySelector(`#${id}`)) {
+      return this.svg.querySelector(`#${id}`);
+    }
+
+    const marker = this._createSVGElement('marker', {
+      id,
+      markerWidth: width,
+      markerHeight: height,
+      refX: width,
+      refY: height / 2,
+      orient: 'auto',
+      markerUnits: 'strokeWidth',
+    });
+
+    const polygon = this._createSVGElement('polygon', {
+      points: `0 0, ${width} ${height / 2}, 0 ${height}`,
+      fill: color,
+    });
+
+    marker.appendChild(polygon);
+    this.defs.appendChild(marker);
+
+    return marker;
+  }
+
+  /**
+   * Creates and appends an SVG path to the canvas.
+   * @param {string} pathData - The SVG path data (d attribute).
+   * @param {Object} options - Styling and marker options.
+   * @param {string} options.stroke - The stroke color.
+   * @param {number} options.strokeWidth - The stroke width.
+   * @param {string} [options.strokeDasharray] - The stroke dash array for dashed or dotted lines.
+   * @param {string} [options.markerEnd] - The URL of the marker to use at the end.
+   * @returns {SVGPathElement} The created path element.
+   */
+  createPath(pathData, options = {}) {
+    const path = this._createSVGElement('path', {
+      d: pathData,
+      fill: 'none',
+      stroke: options.stroke || 'black',
+      'stroke-width': options.strokeWidth || 2,
+    });
+
+    if (options.strokeDasharray) {
+      path.setAttribute('stroke-dasharray', options.strokeDasharray);
+    }
+
+    if (options.markerEnd) {
+      path.setAttribute('marker-end', options.markerEnd);
+    }
+
+    this.svg.appendChild(path);
+    return path;
+  }
+
+  /**
+   * Creates and appends an SVG group (<g>) to the canvas.
+   * Useful for grouping related SVG elements.
+   * @param {Object} attrs - Attributes for the group.
+   * @returns {SVGGElement} The created group element.
+   */
+  createGroup(attrs = {}) {
+    const group = this._createSVGElement('g', attrs);
+    this.svg.appendChild(group);
+    return group;
+  }
+
+  /**
+   * Clears all elements from the SVG canvas.
+   */
+  clear() {
+    while (this.svg.firstChild) {
+      this.svg.removeChild(this.svg.firstChild);
+    }
+    // Re-initialize <defs>
+    this.defs = this._createSVGElement('defs');
+    this.svg.appendChild(this.defs);
+  }
+}
+
+/**
  * ArrowDrawer is responsible for rendering arrows between DOM elements using SVG.
  */
 class ArrowDrawer {
   /**
-   * Draws an arrow between two DOM elements within the specified SVG container.
-   * Handles both regular and looped arrows based on the distance between elements.
-   * Includes an optional debug mode to visualize control points and handles.
+   * Creates an instance of ArrowDrawer.
+   * @param {SVGCanvas} svgCanvas - An instance of SVGCanvas to handle SVG manipulations.
+   * @param {Object} options - Configuration options for the arrows.
+   * @param {string} options.color - The color of the arrows.
+   * @param {number} options.strokeWidth - The stroke width of the arrows.
+   * @param {number} options.maxCurvature - Maximum curvature for regular arrows.
+   * @param {number} options.minDistance - Minimum distance to decide between regular and looped arrows.
+   * @param {number} options.minLoopCurvature - Minimum curvature for looped arrows.
+   * @param {number} options.maxLoopCurvature - Maximum curvature for looped arrows.
+   */
+  constructor(svgCanvas, options = {}) {
+    if (!svgCanvas) {
+      throw new Error('SVGCanvas instance is required to initialize ArrowDrawer.');
+    }
+
+    this.svgCanvas = svgCanvas;
+    this.color = options.color || 'rgba(98, 0, 238, 0.86)';
+    this.strokeWidth = options.strokeWidth || 2;
+    this.maxCurvature = options.maxCurvature || 100;
+    this.minDistance = options.minDistance || 100;
+    this.minLoopCurvature = options.minLoopCurvature || 80;
+    this.maxLoopCurvature = options.maxLoopCurvature || 160;
+    this.k = 0.3; // Curvature factor
+
+    // Add arrowhead marker
+    this.markerId = 'arrowhead';
+    this.svgCanvas.addMarker(this.markerId, this.color);
+  }
+
+  /**
+   * Draws an arrow between two DOM elements.
    * @param {HTMLElement} fromElem - The starting element.
    * @param {HTMLElement} toElem - The ending element.
-   * @param {SVGSVGElement} svgContainer - The SVG container to append the arrow to.
    * @param {boolean} dashed - Whether the arrow should be dashed.
    * @param {boolean} dotted - Whether the arrow should be dotted.
-   * @param {boolean} debug - Whether to enable debug mode (default: false).
+   * @param {boolean} debug - Whether to enable debug mode.
    * @returns {SVGPathElement} The created SVG path element representing the arrow.
    */
-  static drawArrow(fromElem, toElem, svgContainer, dashed = false, dotted = false, debug = true) {
-    if (!fromElem || !toElem) return;
-
-    const color = 'rgba(98, 0, 238, 0.86)';
-    const k = 0.2; // Curvature scaling factor for regular arrows
-    const maxCurvature = 100; // Maximum curvature in pixels for regular arrows
-    const minDistance = 100; // Minimum distance to draw a regular arrow
-
-    // Define bounds for dynamic loop curvature and slant offset
-    const minLoopCurvature = 80; // Minimum curvature for looped arrows
-    const maxLoopCurvature = 160; // Maximum curvature for looped arrows
-    const minSlantOffset = -20; // Minimum slant offset in pixels for looped arrows
-    const maxSlantOffset = 0; // Maximum slant offset in pixels for looped arrows
-
+  drawArrow(fromElem, toElem, dashed = false, dotted = false, debug = false) {
+    console.assert(fromElem, 'fromElem is required');
+    console.assert(toElem, 'toElem is required');
     // Define primary anchor points
     const primaryAnchors = ['top', 'bottom', 'left', 'right'];
 
@@ -60,26 +202,11 @@ class ArrowDrawer {
       }
     };
 
-    // Get bounding rectangles
-    const fromRect = fromElem.getBoundingClientRect();
-    const toRect = toElem.getBoundingClientRect();
-    const containerRect = svgContainer.getBoundingClientRect();
-
-    // Calculate centers
-    const fromCenterX = (fromRect.left + fromRect.right) / 2;
-    const fromCenterY = (fromRect.top + fromRect.bottom) / 2;
-    const toCenterX = (toRect.left + toRect.right) / 2;
-    const toCenterY = (toRect.top + toRect.bottom) / 2;
-
-    // Calculate deltas
-    const dx = toCenterX - fromCenterX;
-    const dy = toCenterY - fromCenterY;
-
     /**
-     * Step 1: Choose the From Anchor based on the relative position of toElem.
-     * @param {number} dx 
-     * @param {number} dy 
-     * @returns {string} Selected from anchor.
+     * Selects the appropriate anchor for the "from" element based on the direction.
+     * @param {number} dx - Difference in x-coordinates.
+     * @param {number} dy - Difference in y-coordinates.
+     * @returns {string} The selected from anchor.
      */
     const chooseFromAnchor = (dx, dy) => {
       if (Math.abs(dx) > Math.abs(dy)) {
@@ -92,12 +219,12 @@ class ArrowDrawer {
     };
 
     /**
-     * Step 2: Choose the To Anchor based on the direction vector and normal vectors.
-     * @param {string} fromAnchorName - The name of the from anchor ('top', 'bottom', 'left', 'right').
-     * @param {{x: number, y: number}} fromAnchorPos - The position of the from anchor.
-     * @param {DOMRect} toRect - The bounding rectangle of the to element.
-     * @param {DOMRect} containerRect - The bounding rectangle of the SVG container.
-     * @returns {string} Selected to anchor.
+     * Selects the appropriate anchor for the "to" element based on the direction.
+     * @param {string} fromAnchorName - The selected from anchor.
+     * @param {{x: number, y: number}} fromAnchorPos - Position of the from anchor.
+     * @param {DOMRect} toRect - Bounding rectangle of the to element.
+     * @param {DOMRect} containerRect - Bounding rectangle of the SVG container.
+     * @returns {string} The selected to anchor.
      */
     const chooseToAnchor = (fromAnchorName, fromAnchorPos, toRect, containerRect) => {
       const aspectRatio = toRect.width / toRect.height;
@@ -141,24 +268,218 @@ class ArrowDrawer {
     };
 
     /**
-     * Step 3: Choose alternative anchors for short arrows to create pleasing loops.
-     * Dynamically selects alternative anchors based on the dominant direction and relative positions.
+     * Chooses alternative anchors for looped arrows based on the dominant direction.
      * @param {string} dominantDirection - 'horizontal' or 'vertical'.
-     * @param {number} dx 
-     * @param {number} dy 
-     * @returns {{ from: string, to: string }} Selected anchors.
+     * @param {number} dx - Difference in x-coordinates.
+     * @param {number} dy - Difference in y-coordinates.
+     * @returns {{ from: string, to: string }} Selected alternative anchors.
      */
     const chooseAlternativeAnchors = (dominantDirection, dx, dy) => {
       if (dominantDirection === 'horizontal') {
-        // For horizontal dominance, determine if toElem is to the right or left
         return dx > 0 ? { from: 'top', to: 'top' } : { from: 'bottom', to: 'bottom' };
       } else {
-        // For vertical dominance, determine if toElem is below or above
         return dy > 0 ? { from: 'left', to: 'left' } : { from: 'right', to: 'right' };
       }
     };
 
-    // Execute the two-step anchor selection
+    /**
+     * Computes the path data for a regular arrow using a single quadratic Bézier curve.
+     * @param {{x: number, y: number}} from - Starting point.
+     * @param {{x: number, y: number}} to - Ending point.
+     * @param {string} fromAnchorName - Name of the from anchor.
+     * @returns {{ pathData: string, controlPoint: {x: number, y: number} }} Path data and control point.
+     */
+    const computeRegularPath = (from, to, fromAnchorName) => {
+      let controlX, controlY;
+      const distance = Math.hypot(to.x - from.x, to.y - from.y);
+      let curvature = this.k * distance;
+      curvature = Math.min(curvature, this.maxCurvature); // Cap curvature
+
+      if (fromAnchorName === 'left' || fromAnchorName === 'right') {
+        // Horizontal connection: control point offset vertically
+        controlX = (from.x + to.x) / 2;
+        controlY = (from.y + to.y) / 2 + (fromAnchorName === 'left' ? curvature : -curvature);
+      } else {
+        // Vertical connection: control point offset horizontally
+        controlX = (from.x + to.x) / 2 + (fromAnchorName === 'top' ? curvature : -curvature);
+        controlY = (from.y + to.y) / 2;
+      }
+
+      const pathData = `M${from.x} ${from.y} Q${controlX} ${controlY} ${to.x} ${to.y}`;
+      const controlPoint = { x: controlX, y: controlY };
+
+      return { pathData, controlPoint };
+    };
+
+    /**
+     * Computes the path data for a looped arrow using two quadratic Bézier curves.
+     * @param {{x: number, y: number}} from - Starting anchor point.
+     * @param {{x: number, y: number}} to - Ending anchor point.
+     * @param {string} dominantDirection - 'horizontal' or 'vertical'.
+     * @returns {{ pathData: string, controlPoints: Array<{x: number, y: number}>, midPoint: {x: number, y: number} }} Path data, control points, and midpoint.
+     */
+    const computeLoopedPath = (from, to, dominantDirection) => {
+      // Calculate proportional values for loopCurvature based on distance
+      const distance = Math.hypot(to.x - from.x, to.y - from.y);
+      const curvatureRatio = distance / this.minDistance; // Ranges from 0 to 1
+      const currentLoopCurvature = this.minLoopCurvature + curvatureRatio * (this.maxLoopCurvature - this.minLoopCurvature);
+
+      let control1X, control1Y, control2X, control2Y, midPoint;
+
+      if (dominantDirection === 'horizontal') {
+        // Shift control points upwards or downwards based on anchor
+        if (from.anchor === 'top') {
+          // Upwards loop
+          control1X = from.x;
+          control1Y = from.y - currentLoopCurvature;
+          control2X = to.x;
+          control2Y = to.y - currentLoopCurvature;
+          midPoint = { x: (from.x + to.x) / 2, y: (from.y + to.y) / 2 - currentLoopCurvature };
+        } else {
+          // Downwards loop
+          control1X = from.x;
+          control1Y = from.y + currentLoopCurvature;
+          control2X = to.x;
+          control2Y = to.y + currentLoopCurvature;
+          midPoint = { x: (from.x + to.x) / 2, y: (from.y + to.y) / 2 + currentLoopCurvature };
+        }
+      } else {
+        // Vertical dominance: Shift control points left or right
+        if (from.anchor === 'left') {
+          // Leftwards loop
+          control1X = from.x - currentLoopCurvature;
+          control1Y = from.y;
+          control2X = to.x - currentLoopCurvature;
+          control2Y = to.y;
+          midPoint = { x: (from.x + to.x) / 2 - currentLoopCurvature, y: (from.y + to.y) / 2 };
+        } else {
+          // Rightwards loop
+          control1X = from.x + currentLoopCurvature;
+          control1Y = from.y;
+          control2X = to.x + currentLoopCurvature;
+          control2Y = to.y;
+          midPoint = { x: (from.x + to.x) / 2 + currentLoopCurvature, y: (from.y + to.y) / 2 };
+        }
+      }
+
+      // Define two quadratic Bézier segments
+      const pathData = `
+        M${from.x} ${from.y}
+        Q${control1X} ${control1Y}, ${midPoint.x} ${midPoint.y}
+        Q${control2X} ${control2Y}, ${to.x} ${to.y}
+      `;
+
+      const controlPoints = [
+        { x: control1X, y: control1Y },
+        { x: control2X, y: control2Y }
+      ];
+
+      return { pathData, controlPoints, midPoint };
+    };
+
+    /**
+     * Draws debug lines and circles to visualize control points and handles.
+     * @param {SVGPathElement} path - The SVG path element representing the arrow.
+     * @param {boolean} isLoop - Whether the arrow is looped.
+     * @param {Object} points - Contains control points and midPoint if looped.
+     * @param {{x: number, y: number}} from - Starting point.
+     * @param {{x: number, y: number}} to - Ending point.
+     */
+    const drawDebugElements = (path, isLoop, points, from, to) => {
+      const debugGroup = this.svgCanvas.createGroup({
+        class: 'debug-group',
+        stroke: 'red',
+        'stroke-width': '1',
+        'stroke-dasharray': '4,2',
+        fill: 'blue',
+      });
+
+      if (isLoop && points.controlPoints && points.midPoint) {
+        const [control1, control2] = points.controlPoints;
+        const { midPoint } = points;
+
+        // Draw lines between points
+        const lines = [
+          { x1: from.x, y1: from.y, x2: control1.x, y2: control1.y },
+          { x1: control1.x, y1: control1.y, x2: midPoint.x, y2: midPoint.y },
+          { x1: midPoint.x, y1: midPoint.y, x2: control2.x, y2: control2.y },
+          { x1: control2.x, y1: control2.y, x2: to.x, y2: to.y }
+        ];
+
+        lines.forEach(lineData => {
+          const line = this.svgCanvas._createSVGElement('line', {
+            x1: lineData.x1,
+            y1: lineData.y1,
+            x2: lineData.x2,
+            y2: lineData.y2,
+            stroke: 'red',
+            'stroke-width': '1',
+            'stroke-dasharray': '4,2',
+          });
+          debugGroup.appendChild(line);
+        });
+
+        // Draw control points and midpoint
+        [control1, control2, midPoint].forEach(point => {
+          const circle = this.svgCanvas._createSVGElement('circle', {
+            cx: point.x,
+            cy: point.y,
+            r: 3,
+            fill: 'blue',
+          });
+          debugGroup.appendChild(circle);
+        });
+      } else if (!isLoop && points.controlPoint) {
+        const { controlPoint } = points;
+
+        // Draw lines between points
+        const lines = [
+          { x1: from.x, y1: from.y, x2: controlPoint.x, y2: controlPoint.y },
+          { x1: controlPoint.x, y1: controlPoint.y, x2: to.x, y2: to.y }
+        ];
+
+        lines.forEach(lineData => {
+          const line = this.svgCanvas._createSVGElement('line', {
+            x1: lineData.x1,
+            y1: lineData.y1,
+            x2: lineData.x2,
+            y2: lineData.y2,
+            stroke: 'red',
+            'stroke-width': '1',
+            'stroke-dasharray': '4,2',
+          });
+          debugGroup.appendChild(line);
+        });
+
+        // Draw control point
+        const circle = this.svgCanvas._createSVGElement('circle', {
+          cx: controlPoint.x,
+          cy: controlPoint.y,
+          r: 3,
+          fill: 'blue',
+        });
+        debugGroup.appendChild(circle);
+      }
+
+      this.svgCanvas.svg.appendChild(debugGroup);
+    };
+
+    // Get bounding rectangles
+    const fromRect = fromElem.getBoundingClientRect();
+    const toRect = toElem.getBoundingClientRect();
+    const containerRect = this.svgCanvas.svg.getBoundingClientRect();
+
+    // Calculate centers
+    const fromCenterX = (fromRect.left + fromRect.right) / 2;
+    const fromCenterY = (fromRect.top + fromRect.bottom) / 2;
+    const toCenterX = (toRect.left + toRect.right) / 2;
+    const toCenterY = (toRect.top + toRect.bottom) / 2;
+
+    // Calculate deltas
+    const dx = toCenterX - fromCenterX;
+    const dy = toCenterY - fromCenterY;
+
+    // Anchor selection
     const fromAnchorName = chooseFromAnchor(dx, dy);
     const fromAnchor = getAnchorPoint(fromRect, fromAnchorName, containerRect);
     const toAnchorName = chooseToAnchor(fromAnchorName, fromAnchor, toRect, containerRect);
@@ -167,231 +488,62 @@ class ArrowDrawer {
     // Calculate distance between points
     const distance = Math.hypot(toAnchor.x - fromAnchor.x, toAnchor.y - fromAnchor.y);
 
-    // Initialize path data
+    // Determine if the arrow should be looped
+    const isLoop = distance < this.minDistance;
+
+    // Initialize path data and control points
     let pathData = '';
-    let isLoop = false;
+    let controlPoints = null;
+    let midPoint = null;
 
-    // Variables to store control points for debug mode
-    let controlPoint1 = null;
-    let controlPoint2 = null;
-    let startAnchor = fromAnchor;
-    let endAnchor = toAnchor;
-
-    if (distance < minDistance) {
-      // Handle short arrows by creating a loop
-      isLoop = true;
-
-      // Determine the dominant direction
+    if (isLoop) {
+      // Handle looped arrows using two quadratic Bézier curves
       const dominantDirection = Math.abs(dx) > Math.abs(dy) ? 'horizontal' : 'vertical';
-
-      // Choose alternative anchors based on dominant direction and relative positions
       const altAnchors = chooseAlternativeAnchors(dominantDirection, dx, dy);
       const altFromAnchor = getAnchorPoint(fromRect, altAnchors.from, containerRect);
       const altToAnchor = getAnchorPoint(toRect, altAnchors.to, containerRect);
 
-      // Calculate proportional values for loopCurvature and slantOffset based on distance
-      // Closer distance -> smaller curvature and slant
-      // Farther distance (but < minDistance) -> larger curvature and slant
-      const curvatureRatio = distance / minDistance; // Ranges from 0 to 1
-      const currentLoopCurvature = minLoopCurvature + curvatureRatio * (maxLoopCurvature - minLoopCurvature);
-      const currentSlantOffset = minSlantOffset + curvatureRatio * (maxSlantOffset - minSlantOffset);
+      const { pathData: loopPathData, controlPoints: loopControlPoints, midPoint: loopMidPoint } = computeLoopedPath(
+        altFromAnchor,
+        altToAnchor,
+        dominantDirection
+      );
 
-      // Determine direction to offset control points based on alternative anchors
-      let control1X, control1Y, control2X, control2Y;
-
-      if (dominantDirection === 'horizontal') {
-        // For horizontal dominance, use top or bottom anchors
-        if (altAnchors.from === 'top') {
-          // Shift control points further upwards
-          control1X = altFromAnchor.x + currentSlantOffset; // Slight right shift
-          control1Y = altFromAnchor.y - currentLoopCurvature - currentSlantOffset; // More upwards
-          control2X = altToAnchor.x - currentSlantOffset; // Slight left shift
-          control2Y = altToAnchor.y - currentLoopCurvature - currentSlantOffset; // More upwards
-        } else {
-          // Shift control points further downwards
-          control1X = altFromAnchor.x + currentSlantOffset; // Slight right shift
-          control1Y = altFromAnchor.y + currentLoopCurvature + currentSlantOffset; // More downwards
-          control2X = altToAnchor.x - currentSlantOffset; // Slight left shift
-          control2Y = altToAnchor.y + currentLoopCurvature + currentSlantOffset; // More downwards
-        }
-
-        pathData = `M${altFromAnchor.x} ${altFromAnchor.y} C${control1X} ${control1Y}, ${control2X} ${control2Y}, ${altToAnchor.x} ${altToAnchor.y}`;
-
-      } else {
-        // For vertical dominance, use left or right anchors
-        if (altAnchors.from === 'left') {
-          // Shift control points further leftwards
-          control1X = altFromAnchor.x - currentLoopCurvature - currentSlantOffset; // More left
-          control1Y = altFromAnchor.y + currentSlantOffset; // Slight downward shift
-          control2X = altToAnchor.x - currentLoopCurvature - currentSlantOffset; // More left
-          control2Y = altToAnchor.y - currentSlantOffset; // Slight upward shift
-        } else {
-          // Shift control points further rightwards
-          control1X = altFromAnchor.x + currentLoopCurvature + currentSlantOffset; // More right
-          control1Y = altFromAnchor.y + currentSlantOffset; // Slight downward shift
-          control2X = altToAnchor.x + currentLoopCurvature + currentSlantOffset; // More right
-          control2Y = altToAnchor.y - currentSlantOffset; // Slight upward shift
-        }
-
-        pathData = `M${altFromAnchor.x} ${altFromAnchor.y} C${control1X} ${control1Y}, ${control2X} ${control2Y}, ${altToAnchor.x} ${altToAnchor.y}`;
-      }
-
-      // Store control points for debug
-      controlPoint1 = { x: control1X, y: control1Y };
-      controlPoint2 = { x: control2X, y: control2Y };
-      startAnchor = altFromAnchor;
-      endAnchor = altToAnchor;
+      pathData = loopPathData;
+      controlPoints = loopControlPoints;
+      midPoint = loopMidPoint;
     } else {
-      // Handle regular arrows
-      // Calculate curvature
-      let curvature = k * distance;
-      curvature = Math.min(curvature, maxCurvature); // Cap curvature
-
-      // Determine the direction of the curvature based on anchor positions
-      let controlX, controlY;
-      if (fromAnchorName === 'left' || fromAnchorName === 'right') {
-        // Horizontal connection: control point offset vertically
-        controlX = (fromAnchor.x + toAnchor.x) / 2;
-        controlY = (fromAnchor.y + toAnchor.y) / 2 + (fromAnchorName === 'left' ? curvature : -curvature);
-      } else {
-        // Vertical connection: control point offset horizontally
-        controlX = (fromAnchor.x + toAnchor.x) / 2 + (fromAnchorName === 'top' ? curvature : -curvature);
-        controlY = (fromAnchor.y + toAnchor.y) / 2;
-      }
-
-      pathData = `M${fromAnchor.x} ${fromAnchor.y} Q${controlX} ${controlY} ${toAnchor.x} ${toAnchor.y}`;
-
-      // Store control point for debug
-      controlPoint1 = { x: controlX, y: controlY };
+      // Handle regular arrows using a single quadratic Bézier curve
+      const { pathData: regularPathData, controlPoint } = computeRegularPath(fromAnchor, toAnchor, fromAnchorName);
+      pathData = regularPathData;
+      controlPoints = { controlPoint };
     }
 
-    // Create arrow marker if it doesn't exist
-    if (!svgContainer.querySelector('defs')) {
-      const defs = document.createElementNS('http://www.w3.org/2000/svg', 'defs');
-      const marker = document.createElementNS('http://www.w3.org/2000/svg', 'marker');
-      marker.setAttribute('id', 'arrowhead');
-      marker.setAttribute('markerWidth', '10');
-      marker.setAttribute('markerHeight', '7');
-      marker.setAttribute('refX', '10');
-      marker.setAttribute('refY', '3.5');
-      marker.setAttribute('orient', 'auto');
-      marker.setAttribute('markerUnits', 'strokeWidth');
+    // Create the styled SVG path
+    const arrowPath = this.svgCanvas.createPath(pathData, {
+      stroke: this.color,
+      strokeWidth: this.strokeWidth,
+      strokeDasharray: dotted ? '2,4' : dashed ? '8,4' : undefined,
+      markerEnd: `url(#${this.markerId})`,
+    });
 
-      const polygon = document.createElementNS('http://www.w3.org/2000/svg', 'polygon');
-      polygon.setAttribute('points', '0 0, 10 3.5, 0 7');
-      polygon.setAttribute('fill', color); // Arrow color
-
-      marker.appendChild(polygon);
-      defs.appendChild(marker);
-      svgContainer.appendChild(defs);
-    }
-
-    // Create the SVG path element
-    const path = document.createElementNS('http://www.w3.org/2000/svg', 'path');
-    path.setAttribute('d', pathData);
-    path.setAttribute('fill', 'none');
-    path.setAttribute('stroke', color); // Arrow color
-
-    // Apply stroke styles
-    if (dashed) {
-      path.setAttribute('stroke-dasharray', '8,4');
-    }
-    if (dotted) {
-      path.setAttribute('stroke-dasharray', '2,4');
-    }
-
-    path.setAttribute('stroke-width', '2');
-    path.setAttribute('marker-end', 'url(#arrowhead)');
-
-    // Optional: Add a class or data attribute to identify looped arrows
+    // Optionally, add a class to looped arrows
     if (isLoop) {
-      path.classList.add('looped-arrow');
+      arrowPath.classList.add('looped-arrow');
     }
-
-    // Append the arrow path to the SVG container
-    svgContainer.appendChild(path);
 
     // If debug mode is enabled, draw control points and handles
     if (debug) {
-      const debugGroup = document.createElementNS('http://www.w3.org/2000/svg', 'g');
-      debugGroup.setAttribute('class', 'debug-group');
-      debugGroup.setAttribute('stroke', 'red');
-      debugGroup.setAttribute('stroke-width', '1');
-      debugGroup.setAttribute('stroke-dasharray', '4,2');
-      debugGroup.setAttribute('fill', 'blue');
-
-      if (isLoop) {
-        // For looped arrows, there are two control points
-        if (controlPoint1 && controlPoint2) {
-          // Draw lines from startAnchor to control1
-          const line1 = document.createElementNS('http://www.w3.org/2000/svg', 'line');
-          line1.setAttribute('x1', startAnchor.x);
-          line1.setAttribute('y1', startAnchor.y);
-          line1.setAttribute('x2', controlPoint1.x);
-          line1.setAttribute('y2', controlPoint1.y);
-          debugGroup.appendChild(line1);
-
-          // Draw lines between control1 and control2
-          const line2 = document.createElementNS('http://www.w3.org/2000/svg', 'line');
-          line2.setAttribute('x1', controlPoint1.x);
-          line2.setAttribute('y1', controlPoint1.y);
-          line2.setAttribute('x2', controlPoint2.x);
-          line2.setAttribute('y2', controlPoint2.y);
-          debugGroup.appendChild(line2);
-
-          // Draw lines from control2 to endAnchor
-          const line3 = document.createElementNS('http://www.w3.org/2000/svg', 'line');
-          line3.setAttribute('x1', controlPoint2.x);
-          line3.setAttribute('y1', controlPoint2.y);
-          line3.setAttribute('x2', endAnchor.x);
-          line3.setAttribute('y2', endAnchor.y);
-          debugGroup.appendChild(line3);
-
-          // Draw control points as circles
-          const circle1 = document.createElementNS('http://www.w3.org/2000/svg', 'circle');
-          circle1.setAttribute('cx', controlPoint1.x);
-          circle1.setAttribute('cy', controlPoint1.y);
-          circle1.setAttribute('r', 3);
-          debugGroup.appendChild(circle1);
-
-          const circle2 = document.createElementNS('http://www.w3.org/2000/svg', 'circle');
-          circle2.setAttribute('cx', controlPoint2.x);
-          circle2.setAttribute('cy', controlPoint2.y);
-          circle2.setAttribute('r', 3);
-          debugGroup.appendChild(circle2);
-        }
-      } else {
-        // For regular arrows, there is one control point
-        if (controlPoint1) {
-          // Draw line from startAnchor to control point
-          const line1 = document.createElementNS('http://www.w3.org/2000/svg', 'line');
-          line1.setAttribute('x1', startAnchor.x);
-          line1.setAttribute('y1', startAnchor.y);
-          line1.setAttribute('x2', controlPoint1.x);
-          line1.setAttribute('y2', controlPoint1.y);
-          debugGroup.appendChild(line1);
-
-          // Draw line from control point to endAnchor
-          const line2 = document.createElementNS('http://www.w3.org/2000/svg', 'line');
-          line2.setAttribute('x1', controlPoint1.x);
-          line2.setAttribute('y1', controlPoint1.y);
-          line2.setAttribute('x2', endAnchor.x);
-          line2.setAttribute('y2', endAnchor.y);
-          debugGroup.appendChild(line2);
-
-          // Draw control point as a circle
-          const circle = document.createElementNS('http://www.w3.org/2000/svg', 'circle');
-          circle.setAttribute('cx', controlPoint1.x);
-          circle.setAttribute('cy', controlPoint1.y);
-          circle.setAttribute('r', 3);
-          debugGroup.appendChild(circle);
-        }
-      }
-
-      // Append the debug group to the SVG container
-      svgContainer.appendChild(debugGroup);
+      const points = isLoop ? { controlPoints, midPoint } : { controlPoint: controlPoints.controlPoint };
+      drawDebugElements(arrowPath, isLoop, points, fromAnchor, toAnchor);
     }
 
-    return path;
+    return arrowPath;
+  }
+
+  clearArrows() {
+    this.svgCanvas.svg.querySelectorAll('path').forEach(path => {
+      path.remove();
+    });
   }
 }

@@ -199,6 +199,15 @@ class InspectorUI {
     this.hoverNodeDisabledUntilPointerMove = false;
 
     this.svgContainer = document.getElementById('arrow-container');
+    this.svgCanvas = new SVGCanvas(this.svgContainer);
+    this.arrowDrawer = new ArrowDrawer(this.svgCanvas, {
+      color: 'rgba(98, 0, 238, 0.86)',
+      strokeWidth: 2,
+      maxCurvature: 100,
+      minDistance: 100,
+      minLoopCurvature: 80,
+      maxLoopCurvature: 160,
+    });
     this.sourceCodeContainer = document.getElementById('source-code');
     this.inspectorElement = document.querySelector('.inspector-section');
     this.arrowConfigElement = document.getElementById('arrow-config');
@@ -377,7 +386,7 @@ class InspectorUI {
   generateNodeTypeHTML(node) {
     let parts = [];
     parts.push(`<div class="node-type-icons">`);
-    if (node.is_buffer === true) {
+    if (node.is_buffer === "1") {
       parts.push(`<span class="node-type is-buffer" title="is_buffer">B</span>`);
     }
     if (node.debug_info?.original_size_info_available === true) {
@@ -386,10 +395,10 @@ class InspectorUI {
     if (node.visited) {
       parts.push(`<span class="node-type" title="visited">V</span>`);
     }
-    if (node.is_deref_node === true) {
+    if (node.is_deref_node === "1") {
       parts.push(`<span class="node-type" title="is_deref_node">DR</span>`);
     }
-    if (node.is_data_change === true) {
+    if (node.is_data_change === "1") {
       parts.push(`<span class="node-type" title="is_data_change">DC</span>`);
     }
     parts.push(`</div>`);
@@ -578,7 +587,7 @@ class InspectorUI {
    * Updates the arrows in the SVG container based on the current arrow configuration and selected node.
    */
   updateArrows() {
-    this.svgContainer.innerHTML = "";
+    this.arrowDrawer.clearArrows();
 
     if (this.arrowConfig === "") return;
 
@@ -594,7 +603,7 @@ class InspectorUI {
       const fromElem = this.sourceCodeContainer.querySelector(`.replacement[data-node-id="${link.source}"]`);
       const toElem = this.sourceCodeContainer.querySelector(`.replacement[data-node-id="${link.target}"]`);
       let sourceNode = nodeMap[link.source];
-      ArrowDrawer.drawArrow(fromElem, toElem, this.svgContainer, sourceNode?.is_deref_node === true, false, window.debug);
+      this.arrowDrawer.drawArrow(fromElem, toElem, sourceNode?.is_deref_node === true, false, window.debug);
     });
 
     this.graphData.nodes.forEach(node => {
