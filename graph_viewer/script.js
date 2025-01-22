@@ -389,7 +389,7 @@ class InspectorUI {
     if (node.is_buffer === "1") {
       parts.push(`<span class="node-type is-buffer" title="is_buffer">B</span>`);
     }
-    if (node.debug_info?.original_size_info_available === true) {
+    if (node.debug_info?.original_size_info_available === "1") {
       parts.push(`<span class="node-type" title="original_size_info_available">S</span>`);
     }
     if (node.visited) {
