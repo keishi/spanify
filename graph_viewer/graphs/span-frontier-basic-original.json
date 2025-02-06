@@ -1,0 +1,88 @@
+{
+    "nodes": [
+        {
+            "id": 0,
+            "replacement": "r:::tools/clang/spanify/tests/span-frontier-basic-original.cc:::939:::5:::base::span<int>",
+            "size_info_available": true,
+            "visited": true,
+            "debug_info": {
+                "rewrite_applied": true,
+                "original_is_buffer": false,
+                "original_size_info_available": null
+            }
+        },
+        {
+            "id": 1,
+            "replacement": "r:::tools/clang/spanify/tests/span-frontier-basic-original.cc:::961:::7:::",
+            "size_info_available": true,
+            "visited": true,
+            "debug_info": {
+                "rewrite_applied": true,
+                "original_is_buffer": false,
+                "original_size_info_available": null
+            }
+        },
+        {
+            "id": 2,
+            "replacement": "r:::tools/clang/spanify/tests/span-frontier-basic-original.cc:::972:::5:::base::span<int>",
+            "size_info_available": true,
+            "visited": true,
+            "debug_info": {
+                "rewrite_applied": true,
+                "original_is_buffer": false,
+                "original_size_info_available": null
+            }
+        },
+        {
+            "id": 3,
+            "replacement": "r:::tools/clang/spanify/tests/span-frontier-basic-original.cc:::1048:::5:::base::span<int>",
+            "size_info_available": null,
+            "visited": false,
+            "debug_info": {
+                "rewrite_applied": false,
+                "original_is_buffer": false,
+                "original_size_info_available": null
+            }
+        },
+        {
+            "id": 4,
+            "replacement": "r:::tools/clang/spanify/tests/span-frontier-basic-original.cc:::1119:::5:::base::span<int>",
+            "size_info_available": null,
+            "visited": false,
+            "debug_info": {
+                "rewrite_applied": false,
+                "original_is_buffer": false,
+                "original_size_info_available": null
+            }
+        }
+    ],
+    "links": [
+        {
+            "source": 0,
+            "target": 1
+        },
+        {
+            "source": 2,
+            "target": 0
+        },
+        {
+            "source": 3,
+            "target": 0
+        },
+        {
+            "source": 4,
+            "target": 3
+        }
+    ],
+    "source": {
+        "content": "// Copyright 2025 The Chromium Authors\n// Use of this source code is governed by a BSD-style license that can be\n// found in the LICENSE file.\n\n#include <vector>\n\n// Test the frontier change are applied correctly. Below, there are 3 kinds of\n// frontiers, but only 1 of them is spanified.\n//        \u250c\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2510\n//        \u2502spanified_2       \u2502\n//        \u2514\u25b2\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u25b2\u2518\n// \u250c\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2534\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2510\u250c\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2534\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2510\n// \u2502not_spanified_2\u2502\u2502spanified_1 (*)\u2502 (* = buffer usage)\n// \u2514\u25b2\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2518\u2514\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2518\n// \u250c\u2534\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2510\n// \u2502not_spanified_1\u2502\n// \u2514\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2518\nvoid test_frontier_basic() {\n  std::vector<int> buf(5, 5);\n  int* spanified_2 = buf.data();\n  int* spanified_1 = spanified_2;          // Expect: frontier not applied.\n  int* not_spanified_2 = spanified_2;      // Expect: frontier applied\n  int* not_spanified_1 = not_spanified_2;  // Expect: frontier not applied.\n  spanified_1[0] = 0;\n}\n",
+        "file_path": "tools/clang/spanify/tests/span-frontier-basic-original.cc",
+        "rev": "733eff2098bf2f25b1cf0c182a3ee8beda9ef880"
+    },
+    "sources": [
+        {
+            "content": null,
+            "file_path": "tools/clang/spanify/tests/span-frontier-basic-original.cc"
+        }
+    ]
+}

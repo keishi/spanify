@@ -1,0 +1,147 @@
+{
+    "nodes": [
+        {
+            "id": 0,
+            "replacement": "r:::tools/clang/spanify/tests/safe-access-original.cc:::444:::5:::base::span<int>",
+            "size_info_available": true,
+            "visited": true,
+            "debug_info": {
+                "rewrite_applied": true,
+                "original_is_buffer": false,
+                "original_size_info_available": null
+            }
+        },
+        {
+            "id": 1,
+            "replacement": "r:::tools/clang/spanify/tests/safe-access-original.cc:::455:::0:::<empty>",
+            "size_info_available": true,
+            "visited": true,
+            "debug_info": {
+                "rewrite_applied": true,
+                "original_is_buffer": false,
+                "original_size_info_available": null
+            }
+        },
+        {
+            "id": 2,
+            "replacement": "r:::tools/clang/spanify/tests/safe-access-original.cc:::525:::14:::std::array<int, 10> buffer",
+            "size_info_available": true,
+            "visited": true,
+            "debug_info": {
+                "rewrite_applied": true,
+                "original_is_buffer": false,
+                "original_size_info_available": null
+            }
+        },
+        {
+            "id": 3,
+            "replacement": "r:::tools/clang/spanify/tests/safe-access-original.cc:::525:::0:::",
+            "size_info_available": null,
+            "visited": true,
+            "debug_info": {
+                "rewrite_applied": true,
+                "original_is_buffer": false,
+                "original_size_info_available": null
+            }
+        },
+        {
+            "id": 4,
+            "replacement": "r:::tools/clang/spanify/tests/safe-access-original.cc:::892:::5:::base::span<int>",
+            "size_info_available": true,
+            "visited": true,
+            "debug_info": {
+                "rewrite_applied": true,
+                "original_is_buffer": false,
+                "original_size_info_available": null
+            }
+        },
+        {
+            "id": 5,
+            "replacement": "r:::tools/clang/spanify/tests/safe-access-original.cc:::903:::0:::<empty>",
+            "size_info_available": true,
+            "visited": true,
+            "debug_info": {
+                "rewrite_applied": true,
+                "original_is_buffer": false,
+                "original_size_info_available": null
+            }
+        },
+        {
+            "id": 6,
+            "replacement": "r:::tools/clang/spanify/tests/safe-access-original.cc:::977:::14:::std::array<int, 10> buffer",
+            "size_info_available": true,
+            "visited": true,
+            "debug_info": {
+                "rewrite_applied": true,
+                "original_is_buffer": false,
+                "original_size_info_available": null
+            }
+        },
+        {
+            "id": 7,
+            "replacement": "r:::tools/clang/spanify/tests/safe-access-original.cc:::977:::0:::",
+            "size_info_available": null,
+            "visited": true,
+            "debug_info": {
+                "rewrite_applied": true,
+                "original_is_buffer": false,
+                "original_size_info_available": null
+            }
+        },
+        {
+            "id": 8,
+            "replacement": "r:::tools/clang/spanify/tests/safe-access-original.cc:::1321:::5:::base::span<int>",
+            "size_info_available": true,
+            "visited": true,
+            "debug_info": {
+                "rewrite_applied": true,
+                "original_is_buffer": false,
+                "original_size_info_available": null
+            }
+        },
+        {
+            "id": 9,
+            "replacement": "r:::tools/clang/spanify/tests/safe-access-original.cc:::1332:::0:::<empty>",
+            "size_info_available": true,
+            "visited": true,
+            "debug_info": {
+                "rewrite_applied": true,
+                "original_is_buffer": false,
+                "original_size_info_available": null
+            }
+        }
+    ],
+    "links": [
+        {
+            "source": 0,
+            "target": 1
+        },
+        {
+            "source": 2,
+            "target": 3
+        },
+        {
+            "source": 4,
+            "target": 5
+        },
+        {
+            "source": 6,
+            "target": 7
+        },
+        {
+            "source": 8,
+            "target": 9
+        }
+    ],
+    "source": {
+        "content": "// Copyright 2025 The Chromium Authors\n// Use of this source code is governed by a BSD-style license that can be\n// found in the LICENSE file.\n\nvoid test_safe_array_access_basic() {\n  int buffer[10];  // Expect no rewrite, because 0 < 10.\n  buffer[0] = 0;\n}\n\nvoid test_safe_array_access_basic_pointer() {\n  int buffer[10];\n  // Here, the plugin fails to detect the access to be safe.\n  // Expected rewrite:\n  // base::span<int> ptr = buffer;\n  int* ptr = buffer;\n  ptr[0] = 0;\n}\n\nvoid test_safe_array_access_computed_1() {\n  int buffer[10];  // Expect no rewrite, because 5 + 4 < 10.\n  int a = 5;\n  int b = 4;\n  int index = a + b;\n  buffer[index] = 0;\n}\n\nvoid test_safe_array_access_computed_1_pointer() {\n  int buffer[10];\n  int a = 5;\n  int b = 4;\n  int index = a + b;\n  // Here, the plugin fails to detect the access to be safe.\n  // Expected rewrite:\n  // base::span<int> ptr = buffer;\n  int* ptr = buffer;\n  ptr[index] = 0;\n}\n\nvoid test_safe_array_access_computed_2() {\n  int buffer[10];  // Expect no rewrite, because 109 % 10 < 10.\n  int index = 109;\n  index %= 10;\n  buffer[index] = 0;\n}\n\nvoid test_safe_array_access_computed_2_pointer() {\n  int buffer[10];\n  int index = 109;\n  index %= 10;\n  // Here, the plugin fails to detect the access to be safe.\n  // Expected rewrite:\n  // base::span<int> ptr = buffer;\n  int* ptr = buffer;\n  ptr[index] = 0;\n}\n",
+        "file_path": "tools/clang/spanify/tests/safe-access-original.cc",
+        "rev": "733eff2098bf2f25b1cf0c182a3ee8beda9ef880"
+    },
+    "sources": [
+        {
+            "content": null,
+            "file_path": "tools/clang/spanify/tests/safe-access-original.cc"
+        }
+    ]
+}

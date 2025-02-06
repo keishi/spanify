@@ -2,123 +2,91 @@
     "nodes": [
         {
             "id": 0,
-            "replacement": "r:::/usr/local/google/home/keishi/chromium2/src/tools/clang/spanify/tests/char-array-with-string-literal-original.cc:::292:::16:::const std::string_view buf",
-            "is_buffer": "1",
-            "size_info_available": "1",
-            "is_deref_node": "0",
-            "is_data_change": "0",
+            "replacement": "r:::tools/clang/spanify/tests/char-array-with-string-literal-original.cc:::361:::16:::const std::string_view buf",
+            "size_info_available": true,
             "visited": true,
             "debug_info": {
-                "added_to_component": true,
-                "original_is_buffer": "1",
-                "original_size_info_available": "1"
-            },
-            "data_change_lhs": -1
+                "rewrite_applied": true,
+                "original_is_buffer": false,
+                "original_size_info_available": null
+            }
         },
         {
             "id": 1,
-            "replacement": "r:::/usr/local/google/home/keishi/chromium2/src/tools/clang/spanify/tests/char-array-with-string-literal-original.cc:::292:::0:::",
-            "is_buffer": "0",
-            "size_info_available": "0",
-            "is_deref_node": "0",
-            "is_data_change": "0",
+            "replacement": "r:::tools/clang/spanify/tests/char-array-with-string-literal-original.cc:::361:::0:::",
+            "size_info_available": null,
             "visited": true,
             "debug_info": {
-                "added_to_component": true,
-                "original_is_buffer": "0",
-                "original_size_info_available": "0"
-            },
-            "data_change_lhs": -1
+                "rewrite_applied": true,
+                "original_is_buffer": false,
+                "original_size_info_available": null
+            }
         },
         {
             "id": 2,
-            "replacement": "r:::/usr/local/google/home/keishi/chromium2/src/tools/clang/spanify/tests/char-array-with-string-literal-original.cc:::419:::20:::const std::wstring_view buf2",
-            "is_buffer": "1",
-            "size_info_available": "1",
-            "is_deref_node": "0",
-            "is_data_change": "0",
+            "replacement": "r:::tools/clang/spanify/tests/char-array-with-string-literal-original.cc:::504:::20:::const std::wstring_view buf2",
+            "size_info_available": true,
             "visited": true,
             "debug_info": {
-                "added_to_component": true,
-                "original_is_buffer": "1",
-                "original_size_info_available": "1"
-            },
-            "data_change_lhs": -1
+                "rewrite_applied": true,
+                "original_is_buffer": false,
+                "original_size_info_available": null
+            }
         },
         {
             "id": 3,
-            "replacement": "r:::/usr/local/google/home/keishi/chromium2/src/tools/clang/spanify/tests/char-array-with-string-literal-original.cc:::419:::0:::",
-            "is_buffer": "0",
-            "size_info_available": "0",
-            "is_deref_node": "0",
-            "is_data_change": "0",
+            "replacement": "r:::tools/clang/spanify/tests/char-array-with-string-literal-original.cc:::504:::0:::",
+            "size_info_available": null,
             "visited": true,
             "debug_info": {
-                "added_to_component": true,
-                "original_is_buffer": "0",
-                "original_size_info_available": "0"
-            },
-            "data_change_lhs": -1
+                "rewrite_applied": true,
+                "original_is_buffer": false,
+                "original_size_info_available": null
+            }
         },
         {
             "id": 4,
-            "replacement": "r:::/usr/local/google/home/keishi/chromium2/src/tools/clang/spanify/tests/char-array-with-string-literal-original.cc:::554:::21:::const std::u16string_view buf4",
-            "is_buffer": "1",
-            "size_info_available": "1",
-            "is_deref_node": "0",
-            "is_data_change": "0",
+            "replacement": "r:::tools/clang/spanify/tests/char-array-with-string-literal-original.cc:::655:::21:::const std::u16string_view buf4",
+            "size_info_available": true,
             "visited": true,
             "debug_info": {
-                "added_to_component": true,
-                "original_is_buffer": "1",
-                "original_size_info_available": "1"
-            },
-            "data_change_lhs": -1
+                "rewrite_applied": true,
+                "original_is_buffer": false,
+                "original_size_info_available": null
+            }
         },
         {
             "id": 5,
-            "replacement": "r:::/usr/local/google/home/keishi/chromium2/src/tools/clang/spanify/tests/char-array-with-string-literal-original.cc:::554:::0:::",
-            "is_buffer": "0",
-            "size_info_available": "0",
-            "is_deref_node": "0",
-            "is_data_change": "0",
+            "replacement": "r:::tools/clang/spanify/tests/char-array-with-string-literal-original.cc:::655:::0:::",
+            "size_info_available": null,
             "visited": true,
             "debug_info": {
-                "added_to_component": true,
-                "original_is_buffer": "0",
-                "original_size_info_available": "0"
-            },
-            "data_change_lhs": -1
+                "rewrite_applied": true,
+                "original_is_buffer": false,
+                "original_size_info_available": null
+            }
         },
         {
             "id": 6,
-            "replacement": "r:::/usr/local/google/home/keishi/chromium2/src/tools/clang/spanify/tests/char-array-with-string-literal-original.cc:::690:::21:::const std::u32string_view buf5",
-            "is_buffer": "1",
-            "size_info_available": "1",
-            "is_deref_node": "0",
-            "is_data_change": "0",
+            "replacement": "r:::tools/clang/spanify/tests/char-array-with-string-literal-original.cc:::807:::21:::const std::u32string_view buf5",
+            "size_info_available": true,
             "visited": true,
             "debug_info": {
-                "added_to_component": true,
-                "original_is_buffer": "1",
-                "original_size_info_available": "1"
-            },
-            "data_change_lhs": -1
+                "rewrite_applied": true,
+                "original_is_buffer": false,
+                "original_size_info_available": null
+            }
         },
         {
             "id": 7,
-            "replacement": "r:::/usr/local/google/home/keishi/chromium2/src/tools/clang/spanify/tests/char-array-with-string-literal-original.cc:::690:::0:::",
-            "is_buffer": "0",
-            "size_info_available": "0",
-            "is_deref_node": "0",
-            "is_data_change": "0",
+            "replacement": "r:::tools/clang/spanify/tests/char-array-with-string-literal-original.cc:::807:::0:::",
+            "size_info_available": null,
             "visited": true,
             "debug_info": {
-                "added_to_component": true,
-                "original_is_buffer": "0",
-                "original_size_info_available": "0"
-            },
-            "data_change_lhs": -1
+                "rewrite_applied": true,
+                "original_is_buffer": false,
+                "original_size_info_available": null
+            }
         }
     ],
     "links": [
@@ -140,7 +108,14 @@
         }
     ],
     "source": {
-        "content": "// Copyright 2024 The Chromium Authors\n// Use of this source code is governed by a BSD-style license that can be\n// found in the LICENSE file.\n\n#include <uchar.h>\n#include <wchar.h>\n\nvoid func() {\n  const int index = 0;\n  // Expected rewrite:\n  // const std::string_view buf = \"123456789\";\n  const char buf[] = \"123456789\";\n  (void)buf[index];\n\n  // Expected rewrite:\n  // const std::wstring_view buf = L\"123456789\";\n  const wchar_t buf2[] = L\"123456789\";\n  (void)buf2[index];\n\n  // Expected rewrite:\n  // const std::u16string_view buf = u\"123456789\";\n  const char16_t buf4[] = u\"123456789\";\n  (void)buf4[index];\n\n  // Expected rewrite:\n  // const std::u32string_view buf = U\"123456789\";\n  const char32_t buf5[] = U\"123456789\";\n  (void)buf5[index];\n}\n",
-        "file_path": "/usr/local/google/home/keishi/chromium2/src/tools/clang/spanify/tests/char-array-with-string-literal-original.cc"
-    }
+        "content": "// Copyright 2024 The Chromium Authors\n// Use of this source code is governed by a BSD-style license that can be\n// found in the LICENSE file.\n\n#include <uchar.h>\n#include <wchar.h>\n\n#include <tuple>\n\nint UnsafeIndex();  // This function might return an out-of-bound index.\n\nvoid func() {\n  // Expected rewrite:\n  // const std::string_view buf = \"123456789\";\n  const char buf[] = \"123456789\";\n  std::ignore = buf[UnsafeIndex()];\n\n  // Expected rewrite:\n  // const std::wstring_view buf = L\"123456789\";\n  const wchar_t buf2[] = L\"123456789\";\n  std::ignore = buf2[UnsafeIndex()];\n\n  // Expected rewrite:\n  // const std::u16string_view buf = u\"123456789\";\n  const char16_t buf4[] = u\"123456789\";\n  std::ignore = buf4[UnsafeIndex()];\n\n  // Expected rewrite:\n  // const std::u32string_view buf = U\"123456789\";\n  const char32_t buf5[] = U\"123456789\";\n  std::ignore = buf5[UnsafeIndex()];\n}\n",
+        "file_path": "tools/clang/spanify/tests/char-array-with-string-literal-original.cc",
+        "rev": "733eff2098bf2f25b1cf0c182a3ee8beda9ef880"
+    },
+    "sources": [
+        {
+            "content": null,
+            "file_path": "tools/clang/spanify/tests/char-array-with-string-literal-original.cc"
+        }
+    ]
 }

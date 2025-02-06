@@ -1,0 +1,43 @@
+{
+    "nodes": [
+        {
+            "id": 0,
+            "replacement": "r:::tools/clang/spanify/tests/span-template-original.cc:::426:::3:::base::span<int>",
+            "size_info_available": null,
+            "visited": false,
+            "debug_info": {
+                "rewrite_applied": false,
+                "original_is_buffer": false,
+                "original_size_info_available": null
+            }
+        },
+        {
+            "id": 1,
+            "replacement": "r:::tools/clang/spanify/tests/span-template-original.cc:::506:::0:::<empty>",
+            "size_info_available": true,
+            "visited": false,
+            "debug_info": {
+                "rewrite_applied": false,
+                "original_is_buffer": false,
+                "original_size_info_available": null
+            }
+        }
+    ],
+    "links": [
+        {
+            "source": 0,
+            "target": 1
+        }
+    ],
+    "source": {
+        "content": "// Copyright 2025 The Chromium Authors\n// Use of this source code is governed by a BSD-style license that can be\n// found in the LICENSE file.\n\nint UnsafeIndex();  // Return out of bounds index.\n\n// Regression test. This shouldn't violate assertions.\n// TODO(crbug.com/393402160): This should be spanified but currently is just\n// ignored. Would need to ensure all instantiations have know sizes.\ntemplate <typename T>\nvoid f(T* t) {\n  t[UnsafeIndex()] = 0;\n}\n\nvoid test_with_template() {\n  int a[10];\n  f(a);\n}\n",
+        "file_path": "tools/clang/spanify/tests/span-template-original.cc",
+        "rev": "733eff2098bf2f25b1cf0c182a3ee8beda9ef880"
+    },
+    "sources": [
+        {
+            "content": null,
+            "file_path": "tools/clang/spanify/tests/span-template-original.cc"
+        }
+    ]
+}

@@ -2,273 +2,201 @@
     "nodes": [
         {
             "id": 0,
-            "replacement": "r:::/usr/local/google/home/keishi/chromium2/src/tools/clang/spanify/tests/trailing-comma-original.cc:::1066:::52:::auto a_5 = std::to_array<A, 5>({{1, 2}, {3, 4}, {5, 6}, {7, 8}, {9, 10},})",
-            "is_buffer": "1",
-            "size_info_available": "1",
-            "is_deref_node": "0",
-            "is_data_change": "0",
+            "replacement": "r:::tools/clang/spanify/tests/trailing-comma-original.cc:::346:::11:::std::array<A, 1> a_1 = {",
+            "size_info_available": true,
             "visited": true,
             "debug_info": {
-                "added_to_component": true,
-                "original_is_buffer": "1",
-                "original_size_info_available": "1"
-            },
-            "data_change_lhs": -1
+                "rewrite_applied": true,
+                "original_is_buffer": false,
+                "original_size_info_available": null
+            }
         },
         {
             "id": 1,
-            "replacement": "r:::/usr/local/google/home/keishi/chromium2/src/tools/clang/spanify/tests/trailing-comma-original.cc:::1066:::0:::",
-            "is_buffer": "0",
-            "size_info_available": "0",
-            "is_deref_node": "0",
-            "is_data_change": "0",
+            "replacement": "r:::tools/clang/spanify/tests/trailing-comma-original.cc:::346:::0:::",
+            "size_info_available": null,
             "visited": true,
             "debug_info": {
-                "added_to_component": true,
-                "original_is_buffer": "0",
-                "original_size_info_available": "0"
-            },
-            "data_change_lhs": -1
+                "rewrite_applied": true,
+                "original_is_buffer": false,
+                "original_size_info_available": null
+            }
         },
         {
             "id": 2,
-            "replacement": "r:::/usr/local/google/home/keishi/chromium2/src/tools/clang/spanify/tests/trailing-comma-original.cc:::1353:::97:::auto a_5_long = std::to_array<A, 5>({\u0000      {1, 2}, {3, 4}, aggregate_with_very_very_very_long_name, {7, 8}, {9, 10},})",
-            "is_buffer": "1",
-            "size_info_available": "1",
-            "is_deref_node": "0",
-            "is_data_change": "0",
+            "replacement": "r:::tools/clang/spanify/tests/trailing-comma-original.cc:::477:::11:::std::array<A, 2> a_2 = {",
+            "size_info_available": true,
             "visited": true,
             "debug_info": {
-                "added_to_component": true,
-                "original_is_buffer": "1",
-                "original_size_info_available": "1"
-            },
-            "data_change_lhs": -1
+                "rewrite_applied": true,
+                "original_is_buffer": false,
+                "original_size_info_available": null
+            }
         },
         {
             "id": 3,
-            "replacement": "r:::/usr/local/google/home/keishi/chromium2/src/tools/clang/spanify/tests/trailing-comma-original.cc:::1353:::0:::",
-            "is_buffer": "0",
-            "size_info_available": "0",
-            "is_deref_node": "0",
-            "is_data_change": "0",
+            "replacement": "r:::tools/clang/spanify/tests/trailing-comma-original.cc:::477:::0:::",
+            "size_info_available": null,
             "visited": true,
             "debug_info": {
-                "added_to_component": true,
-                "original_is_buffer": "0",
-                "original_size_info_available": "0"
-            },
-            "data_change_lhs": -1
+                "rewrite_applied": true,
+                "original_is_buffer": false,
+                "original_size_info_available": null
+            }
         },
         {
             "id": 4,
-            "replacement": "r:::/usr/local/google/home/keishi/chromium2/src/tools/clang/spanify/tests/trailing-comma-original.cc:::1671:::62:::auto a_6 = std::to_array<A, 6>({{1, 2}, {3, 4}, {5, 6}, {7, 8}, {9, 10}, {11, 12},})",
-            "is_buffer": "1",
-            "size_info_available": "1",
-            "is_deref_node": "0",
-            "is_data_change": "0",
+            "replacement": "r:::tools/clang/spanify/tests/trailing-comma-original.cc:::719:::16:::std::array<A, 2> a_2_long = ",
+            "size_info_available": true,
             "visited": true,
             "debug_info": {
-                "added_to_component": true,
-                "original_is_buffer": "1",
-                "original_size_info_available": "1"
-            },
-            "data_change_lhs": -1
+                "rewrite_applied": true,
+                "original_is_buffer": false,
+                "original_size_info_available": null
+            }
         },
         {
             "id": 5,
-            "replacement": "r:::/usr/local/google/home/keishi/chromium2/src/tools/clang/spanify/tests/trailing-comma-original.cc:::1671:::0:::",
-            "is_buffer": "0",
-            "size_info_available": "0",
-            "is_deref_node": "0",
-            "is_data_change": "0",
+            "replacement": "r:::tools/clang/spanify/tests/trailing-comma-original.cc:::719:::0:::",
+            "size_info_available": null,
             "visited": true,
             "debug_info": {
-                "added_to_component": true,
-                "original_is_buffer": "0",
-                "original_size_info_available": "0"
-            },
-            "data_change_lhs": -1
+                "rewrite_applied": true,
+                "original_is_buffer": false,
+                "original_size_info_available": null
+            }
         },
         {
             "id": 6,
-            "replacement": "r:::/usr/local/google/home/keishi/chromium2/src/tools/clang/spanify/tests/trailing-comma-original.cc:::1963:::88:::auto a_6_with_new_line = std::to_array<A, 6>({\u0000    {1, 2}, {3, 4}, {5, 6},\u0000    {7, 8}, {9, 10}, {11, 12},\u0000  })",
-            "is_buffer": "1",
-            "size_info_available": "1",
-            "is_deref_node": "0",
-            "is_data_change": "0",
+            "replacement": "r:::tools/clang/spanify/tests/trailing-comma-original.cc:::1031:::11:::std::array<A, 5> a_5 = {",
+            "size_info_available": true,
             "visited": true,
             "debug_info": {
-                "added_to_component": true,
-                "original_is_buffer": "1",
-                "original_size_info_available": "1"
-            },
-            "data_change_lhs": -1
+                "rewrite_applied": true,
+                "original_is_buffer": false,
+                "original_size_info_available": null
+            }
         },
         {
             "id": 7,
-            "replacement": "r:::/usr/local/google/home/keishi/chromium2/src/tools/clang/spanify/tests/trailing-comma-original.cc:::1963:::0:::",
-            "is_buffer": "0",
-            "size_info_available": "0",
-            "is_deref_node": "0",
-            "is_data_change": "0",
+            "replacement": "r:::tools/clang/spanify/tests/trailing-comma-original.cc:::1031:::0:::",
+            "size_info_available": null,
             "visited": true,
             "debug_info": {
-                "added_to_component": true,
-                "original_is_buffer": "0",
-                "original_size_info_available": "0"
-            },
-            "data_change_lhs": -1
+                "rewrite_applied": true,
+                "original_is_buffer": false,
+                "original_size_info_available": null
+            }
         },
         {
             "id": 8,
-            "replacement": "r:::/usr/local/google/home/keishi/chromium2/src/tools/clang/spanify/tests/trailing-comma-original.cc:::2282:::83:::auto a_5_with_trailing_comma = std::to_array<A, 5>({\u0000      {1, 2}, {3, 4}, {5, 6}, {7, 8}, {9, 10},\u0000  })",
-            "is_buffer": "1",
-            "size_info_available": "1",
-            "is_deref_node": "0",
-            "is_data_change": "0",
+            "replacement": "r:::tools/clang/spanify/tests/trailing-comma-original.cc:::1311:::16:::std::array<A, 5> a_5_long = {",
+            "size_info_available": true,
             "visited": true,
             "debug_info": {
-                "added_to_component": true,
-                "original_is_buffer": "1",
-                "original_size_info_available": "1"
-            },
-            "data_change_lhs": -1
+                "rewrite_applied": true,
+                "original_is_buffer": false,
+                "original_size_info_available": null
+            }
         },
         {
             "id": 9,
-            "replacement": "r:::/usr/local/google/home/keishi/chromium2/src/tools/clang/spanify/tests/trailing-comma-original.cc:::2282:::0:::",
-            "is_buffer": "0",
-            "size_info_available": "0",
-            "is_deref_node": "0",
-            "is_data_change": "0",
+            "replacement": "r:::tools/clang/spanify/tests/trailing-comma-original.cc:::1311:::0:::",
+            "size_info_available": null,
             "visited": true,
             "debug_info": {
-                "added_to_component": true,
-                "original_is_buffer": "0",
-                "original_size_info_available": "0"
-            },
-            "data_change_lhs": -1
+                "rewrite_applied": true,
+                "original_is_buffer": false,
+                "original_size_info_available": null
+            }
         },
         {
             "id": 10,
-            "replacement": "r:::/usr/local/google/home/keishi/chromium2/src/tools/clang/spanify/tests/trailing-comma-original.cc:::2604:::114:::auto a_5_with_trailing_comma_2 = std::to_array<A, 5>({\u0000       {1, 2},\u0000       {3, 4},\u0000       {5, 6},\u0000       {7, 8},\u0000       {9, 10},\u0000  })",
-            "is_buffer": "1",
-            "size_info_available": "1",
-            "is_deref_node": "0",
-            "is_data_change": "0",
+            "replacement": "r:::tools/clang/spanify/tests/trailing-comma-original.cc:::1622:::11:::std::array<A, 6> a_6 = {",
+            "size_info_available": true,
             "visited": true,
             "debug_info": {
-                "added_to_component": true,
-                "original_is_buffer": "1",
-                "original_size_info_available": "1"
-            },
-            "data_change_lhs": -1
+                "rewrite_applied": true,
+                "original_is_buffer": false,
+                "original_size_info_available": null
+            }
         },
         {
             "id": 11,
-            "replacement": "r:::/usr/local/google/home/keishi/chromium2/src/tools/clang/spanify/tests/trailing-comma-original.cc:::2604:::0:::",
-            "is_buffer": "0",
-            "size_info_available": "0",
-            "is_deref_node": "0",
-            "is_data_change": "0",
+            "replacement": "r:::tools/clang/spanify/tests/trailing-comma-original.cc:::1622:::0:::",
+            "size_info_available": null,
             "visited": true,
             "debug_info": {
-                "added_to_component": true,
-                "original_is_buffer": "0",
-                "original_size_info_available": "0"
-            },
-            "data_change_lhs": -1
+                "rewrite_applied": true,
+                "original_is_buffer": false,
+                "original_size_info_available": null
+            }
         },
         {
             "id": 12,
-            "replacement": "r:::/usr/local/google/home/keishi/chromium2/src/tools/clang/spanify/tests/trailing-comma-original.cc:::353:::19:::auto a_1 = std::to_array<A, 1>({{1, 2}})",
-            "is_buffer": "1",
-            "size_info_available": "1",
-            "is_deref_node": "0",
-            "is_data_change": "0",
+            "replacement": "r:::tools/clang/spanify/tests/trailing-comma-original.cc:::1907:::25:::std::array<A, 6> a_6_with_new_line = {",
+            "size_info_available": true,
             "visited": true,
             "debug_info": {
-                "added_to_component": true,
-                "original_is_buffer": "1",
-                "original_size_info_available": "1"
-            },
-            "data_change_lhs": -1
+                "rewrite_applied": true,
+                "original_is_buffer": false,
+                "original_size_info_available": null
+            }
         },
         {
             "id": 13,
-            "replacement": "r:::/usr/local/google/home/keishi/chromium2/src/tools/clang/spanify/tests/trailing-comma-original.cc:::353:::0:::",
-            "is_buffer": "0",
-            "size_info_available": "0",
-            "is_deref_node": "0",
-            "is_data_change": "0",
+            "replacement": "r:::tools/clang/spanify/tests/trailing-comma-original.cc:::1907:::0:::",
+            "size_info_available": null,
             "visited": true,
             "debug_info": {
-                "added_to_component": true,
-                "original_is_buffer": "0",
-                "original_size_info_available": "0"
-            },
-            "data_change_lhs": -1
+                "rewrite_applied": true,
+                "original_is_buffer": false,
+                "original_size_info_available": null
+            }
         },
         {
             "id": 14,
-            "replacement": "r:::/usr/local/google/home/keishi/chromium2/src/tools/clang/spanify/tests/trailing-comma-original.cc:::491:::27:::auto a_2 = std::to_array<A, 2>({{1, 2}, {3, 4}})",
-            "is_buffer": "1",
-            "size_info_available": "1",
-            "is_deref_node": "0",
-            "is_data_change": "0",
+            "replacement": "r:::tools/clang/spanify/tests/trailing-comma-original.cc:::2219:::31:::std::array<A, 5> a_5_with_trailing_comma = {",
+            "size_info_available": true,
             "visited": true,
             "debug_info": {
-                "added_to_component": true,
-                "original_is_buffer": "1",
-                "original_size_info_available": "1"
-            },
-            "data_change_lhs": -1
+                "rewrite_applied": true,
+                "original_is_buffer": false,
+                "original_size_info_available": null
+            }
         },
         {
             "id": 15,
-            "replacement": "r:::/usr/local/google/home/keishi/chromium2/src/tools/clang/spanify/tests/trailing-comma-original.cc:::491:::0:::",
-            "is_buffer": "0",
-            "size_info_available": "0",
-            "is_deref_node": "0",
-            "is_data_change": "0",
+            "replacement": "r:::tools/clang/spanify/tests/trailing-comma-original.cc:::2219:::0:::",
+            "size_info_available": null,
             "visited": true,
             "debug_info": {
-                "added_to_component": true,
-                "original_is_buffer": "0",
-                "original_size_info_available": "0"
-            },
-            "data_change_lhs": -1
+                "rewrite_applied": true,
+                "original_is_buffer": false,
+                "original_size_info_available": null
+            }
         },
         {
             "id": 16,
-            "replacement": "r:::/usr/local/google/home/keishi/chromium2/src/tools/clang/spanify/tests/trailing-comma-original.cc:::747:::117:::auto a_2_long = std::to_array<A, 2>({aggregate_with_very_very_very_long_name,\u0000                   aggregate_with_very_very_very_long_name})",
-            "is_buffer": "1",
-            "size_info_available": "1",
-            "is_deref_node": "0",
-            "is_data_change": "0",
+            "replacement": "r:::tools/clang/spanify/tests/trailing-comma-original.cc:::2534:::33:::std::array<A, 5> a_5_with_trailing_comma_2 = {",
+            "size_info_available": true,
             "visited": true,
             "debug_info": {
-                "added_to_component": true,
-                "original_is_buffer": "1",
-                "original_size_info_available": "1"
-            },
-            "data_change_lhs": -1
+                "rewrite_applied": true,
+                "original_is_buffer": false,
+                "original_size_info_available": null
+            }
         },
         {
             "id": 17,
-            "replacement": "r:::/usr/local/google/home/keishi/chromium2/src/tools/clang/spanify/tests/trailing-comma-original.cc:::747:::0:::",
-            "is_buffer": "0",
-            "size_info_available": "0",
-            "is_deref_node": "0",
-            "is_data_change": "0",
+            "replacement": "r:::tools/clang/spanify/tests/trailing-comma-original.cc:::2534:::0:::",
+            "size_info_available": null,
             "visited": true,
             "debug_info": {
-                "added_to_component": true,
-                "original_is_buffer": "0",
-                "original_size_info_available": "0"
-            },
-            "data_change_lhs": -1
+                "rewrite_applied": true,
+                "original_is_buffer": false,
+                "original_size_info_available": null
+            }
         }
     ],
     "links": [
@@ -310,7 +238,14 @@
         }
     ],
     "source": {
-        "content": "// Copyright 2024 The Chromium Authors\n// Use of this source code is governed by a BSD-style license that can be\n// found in the LICENSE file.\n\n#include <tuple>\n\nstruct A{\n  int a;\n  int b;\n};\n\nA aggregate_with_very_very_very_long_name = {1, 2};\n\nint UnsafeIndex();\n\nvoid Test() {\n  // Expected rewrite:\n  // auto a_1 = std::to_array<A, 1>({{1, 2}});\n  A a_1[1] = {{1, 2}};\n  std::ignore = a_1[UnsafeIndex()];\n\n  // Expected rewrite:\n  // auto a_2 = std::to_array<A, 2>({{1, 2}, {3, 4}});\n  A a_2[2] = {{1, 2}, {3, 4}};\n  std::ignore = a_2[UnsafeIndex()];\n\n  // Expected rewrite:\n  // auto a_2_long =\n  //     std::to_array<A, 2>({aggregate_with_very_very_very_long_name,\n  //                          aggregate_with_very_very_very_long_name});\n  A a_2_long[2] = {aggregate_with_very_very_very_long_name,\n                   aggregate_with_very_very_very_long_name};\n  std::ignore = a_2_long[UnsafeIndex()];\n\n  // Expected rewrite:\n  // auto a_5 = std::to_array<A, 5>({\n  //     {1, 2},\n  //     {3, 4},\n  //     {5, 6},\n  //     {7, 8},\n  //     {9, 10},\n  // });\n  A a_5[5] = {{1, 2}, {3, 4}, {5, 6}, {7, 8}, {9, 10}};\n  std::ignore = a_5[UnsafeIndex()];\n\n  // Expected rewrite:\n  // auto a_5_long = std::to_array<A, 5>({\n  //     {1, 2},\n  //     {3, 4},\n  //     aggregate_with_very_very_very_long_name,\n  //     {7, 8},\n  //     {9, 10},\n  // });\n  A a_5_long[5] = {\n      {1, 2}, {3, 4}, aggregate_with_very_very_very_long_name, {7, 8}, {9, 10}};\n  std::ignore = a_5_long[UnsafeIndex()];\n\n  // Expected rewrite:\n  // auto a_6 = std::to_array<A, 6>({\n  //     {1, 2},\n  //     {3, 4},\n  //     {5, 6},\n  //     {7, 8},\n  //     {9, 10},\n  //     {11, 12},\n  // });\n  A a_6[6] = {{1, 2}, {3, 4}, {5, 6}, {7, 8}, {9, 10}, {11, 12}};\n  std::ignore = a_6[UnsafeIndex()];\n\n  // Expected rewrite:\n  // auto a_6_with_new_line = std::to_array<A, 6>({\n  //     {1, 2},\n  //     {3, 4},\n  //     {5, 6},\n  //     {7, 8},\n  //     {9, 10},\n  //     {11, 12},\n  // });\n  A a_6_with_new_line[6] = {\n    {1, 2}, {3, 4}, {5, 6},\n    {7, 8}, {9, 10}, {11, 12}\n  };\n  std::ignore = a_6_with_new_line[UnsafeIndex()];\n\n  // Expected rewrite:\n  // auto a_5_with_trailing_comma = std::to_array<A, 5>({\n  //     {1, 2},\n  //     {3, 4},\n  //     {5, 6},\n  //     {7, 8},\n  //     {9, 10},\n  // });\n  A a_5_with_trailing_comma[5] = {\n      {1, 2}, {3, 4}, {5, 6}, {7, 8}, {9, 10},\n  };\n  std::ignore = a_5_with_trailing_comma[UnsafeIndex()];\n\n  // Expected rewrite:\n  // auto a_5_with_trailing_comma_2 = std::to_array<A, 5>({\n  //     {1, 2},\n  //     {3, 4},\n  //     {5, 6},\n  //     {7, 8},\n  //     {9, 10},\n  // });\n  A a_5_with_trailing_comma_2[5] = {\n       {1, 2},\n       {3, 4},\n       {5, 6},\n       {7, 8},\n       {9, 10},\n  };\n  std::ignore = a_5_with_trailing_comma_2[UnsafeIndex()];\n}\n",
-        "file_path": "/usr/local/google/home/keishi/chromium2/src/tools/clang/spanify/tests/trailing-comma-original.cc"
-    }
+        "content": "// Copyright 2024 The Chromium Authors\n// Use of this source code is governed by a BSD-style license that can be\n// found in the LICENSE file.\n\n#include <tuple>\n\nstruct A{\n  int a;\n  int b;\n};\n\nA aggregate_with_very_very_very_long_name = {1, 2};\n\nint UnsafeIndex();\n\nvoid Test() {\n  // Expected rewrite:\n  // std::array<A, 1> a_1 = {{{1, 2}}};\n  A a_1[1] = {{1, 2}};\n  std::ignore = a_1[UnsafeIndex()];\n\n  // Expected rewrite:\n  // std::array<A, 2> a_2 = {{{1, 2}, {3, 4}}};\n  A a_2[2] = {{1, 2}, {3, 4}};\n  std::ignore = a_2[UnsafeIndex()];\n\n  // Expected rewrite:\n  // std::array<A, 2> a_2_long = {aggregate_with_very_very_very_long_name,\n  //                              aggregate_with_very_very_very_long_name};\n  A a_2_long[2] = {aggregate_with_very_very_very_long_name,\n                   aggregate_with_very_very_very_long_name};\n  std::ignore = a_2_long[UnsafeIndex()];\n\n  // Expected rewrite:\n  // std::array<A, 5> a_5 = {{\n  //     {1, 2},\n  //     {3, 4},\n  //     {5, 6},\n  //     {7, 8},\n  //     {9, 10},\n  // }};\n  A a_5[5] = {{1, 2}, {3, 4}, {5, 6}, {7, 8}, {9, 10}};\n  std::ignore = a_5[UnsafeIndex()];\n\n  // Expected rewrite:\n  // std::array<A, 5> a_5_long = {{\n  //     {1, 2},\n  //     {3, 4},\n  //     aggregate_with_very_very_very_long_name,\n  //     {7, 8},\n  //     {9, 10},\n  // }};\n  A a_5_long[5] = {\n      {1, 2}, {3, 4}, aggregate_with_very_very_very_long_name, {7, 8}, {9, 10}};\n  std::ignore = a_5_long[UnsafeIndex()];\n\n  // Expected rewrite:\n  // std::array<A, 6> a_6 = {{\n  //     {1, 2},\n  //     {3, 4},\n  //     {5, 6},\n  //     {7, 8},\n  //     {9, 10},\n  //     {11, 12},\n  // }};\n  A a_6[6] = {{1, 2}, {3, 4}, {5, 6}, {7, 8}, {9, 10}, {11, 12}};\n  std::ignore = a_6[UnsafeIndex()];\n\n  // Expected rewrite:\n  // std::array<A, 6> a_6_with_new_line = {{\n  //     {1, 2},\n  //     {3, 4},\n  //     {5, 6},\n  //     {7, 8},\n  //     {9, 10},\n  //     {11, 12},\n  // }};\n  A a_6_with_new_line[6] = {\n    {1, 2}, {3, 4}, {5, 6},\n    {7, 8}, {9, 10}, {11, 12}\n  };\n  std::ignore = a_6_with_new_line[UnsafeIndex()];\n\n  // Expected rewrite:\n  // std::array<A, 5> a_5_with_trailing_comma = {{\n  //     {1, 2},\n  //     {3, 4},\n  //     {5, 6},\n  //     {7, 8},\n  //     {9, 10},\n  // }};\n  A a_5_with_trailing_comma[5] = {\n      {1, 2}, {3, 4}, {5, 6}, {7, 8}, {9, 10},\n  };\n  std::ignore = a_5_with_trailing_comma[UnsafeIndex()];\n\n  // Expected rewrite:\n  // std::array<A, 5> a_5_with_trailing_comma_2 = {{\n  //     {1, 2},\n  //     {3, 4},\n  //     {5, 6},\n  //     {7, 8},\n  //     {9, 10},\n  // }};\n  A a_5_with_trailing_comma_2[5] = {\n       {1, 2},\n       {3, 4},\n       {5, 6},\n       {7, 8},\n       {9, 10},\n  };\n  std::ignore = a_5_with_trailing_comma_2[UnsafeIndex()];\n}\n",
+        "file_path": "tools/clang/spanify/tests/trailing-comma-original.cc",
+        "rev": "733eff2098bf2f25b1cf0c182a3ee8beda9ef880"
+    },
+    "sources": [
+        {
+            "content": null,
+            "file_path": "tools/clang/spanify/tests/trailing-comma-original.cc"
+        }
+    ]
 }

@@ -2,363 +2,421 @@
     "nodes": [
         {
             "id": 0,
-            "replacement": "r:::/usr/local/google/home/keishi/chromium2/src/tools/clang/spanify/tests/array-with-init-list-original.cc:::1213:::73:::auto buf0 = std::to_array<std::array<int, 3>, 3>({\u0000      {0, 1, 2},\u0000      {3, 4, 5},\u0000      {6, 7, 8},\u0000  })",
-            "is_buffer": "1",
-            "size_info_available": "1",
-            "is_deref_node": "0",
-            "is_data_change": "0",
+            "replacement": "r:::tools/clang/spanify/tests/array-with-init-list-original.cc:::539:::19:::auto buf0 = std::to_array<Aggregate>(",
+            "size_info_available": true,
             "visited": true,
             "debug_info": {
-                "added_to_component": true,
-                "original_is_buffer": "1",
-                "original_size_info_available": "1"
-            },
-            "data_change_lhs": -1
+                "rewrite_applied": true,
+                "original_is_buffer": false,
+                "original_size_info_available": null
+            }
         },
         {
             "id": 1,
-            "replacement": "r:::/usr/local/google/home/keishi/chromium2/src/tools/clang/spanify/tests/array-with-init-list-original.cc:::1213:::0:::",
-            "is_buffer": "0",
-            "size_info_available": "0",
-            "is_deref_node": "0",
-            "is_data_change": "0",
+            "replacement": "r:::tools/clang/spanify/tests/array-with-init-list-original.cc:::539:::0:::",
+            "size_info_available": null,
             "visited": true,
             "debug_info": {
-                "added_to_component": true,
-                "original_is_buffer": "0",
-                "original_size_info_available": "0"
-            },
-            "data_change_lhs": -1
+                "rewrite_applied": true,
+                "original_is_buffer": false,
+                "original_size_info_available": null
+            }
         },
         {
             "id": 2,
-            "replacement": "r:::/usr/local/google/home/keishi/chromium2/src/tools/clang/spanify/tests/array-with-init-list-original.cc:::1667:::36:::auto buf0 = std::to_array<std::string>({\"1\", \"2\", \"3\"})",
-            "is_buffer": "1",
-            "size_info_available": "1",
-            "is_deref_node": "0",
-            "is_data_change": "0",
+            "replacement": "r:::tools/clang/spanify/tests/array-with-init-list-original.cc:::748:::20:::std::array<Aggregate, 2> buf1 = ",
+            "size_info_available": true,
             "visited": true,
             "debug_info": {
-                "added_to_component": true,
-                "original_is_buffer": "1",
-                "original_size_info_available": "1"
-            },
-            "data_change_lhs": -1
+                "rewrite_applied": true,
+                "original_is_buffer": false,
+                "original_size_info_available": null
+            }
         },
         {
             "id": 3,
-            "replacement": "r:::/usr/local/google/home/keishi/chromium2/src/tools/clang/spanify/tests/array-with-init-list-original.cc:::1667:::0:::",
-            "is_buffer": "0",
-            "size_info_available": "0",
-            "is_deref_node": "0",
-            "is_data_change": "0",
+            "replacement": "r:::tools/clang/spanify/tests/array-with-init-list-original.cc:::748:::0:::",
+            "size_info_available": null,
             "visited": true,
             "debug_info": {
-                "added_to_component": true,
-                "original_is_buffer": "0",
-                "original_size_info_available": "0"
-            },
-            "data_change_lhs": -1
+                "rewrite_applied": true,
+                "original_is_buffer": false,
+                "original_size_info_available": null
+            }
         },
         {
             "id": 4,
-            "replacement": "r:::/usr/local/google/home/keishi/chromium2/src/tools/clang/spanify/tests/array-with-init-list-original.cc:::1838:::33:::const auto data = std::to_array<bool>({false, true})",
-            "is_buffer": "1",
-            "size_info_available": "1",
-            "is_deref_node": "0",
-            "is_data_change": "0",
+            "replacement": "r:::tools/clang/spanify/tests/array-with-init-list-original.cc:::993:::20:::std::array<Aggregate, 3> buf2 = {",
+            "size_info_available": true,
             "visited": true,
             "debug_info": {
-                "added_to_component": true,
-                "original_is_buffer": "1",
-                "original_size_info_available": "1"
-            },
-            "data_change_lhs": -1
+                "rewrite_applied": true,
+                "original_is_buffer": false,
+                "original_size_info_available": null
+            }
         },
         {
             "id": 5,
-            "replacement": "r:::/usr/local/google/home/keishi/chromium2/src/tools/clang/spanify/tests/array-with-init-list-original.cc:::1838:::0:::",
-            "is_buffer": "0",
-            "size_info_available": "0",
-            "is_deref_node": "0",
-            "is_data_change": "0",
+            "replacement": "r:::tools/clang/spanify/tests/array-with-init-list-original.cc:::993:::0:::",
+            "size_info_available": null,
             "visited": true,
             "debug_info": {
-                "added_to_component": true,
-                "original_is_buffer": "0",
-                "original_size_info_available": "0"
-            },
-            "data_change_lhs": -1
+                "rewrite_applied": true,
+                "original_is_buffer": false,
+                "original_size_info_available": null
+            }
         },
         {
             "id": 6,
-            "replacement": "r:::/usr/local/google/home/keishi/chromium2/src/tools/clang/spanify/tests/array-with-init-list-original.cc:::1999:::29:::static auto data = std::to_array<int>({1, 2, 3})",
-            "is_buffer": "1",
-            "size_info_available": "1",
-            "is_deref_node": "0",
-            "is_data_change": "0",
+            "replacement": "r:::tools/clang/spanify/tests/array-with-init-list-original.cc:::1282:::17:::std::array<std::array<int, 3>, 3> buf0 = {",
+            "size_info_available": true,
             "visited": true,
             "debug_info": {
-                "added_to_component": true,
-                "original_is_buffer": "1",
-                "original_size_info_available": "1"
-            },
-            "data_change_lhs": -1
+                "rewrite_applied": true,
+                "original_is_buffer": false,
+                "original_size_info_available": null
+            }
         },
         {
             "id": 7,
-            "replacement": "r:::/usr/local/google/home/keishi/chromium2/src/tools/clang/spanify/tests/array-with-init-list-original.cc:::1999:::0:::",
-            "is_buffer": "0",
-            "size_info_available": "0",
-            "is_deref_node": "0",
-            "is_data_change": "0",
+            "replacement": "r:::tools/clang/spanify/tests/array-with-init-list-original.cc:::1282:::0:::",
+            "size_info_available": null,
             "visited": true,
             "debug_info": {
-                "added_to_component": true,
-                "original_is_buffer": "0",
-                "original_size_info_available": "0"
-            },
-            "data_change_lhs": -1
+                "rewrite_applied": true,
+                "original_is_buffer": false,
+                "original_size_info_available": null
+            }
         },
         {
             "id": 8,
-            "replacement": "r:::/usr/local/google/home/keishi/chromium2/src/tools/clang/spanify/tests/array-with-init-list-original.cc:::2168:::38:::constexpr const auto data = std::to_array<int>({1, 2, 3})",
-            "is_buffer": "1",
-            "size_info_available": "1",
-            "is_deref_node": "0",
-            "is_data_change": "0",
+            "replacement": "r:::tools/clang/spanify/tests/array-with-init-list-original.cc:::1737:::21:::auto buf0 = std::to_array<std::string>(",
+            "size_info_available": true,
             "visited": true,
             "debug_info": {
-                "added_to_component": true,
-                "original_is_buffer": "1",
-                "original_size_info_available": "1"
-            },
-            "data_change_lhs": -1
+                "rewrite_applied": true,
+                "original_is_buffer": false,
+                "original_size_info_available": null
+            }
         },
         {
             "id": 9,
-            "replacement": "r:::/usr/local/google/home/keishi/chromium2/src/tools/clang/spanify/tests/array-with-init-list-original.cc:::2168:::0:::",
-            "is_buffer": "0",
-            "size_info_available": "0",
-            "is_deref_node": "0",
-            "is_data_change": "0",
+            "replacement": "r:::tools/clang/spanify/tests/array-with-init-list-original.cc:::1737:::0:::",
+            "size_info_available": null,
             "visited": true,
             "debug_info": {
-                "added_to_component": true,
-                "original_is_buffer": "0",
-                "original_size_info_available": "0"
-            },
-            "data_change_lhs": -1
+                "rewrite_applied": true,
+                "original_is_buffer": false,
+                "original_size_info_available": null
+            }
         },
         {
             "id": 10,
-            "replacement": "r:::/usr/local/google/home/keishi/chromium2/src/tools/clang/spanify/tests/array-with-init-list-original.cc:::2338:::31:::auto data = std::to_array<volatile int>({1, 2, 3})",
-            "is_buffer": "1",
-            "size_info_available": "1",
-            "is_deref_node": "0",
-            "is_data_change": "0",
+            "replacement": "r:::tools/clang/spanify/tests/array-with-init-list-original.cc:::1916:::20:::const auto data = std::to_array<bool>(",
+            "size_info_available": true,
             "visited": true,
             "debug_info": {
-                "added_to_component": true,
-                "original_is_buffer": "1",
-                "original_size_info_available": "1"
-            },
-            "data_change_lhs": -1
+                "rewrite_applied": true,
+                "original_is_buffer": false,
+                "original_size_info_available": null
+            }
         },
         {
             "id": 11,
-            "replacement": "r:::/usr/local/google/home/keishi/chromium2/src/tools/clang/spanify/tests/array-with-init-list-original.cc:::2338:::0:::",
-            "is_buffer": "0",
-            "size_info_available": "0",
-            "is_deref_node": "0",
-            "is_data_change": "0",
+            "replacement": "r:::tools/clang/spanify/tests/array-with-init-list-original.cc:::1916:::0:::",
+            "size_info_available": null,
             "visited": true,
             "debug_info": {
-                "added_to_component": true,
-                "original_is_buffer": "0",
-                "original_size_info_available": "0"
-            },
-            "data_change_lhs": -1
+                "rewrite_applied": true,
+                "original_is_buffer": false,
+                "original_size_info_available": null
+            }
         },
         {
             "id": 12,
-            "replacement": "r:::/usr/local/google/home/keishi/chromium2/src/tools/clang/spanify/tests/array-with-init-list-original.cc:::2520:::44:::static const auto data = std::to_array<volatile int>({1, 2, 3})",
-            "is_buffer": "1",
-            "size_info_available": "1",
-            "is_deref_node": "0",
-            "is_data_change": "0",
+            "replacement": "r:::tools/clang/spanify/tests/array-with-init-list-original.cc:::2097:::20:::static auto data = std::to_array<int>(",
+            "size_info_available": true,
             "visited": true,
             "debug_info": {
-                "added_to_component": true,
-                "original_is_buffer": "1",
-                "original_size_info_available": "1"
-            },
-            "data_change_lhs": -1
+                "rewrite_applied": true,
+                "original_is_buffer": false,
+                "original_size_info_available": null
+            }
         },
         {
             "id": 13,
-            "replacement": "r:::/usr/local/google/home/keishi/chromium2/src/tools/clang/spanify/tests/array-with-init-list-original.cc:::2520:::0:::",
-            "is_buffer": "0",
-            "size_info_available": "0",
-            "is_deref_node": "0",
-            "is_data_change": "0",
+            "replacement": "r:::tools/clang/spanify/tests/array-with-init-list-original.cc:::2097:::0:::",
+            "size_info_available": null,
             "visited": true,
             "debug_info": {
-                "added_to_component": true,
-                "original_is_buffer": "0",
-                "original_size_info_available": "0"
-            },
-            "data_change_lhs": -1
+                "rewrite_applied": true,
+                "original_is_buffer": false,
+                "original_size_info_available": null
+            }
         },
         {
             "id": 14,
-            "replacement": "r:::/usr/local/google/home/keishi/chromium2/src/tools/clang/spanify/tests/array-with-init-list-original.cc:::2715:::48:::static auto data = std::to_array<const char *>({\" B\", \" kB\", \" MB\"})",
-            "is_buffer": "1",
-            "size_info_available": "1",
-            "is_deref_node": "0",
-            "is_data_change": "0",
+            "replacement": "r:::tools/clang/spanify/tests/array-with-init-list-original.cc:::2280:::23:::constexpr auto data = std::to_array<int>(",
+            "size_info_available": true,
             "visited": true,
             "debug_info": {
-                "added_to_component": true,
-                "original_is_buffer": "1",
-                "original_size_info_available": "1"
-            },
-            "data_change_lhs": -1
+                "rewrite_applied": true,
+                "original_is_buffer": false,
+                "original_size_info_available": null
+            }
         },
         {
             "id": 15,
-            "replacement": "r:::/usr/local/google/home/keishi/chromium2/src/tools/clang/spanify/tests/array-with-init-list-original.cc:::2715:::0:::",
-            "is_buffer": "0",
-            "size_info_available": "0",
-            "is_deref_node": "0",
-            "is_data_change": "0",
+            "replacement": "r:::tools/clang/spanify/tests/array-with-init-list-original.cc:::2280:::0:::",
+            "size_info_available": null,
             "visited": true,
             "debug_info": {
-                "added_to_component": true,
-                "original_is_buffer": "0",
-                "original_size_info_available": "0"
-            },
-            "data_change_lhs": -1
+                "rewrite_applied": true,
+                "original_is_buffer": false,
+                "original_size_info_available": null
+            }
         },
         {
             "id": 16,
-            "replacement": "r:::/usr/local/google/home/keishi/chromium2/src/tools/clang/spanify/tests/array-with-init-list-original.cc:::2929:::54:::static const auto data = std::to_array<const char *>({\" B\", \" kB\", \" MB\"})",
-            "is_buffer": "1",
-            "size_info_available": "1",
-            "is_deref_node": "0",
-            "is_data_change": "0",
+            "replacement": "r:::tools/clang/spanify/tests/array-with-init-list-original.cc:::2472:::29:::constexpr auto data = std::to_array<int>(",
+            "size_info_available": true,
             "visited": true,
             "debug_info": {
-                "added_to_component": true,
-                "original_is_buffer": "1",
-                "original_size_info_available": "1"
-            },
-            "data_change_lhs": -1
+                "rewrite_applied": true,
+                "original_is_buffer": false,
+                "original_size_info_available": null
+            }
         },
         {
             "id": 17,
-            "replacement": "r:::/usr/local/google/home/keishi/chromium2/src/tools/clang/spanify/tests/array-with-init-list-original.cc:::2929:::0:::",
-            "is_buffer": "0",
-            "size_info_available": "0",
-            "is_deref_node": "0",
-            "is_data_change": "0",
+            "replacement": "r:::tools/clang/spanify/tests/array-with-init-list-original.cc:::2472:::0:::",
+            "size_info_available": null,
             "visited": true,
             "debug_info": {
-                "added_to_component": true,
-                "original_is_buffer": "0",
-                "original_size_info_available": "0"
-            },
-            "data_change_lhs": -1
+                "rewrite_applied": true,
+                "original_is_buffer": false,
+                "original_size_info_available": null
+            }
         },
         {
             "id": 18,
-            "replacement": "r:::/usr/local/google/home/keishi/chromium2/src/tools/clang/spanify/tests/array-with-init-list-original.cc:::471:::55:::auto buf0 = std::to_array<Aggregate>({{13, 1, 7}, {14, 2, 5}, {15, 2, 4}})",
-            "is_buffer": "1",
-            "size_info_available": "1",
-            "is_deref_node": "0",
-            "is_data_change": "0",
+            "replacement": "r:::tools/clang/spanify/tests/array-with-init-list-original.cc:::2662:::22:::auto data = std::to_array<volatile int>(",
+            "size_info_available": true,
             "visited": true,
             "debug_info": {
-                "added_to_component": true,
-                "original_is_buffer": "1",
-                "original_size_info_available": "1"
-            },
-            "data_change_lhs": -1
+                "rewrite_applied": true,
+                "original_is_buffer": false,
+                "original_size_info_available": null
+            }
         },
         {
             "id": 19,
-            "replacement": "r:::/usr/local/google/home/keishi/chromium2/src/tools/clang/spanify/tests/array-with-init-list-original.cc:::471:::0:::",
-            "is_buffer": "0",
-            "size_info_available": "0",
-            "is_deref_node": "0",
-            "is_data_change": "0",
+            "replacement": "r:::tools/clang/spanify/tests/array-with-init-list-original.cc:::2662:::0:::",
+            "size_info_available": null,
             "visited": true,
             "debug_info": {
-                "added_to_component": true,
-                "original_is_buffer": "0",
-                "original_size_info_available": "0"
-            },
-            "data_change_lhs": -1
+                "rewrite_applied": true,
+                "original_is_buffer": false,
+                "original_size_info_available": null
+            }
         },
         {
             "id": 20,
-            "replacement": "r:::/usr/local/google/home/keishi/chromium2/src/tools/clang/spanify/tests/array-with-init-list-original.cc:::681:::69:::auto buf1 = std::to_array<Aggregate, 2>({\u0000      Build(1, 2, 3),\u0000      Build(4, 5, 6),\u0000  })",
-            "is_buffer": "1",
-            "size_info_available": "1",
-            "is_deref_node": "0",
-            "is_data_change": "0",
+            "replacement": "r:::tools/clang/spanify/tests/array-with-init-list-original.cc:::2864:::35:::static const auto data = std::to_array<volatile int>(",
+            "size_info_available": true,
             "visited": true,
             "debug_info": {
-                "added_to_component": true,
-                "original_is_buffer": "1",
-                "original_size_info_available": "1"
-            },
-            "data_change_lhs": -1
+                "rewrite_applied": true,
+                "original_is_buffer": false,
+                "original_size_info_available": null
+            }
         },
         {
             "id": 21,
-            "replacement": "r:::/usr/local/google/home/keishi/chromium2/src/tools/clang/spanify/tests/array-with-init-list-original.cc:::681:::0:::",
-            "is_buffer": "0",
-            "size_info_available": "0",
-            "is_deref_node": "0",
-            "is_data_change": "0",
+            "replacement": "r:::tools/clang/spanify/tests/array-with-init-list-original.cc:::2864:::0:::",
+            "size_info_available": null,
             "visited": true,
             "debug_info": {
-                "added_to_component": true,
-                "original_is_buffer": "0",
-                "original_size_info_available": "0"
-            },
-            "data_change_lhs": -1
+                "rewrite_applied": true,
+                "original_is_buffer": false,
+                "original_size_info_available": null
+            }
         },
         {
             "id": 22,
-            "replacement": "r:::/usr/local/google/home/keishi/chromium2/src/tools/clang/spanify/tests/array-with-init-list-original.cc:::925:::86:::auto buf2 = std::to_array<Aggregate, 3>({\u0000      Build(1, 2, 3),\u0000      {1, 2, 3},\u0000      Build(4, 5, 6),\u0000  })",
-            "is_buffer": "1",
-            "size_info_available": "1",
-            "is_deref_node": "0",
-            "is_data_change": "0",
+            "replacement": "r:::tools/clang/spanify/tests/array-with-init-list-original.cc:::3079:::28:::static auto data = std::to_array<const char *>(",
+            "size_info_available": true,
             "visited": true,
             "debug_info": {
-                "added_to_component": true,
-                "original_is_buffer": "1",
-                "original_size_info_available": "1"
-            },
-            "data_change_lhs": -1
+                "rewrite_applied": true,
+                "original_is_buffer": false,
+                "original_size_info_available": null
+            }
         },
         {
             "id": 23,
-            "replacement": "r:::/usr/local/google/home/keishi/chromium2/src/tools/clang/spanify/tests/array-with-init-list-original.cc:::925:::0:::",
-            "is_buffer": "0",
-            "size_info_available": "0",
-            "is_deref_node": "0",
-            "is_data_change": "0",
+            "replacement": "r:::tools/clang/spanify/tests/array-with-init-list-original.cc:::3079:::0:::",
+            "size_info_available": null,
             "visited": true,
             "debug_info": {
-                "added_to_component": true,
-                "original_is_buffer": "0",
-                "original_size_info_available": "0"
-            },
-            "data_change_lhs": -1
+                "rewrite_applied": true,
+                "original_is_buffer": false,
+                "original_size_info_available": null
+            }
+        },
+        {
+            "id": 24,
+            "replacement": "r:::tools/clang/spanify/tests/array-with-init-list-original.cc:::3313:::34:::static const auto data = std::to_array<const char *>(",
+            "size_info_available": true,
+            "visited": true,
+            "debug_info": {
+                "rewrite_applied": true,
+                "original_is_buffer": false,
+                "original_size_info_available": null
+            }
+        },
+        {
+            "id": 25,
+            "replacement": "r:::tools/clang/spanify/tests/array-with-init-list-original.cc:::3313:::0:::",
+            "size_info_available": null,
+            "visited": true,
+            "debug_info": {
+                "rewrite_applied": true,
+                "original_is_buffer": false,
+                "original_size_info_available": null
+            }
+        },
+        {
+            "id": 26,
+            "replacement": "r:::tools/clang/spanify/tests/array-with-init-list-original.cc:::3516:::18:::std::array<int, 2 + 2> data = ",
+            "size_info_available": true,
+            "visited": true,
+            "debug_info": {
+                "rewrite_applied": true,
+                "original_is_buffer": false,
+                "original_size_info_available": null
+            }
+        },
+        {
+            "id": 27,
+            "replacement": "r:::tools/clang/spanify/tests/array-with-init-list-original.cc:::3516:::0:::",
+            "size_info_available": null,
+            "visited": true,
+            "debug_info": {
+                "rewrite_applied": true,
+                "original_is_buffer": false,
+                "original_size_info_available": null
+            }
+        },
+        {
+            "id": 28,
+            "replacement": "r:::tools/clang/spanify/tests/array-with-init-list-original.cc:::3725:::17:::std::array<int, size> data = ",
+            "size_info_available": true,
+            "visited": true,
+            "debug_info": {
+                "rewrite_applied": true,
+                "original_is_buffer": false,
+                "original_size_info_available": null
+            }
+        },
+        {
+            "id": 29,
+            "replacement": "r:::tools/clang/spanify/tests/array-with-init-list-original.cc:::3725:::0:::",
+            "size_info_available": null,
+            "visited": true,
+            "debug_info": {
+                "rewrite_applied": true,
+                "original_is_buffer": false,
+                "original_size_info_available": null
+            }
+        },
+        {
+            "id": 30,
+            "replacement": "r:::tools/clang/spanify/tests/array-with-init-list-original.cc:::3925:::17:::std::array<int, size> data = ",
+            "size_info_available": true,
+            "visited": true,
+            "debug_info": {
+                "rewrite_applied": true,
+                "original_is_buffer": false,
+                "original_size_info_available": null
+            }
+        },
+        {
+            "id": 31,
+            "replacement": "r:::tools/clang/spanify/tests/array-with-init-list-original.cc:::3925:::0:::",
+            "size_info_available": null,
+            "visited": true,
+            "debug_info": {
+                "rewrite_applied": true,
+                "original_is_buffer": false,
+                "original_size_info_available": null
+            }
+        },
+        {
+            "id": 32,
+            "replacement": "r:::tools/clang/spanify/tests/array-with-init-list-original.cc:::4199:::25:::std::array<Aggregate, size> buffer = {",
+            "size_info_available": true,
+            "visited": true,
+            "debug_info": {
+                "rewrite_applied": true,
+                "original_is_buffer": false,
+                "original_size_info_available": null
+            }
+        },
+        {
+            "id": 33,
+            "replacement": "r:::tools/clang/spanify/tests/array-with-init-list-original.cc:::4199:::0:::",
+            "size_info_available": null,
+            "visited": true,
+            "debug_info": {
+                "rewrite_applied": true,
+                "original_is_buffer": false,
+                "original_size_info_available": null
+            }
+        },
+        {
+            "id": 34,
+            "replacement": "r:::tools/clang/spanify/tests/array-with-init-list-original.cc:::4442:::26:::auto data = std::to_array<std::vector<int>>(",
+            "size_info_available": true,
+            "visited": true,
+            "debug_info": {
+                "rewrite_applied": true,
+                "original_is_buffer": false,
+                "original_size_info_available": null
+            }
+        },
+        {
+            "id": 35,
+            "replacement": "r:::tools/clang/spanify/tests/array-with-init-list-original.cc:::4442:::0:::",
+            "size_info_available": null,
+            "visited": true,
+            "debug_info": {
+                "rewrite_applied": true,
+                "original_is_buffer": false,
+                "original_size_info_available": null
+            }
+        },
+        {
+            "id": 36,
+            "replacement": "r:::tools/clang/spanify/tests/array-with-init-list-original.cc:::4712:::27:::std::array<std::vector<int>, 2> data = {",
+            "size_info_available": true,
+            "visited": true,
+            "debug_info": {
+                "rewrite_applied": true,
+                "original_is_buffer": false,
+                "original_size_info_available": null
+            }
+        },
+        {
+            "id": 37,
+            "replacement": "r:::tools/clang/spanify/tests/array-with-init-list-original.cc:::4712:::0:::",
+            "size_info_available": null,
+            "visited": true,
+            "debug_info": {
+                "rewrite_applied": true,
+                "original_is_buffer": false,
+                "original_size_info_available": null
+            }
         }
     ],
     "links": [
@@ -409,10 +467,45 @@
         {
             "source": 22,
             "target": 23
+        },
+        {
+            "source": 24,
+            "target": 25
+        },
+        {
+            "source": 26,
+            "target": 27
+        },
+        {
+            "source": 28,
+            "target": 29
+        },
+        {
+            "source": 30,
+            "target": 31
+        },
+        {
+            "source": 32,
+            "target": 33
+        },
+        {
+            "source": 34,
+            "target": 35
+        },
+        {
+            "source": 36,
+            "target": 37
         }
     ],
     "source": {
-        "content": "// Copyright 2024 The Chromium Authors\n// Use of this source code is governed by a BSD-style license that can be\n// found in the LICENSE file.\n\n#include <string>\n\nnamespace {\n\nstruct Aggregate {\n  int a;\n  int b;\n  int c;\n};\n\nAggregate Build(int a, int b, int c) {\n  return Aggregate{a, b, c};\n}\n\n}  // namespace\n\nvoid test_with_structs() {\n  const int index = 0;\n\n  // Expected rewrite:\n  // auto buf0 = std::to_array<Aggregate>({{13, 1, 7}, {14, 2, 5}, {15, 2, 4}});\n  Aggregate buf0[] = {{13, 1, 7}, {14, 2, 5}, {15, 2, 4}};\n  buf0[index].a = 0;\n\n  // Expected rewrite:\n  // auto buf1 = std::to_array<Aggregate, 2>({\n  //     Build(1, 2, 3),\n  //     Build(4, 5, 6),\n  // });\n  Aggregate buf1[2] = {\n      Build(1, 2, 3),\n      Build(4, 5, 6),\n  };\n  buf1[index].a = 0;\n\n  // Expected rewrite:\n  // auto buf2 = std::to_array<Aggregate, 3>({\n  //     Build(1, 2, 3),\n  //     {1, 2, 3},\n  //     Build(4, 5, 6),\n  // });\n  Aggregate buf2[3] = {\n      Build(1, 2, 3),\n      {1, 2, 3},\n      Build(4, 5, 6),\n  };\n  buf2[index].a = 0;\n}\n\nvoid test_with_arrays() {\n  // Expected rewrite:\n  // auto buf0 = std::to_array<std::array<int, 3>, 3>({\n  //     {0, 1, 2},\n  //     {3, 4, 5},\n  //     {6, 7, 8},\n  // });\n  int buf0[3][3] = {\n      {0, 1, 2},\n      {3, 4, 5},\n      {6, 7, 8},\n  };\n  buf0[0][0] = 0;\n\n  // Since function returning array is not allowed, we don't need to\n  // test the following:\n  //   int buf1[3][3] = {\n  //      BuildArray(0, 1, 2)\n  //      BuildArray(3, 4, 5)\n  //      BuildArray(6, 7, 8)\n  //   };\n}\n\nvoid test_with_strings() {\n  const int index = 0;\n  // Expected rewrite:\n  // auto buf0 = std::to_array<std::string>({\"1\", \"2\", \"3\"});\n  std::string buf0[] = {\"1\", \"2\", \"3\"};\n  buf0[index] = \"4\";\n}\n\nvoid test_with_const() {\n  // Expected rewrite:\n  // const auto data = std::to_array<bool>({false, true});\n  const bool data[] = {false, true};\n  (void)data[0];\n}\n\nvoid test_with_static() {\n  // Expected rewrite:\n  // static auto data = std::to_array<int>({1, 2, 3});\n  static int data[] = {1, 2, 3};\n  (void)data[0];\n}\n\nvoid test_with_constexpr() {\n  // Expected rewrite:\n  // constexpr const auto data = std::to_array<int>({1, 2, 3});\n  constexpr const int data[] = {1, 2, 3};\n  (void)data[0];\n}\n\nvoid test_with_volatile() {\n  // Expected rewrite:\n  // auto data = std::to_array<volatile int>({1, 2, 3});\n  volatile int data[] = {1, 2, 3};\n  (void)data[0];\n}\n\nvoid test_with_all_qualifiers() {\n  // Expected rewrite:\n  // static const auto data = std::to_array<volatile int>({1, 2, 3});\n  static const volatile int data[] = {1, 2, 3};\n  (void)data[0];\n}\n\nvoid test_with_const_char() {\n  // Expected rewrite:\n  // static auto data = std::to_array<const char*>({\" B\", \" kB\", \" MB\"});\n  static const char* data[] = {\" B\", \" kB\", \" MB\"};\n  (void)data[0];\n}\n\nvoid test_with_constant_const_char() {\n  // Expected rewrite:\n  // static const auto data = std::to_array<const char*>({\" B\", \" kB\", \" MB\"});\n  static const char* const data[] = {\" B\", \" kB\", \" MB\"};\n  (void)data[0];\n}\n",
-        "file_path": "/usr/local/google/home/keishi/chromium2/src/tools/clang/spanify/tests/array-with-init-list-original.cc"
-    }
+        "content": "// Copyright 2024 The Chromium Authors\n// Use of this source code is governed by a BSD-style license that can be\n// found in the LICENSE file.\n\n#include <string>\n#include <vector>\n\nnamespace {\n\nstruct Aggregate {\n  int a;\n  int b;\n  int c;\n};\n\nAggregate Build(int a, int b, int c) {\n  return Aggregate{a, b, c};\n}\n\n}  // namespace\n\nint UnsafeIndex();  // This function might return an out-of-bound index.\n\nvoid test_with_structs() {\n  // Expected rewrite:\n  // auto buf0 = std::to_array<Aggregate>({{13, 1, 7}, {14, 2, 5}, {15, 2, 4}});\n  Aggregate buf0[] = {{13, 1, 7}, {14, 2, 5}, {15, 2, 4}};\n  buf0[UnsafeIndex()].a = 0;\n\n  // Expected rewrite:\n  // std::array<Aggregate, 2> buf1 = {\n  //     Build(1, 2, 3),\n  //     Build(4, 5, 6),\n  // };\n  Aggregate buf1[2] = {\n      Build(1, 2, 3),\n      Build(4, 5, 6),\n  };\n  buf1[UnsafeIndex()].a = 0;\n\n  // Expected rewrite:\n  // std::array<Aggregate, 3> buf2 = {{\n  //     Build(1, 2, 3),\n  //     {1, 2, 3},\n  //     Build(4, 5, 6),\n  // }};\n  Aggregate buf2[3] = {\n      Build(1, 2, 3),\n      {1, 2, 3},\n      Build(4, 5, 6),\n  };\n  buf2[UnsafeIndex()].a = 0;\n}\n\nvoid test_with_arrays() {\n  // Expected rewrite:\n  // std::array<std::array<int, 3>, 3> buf0 = {{\n  //     {0, 1, 2},\n  //     {3, 4, 5},\n  //     {6, 7, 8},\n  // }};\n  int buf0[3][3] = {\n      {0, 1, 2},\n      {3, 4, 5},\n      {6, 7, 8},\n  };\n  buf0[UnsafeIndex()][UnsafeIndex()] = 0;\n\n  // Since function returning array is not allowed, we don't need to\n  // test the following:\n  //   int buf1[3][3] = {\n  //      BuildArray(0, 1, 2)\n  //      BuildArray(3, 4, 5)\n  //      BuildArray(6, 7, 8)\n  //   };\n}\n\nvoid test_with_strings() {\n  // Expected rewrite:\n  // auto buf0 = std::to_array<std::string>({\"1\", \"2\", \"3\"});\n  std::string buf0[] = {\"1\", \"2\", \"3\"};\n  buf0[UnsafeIndex()] = \"4\";\n}\n\nvoid test_with_const() {\n  // Expected rewrite:\n  // const auto data = std::to_array<bool>({false, true});\n  const bool data[] = {false, true};\n  std::ignore = data[UnsafeIndex()];\n}\n\nvoid test_with_static() {\n  // Expected rewrite:\n  // static auto data = std::to_array<int>({1, 2, 3});\n  static int data[] = {1, 2, 3};\n  std::ignore = data[UnsafeIndex()];\n}\n\nvoid test_with_constexpr() {\n  // Expected rewrite:\n  // constexpr auto data = std::to_array<int>({1, 2, 3});\n  constexpr int data[] = {1, 2, 3};\n  std::ignore = data[UnsafeIndex()];\n}\n\nvoid test_with_constexpr_const() {\n  // Expected rewrite:\n  // constexpr auto data = std::to_array<int>({1, 2, 3});\n  constexpr const int data[] = {1, 2, 3};\n  std::ignore = data[UnsafeIndex()];\n}\n\nvoid test_with_volatile() {\n  // Expected rewrite:\n  // auto data = std::to_array<volatile int>({1, 2, 3});\n  volatile int data[] = {1, 2, 3};\n  std::ignore = data[UnsafeIndex()];\n}\n\nvoid test_with_all_qualifiers() {\n  // Expected rewrite:\n  // static const auto data = std::to_array<volatile int>({1, 2, 3});\n  static const volatile int data[] = {1, 2, 3};\n  std::ignore = data[UnsafeIndex()];\n}\n\nvoid test_with_const_char() {\n  // Expected rewrite:\n  // static auto data = std::to_array<const char*>({\" B\", \" kB\", \" MB\"});\n  static const char* data[] = {\" B\", \" kB\", \" MB\"};\n  std::ignore = data[UnsafeIndex()];\n}\n\nvoid test_with_constant_const_char() {\n  // Expected rewrite:\n  // static const auto data = std::to_array<const char*>({\" B\", \" kB\", \" MB\"});\n  static const char* const data[] = {\" B\", \" kB\", \" MB\"};\n  std::ignore = data[UnsafeIndex()];\n}\n\nvoid test_with_computed_size() {\n  // Expected rewrite:\n  // std::array<int, 2 + 2> data = {1, 2, 3, 4};\n  int data[2 + 2] = {1, 2, 3, 4};\n  std::ignore = data[UnsafeIndex()];\n}\n\nvoid test_with_constexpr_size() {\n  constexpr int size = 2 + 2;\n  // Expected rewrite:\n  // std::array<int, size> data = {1, 2, 3, 4};\n  int data[size] = {1, 2, 3, 4};\n  std::ignore = data[UnsafeIndex()];\n}\n\nvoid test_with_const_size() {\n  const int size = 2 + 2;\n  // Expected rewrite:\n  // std::array<int, size> data = {1, 2, 3, 4};\n  int data[size] = {1, 2, 3, 4};\n  std::ignore = data[UnsafeIndex()];\n}\n\nvoid test_brace_elision_computed_size() {\n  constexpr int size = 2;\n  struct Aggregate {\n    int a;\n    int b;\n  };\n  // Expected rewrite:\n  // std::array<Aggregate, size> buffer = {{{1, 2}, {3, 4}}};\n  Aggregate buffer[size] = {{1, 2}, {3, 4}};\n  std::ignore = buffer[UnsafeIndex()];\n}\n\nvoid test_with_nested_vector() {\n  // Expected rewrite:\n  // auto data = std::to_array<std::vector<int>>({\n  //     {1, 2, 3},\n  //     {4, 5, 6},\n  // });\n  std::vector<int> data[] = {\n      {1, 2, 3},\n      {4, 5, 6},\n  };\n  std::ignore = data[UnsafeIndex()];\n}\n\nvoid test_with_nested_vector_const_size() {\n  // Expected rewrite:\n  // std::array<std::vector<int>, 2> data = {{\n  //    {1, 2, 3},\n  //    {4, 5, 6},\n  // }};\n  std::vector<int> data[2] = {\n      {1, 2, 3},\n      {4, 5, 6},\n  };\n  std::ignore = data[UnsafeIndex()];\n}\n",
+        "file_path": "tools/clang/spanify/tests/array-with-init-list-original.cc",
+        "rev": "733eff2098bf2f25b1cf0c182a3ee8beda9ef880"
+    },
+    "sources": [
+        {
+            "content": null,
+            "file_path": "tools/clang/spanify/tests/array-with-init-list-original.cc"
+        }
+    ]
 }

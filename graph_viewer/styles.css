@@ -227,7 +227,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 #source-code {
-  white-space: nowrap;
+  white-space: pre;
   font-family: var(--mono-font-family);
   font-size: var(--source-code-font-size);
   line-height: var(--source-code-line-height);

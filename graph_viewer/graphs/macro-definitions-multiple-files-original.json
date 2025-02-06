@@ -2,633 +2,410 @@
     "nodes": [
         {
             "id": 0,
-            "replacement": "r:::/usr/local/google/home/keishi/chromium2/src/tools/clang/spanify/tests/macro-definitions-multiple-files-original.cc:::1040:::0:::.data()",
-            "is_buffer": "0",
-            "size_info_available": "0",
-            "is_deref_node": "0",
-            "is_data_change": "1",
+            "replacement": "r:::tools/clang/spanify/tests/macro-definitions-multiple-files-original.cc:::879:::0:::.size()",
+            "size_info_available": null,
             "visited": false,
             "debug_info": {
-                "added_to_component": false,
-                "original_is_buffer": "0",
-                "original_size_info_available": "0"
-            },
-            "data_change_lhs": 41
+                "rewrite_applied": false,
+                "original_is_buffer": false,
+                "original_size_info_available": null
+            }
         },
         {
             "id": 1,
-            "replacement": "r:::/usr/local/google/home/keishi/chromium2/src/tools/clang/spanify/tests/macro-definitions-multiple-files-original.cc:::747:::23:::base::span<const struct nlmsghdr>",
-            "is_buffer": "1",
-            "size_info_available": "0",
-            "is_deref_node": "0",
-            "is_data_change": "0",
+            "replacement": "r:::tools/clang/spanify/tests/macro-definitions-multiple-files-original.cc:::829:::6:::base::span<bool>",
+            "size_info_available": null,
             "visited": false,
             "debug_info": {
-                "added_to_component": false,
-                "original_is_buffer": "0",
-                "original_size_info_available": "0"
-            },
-            "data_change_lhs": -1
+                "rewrite_applied": false,
+                "original_is_buffer": false,
+                "original_size_info_available": null
+            }
         },
         {
             "id": 2,
-            "replacement": "r:::/usr/local/google/home/keishi/chromium2/src/tools/clang/spanify/tests/macro-definitions-multiple-files-original.cc:::1107:::2:::base::span<T>",
-            "is_buffer": "0",
-            "size_info_available": "0",
-            "is_deref_node": "0",
-            "is_data_change": "0",
+            "replacement": "r:::tools/clang/spanify/tests/macro-definitions-multiple-files-original.cc:::887:::18:::really_deprecated[0]",
+            "size_info_available": null,
             "visited": false,
             "debug_info": {
-                "added_to_component": false,
-                "original_is_buffer": "0",
-                "original_size_info_available": "0"
-            },
-            "data_change_lhs": -1
+                "rewrite_applied": false,
+                "original_is_buffer": false,
+                "original_size_info_available": null
+            }
         },
         {
             "id": 3,
-            "replacement": "r:::/usr/local/google/home/keishi/chromium2/src/tools/clang/spanify/tests/macro-definitions-multiple-files-original.cc:::1135:::23:::base::span<const struct nlmsghdr>",
-            "is_buffer": "1",
-            "size_info_available": "0",
-            "is_deref_node": "0",
-            "is_data_change": "0",
+            "replacement": "r:::tools/clang/spanify/tests/macro-definitions-multiple-files-original.cc:::947:::23:::base::span<const struct nlmsghdr>",
+            "size_info_available": null,
             "visited": false,
             "debug_info": {
-                "added_to_component": false,
-                "original_is_buffer": "0",
-                "original_size_info_available": "0"
-            },
-            "data_change_lhs": -1
+                "rewrite_applied": false,
+                "original_is_buffer": false,
+                "original_size_info_available": null
+            }
         },
         {
             "id": 4,
-            "replacement": "r:::/usr/local/google/home/keishi/chromium2/src/tools/clang/spanify/tests/macro-definitions-multiple-files-original.cc:::1270:::7:::{}",
-            "is_buffer": "0",
-            "size_info_available": "1",
-            "is_deref_node": "0",
-            "is_data_change": "0",
+            "replacement": "r:::tools/clang/spanify/tests/macro-definitions-multiple-files-original.cc:::747:::23:::base::span<const struct nlmsghdr>",
+            "size_info_available": false,
             "visited": false,
             "debug_info": {
-                "added_to_component": false,
-                "original_is_buffer": "0",
-                "original_size_info_available": "1"
-            },
-            "data_change_lhs": -1
+                "rewrite_applied": false,
+                "original_is_buffer": false,
+                "original_size_info_available": null
+            }
         },
         {
             "id": 5,
-            "replacement": "r:::/usr/local/google/home/keishi/chromium2/src/tools/clang/spanify/tests/macro-definitions-multiple-files-original.cc:::1361:::0:::.data()",
-            "is_buffer": "0",
-            "size_info_available": "0",
-            "is_deref_node": "0",
-            "is_data_change": "1",
+            "replacement": "r:::tools/clang/spanify/tests/macro-definitions-multiple-files-original.cc:::1107:::2:::base::span<T>",
+            "size_info_available": null,
             "visited": false,
             "debug_info": {
-                "added_to_component": false,
-                "original_is_buffer": "0",
-                "original_size_info_available": "0"
-            },
-            "data_change_lhs": 2
+                "rewrite_applied": false,
+                "original_is_buffer": false,
+                "original_size_info_available": null
+            }
         },
         {
             "id": 6,
-            "replacement": "r:::/usr/local/google/home/keishi/chromium2/src/tools/clang/spanify/tests/macro-definitions-multiple-files-original.cc:::1661:::0:::.data()",
-            "is_buffer": "0",
-            "size_info_available": "0",
-            "is_deref_node": "0",
-            "is_data_change": "1",
+            "replacement": "r:::tools/clang/spanify/tests/macro-definitions-multiple-files-original.cc:::1135:::23:::base::span<const struct nlmsghdr>",
+            "size_info_available": false,
             "visited": false,
             "debug_info": {
-                "added_to_component": true,
-                "original_is_buffer": "0",
-                "original_size_info_available": "0"
-            },
-            "data_change_lhs": 9
+                "rewrite_applied": false,
+                "original_is_buffer": false,
+                "original_size_info_available": null
+            }
         },
         {
             "id": 7,
-            "replacement": "r:::/usr/local/google/home/keishi/chromium2/src/tools/clang/spanify/tests/macro-definitions-multiple-files-original.cc:::1787:::6:::base::span<int *>",
-            "is_buffer": "1",
-            "size_info_available": "1",
-            "is_deref_node": "0",
-            "is_data_change": "0",
-            "visited": true,
+            "replacement": "r:::tools/clang/spanify/tests/macro-definitions-multiple-files-original.cc:::1270:::7:::{}",
+            "size_info_available": true,
+            "visited": false,
             "debug_info": {
-                "added_to_component": true,
-                "original_is_buffer": "0",
-                "original_size_info_available": "0"
-            },
-            "data_change_lhs": -1
+                "rewrite_applied": false,
+                "original_is_buffer": false,
+                "original_size_info_available": null
+            }
         },
         {
             "id": 8,
-            "replacement": "r:::/usr/local/google/home/keishi/chromium2/src/tools/clang/spanify/tests/macro-definitions-multiple-files-original.cc:::2303:::6:::base::span<int *>",
-            "is_buffer": "0",
-            "size_info_available": "1",
-            "is_deref_node": "0",
-            "is_data_change": "0",
-            "visited": true,
+            "replacement": "r:::tools/clang/spanify/tests/macro-definitions-multiple-files-original.cc:::1826:::0:::.size()",
+            "size_info_available": null,
+            "visited": false,
             "debug_info": {
-                "added_to_component": true,
-                "original_is_buffer": "0",
-                "original_size_info_available": "0"
-            },
-            "data_change_lhs": -1
+                "rewrite_applied": true,
+                "original_is_buffer": false,
+                "original_size_info_available": null
+            }
         },
         {
             "id": 9,
-            "replacement": "r:::/usr/local/google/home/keishi/chromium2/src/tools/clang/spanify/tests/macro-definitions-multiple-files-original.cc:::1925:::14:::base::span<std::size_t *>",
-            "is_buffer": "0",
-            "size_info_available": "0",
-            "is_deref_node": "0",
-            "is_data_change": "0",
-            "visited": false,
+            "replacement": "r:::tools/clang/spanify/tests/macro-definitions-multiple-files-original.cc:::1787:::6:::base::span<int *>",
+            "size_info_available": true,
+            "visited": true,
             "debug_info": {
-                "added_to_component": false,
-                "original_is_buffer": "0",
-                "original_size_info_available": "0"
-            },
-            "data_change_lhs": -1
+                "rewrite_applied": true,
+                "original_is_buffer": false,
+                "original_size_info_available": null
+            }
         },
         {
             "id": 10,
-            "replacement": "r:::/usr/local/google/home/keishi/chromium2/src/tools/clang/spanify/tests/macro-definitions-multiple-files-original.cc:::2013:::14:::base::span<std::size_t *>",
-            "is_buffer": "0",
-            "size_info_available": "0",
-            "is_deref_node": "0",
-            "is_data_change": "0",
+            "replacement": "r:::tools/clang/spanify/tests/macro-definitions-multiple-files-original.cc:::1925:::14:::base::span<std::size_t *>",
+            "size_info_available": null,
             "visited": false,
             "debug_info": {
-                "added_to_component": false,
-                "original_is_buffer": "0",
-                "original_size_info_available": "0"
-            },
-            "data_change_lhs": -1
+                "rewrite_applied": false,
+                "original_is_buffer": false,
+                "original_size_info_available": null
+            }
         },
         {
             "id": 11,
-            "replacement": "r:::/usr/local/google/home/keishi/chromium2/src/tools/clang/spanify/tests/macro-definitions-multiple-files-original.cc:::2054:::0:::.data()",
-            "is_buffer": "0",
-            "size_info_available": "0",
-            "is_deref_node": "0",
-            "is_data_change": "1",
+            "replacement": "r:::tools/clang/spanify/tests/macro-definitions-multiple-files-original.cc:::2013:::14:::base::span<std::size_t *>",
+            "size_info_available": null,
             "visited": false,
             "debug_info": {
-                "added_to_component": true,
-                "original_is_buffer": "0",
-                "original_size_info_available": "0"
-            },
-            "data_change_lhs": 10
+                "rewrite_applied": false,
+                "original_is_buffer": false,
+                "original_size_info_available": null
+            }
         },
         {
             "id": 12,
-            "replacement": "r:::/usr/local/google/home/keishi/chromium2/src/tools/clang/spanify/tests/macro-definitions-multiple-files-original.cc:::2068:::8:::new_ptr[0]",
-            "is_buffer": "0",
-            "size_info_available": "0",
-            "is_deref_node": "1",
-            "is_data_change": "0",
+            "replacement": "r:::tools/clang/spanify/tests/macro-definitions-multiple-files-original.cc:::2068:::8:::new_ptr[0]",
+            "size_info_available": null,
             "visited": false,
             "debug_info": {
-                "added_to_component": false,
-                "original_is_buffer": "0",
-                "original_size_info_available": "0"
-            },
-            "data_change_lhs": -1
+                "rewrite_applied": false,
+                "original_is_buffer": false,
+                "original_size_info_available": null
+            }
         },
         {
             "id": 13,
-            "replacement": "r:::/usr/local/google/home/keishi/chromium2/src/tools/clang/spanify/tests/macro-definitions-multiple-files-original.cc:::2101:::8:::new_ptr[0]",
-            "is_buffer": "0",
-            "size_info_available": "0",
-            "is_deref_node": "1",
-            "is_data_change": "0",
+            "replacement": "r:::tools/clang/spanify/tests/macro-definitions-multiple-files-original.cc:::2101:::8:::new_ptr[0]",
+            "size_info_available": null,
             "visited": false,
             "debug_info": {
-                "added_to_component": false,
-                "original_is_buffer": "0",
-                "original_size_info_available": "0"
-            },
-            "data_change_lhs": -1
+                "rewrite_applied": false,
+                "original_is_buffer": false,
+                "original_size_info_available": null
+            }
         },
         {
             "id": 14,
-            "replacement": "r:::/usr/local/google/home/keishi/chromium2/src/tools/clang/spanify/tests/macro-definitions-multiple-files-original.cc:::2142:::10:::new_ptr_2[0]",
-            "is_buffer": "0",
-            "size_info_available": "0",
-            "is_deref_node": "1",
-            "is_data_change": "0",
+            "replacement": "r:::tools/clang/spanify/tests/macro-definitions-multiple-files-original.cc:::2142:::10:::new_ptr_2[0]",
+            "size_info_available": null,
             "visited": false,
             "debug_info": {
-                "added_to_component": false,
-                "original_is_buffer": "0",
-                "original_size_info_available": "0"
-            },
-            "data_change_lhs": -1
+                "rewrite_applied": false,
+                "original_is_buffer": false,
+                "original_size_info_available": null
+            }
         },
         {
             "id": 15,
-            "replacement": "r:::/usr/local/google/home/keishi/chromium2/src/tools/clang/spanify/tests/macro-definitions-multiple-files-original.cc:::2341:::0:::<empty>",
-            "is_buffer": "0",
-            "size_info_available": "1",
-            "is_deref_node": "0",
-            "is_data_change": "0",
+            "replacement": "r:::tools/clang/spanify/tests/macro-definitions-multiple-files-original.cc:::2303:::6:::base::span<int *>",
+            "size_info_available": true,
             "visited": true,
             "debug_info": {
-                "added_to_component": true,
-                "original_is_buffer": "0",
-                "original_size_info_available": "1"
-            },
-            "data_change_lhs": -1
+                "rewrite_applied": true,
+                "original_is_buffer": false,
+                "original_size_info_available": null
+            }
         },
         {
             "id": 16,
-            "replacement": "r:::/usr/local/google/home/keishi/chromium2/src/tools/clang/spanify/tests/macro-definitions-multiple-files-original.cc:::2362:::0:::.data()",
-            "is_buffer": "0",
-            "size_info_available": "0",
-            "is_deref_node": "0",
-            "is_data_change": "1",
-            "visited": false,
+            "replacement": "r:::tools/clang/spanify/tests/macro-definitions-multiple-files-original.cc:::2341:::0:::<empty>",
+            "size_info_available": true,
+            "visited": true,
             "debug_info": {
-                "added_to_component": false,
-                "original_is_buffer": "0",
-                "original_size_info_available": "0"
-            },
-            "data_change_lhs": 7
+                "rewrite_applied": true,
+                "original_is_buffer": false,
+                "original_size_info_available": null
+            }
         },
         {
             "id": 17,
-            "replacement": "r:::/usr/local/google/home/keishi/chromium2/src/tools/clang/spanify/tests/macro-definitions-multiple-files-original.cc:::2781:::13:::base::span<const Entry>",
-            "is_buffer": "0",
-            "size_info_available": "0",
-            "is_deref_node": "0",
-            "is_data_change": "0",
+            "replacement": "r:::tools/clang/spanify/tests/macro-definitions-multiple-files-original.cc:::2832:::11:::base::span<const int>",
+            "size_info_available": null,
             "visited": false,
             "debug_info": {
-                "added_to_component": false,
-                "original_is_buffer": "0",
-                "original_size_info_available": "0"
-            },
-            "data_change_lhs": -1
+                "rewrite_applied": false,
+                "original_is_buffer": false,
+                "original_size_info_available": null
+            }
         },
         {
             "id": 18,
-            "replacement": "r:::/usr/local/google/home/keishi/chromium2/src/tools/clang/spanify/tests/macro-definitions-multiple-files-original.cc:::5278:::13:::base::span<const Entry>",
-            "is_buffer": "0",
-            "size_info_available": "0",
-            "is_deref_node": "0",
-            "is_data_change": "0",
+            "replacement": "r:::tools/clang/spanify/tests/macro-definitions-multiple-files-original.cc:::2849:::7:::{}",
+            "size_info_available": true,
             "visited": false,
             "debug_info": {
-                "added_to_component": false,
-                "original_is_buffer": "0",
-                "original_size_info_available": "0"
-            },
-            "data_change_lhs": -1
+                "rewrite_applied": false,
+                "original_is_buffer": false,
+                "original_size_info_available": null
+            }
         },
         {
             "id": 19,
-            "replacement": "r:::/usr/local/google/home/keishi/chromium2/src/tools/clang/spanify/tests/macro-definitions-multiple-files-original.cc:::5656:::13:::base::span<const Entry>",
-            "is_buffer": "0",
-            "size_info_available": "0",
-            "is_deref_node": "0",
-            "is_data_change": "0",
+            "replacement": "r:::tools/clang/spanify/tests/macro-definitions-multiple-files-original.cc:::3273:::11:::base::span<const int>",
+            "size_info_available": null,
             "visited": false,
             "debug_info": {
-                "added_to_component": false,
-                "original_is_buffer": "0",
-                "original_size_info_available": "0"
-            },
-            "data_change_lhs": -1
+                "rewrite_applied": false,
+                "original_is_buffer": false,
+                "original_size_info_available": null
+            }
         },
         {
             "id": 20,
-            "replacement": "r:::/usr/local/google/home/keishi/chromium2/src/tools/clang/spanify/tests/macro-definitions-multiple-files-original.cc:::2832:::11:::base::span<const int>",
-            "is_buffer": "0",
-            "size_info_available": "0",
-            "is_deref_node": "0",
-            "is_data_change": "0",
+            "replacement": "r:::tools/clang/spanify/tests/macro-definitions-multiple-files-original.cc:::3290:::7:::{}",
+            "size_info_available": true,
             "visited": false,
             "debug_info": {
-                "added_to_component": false,
-                "original_is_buffer": "0",
-                "original_size_info_available": "0"
-            },
-            "data_change_lhs": -1
+                "rewrite_applied": false,
+                "original_is_buffer": false,
+                "original_size_info_available": null
+            }
         },
         {
             "id": 21,
-            "replacement": "r:::/usr/local/google/home/keishi/chromium2/src/tools/clang/spanify/tests/macro-definitions-multiple-files-original.cc:::2849:::7:::{}",
-            "is_buffer": "0",
-            "size_info_available": "1",
-            "is_deref_node": "0",
-            "is_data_change": "0",
+            "replacement": "r:::tools/clang/spanify/tests/macro-definitions-multiple-files-original.cc:::3315:::0:::.size()",
+            "size_info_available": null,
             "visited": false,
             "debug_info": {
-                "added_to_component": false,
-                "original_is_buffer": "0",
-                "original_size_info_available": "1"
-            },
-            "data_change_lhs": -1
+                "rewrite_applied": false,
+                "original_is_buffer": false,
+                "original_size_info_available": null
+            }
         },
         {
             "id": 22,
-            "replacement": "r:::/usr/local/google/home/keishi/chromium2/src/tools/clang/spanify/tests/macro-definitions-multiple-files-original.cc:::3076:::20:::base::span<const Entry *const>",
-            "is_buffer": "0",
-            "size_info_available": "0",
-            "is_deref_node": "0",
-            "is_data_change": "0",
+            "replacement": "r:::tools/clang/spanify/tests/macro-definitions-multiple-files-original.cc:::3076:::20:::base::span<const Entry *const>",
+            "size_info_available": null,
             "visited": false,
             "debug_info": {
-                "added_to_component": false,
-                "original_is_buffer": "0",
-                "original_size_info_available": "0"
-            },
-            "data_change_lhs": -1
+                "rewrite_applied": false,
+                "original_is_buffer": false,
+                "original_size_info_available": null
+            }
         },
         {
             "id": 23,
-            "replacement": "r:::/usr/local/google/home/keishi/chromium2/src/tools/clang/spanify/tests/macro-definitions-multiple-files-original.cc:::6149:::20:::base::span<const Entry *const>",
-            "is_buffer": "1",
-            "size_info_available": "1",
-            "is_deref_node": "0",
-            "is_data_change": "0",
-            "visited": true,
+            "replacement": "r:::tools/clang/spanify/tests/macro-definitions-multiple-files-original.cc:::3634:::11:::base::span<const int>",
+            "size_info_available": null,
+            "visited": false,
             "debug_info": {
-                "added_to_component": true,
-                "original_is_buffer": "0",
-                "original_size_info_available": "0"
-            },
-            "data_change_lhs": -1
+                "rewrite_applied": false,
+                "original_is_buffer": false,
+                "original_size_info_available": null
+            }
         },
         {
             "id": 24,
-            "replacement": "r:::/usr/local/google/home/keishi/chromium2/src/tools/clang/spanify/tests/macro-definitions-multiple-files-original.cc:::6457:::20:::base::span<const Entry *const>",
-            "is_buffer": "1",
-            "size_info_available": "1",
-            "is_deref_node": "0",
-            "is_data_change": "0",
-            "visited": true,
+            "replacement": "r:::tools/clang/spanify/tests/macro-definitions-multiple-files-original.cc:::3651:::7:::{}",
+            "size_info_available": true,
+            "visited": false,
             "debug_info": {
-                "added_to_component": true,
-                "original_is_buffer": "0",
-                "original_size_info_available": "0"
-            },
-            "data_change_lhs": -1
+                "rewrite_applied": false,
+                "original_is_buffer": false,
+                "original_size_info_available": null
+            }
         },
         {
             "id": 25,
-            "replacement": "r:::/usr/local/google/home/keishi/chromium2/src/tools/clang/spanify/tests/macro-definitions-multiple-files-original.cc:::3273:::11:::base::span<const int>",
-            "is_buffer": "0",
-            "size_info_available": "0",
-            "is_deref_node": "0",
-            "is_data_change": "0",
+            "replacement": "r:::tools/clang/spanify/tests/macro-definitions-multiple-files-original.cc:::2781:::13:::base::span<const Entry>",
+            "size_info_available": null,
             "visited": false,
             "debug_info": {
-                "added_to_component": false,
-                "original_is_buffer": "0",
-                "original_size_info_available": "0"
-            },
-            "data_change_lhs": -1
+                "rewrite_applied": false,
+                "original_is_buffer": false,
+                "original_size_info_available": null
+            }
         },
         {
             "id": 26,
-            "replacement": "r:::/usr/local/google/home/keishi/chromium2/src/tools/clang/spanify/tests/macro-definitions-multiple-files-original.cc:::3290:::7:::{}",
-            "is_buffer": "0",
-            "size_info_available": "1",
-            "is_deref_node": "0",
-            "is_data_change": "0",
+            "replacement": "r:::tools/clang/spanify/tests/macro-definitions-multiple-files-original.cc:::5278:::13:::base::span<const Entry>",
+            "size_info_available": null,
             "visited": false,
             "debug_info": {
-                "added_to_component": false,
-                "original_is_buffer": "0",
-                "original_size_info_available": "1"
-            },
-            "data_change_lhs": -1
+                "rewrite_applied": false,
+                "original_is_buffer": false,
+                "original_size_info_available": null
+            }
         },
         {
             "id": 27,
-            "replacement": "r:::/usr/local/google/home/keishi/chromium2/src/tools/clang/spanify/tests/macro-definitions-multiple-files-original.cc:::3496:::20:::base::span<const Entry *const>",
-            "is_buffer": "1",
-            "size_info_available": "1",
-            "is_deref_node": "0",
-            "is_data_change": "0",
-            "visited": true,
+            "replacement": "r:::tools/clang/spanify/tests/macro-definitions-multiple-files-original.cc:::5656:::13:::base::span<const Entry>",
+            "size_info_available": null,
+            "visited": false,
             "debug_info": {
-                "added_to_component": true,
-                "original_is_buffer": "0",
-                "original_size_info_available": "0"
-            },
-            "data_change_lhs": -1
+                "rewrite_applied": false,
+                "original_is_buffer": false,
+                "original_size_info_available": null
+            }
         },
         {
             "id": 28,
-            "replacement": "r:::/usr/local/google/home/keishi/chromium2/src/tools/clang/spanify/tests/macro-definitions-multiple-files-original.cc:::6849:::20:::base::span<const Entry *const>",
-            "is_buffer": "0",
-            "size_info_available": "1",
-            "is_deref_node": "0",
-            "is_data_change": "0",
+            "replacement": "r:::tools/clang/spanify/tests/macro-definitions-multiple-files-original.cc:::6149:::20:::base::span<const Entry *const>",
+            "size_info_available": true,
             "visited": true,
             "debug_info": {
-                "added_to_component": true,
-                "original_is_buffer": "0",
-                "original_size_info_available": "0"
-            },
-            "data_change_lhs": -1
+                "rewrite_applied": true,
+                "original_is_buffer": false,
+                "original_size_info_available": null
+            }
         },
         {
             "id": 29,
-            "replacement": "r:::/usr/local/google/home/keishi/chromium2/src/tools/clang/spanify/tests/macro-definitions-multiple-files-original.cc:::7106:::20:::base::span<const Entry *const>",
-            "is_buffer": "0",
-            "size_info_available": "1",
-            "is_deref_node": "0",
-            "is_data_change": "0",
+            "replacement": "r:::tools/clang/spanify/tests/macro-definitions-multiple-files-original.cc:::6191:::7:::",
+            "size_info_available": true,
             "visited": true,
             "debug_info": {
-                "added_to_component": true,
-                "original_is_buffer": "0",
-                "original_size_info_available": "0"
-            },
-            "data_change_lhs": -1
+                "rewrite_applied": true,
+                "original_is_buffer": false,
+                "original_size_info_available": null
+            }
         },
         {
             "id": 30,
-            "replacement": "r:::/usr/local/google/home/keishi/chromium2/src/tools/clang/spanify/tests/macro-definitions-multiple-files-original.cc:::3634:::11:::base::span<const int>",
-            "is_buffer": "0",
-            "size_info_available": "0",
-            "is_deref_node": "0",
-            "is_data_change": "0",
-            "visited": false,
+            "replacement": "r:::tools/clang/spanify/tests/macro-definitions-multiple-files-original.cc:::6457:::20:::base::span<const Entry *const>",
+            "size_info_available": true,
+            "visited": true,
             "debug_info": {
-                "added_to_component": false,
-                "original_is_buffer": "0",
-                "original_size_info_available": "0"
-            },
-            "data_change_lhs": -1
+                "rewrite_applied": true,
+                "original_is_buffer": false,
+                "original_size_info_available": null
+            }
         },
         {
             "id": 31,
-            "replacement": "r:::/usr/local/google/home/keishi/chromium2/src/tools/clang/spanify/tests/macro-definitions-multiple-files-original.cc:::3651:::7:::{}",
-            "is_buffer": "0",
-            "size_info_available": "1",
-            "is_deref_node": "0",
-            "is_data_change": "0",
-            "visited": false,
+            "replacement": "r:::tools/clang/spanify/tests/macro-definitions-multiple-files-original.cc:::6499:::7:::",
+            "size_info_available": true,
+            "visited": true,
             "debug_info": {
-                "added_to_component": false,
-                "original_is_buffer": "0",
-                "original_size_info_available": "1"
-            },
-            "data_change_lhs": -1
+                "rewrite_applied": true,
+                "original_is_buffer": false,
+                "original_size_info_available": null
+            }
         },
         {
             "id": 32,
-            "replacement": "r:::/usr/local/google/home/keishi/chromium2/src/tools/clang/spanify/tests/macro-definitions-multiple-files-original.cc:::4369:::0:::.data()",
-            "is_buffer": "0",
-            "size_info_available": "0",
-            "is_deref_node": "0",
-            "is_data_change": "1",
-            "visited": false,
+            "replacement": "r:::tools/clang/spanify/tests/macro-definitions-multiple-files-original.cc:::6849:::20:::base::span<const Entry *const>",
+            "size_info_available": true,
+            "visited": true,
             "debug_info": {
-                "added_to_component": false,
-                "original_is_buffer": "0",
-                "original_size_info_available": "0"
-            },
-            "data_change_lhs": 17
+                "rewrite_applied": true,
+                "original_is_buffer": false,
+                "original_size_info_available": null
+            }
         },
         {
             "id": 33,
-            "replacement": "r:::/usr/local/google/home/keishi/chromium2/src/tools/clang/spanify/tests/macro-definitions-multiple-files-original.cc:::4552:::0:::.data()",
-            "is_buffer": "0",
-            "size_info_available": "0",
-            "is_deref_node": "0",
-            "is_data_change": "1",
-            "visited": false,
+            "replacement": "r:::tools/clang/spanify/tests/macro-definitions-multiple-files-original.cc:::6891:::7:::",
+            "size_info_available": true,
+            "visited": true,
             "debug_info": {
-                "added_to_component": true,
-                "original_is_buffer": "0",
-                "original_size_info_available": "0"
-            },
-            "data_change_lhs": 22
+                "rewrite_applied": true,
+                "original_is_buffer": false,
+                "original_size_info_available": null
+            }
         },
         {
             "id": 34,
-            "replacement": "r:::/usr/local/google/home/keishi/chromium2/src/tools/clang/spanify/tests/macro-definitions-multiple-files-original.cc:::4785:::0:::.data()",
-            "is_buffer": "0",
-            "size_info_available": "0",
-            "is_deref_node": "0",
-            "is_data_change": "1",
-            "visited": false,
+            "replacement": "r:::tools/clang/spanify/tests/macro-definitions-multiple-files-original.cc:::3496:::20:::base::span<const Entry *const>",
+            "size_info_available": true,
+            "visited": true,
             "debug_info": {
-                "added_to_component": false,
-                "original_is_buffer": "0",
-                "original_size_info_available": "0"
-            },
-            "data_change_lhs": 27
+                "rewrite_applied": true,
+                "original_is_buffer": false,
+                "original_size_info_available": null
+            }
         },
         {
             "id": 35,
-            "replacement": "r:::/usr/local/google/home/keishi/chromium2/src/tools/clang/spanify/tests/macro-definitions-multiple-files-original.cc:::6191:::7::: ",
-            "is_buffer": "0",
-            "size_info_available": "1",
-            "is_deref_node": "0",
-            "is_data_change": "0",
+            "replacement": "r:::tools/clang/spanify/tests/macro-definitions-multiple-files-original.cc:::7106:::20:::base::span<const Entry *const>",
+            "size_info_available": true,
             "visited": true,
             "debug_info": {
-                "added_to_component": true,
-                "original_is_buffer": "0",
-                "original_size_info_available": "1"
-            },
-            "data_change_lhs": -1
+                "rewrite_applied": true,
+                "original_is_buffer": false,
+                "original_size_info_available": null
+            }
         },
         {
             "id": 36,
-            "replacement": "r:::/usr/local/google/home/keishi/chromium2/src/tools/clang/spanify/tests/macro-definitions-multiple-files-original.cc:::6499:::7::: ",
-            "is_buffer": "0",
-            "size_info_available": "1",
-            "is_deref_node": "0",
-            "is_data_change": "0",
+            "replacement": "r:::tools/clang/spanify/tests/macro-definitions-multiple-files-original.cc:::7148:::7:::",
+            "size_info_available": true,
             "visited": true,
             "debug_info": {
-                "added_to_component": true,
-                "original_is_buffer": "0",
-                "original_size_info_available": "1"
-            },
-            "data_change_lhs": -1
-        },
-        {
-            "id": 37,
-            "replacement": "r:::/usr/local/google/home/keishi/chromium2/src/tools/clang/spanify/tests/macro-definitions-multiple-files-original.cc:::6891:::7::: ",
-            "is_buffer": "0",
-            "size_info_available": "1",
-            "is_deref_node": "0",
-            "is_data_change": "0",
-            "visited": true,
-            "debug_info": {
-                "added_to_component": true,
-                "original_is_buffer": "0",
-                "original_size_info_available": "1"
-            },
-            "data_change_lhs": -1
-        },
-        {
-            "id": 38,
-            "replacement": "r:::/usr/local/google/home/keishi/chromium2/src/tools/clang/spanify/tests/macro-definitions-multiple-files-original.cc:::7148:::7::: ",
-            "is_buffer": "0",
-            "size_info_available": "1",
-            "is_deref_node": "0",
-            "is_data_change": "0",
-            "visited": true,
-            "debug_info": {
-                "added_to_component": true,
-                "original_is_buffer": "0",
-                "original_size_info_available": "1"
-            },
-            "data_change_lhs": -1
-        },
-        {
-            "id": 39,
-            "replacement": "r:::/usr/local/google/home/keishi/chromium2/src/tools/clang/spanify/tests/macro-definitions-multiple-files-original.cc:::887:::18:::really_deprecated[0]",
-            "is_buffer": "0",
-            "size_info_available": "0",
-            "is_deref_node": "1",
-            "is_data_change": "0",
-            "visited": false,
-            "debug_info": {
-                "added_to_component": false,
-                "original_is_buffer": "0",
-                "original_size_info_available": "0"
-            },
-            "data_change_lhs": -1
-        },
-        {
-            "id": 40,
-            "replacement": "r:::/usr/local/google/home/keishi/chromium2/src/tools/clang/spanify/tests/macro-definitions-multiple-files-original.cc:::829:::6:::base::span<bool>",
-            "is_buffer": "0",
-            "size_info_available": "0",
-            "is_deref_node": "0",
-            "is_data_change": "0",
-            "visited": false,
-            "debug_info": {
-                "added_to_component": false,
-                "original_is_buffer": "0",
-                "original_size_info_available": "0"
-            },
-            "data_change_lhs": -1
-        },
-        {
-            "id": 41,
-            "replacement": "r:::/usr/local/google/home/keishi/chromium2/src/tools/clang/spanify/tests/macro-definitions-multiple-files-original.cc:::947:::23:::base::span<const struct nlmsghdr>",
-            "is_buffer": "0",
-            "size_info_available": "0",
-            "is_deref_node": "0",
-            "is_data_change": "0",
-            "visited": false,
-            "debug_info": {
-                "added_to_component": false,
-                "original_is_buffer": "0",
-                "original_size_info_available": "0"
-            },
-            "data_change_lhs": -1
+                "rewrite_applied": true,
+                "original_is_buffer": false,
+                "original_size_info_available": null
+            }
         }
     ],
     "links": [
@@ -638,103 +415,87 @@
         },
         {
             "source": 2,
+            "target": 1
+        },
+        {
+            "source": 3,
             "target": 4
         },
         {
-            "source": 2,
-            "target": 3
+            "source": 5,
+            "target": 6
         },
         {
             "source": 5,
-            "target": 3
-        },
-        {
-            "source": 6,
             "target": 7
-        },
-        {
-            "source": 7,
-            "target": 8
         },
         {
             "source": 8,
-            "target": 15
+            "target": 9
         },
         {
             "source": 9,
-            "target": 7
+            "target": 15
         },
         {
             "source": 10,
-            "target": 7
+            "target": 9
         },
         {
             "source": 11,
-            "target": 7
+            "target": 9
         },
         {
             "source": 12,
-            "target": 9
-        },
-        {
-            "source": 13,
-            "target": 9
-        },
-        {
-            "source": 14,
             "target": 10
         },
         {
-            "source": 16,
-            "target": 8
+            "source": 13,
+            "target": 10
         },
         {
-            "source": 17,
-            "target": 19
+            "source": 14,
+            "target": 11
+        },
+        {
+            "source": 15,
+            "target": 16
         },
         {
             "source": 17,
             "target": 18
         },
         {
-            "source": 20,
-            "target": 21
+            "source": 19,
+            "target": 20
+        },
+        {
+            "source": 21,
+            "target": 22
         },
         {
             "source": 22,
-            "target": 24
+            "target": 28
         },
         {
             "source": 22,
-            "target": 23
+            "target": 30
         },
         {
             "source": 23,
-            "target": 35
-        },
-        {
-            "source": 24,
-            "target": 36
+            "target": 24
         },
         {
             "source": 25,
             "target": 26
         },
         {
-            "source": 27,
-            "target": 28
-        },
-        {
-            "source": 27,
-            "target": 29
+            "source": 25,
+            "target": 27
         },
         {
             "source": 28,
-            "target": 37
-        },
-        {
-            "source": 29,
-            "target": 38
+            "target": 29
         },
         {
             "source": 30,
@@ -742,39 +503,30 @@
         },
         {
             "source": 32,
-            "target": 19
-        },
-        {
-            "source": 32,
-            "target": 18
-        },
-        {
-            "source": 33,
-            "target": 24
-        },
-        {
-            "source": 33,
-            "target": 23
+            "target": 33
         },
         {
             "source": 34,
-            "target": 28
+            "target": 32
         },
         {
             "source": 34,
-            "target": 29
+            "target": 35
         },
         {
-            "source": 39,
-            "target": 40
-        },
-        {
-            "source": 41,
-            "target": 1
+            "source": 35,
+            "target": 36
         }
     ],
     "source": {
         "content": "// Copyright 2024 The Chromium Authors\n// Use of this source code is governed by a BSD-style license that can be\n// found in the LICENSE file.\n#include <cassert>\n#include <cstdint>\n#include <cstring>\n#include <memory>\n#include <string>\n#include <unordered_map>\n#include <vector>\n\n#include \"usr/include/linux/netlink.h\"\n\n// NOTE: this exists as a regression test for crbug/357433195, where before the\n// associated patch that added this, this would fail an assertion in\n// extract_edits.py. However after fixing the assertion the code below doesn't\n// get rewritten so original.cc == expected.cc, we're just asserting that the\n// script doesn't fail on it.\nnamespace internal {\nnamespace {\nusing std::size_t;\n// No expected rewrite\nbool GetAddress(const struct nlmsghdr* header,\n                int header_length,\n                bool* really_deprecated) {\n  if (really_deprecated) {\n    *really_deprecated = false;\n  }\n\n  // No expected rewrite\n  const struct nlmsghdr* msg =\n      reinterpret_cast<const struct nlmsghdr*>(NLMSG_DATA(header));\n  return true;\n}\n\n// No expected rewrite\ntemplate <typename T>\nT* SafelyCastNetlinkMsgData(const struct nlmsghdr* header, int length) {\n  if (length <= 0 || static_cast<size_t>(length) < NLMSG_HDRLEN + sizeof(T)) {\n    return nullptr;\n  }\n  // no expected rewrite\n  return reinterpret_cast<const T*>(NLMSG_DATA(header));\n}\n}  // namespace\n}  // namespace internal\n\n// While fixing the above, the updating sometimes caused the rewrite to occur in\n// the middle of the MACRO rather than inside the macro. This catches that case.\n\n// Expected rewrite:\n// dict.data()\n#define CAST_FUN reinterpret_cast<std::size_t**>(dict);\n#define CAST_FUN_2(x) reinterpret_cast<std::size_t**>(x);\n\n// Expected rewrite:\n// base::span<int*> dict\nstd::size_t check(int** dict, std::size_t N) {\n  if (dict) {\n    for (int i = 0; i < N; ++i) {\n      int* ptr = dict[i];\n      // No expected rewrite\n      std::size_t** new_ptr = CAST_FUN;\n      // Expected rewrite:\n      // dict.data()\n      std::size_t** new_ptr_2 = CAST_FUN_2(dict);\n      if (**new_ptr > 10) {\n        return **new_ptr;\n      } else {\n        return **new_ptr_2;\n      }\n    }\n  }\n  return 10;\n}\n\nvoid checkMacroInFile() {\n  int array[2][1] = {{int(2)}, {int(3)}};\n  // Expected rewrite:\n  // base::span<int*>\n  int** front = reinterpret_cast<int**>(array);\n  check(front, 2);\n}\n\n// Finally after fixing the initial multiple neighbors there was a new one and\n// this one catches that. Again this used to crash and showcases the situations\n// where the assertion would fail.\nstruct Entry {\n  explicit Entry(std::string n) : name(n) {}\n  std::string name;\n  std::unordered_map<std::string, int> metrics;\n};\n\nclass Recorder {\n public:\n  // No expected rewrite.\n  bool EntryHasMetricNoRewrites(const Entry* entry, std::string metric_name) {\n    const int* val = nullptr;\n    if (entry->metrics.find(metric_name) != entry->metrics.end()) {\n      val = &entry->metrics.find(metric_name)->second;\n    }\n    return val != nullptr;\n  }\n\n  // No expected rewrite\n  bool EntryHasMetricRhsRewrite(const Entry* const* entries,\n                                size_t len,\n                                std::string metric_name) {\n    // Can't use entries like a buffer to avoid the rewrite.\n    const int* val = nullptr;\n    if (!entries || metric_name == \"hello\" || len > 3) {\n      return false;\n    }\n    return true;\n  }\n\n  // Expected rewrite:\n  // base::span<const Entry* const>\n  bool EntryHasMetricFullRewrite(const Entry* const* entries,\n                                 size_t len,\n                                 std::string metric_name) {\n    const int* val = nullptr;\n    for (size_t i = 0; i < len; ++i) {\n      const Entry* entry = entries[i];\n      if (entry->metrics.find(metric_name) != entry->metrics.end()) {\n        val = &entry->metrics.find(metric_name)->second;\n      }\n    }\n    return val != nullptr;\n  }\n\n  // No expected rewrite.\n  std::vector<const Entry*> GetEntriesByName(std::string name) const {\n    std::vector<const Entry*> result;\n    for (const auto& entry : entries_) {\n      if (entry->name == name) {\n        result.push_back(entry.get());\n      }\n    }\n    return result;\n  }\n  std::vector<std::unique_ptr<Entry>> entries_;\n};\n\n// No expected rewrite.\n#define EXPECT_HAS_UKM_NO_REWRITE(name) \\\n  assert(test_recorder_->EntryHasMetricNoRewrites(entry, name));\n\n// Expected rewrite:\n// test_entries.data()\n#define EXPECT_HAS_UKM_RHS_REWRITE(name)                        \\\n  assert(test_recorder_->EntryHasMetricRhsRewrite(test_entries, \\\n                                                  entries.size(), name));\n\n// No expected rewrite.\n#define EXPECT_HAS_UKM_FULL_REWRITE(name)                        \\\n  assert(test_recorder_->EntryHasMetricFullRewrite(test_entries, \\\n                                                   entries.size(), name));\n\nvoid MediaMetricsProviderTestTestUkm() {\n  Recorder recorder_;\n  Recorder* test_recorder_ = &recorder_;\n  test_recorder_->entries_.push_back(std::make_unique<Entry>(\"foo\"));\n  // Test when neither lhs nor rhs gets rewritten this is the common case in the\n  // code base.\n  {\n    const auto& entries = test_recorder_->GetEntriesByName(\"foo\");\n    assert(1u == entries.size());\n    // No expected rewrite.\n    for (const Entry* entry : entries) {\n      // This macro references |entry| and thus would need to rewrite it as\n      // .data() if we changed the for loop to a base::span (which we don't).\n      EXPECT_HAS_UKM_NO_REWRITE(\"bar\");\n    }\n  }\n  {\n    const auto& entries = test_recorder_->GetEntriesByName(\"foo\");\n    assert(1u == entries.size());\n    // No expected rewrite.\n    for (const Entry* entry : entries) {\n      // This macro references |entry| and thus would need to rewrite it as\n      // .data() if we changed the for loop to a base::span (which we don't).\n      EXPECT_HAS_UKM_NO_REWRITE(\"bar\");\n    }\n  }\n\n  // Test how we handle macros when the function (lhs) doesn't get rewritten but\n  // the rhs does.\n  {\n    const auto& entries = test_recorder_->GetEntriesByName(\"foo\");\n    // Expected rewrite:\n    // base::span<const Entry*> test_entries = entries;\n    const Entry* const* test_entries = entries.data();\n    const_cast<const Entry**>(test_entries)[0] = nullptr;\n    EXPECT_HAS_UKM_RHS_REWRITE(\"bar\");\n  }\n  {\n    const auto& entries = test_recorder_->GetEntriesByName(\"foo\");\n    // Expected rewrite:\n    // base::span<const Entry*> test_entries = entries;\n    const Entry* const* test_entries = entries.data();\n    const_cast<const Entry**>(test_entries)[0] = nullptr;\n    EXPECT_HAS_UKM_RHS_REWRITE(\"bar\");\n  }\n\n  // Test how we handle macros when the function and the rhs gets rewritten.\n  {\n    const auto& entries = test_recorder_->GetEntriesByName(\"foo\");\n    // Expected rewrite:\n    // base::span<const Entry* const> test_entries = entries;\n    const Entry* const* test_entries = entries.data();\n    EXPECT_HAS_UKM_FULL_REWRITE(\"bar\");\n  }\n  {\n    const auto& entries = test_recorder_->GetEntriesByName(\"foo\");\n    // Expected rewrite:\n    // base::span<const Entry* const> test_entries = entries;\n    const Entry* const* test_entries = entries.data();\n    EXPECT_HAS_UKM_FULL_REWRITE(\"bar\");\n  }\n}\n",
-        "file_path": "/usr/local/google/home/keishi/chromium2/src/tools/clang/spanify/tests/macro-definitions-multiple-files-original.cc"
-    }
+        "file_path": "tools/clang/spanify/tests/macro-definitions-multiple-files-original.cc",
+        "rev": "733eff2098bf2f25b1cf0c182a3ee8beda9ef880"
+    },
+    "sources": [
+        {
+            "content": null,
+            "file_path": "tools/clang/spanify/tests/macro-definitions-multiple-files-original.cc"
+        }
+    ]
 }

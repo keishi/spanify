@@ -1,0 +1,103 @@
+{
+    "nodes": [
+        {
+            "id": 0,
+            "replacement": "r:::tools/clang/spanify/tests/span-frontier-macro-original.cc:::450:::2:::x[0]",
+            "size_info_available": null,
+            "visited": false,
+            "debug_info": {
+                "rewrite_applied": false,
+                "original_is_buffer": false,
+                "original_size_info_available": null
+            }
+        },
+        {
+            "id": 1,
+            "replacement": "r:::tools/clang/spanify/tests/span-frontier-macro-original.cc:::429:::5:::base::span<int>",
+            "size_info_available": null,
+            "visited": false,
+            "debug_info": {
+                "rewrite_applied": false,
+                "original_is_buffer": false,
+                "original_size_info_available": null
+            }
+        },
+        {
+            "id": 2,
+            "replacement": "r:::tools/clang/spanify/tests/span-frontier-macro-original.cc:::607:::5:::base::span<int>",
+            "size_info_available": true,
+            "visited": true,
+            "debug_info": {
+                "rewrite_applied": false,
+                "original_is_buffer": false,
+                "original_size_info_available": null
+            }
+        },
+        {
+            "id": 3,
+            "replacement": "r:::tools/clang/spanify/tests/span-frontier-macro-original.cc:::622:::7:::",
+            "size_info_available": true,
+            "visited": true,
+            "debug_info": {
+                "rewrite_applied": false,
+                "original_is_buffer": false,
+                "original_size_info_available": null
+            }
+        },
+        {
+            "id": 4,
+            "replacement": "r:::tools/clang/spanify/tests/span-frontier-macro-original.cc:::740:::5:::base::span<int>",
+            "size_info_available": null,
+            "visited": false,
+            "debug_info": {
+                "rewrite_applied": false,
+                "original_is_buffer": false,
+                "original_size_info_available": null
+            }
+        },
+        {
+            "id": 5,
+            "replacement": "r:::tools/clang/spanify/tests/span-frontier-macro-original.cc:::755:::7:::",
+            "size_info_available": true,
+            "visited": false,
+            "debug_info": {
+                "rewrite_applied": false,
+                "original_is_buffer": false,
+                "original_size_info_available": null
+            }
+        }
+    ],
+    "links": [
+        {
+            "source": 0,
+            "target": 1
+        },
+        {
+            "source": 1,
+            "target": 4
+        },
+        {
+            "source": 1,
+            "target": 2
+        },
+        {
+            "source": 2,
+            "target": 3
+        },
+        {
+            "source": 4,
+            "target": 5
+        }
+    ],
+    "source": {
+        "content": "// Copyright 2025 The Chromium Authors\n// Use of this source code is governed by a BSD-style license that can be\n// found in the LICENSE file.\n\n#include <vector>\n\n// When a C++ MACRO references a variable that isn't passed as an argument to\n// that MACRO for example. It is sometimes not possible to spanify correctly.\n// This documents a case where the spanification is aborted.\n\n#define ASSIGN(num) assign(x, num);\nvoid assign(int* x, int num) {\n  *x = num;\n}\n\nvoid test_with_macro() {\n  std::vector<int> buffer(10, 0);\n\n  // A local variable could be rewritten to a span if there wasn't a MACRO.\n  {\n    int* x = buffer.data();\n    x[0] = 0;\n    ASSIGN(0);\n  }\n\n  // A local variable that doesn't need to be rewritten to a span.\n  {\n    int* x = buffer.data();\n    ASSIGN(0);  // Sets the integer pointed to by x to 0;\n  }\n}\n",
+        "file_path": "tools/clang/spanify/tests/span-frontier-macro-original.cc",
+        "rev": "733eff2098bf2f25b1cf0c182a3ee8beda9ef880"
+    },
+    "sources": [
+        {
+            "content": null,
+            "file_path": "tools/clang/spanify/tests/span-frontier-macro-original.cc"
+        }
+    ]
+}

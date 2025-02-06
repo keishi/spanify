@@ -351,7 +351,7 @@ class InspectorUI {
         if (offset === node.replacementOffset) {
           // Start of the replacement range
           const isEmpty = node.replacementLength === 0;
-          parts.push(`<span class="replacement${isEmpty ? ' empty-node' : ''}${node['debug_info']['added_to_component'] ? ' applied' : ''}${node.hasError ? ' error-node' : ''}" data-node-id="${node.id}">`);
+          parts.push(`<span class="replacement${isEmpty ? ' empty-node' : ''}${node['debug_info']['added_to_component'] || node['debug_info']['rewrite_applied'] ? ' applied' : ''}${node.hasError ? ' error-node' : ''}" data-node-id="${node.id}">`);
         }
 
         if (offset === node.replacementOffset + node.replacementLength) {

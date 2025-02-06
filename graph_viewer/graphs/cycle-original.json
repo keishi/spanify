@@ -1,0 +1,209 @@
+{
+    "nodes": [
+        {
+            "id": 0,
+            "replacement": "r:::tools/clang/spanify/tests/cycle-original.cc:::355:::4:::base::span<int>",
+            "size_info_available": true,
+            "visited": true,
+            "debug_info": {
+                "rewrite_applied": true,
+                "original_is_buffer": false,
+                "original_size_info_available": null
+            }
+        },
+        {
+            "id": 1,
+            "replacement": "r:::tools/clang/spanify/tests/cycle-original.cc:::388:::0:::<empty>",
+            "size_info_available": true,
+            "visited": true,
+            "debug_info": {
+                "rewrite_applied": true,
+                "original_is_buffer": false,
+                "original_size_info_available": null
+            }
+        },
+        {
+            "id": 2,
+            "replacement": "r:::tools/clang/spanify/tests/cycle-original.cc:::632:::5:::base::span<int>",
+            "size_info_available": true,
+            "visited": true,
+            "debug_info": {
+                "rewrite_applied": true,
+                "original_is_buffer": false,
+                "original_size_info_available": null
+            }
+        },
+        {
+            "id": 3,
+            "replacement": "r:::tools/clang/spanify/tests/cycle-original.cc:::670:::5:::base::span<int>",
+            "size_info_available": true,
+            "visited": true,
+            "debug_info": {
+                "rewrite_applied": true,
+                "original_is_buffer": false,
+                "original_size_info_available": null
+            }
+        },
+        {
+            "id": 4,
+            "replacement": "r:::tools/clang/spanify/tests/cycle-original.cc:::751:::5:::base::span<int>",
+            "size_info_available": true,
+            "visited": true,
+            "debug_info": {
+                "rewrite_applied": true,
+                "original_is_buffer": false,
+                "original_size_info_available": null
+            }
+        },
+        {
+            "id": 5,
+            "replacement": "r:::tools/clang/spanify/tests/cycle-original.cc:::1080:::5:::base::span<int>",
+            "size_info_available": true,
+            "visited": true,
+            "debug_info": {
+                "rewrite_applied": true,
+                "original_is_buffer": false,
+                "original_size_info_available": null
+            }
+        },
+        {
+            "id": 6,
+            "replacement": "r:::tools/clang/spanify/tests/cycle-original.cc:::1137:::5:::base::span<int>",
+            "size_info_available": true,
+            "visited": true,
+            "debug_info": {
+                "rewrite_applied": true,
+                "original_is_buffer": false,
+                "original_size_info_available": null
+            }
+        },
+        {
+            "id": 7,
+            "replacement": "r:::tools/clang/spanify/tests/cycle-original.cc:::1237:::5:::base::span<int>",
+            "size_info_available": true,
+            "visited": true,
+            "debug_info": {
+                "rewrite_applied": true,
+                "original_is_buffer": false,
+                "original_size_info_available": null
+            }
+        },
+        {
+            "id": 8,
+            "replacement": "r:::tools/clang/spanify/tests/cycle-original.cc:::1527:::5:::base::span<int>",
+            "size_info_available": false,
+            "visited": false,
+            "debug_info": {
+                "rewrite_applied": false,
+                "original_is_buffer": false,
+                "original_size_info_available": null
+            }
+        },
+        {
+            "id": 9,
+            "replacement": "r:::tools/clang/spanify/tests/cycle-original.cc:::1562:::5:::base::span<int>",
+            "size_info_available": true,
+            "visited": false,
+            "debug_info": {
+                "rewrite_applied": false,
+                "original_is_buffer": false,
+                "original_size_info_available": null
+            }
+        },
+        {
+            "id": 10,
+            "replacement": "r:::tools/clang/spanify/tests/cycle-original.cc:::266:::4:::base::span<int>",
+            "size_info_available": false,
+            "visited": false,
+            "debug_info": {
+                "rewrite_applied": false,
+                "original_is_buffer": false,
+                "original_size_info_available": null
+            }
+        },
+        {
+            "id": 11,
+            "replacement": "r:::tools/clang/spanify/tests/cycle-original.cc:::1673:::5:::base::span<int>",
+            "size_info_available": false,
+            "visited": false,
+            "debug_info": {
+                "rewrite_applied": false,
+                "original_is_buffer": false,
+                "original_size_info_available": null
+            }
+        }
+    ],
+    "links": [
+        {
+            "source": 0,
+            "target": 1
+        },
+        {
+            "source": 2,
+            "target": 3
+        },
+        {
+            "source": 3,
+            "target": 2
+        },
+        {
+            "source": 4,
+            "target": 2
+        },
+        {
+            "source": 4,
+            "target": 0
+        },
+        {
+            "source": 5,
+            "target": 6
+        },
+        {
+            "source": 5,
+            "target": 0
+        },
+        {
+            "source": 6,
+            "target": 5
+        },
+        {
+            "source": 7,
+            "target": 5
+        },
+        {
+            "source": 7,
+            "target": 0
+        },
+        {
+            "source": 8,
+            "target": 10
+        },
+        {
+            "source": 8,
+            "target": 9
+        },
+        {
+            "source": 9,
+            "target": 8
+        },
+        {
+            "source": 11,
+            "target": 8
+        },
+        {
+            "source": 11,
+            "target": 0
+        }
+    ],
+    "source": {
+        "content": "// Copyright 2025 The Chromium Authors\n// Use of this source code is governed by a BSD-style license that can be\n// found in the LICENSE file.\n#include <tuple>\n\nint UnsafeIndex();      // Return out-of-bounds index.\nbool Bool();            // Unknown boolean value.\nint* ExternalBuffer();  // Return a buffer from an unknown source.\n\n// Expect spanified.\nint* InternalBuffer() {\n  return new int[10];\n}\n\nvoid test_cycle_isolated() {\n  // An isolated cycle with no dependencies.\n  //\n  // As of today, it gets rewritten, because nothing prevents it from being\n  // rewritten, and some of its dependents would like to be spanified.\n  int* cycle_1;  // Expect spanified.\n  int* cycle_2;  // Expect spanified.\n  cycle_1 = cycle_2;\n  cycle_2 = cycle_1;\n\n  int* output;\n  if (Bool()) {\n    output = InternalBuffer();\n  } else {\n    output = cycle_1;\n  }\n  std::ignore = output[UnsafeIndex()];\n}\n\nvoid test_cycle_depending_on_internal_buffer() {\n  // A cycle that can be rewritten, because it depends on something that can be\n  // rewritten, and dependants would like to be spanified.\n  int* cycle_1 = InternalBuffer();  // Expect spanified.\n  int* cycle_2;                     // Expect spanified.\n  cycle_1 = cycle_2;\n  cycle_2 = cycle_1;\n\n  int* output;\n  if (Bool()) {\n    output = InternalBuffer();\n  } else {\n    output = cycle_1;\n  }\n  std::ignore = output[UnsafeIndex()];\n}\n\nvoid test_cycle_depending_on_external_buffer() {\n  // A cycle that can't be rewritten, because it depends on something that can't\n  // be rewritten.\n  int* cycle_1 = ExternalBuffer();\n  int* cycle_2;\n  cycle_1 = cycle_2;  // Expect not spanified.\n  cycle_2 = cycle_1;  // Expect not spanified.\n\n  int* output;\n  if (Bool()) {\n    output = InternalBuffer();  // Expect frontier change (e.g. .data())\n  } else {\n    output = cycle_1;\n  }\n  std::ignore = output[UnsafeIndex()];\n}\n",
+        "file_path": "tools/clang/spanify/tests/cycle-original.cc",
+        "rev": "733eff2098bf2f25b1cf0c182a3ee8beda9ef880"
+    },
+    "sources": [
+        {
+            "content": null,
+            "file_path": "tools/clang/spanify/tests/cycle-original.cc"
+        }
+    ]
+}
