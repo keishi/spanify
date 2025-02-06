@@ -1,4 +1,78 @@
 /**
+ * Returns a point on a cubic Bezier curve for parameter t (0 <= t <= 1)
+ */
+function cubicBezierPoint(P0, P1, P2, P3, t) {
+  const u = 1 - t;
+  const tt = t * t;
+  const uu = u * u;
+  const uuu = uu * u;
+  const ttt = tt * t;
+  return {
+    x: uuu * P0.x + 3 * uu * t * P1.x + 3 * u * tt * P2.x + ttt * P3.x,
+    y: uuu * P0.y + 3 * uu * t * P1.y + 3 * u * tt * P2.y + ttt * P3.y
+  };
+}
+
+/**
+ * Returns the derivative (tangent vector) of a cubic Bezier curve at parameter t.
+ */
+function cubicBezierDerivative(P0, P1, P2, P3, t) {
+  const u = 1 - t;
+  return {
+    x: 3 * u * u * (P1.x - P0.x) + 6 * u * t * (P2.x - P1.x) + 3 * t * t * (P3.x - P2.x),
+    y: 3 * u * u * (P1.y - P0.y) + 6 * u * t * (P2.y - P1.y) + 3 * t * t * (P3.y - P2.y)
+  };
+}
+
+/**
+ * Approximates the arc length along a cubic Bezier curve between t0 and t1.
+ */
+function bezierArcLength(P0, P1, P2, P3, t0, t1, steps = 50) {
+  let length = 0;
+  let prevPoint = cubicBezierPoint(P0, P1, P2, P3, t0);
+  for (let i = 1; i <= steps; i++) {
+    const t = t0 + (t1 - t0) * (i / steps);
+    const point = cubicBezierPoint(P0, P1, P2, P3, t);
+    length += Math.hypot(point.x - prevPoint.x, point.y - prevPoint.y);
+    prevPoint = point;
+  }
+  return length;
+}
+
+/**
+ * Uses binary search to find the parameter t0 such that the arc length from t0 to 1 is targetLength.
+ */
+function findParameterForArcLength(P0, P1, P2, P3, targetLength) {
+  let low = 0, high = 1, tMid;
+  const tolerance = 0.1; // in pixels
+  while (high - low > 0.0001) {
+    tMid = (low + high) / 2;
+    const length = bezierArcLength(P0, P1, P2, P3, tMid, 1);
+    if (Math.abs(length - targetLength) < tolerance) {
+      return tMid;
+    }
+    if (length > targetLength) {
+      low = tMid;
+    } else {
+      high = tMid;
+    }
+  }
+  return tMid;
+}
+
+/**
+ * Returns the normalized tangent vector of a cubic Bezier curve at a point that is offset (in pixels)
+ * from the end of the curve.
+ */
+function tangentAtOffsetFromEnd(P0, P1, P2, P3, offset = 10) {
+  const t0 = findParameterForArcLength(P0, P1, P2, P3, offset);
+  const d = cubicBezierDerivative(P0, P1, P2, P3, t0);
+  const len = Math.hypot(d.x, d.y);
+  return len === 0 ? { x: 0, y: 0 } : { x: d.x / len, y: d.y / len };
+}
+
+
+/**
  * SVGCanvas is responsible for initializing and managing the SVG container.
  * It provides utility methods to create and manipulate SVG elements.
  */
@@ -36,6 +110,7 @@ class SVGCanvas {
 
   /**
    * Adds a marker to the SVG <defs> section.
+   * This method is now unused because we always create new markers.
    * @param {string} id - The unique identifier for the marker.
    * @param {string} color - The fill color of the marker.
    * @param {number} width - The width of the marker.
@@ -43,11 +118,7 @@ class SVGCanvas {
    * @returns {SVGMarkerElement} The created marker element.
    */
   addMarker(id, color, width = 10, height = 7) {
-    // Check if marker already exists
-    if (this.svg.querySelector(`#${id}`)) {
-      return this.svg.querySelector(`#${id}`);
-    }
-
+    // Legacy method: now we always create a new marker.
     const marker = this._createSVGElement('marker', {
       id,
       markerWidth: width,
@@ -55,7 +126,7 @@ class SVGCanvas {
       refX: width,
       refY: height / 2,
       orient: 'auto',
-      markerUnits: 'strokeWidth',
+      markerUnits: 'strokeWidth'
     });
 
     const polygon = this._createSVGElement('polygon', {
@@ -113,8 +184,10 @@ class SVGCanvas {
 
   /**
    * Clears all elements from the SVG canvas.
+   * This method removes all path elements and clears the defs (including markers).
    */
   clear() {
+    // Remove all child elements from the SVG.
     while (this.svg.firstChild) {
       this.svg.removeChild(this.svg.firstChild);
     }
@@ -123,6 +196,7 @@ class SVGCanvas {
     this.svg.appendChild(this.defs);
   }
 }
+
 
 /**
  * ArrowDrawer is responsible for drawing curved arrows between two DOM elements.
@@ -150,10 +224,8 @@ class ArrowDrawer {
     this.color = options.color || 'rgba(98, 0, 238, 0.86)';
     this.strokeWidth = options.strokeWidth || 2;
 
-    // Add an arrowhead marker (make sure that your SVGCanvas.addMarker
-    // creates a marker with refX=0 and reversed polygon so that the tip is at the left).
-    this.markerId = 'arrowhead';
-    this.svgCanvas.addMarker(this.markerId, this.color);
+    // We no longer use a fixed marker id; each arrow gets its own marker.
+    this.markerCounter = 0;
   }
 
   /**
@@ -223,22 +295,22 @@ class ArrowDrawer {
   /**
    * Draws a curved arrow between two DOM elements.
    *
-   * The algorithm does the following:
-   * 1. Compute all four anchor points on each element (top, bottom, left, right).
-   * 2. For every possible pairing, measure the cost based on how closely the connection
-   *    matches the ideal (perpendicular) direction of the box edge.
-   *    If the distance is small (close neighbours) we add a penalty for left/right anchors,
-   *    biasing the selection toward top/bottom.
-   * 3. Select the pair with the lowest cost.
-   * 4. Compute control points so that the arrow leaves/enters each box perpendicularly,
-   *    but with the control point for the target calculated on the outside.
-   * 5. Draw a cubic Bézier curve with an arrowhead marker.
+   * The algorithm:
+   * 1. Computes the anchor points for each element.
+   * 2. Evaluates candidate anchor pairs using a simplified cost function:
+   *    - Base cost based on alignment with each anchor’s ideal.
+   *    - A fixed penalty if the chosen anchors are not the same (to encourage same‑side pairs).
+   *    - A penalty if the midpoint of the connecting line lies inside the target rect.
+   * 3. Chooses the candidate pair with the lowest cost.
+   * 4. Computes control points by offsetting along the anchor’s ideal.
+   * 5. Creates a cubic Bézier path and attaches a new unique marker.
+   * 6. Computes the tangent 10 pixels before the end of the curve to set the marker’s orientation.
    *
    * @param {HTMLElement} fromElem - The starting element.
    * @param {HTMLElement} toElem - The ending element.
    * @param {boolean} [dashed=false] - Whether the arrow should be dashed.
    * @param {boolean} [dotted=false] - Whether the arrow should be dotted.
-   * @param {boolean} [debug=false] - If true, draws extra debugging graphics.
+   * @param {boolean} [debug=false] - If true, logs extra debugging information.
    * @returns {SVGPathElement} The created SVG path element.
    */
   drawArrow(fromElem, toElem, dashed = false, dotted = false, debug = false) {
@@ -246,11 +318,26 @@ class ArrowDrawer {
       throw new Error('Both fromElem and toElem are required');
     }
 
-    // Get the anchors for each element.
+    // Get anchor points from each element.
     const fromAnchors = this._getAnchors(fromElem);
     const toAnchors = this._getAnchors(toElem);
 
-    // Also compute each element's center (relative to the SVG container).
+    // Debug: log anchor points.
+    if (debug) {
+      console.group("Source Anchors:");
+      Object.entries(fromAnchors).forEach(([key, a]) =>
+        console.log(key, `x: ${a.x.toFixed(2)} y: ${a.y.toFixed(2)}`, "ideal:", a.ideal)
+      );
+      console.groupEnd();
+
+      console.group("Target Anchors:");
+      Object.entries(toAnchors).forEach(([key, a]) =>
+        console.log(key, `x: ${a.x.toFixed(2)} y: ${a.y.toFixed(2)}`, "ideal:", a.ideal)
+      );
+      console.groupEnd();
+    }
+
+    // Get bounding rectangles and centers (in SVG container coordinates).
     const fromRect = fromElem.getBoundingClientRect();
     const toRect = toElem.getBoundingClientRect();
     const containerRect = this.svgCanvas.svg.getBoundingClientRect();
@@ -263,142 +350,163 @@ class ArrowDrawer {
       y: (toRect.top + toRect.bottom) / 2 - containerRect.top
     };
 
-    // Evaluate all 16 (4x4) candidate pairs.
+    // Prepare target rect in SVG coordinates.
+    const targetRect = {
+      left: toRect.left - containerRect.left,
+      top: toRect.top - containerRect.top,
+      right: toRect.right - containerRect.left,
+      bottom: toRect.bottom - containerRect.top
+    };
+
+    // Simplified candidate evaluation.
     let bestPair = null;
     let bestCost = Infinity;
+
+    // Fixed penalties.
+    const mismatchPenaltyFixed = 1.5; // Penalty if the chosen anchors are not the same.
+    const rectPenaltyFixed = 5.0;     // Penalty if the candidate line passes through the target.
+    const veryCloseDistance = 50;     // (Optional) Extra penalty for mismatched anchors when very close.
+
     for (const [fromKey, fromAnchor] of Object.entries(fromAnchors)) {
       for (const [toKey, toAnchor] of Object.entries(toAnchors)) {
-        // Compute the connection vector from the "from" anchor to the "to" anchor.
+        // Compute connection vector from source anchor to target anchor.
         const connection = this._subtract(toAnchor, fromAnchor);
         const distance = Math.hypot(connection.x, connection.y);
-        if (distance === 0) continue; // avoid division by zero
+        if (distance === 0) continue; // skip degenerate cases
 
         const connectionNorm = this._normalize(connection);
-        // For the source, we want the arrow to exit along its ideal.
-        const dotFrom = this._dot(connectionNorm, fromAnchor.ideal);
-        // For the target, we want the arrow to approach from the opposite direction.
-        const dotTo = this._dot({ x: -connectionNorm.x, y: -connectionNorm.y }, toAnchor.ideal);
 
-        // Base cost: lower when the connection is aligned with both ideals.
-        let cost = (1 - dotFrom) + (1 - dotTo);
+        // Compute alignment: higher is better.
+        const alignmentFrom = this._dot(connectionNorm, fromAnchor.ideal);
+        const alignmentTo = this._dot({ x: -connectionNorm.x, y: -connectionNorm.y }, toAnchor.ideal);
 
-        // Compute average alignment: if both dotFrom and dotTo are close to 1, the connection is nearly straight.
-        const averageAlignment = (dotFrom + dotTo) / 2;
+        // Base cost.
+        const baseCost = (1 - alignmentFrom) + (1 - alignmentTo);
 
-        // --- Modulated S‑Shape Penalty ---
-        // Calculate the dot product between the source and target ideal vectors.
-        const idealDot = this._dot(fromAnchor.ideal, toAnchor.ideal);
-        // If the ideals point in opposite directions, idealDot will be negative.
-        // Apply a penalty that is scaled by how non-straight the connection is.
-        if (idealDot < 0) {
-          const penaltyFactor = 1 - averageAlignment;  // near 0 for almost straight lines, near 1 for less straight ones.
-          cost += (1 - idealDot) * penaltyFactor;
-        }
-        // ----------------------------------------
-
-        // If the boxes are close neighbours, penalize left/right anchors so that top/bottom
-        // anchors (which produce a U-shaped arrow) are preferred.
-        const closeThreshold = 100; // adjust as needed
-        if (distance < closeThreshold) {
-          if (fromKey === 'left' || fromKey === 'right') cost += 1.0;
-          if (toKey === 'left' || toKey === 'right') cost += 1.0;
+        // Penalty if the anchors are not the same.
+        let mismatchPenalty = (fromKey !== toKey) ? mismatchPenaltyFixed : 0;
+        if (distance < veryCloseDistance && fromKey !== toKey) {
+          mismatchPenalty += 2.0;
         }
 
-        if (cost < bestCost) {
-          bestCost = cost;
-          bestPair = { fromKey, toKey, fromAnchor, toAnchor, distance };
+        // Compute the midpoint of the candidate segment.
+        const midX = (fromAnchor.x + toAnchor.x) / 2;
+        const midY = (fromAnchor.y + toAnchor.y) / 2;
+        let rectPenalty = 0;
+        const margin = 2;
+        if (midX > targetRect.left + margin &&
+          midX < targetRect.right - margin &&
+          midY > targetRect.top + margin &&
+          midY < targetRect.bottom - margin) {
+          rectPenalty = rectPenaltyFixed;
+        }
+
+        const totalCost = baseCost + mismatchPenalty + rectPenalty;
+
+        if (totalCost < bestCost) {
+          bestCost = totalCost;
+          bestPair = {
+            fromKey, toKey,
+            fromAnchor, toAnchor,
+            distance, baseCost, mismatchPenalty, rectPenalty,
+            totalCost
+          };
         }
       }
     }
 
-
-    // Fallback (should not happen): default to top anchors.
-    if (!bestPair) {
-      bestPair = {
-        fromKey: 'top',
-        toKey: 'top',
-        fromAnchor: fromAnchors.top,
-        toAnchor: toAnchors.top,
-        distance: Math.hypot(fromCenter.x - toCenter.x, fromCenter.y - toCenter.y)
-      };
+    // Debug output: chosen candidate.
+    if (debug && bestPair) {
+      console.log(
+        'Chosen Anchor Pair:',
+        `from: ${bestPair.fromKey}, to: ${bestPair.toKey}`,
+        '\nDistance:', bestPair.distance.toFixed(2),
+        '\nCost Breakdown:',
+        `Base: ${bestPair.baseCost.toFixed(2)}`,
+        `Mismatch: ${bestPair.mismatchPenalty.toFixed(2)}`,
+        `RectIntersect: ${bestPair.rectPenalty.toFixed(2)}`,
+        `=> Total: ${bestPair.totalCost.toFixed(2)}`
+      );
     }
 
     // Use the chosen anchors.
     const start = { x: bestPair.fromAnchor.x, y: bestPair.fromAnchor.y };
     const end = { x: bestPair.toAnchor.x, y: bestPair.toAnchor.y };
 
-    // Compute a curvature offset (proportional to the distance, clamped).
+    // Compute control points by offsetting along the ideal vectors.
     const curvatureOffset = this._clamp(bestPair.distance * 0.3, 30, 100);
-
-    // Compute control points so that the curve leaves/enters the boxes perpendicularly.
-    // For the source, we add the ideal vector (placing the control point outside the box).
     const cp1 = this._add(start, this._scale(bestPair.fromAnchor.ideal, curvatureOffset));
-    // For the target, we now also add its ideal vector (instead of subtracting)
-    // so that the arrow approaches the box from outside.
     const cp2 = this._add(end, this._scale(bestPair.toAnchor.ideal, curvatureOffset));
 
-    // Create the cubic Bézier path data.
+    // Build the cubic Bézier path.
     const pathData = `M ${start.x} ${start.y} C ${cp1.x} ${cp1.y}, ${cp2.x} ${cp2.y}, ${end.x} ${end.y}`;
 
-    // Determine stroke dash style if needed.
+    // Determine stroke dash style.
     let strokeDasharray;
     if (dotted) strokeDasharray = '2,4';
     else if (dashed) strokeDasharray = '8,4';
 
-    // Create the SVG path using SVGCanvas's helper.
+    // Create a new marker for this arrow.
+    const markerId = 'arrowhead-' + (++this.markerCounter);
+    const marker = this._createNewMarker(markerId, this.color);
+    // The marker-end attribute will reference this unique marker.
+    const markerUrl = `url(#${markerId})`;
+
+    // Create the arrow path.
     const arrowPath = this.svgCanvas.createPath(pathData, {
       stroke: this.color,
       strokeWidth: this.strokeWidth,
       strokeDasharray,
-      markerEnd: `url(#${this.markerId})`
+      markerEnd: markerUrl
     });
 
-    // (Optional) If debug mode is enabled, draw anchor and control points.
-    if (debug) {
-      const debugGroup = this.svgCanvas.createGroup({ class: 'debug-group' });
-      const debugPoints = [
-        { x: start.x, y: start.y, label: `start (${bestPair.fromKey})` },
-        { x: end.x, y: end.y, label: `end (${bestPair.toKey})` },
-        { x: cp1.x, y: cp1.y, label: 'cp1' },
-        { x: cp2.x, y: cp2.y, label: 'cp2' }
-      ];
-      debugPoints.forEach(pt => {
-        const circle = this.svgCanvas._createSVGElement('circle', {
-          cx: pt.x,
-          cy: pt.y,
-          r: 3,
-          fill: 'red'
-        });
-        debugGroup.appendChild(circle);
-      });
-      // Optionally, draw lines connecting the points.
-      const lines = [
-        { x1: start.x, y1: start.y, x2: cp1.x, y2: cp1.y },
-        { x1: cp1.x, y1: cp1.y, x2: cp2.x, y2: cp2.y },
-        { x1: cp2.x, y1: cp2.y, x2: end.x, y2: end.y }
-      ];
-      lines.forEach(lineData => {
-        const line = this.svgCanvas._createSVGElement('line', {
-          x1: lineData.x1,
-          y1: lineData.y1,
-          x2: lineData.x2,
-          y2: lineData.y2,
-          stroke: 'blue',
-          'stroke-width': 1,
-          'stroke-dasharray': '4,2'
-        });
-        debugGroup.appendChild(line);
-      });
-      this.svgCanvas.svg.appendChild(debugGroup);
-    }
+    // Compute the tangent vector 10 pixels before the end.
+    const tangent = tangentAtOffsetFromEnd(start, cp1, cp2, end, 10);
+    const angleDeg = Math.atan2(tangent.y, tangent.x) * 180 / Math.PI;
+    // Update the marker's orient attribute.
+    marker.setAttribute("orient", angleDeg);
 
     return arrowPath;
   }
 
   /**
-   * Clears all arrows (SVG path elements) from the SVG canvas.
+   * Creates a new marker element with the given id and color.
+   * Always creates a new marker (does not reuse existing ones).
+   * @param {string} id - Unique marker id.
+   * @param {string} color - Fill color for the marker.
+   * @param {number} width - Marker width.
+   * @param {number} height - Marker height.
+   * @returns {SVGMarkerElement} The created marker element.
+   */
+  _createNewMarker(id, color, width = 10, height = 7) {
+    const marker = this.svgCanvas._createSVGElement('marker', {
+      id,
+      markerWidth: width,
+      markerHeight: height,
+      refX: width,
+      refY: height / 2,
+      orient: 'auto',
+      markerUnits: 'strokeWidth'
+    });
+
+    const polygon = this.svgCanvas._createSVGElement('polygon', {
+      points: `0 0, ${width} ${height / 2}, 0 ${height}`,
+      fill: color,
+    });
+    marker.appendChild(polygon);
+    this.svgCanvas.defs.appendChild(marker);
+    return marker;
+  }
+
+  /**
+   * Clears all arrows (SVG path elements) and markers from the SVG canvas.
    */
   clearArrows() {
+    // Remove all path elements.
     this.svgCanvas.svg.querySelectorAll('path').forEach(path => path.remove());
+    // Clear markers by clearing the defs element.
+    while (this.svgCanvas.defs.firstChild) {
+      this.svgCanvas.defs.removeChild(this.svgCanvas.defs.firstChild);
+    }
   }
 }
