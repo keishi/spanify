@@ -617,7 +617,7 @@ class InspectorUI {
       }
       const fromElem = this.sourceCodeContainer.querySelector(`.replacement[data-node-id="${source}"]`);
       const toElem = this.sourceCodeContainer.querySelector(`.replacement[data-node-id="${target}"]`);
-      ArrowDrawer.drawArrow(fromElem, toElem, this.svgContainer, false, true, window.debug);
+      this.arrowDrawer.drawArrow(fromElem, toElem, this.svgContainer, false, true, window.debug);
     });
   }
 }
