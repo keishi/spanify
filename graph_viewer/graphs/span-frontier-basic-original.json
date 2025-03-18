@@ -3,57 +3,86 @@
         {
             "id": 0,
             "replacement": "r:::tools/clang/spanify/tests/span-frontier-basic-original.cc:::939:::5:::base::span<int>",
+            "replacements": [
+                "r:::tools/clang/spanify/tests/span-frontier-basic-original.cc:::939:::5:::base::span<int>",
+                "include-user-header:::tools/clang/spanify/tests/span-frontier-basic-original.cc:::-1:::-1:::base/containers/span.h"
+            ],
             "size_info_available": true,
             "visited": true,
             "debug_info": {
                 "rewrite_applied": true,
                 "original_is_buffer": false,
                 "original_size_info_available": null
-            }
+            },
+            "node_types": []
         },
         {
             "id": 1,
             "replacement": "r:::tools/clang/spanify/tests/span-frontier-basic-original.cc:::961:::7:::",
+            "replacements": [
+                "r:::tools/clang/spanify/tests/span-frontier-basic-original.cc:::961:::7:::",
+                "include-user-header:::tools/clang/spanify/tests/span-frontier-basic-original.cc:::-1:::-1:::base/containers/span.h"
+            ],
             "size_info_available": true,
             "visited": true,
             "debug_info": {
                 "rewrite_applied": true,
                 "original_is_buffer": false,
                 "original_size_info_available": null
-            }
+            },
+            "node_types": [
+                "sink"
+            ]
         },
         {
             "id": 2,
             "replacement": "r:::tools/clang/spanify/tests/span-frontier-basic-original.cc:::972:::5:::base::span<int>",
+            "replacements": [
+                "r:::tools/clang/spanify/tests/span-frontier-basic-original.cc:::972:::5:::base::span<int>",
+                "include-user-header:::tools/clang/spanify/tests/span-frontier-basic-original.cc:::-1:::-1:::base/containers/span.h"
+            ],
             "size_info_available": true,
             "visited": true,
             "debug_info": {
                 "rewrite_applied": true,
                 "original_is_buffer": false,
                 "original_size_info_available": null
-            }
+            },
+            "node_types": [
+                "source"
+            ]
         },
         {
             "id": 3,
             "replacement": "r:::tools/clang/spanify/tests/span-frontier-basic-original.cc:::1048:::5:::base::span<int>",
+            "replacements": [
+                "r:::tools/clang/spanify/tests/span-frontier-basic-original.cc:::1048:::5:::base::span<int>",
+                "include-user-header:::tools/clang/spanify/tests/span-frontier-basic-original.cc:::-1:::-1:::base/containers/span.h"
+            ],
             "size_info_available": null,
             "visited": false,
             "debug_info": {
                 "rewrite_applied": false,
                 "original_is_buffer": false,
                 "original_size_info_available": null
-            }
+            },
+            "node_types": []
         },
         {
             "id": 4,
             "replacement": "r:::tools/clang/spanify/tests/span-frontier-basic-original.cc:::1119:::5:::base::span<int>",
+            "replacements": [
+                "r:::tools/clang/spanify/tests/span-frontier-basic-original.cc:::1119:::5:::base::span<int>",
+                "include-user-header:::tools/clang/spanify/tests/span-frontier-basic-original.cc:::-1:::-1:::base/containers/span.h"
+            ],
             "size_info_available": null,
             "visited": false,
             "debug_info": {
                 "rewrite_applied": false,
                 "original_is_buffer": false,
                 "original_size_info_available": null
-            }
+            },
+            "node_types": []
         }
     ],
     "links": [

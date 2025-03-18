@@ -3,200 +3,316 @@
         {
             "id": 0,
             "replacement": "r:::tools/clang/spanify/tests/trailing-comma-original.cc:::346:::11:::std::array<A, 1> a_1 = {",
+            "replacements": [
+                "r:::tools/clang/spanify/tests/trailing-comma-original.cc:::346:::11:::std::array<A, 1> a_1 = {",
+                "include-system-header:::tools/clang/spanify/tests/trailing-comma-original.cc:::-1:::-1:::array",
+                "r:::tools/clang/spanify/tests/trailing-comma-original.cc:::364:::1:::}}"
+            ],
             "size_info_available": true,
             "visited": true,
             "debug_info": {
                 "rewrite_applied": true,
                 "original_is_buffer": false,
                 "original_size_info_available": null
-            }
+            },
+            "node_types": [
+                "source",
+                "sink"
+            ]
         },
         {
             "id": 1,
             "replacement": "r:::tools/clang/spanify/tests/trailing-comma-original.cc:::346:::0:::",
+            "replacements": [
+                "r:::tools/clang/spanify/tests/trailing-comma-original.cc:::346:::0:::"
+            ],
             "size_info_available": null,
             "visited": true,
             "debug_info": {
                 "rewrite_applied": true,
                 "original_is_buffer": false,
                 "original_size_info_available": null
-            }
+            },
+            "node_types": []
         },
         {
             "id": 2,
             "replacement": "r:::tools/clang/spanify/tests/trailing-comma-original.cc:::477:::11:::std::array<A, 2> a_2 = {",
+            "replacements": [
+                "r:::tools/clang/spanify/tests/trailing-comma-original.cc:::477:::11:::std::array<A, 2> a_2 = {",
+                "include-system-header:::tools/clang/spanify/tests/trailing-comma-original.cc:::-1:::-1:::array",
+                "r:::tools/clang/spanify/tests/trailing-comma-original.cc:::503:::1:::}}"
+            ],
             "size_info_available": true,
             "visited": true,
             "debug_info": {
                 "rewrite_applied": true,
                 "original_is_buffer": false,
                 "original_size_info_available": null
-            }
+            },
+            "node_types": [
+                "source",
+                "sink"
+            ]
         },
         {
             "id": 3,
             "replacement": "r:::tools/clang/spanify/tests/trailing-comma-original.cc:::477:::0:::",
+            "replacements": [
+                "r:::tools/clang/spanify/tests/trailing-comma-original.cc:::477:::0:::"
+            ],
             "size_info_available": null,
             "visited": true,
             "debug_info": {
                 "rewrite_applied": true,
                 "original_is_buffer": false,
                 "original_size_info_available": null
-            }
+            },
+            "node_types": []
         },
         {
             "id": 4,
             "replacement": "r:::tools/clang/spanify/tests/trailing-comma-original.cc:::719:::16:::std::array<A, 2> a_2_long = ",
+            "replacements": [
+                "r:::tools/clang/spanify/tests/trailing-comma-original.cc:::719:::16:::std::array<A, 2> a_2_long = ",
+                "include-system-header:::tools/clang/spanify/tests/trailing-comma-original.cc:::-1:::-1:::array"
+            ],
             "size_info_available": true,
             "visited": true,
             "debug_info": {
                 "rewrite_applied": true,
                 "original_is_buffer": false,
                 "original_size_info_available": null
-            }
+            },
+            "node_types": [
+                "source",
+                "sink"
+            ]
         },
         {
             "id": 5,
             "replacement": "r:::tools/clang/spanify/tests/trailing-comma-original.cc:::719:::0:::",
+            "replacements": [
+                "r:::tools/clang/spanify/tests/trailing-comma-original.cc:::719:::0:::"
+            ],
             "size_info_available": null,
             "visited": true,
             "debug_info": {
                 "rewrite_applied": true,
                 "original_is_buffer": false,
                 "original_size_info_available": null
-            }
+            },
+            "node_types": []
         },
         {
             "id": 6,
             "replacement": "r:::tools/clang/spanify/tests/trailing-comma-original.cc:::1031:::11:::std::array<A, 5> a_5 = {",
+            "replacements": [
+                "r:::tools/clang/spanify/tests/trailing-comma-original.cc:::1031:::11:::std::array<A, 5> a_5 = {",
+                "include-system-header:::tools/clang/spanify/tests/trailing-comma-original.cc:::-1:::-1:::array",
+                "r:::tools/clang/spanify/tests/trailing-comma-original.cc:::1082:::1:::,}}"
+            ],
             "size_info_available": true,
             "visited": true,
             "debug_info": {
                 "rewrite_applied": true,
                 "original_is_buffer": false,
                 "original_size_info_available": null
-            }
+            },
+            "node_types": [
+                "source",
+                "sink"
+            ]
         },
         {
             "id": 7,
             "replacement": "r:::tools/clang/spanify/tests/trailing-comma-original.cc:::1031:::0:::",
+            "replacements": [
+                "r:::tools/clang/spanify/tests/trailing-comma-original.cc:::1031:::0:::"
+            ],
             "size_info_available": null,
             "visited": true,
             "debug_info": {
                 "rewrite_applied": true,
                 "original_is_buffer": false,
                 "original_size_info_available": null
-            }
+            },
+            "node_types": []
         },
         {
             "id": 8,
             "replacement": "r:::tools/clang/spanify/tests/trailing-comma-original.cc:::1311:::16:::std::array<A, 5> a_5_long = {",
+            "replacements": [
+                "r:::tools/clang/spanify/tests/trailing-comma-original.cc:::1311:::16:::std::array<A, 5> a_5_long = {",
+                "include-system-header:::tools/clang/spanify/tests/trailing-comma-original.cc:::-1:::-1:::array",
+                "r:::tools/clang/spanify/tests/trailing-comma-original.cc:::1407:::1:::,}}"
+            ],
             "size_info_available": true,
             "visited": true,
             "debug_info": {
                 "rewrite_applied": true,
                 "original_is_buffer": false,
                 "original_size_info_available": null
-            }
+            },
+            "node_types": [
+                "source",
+                "sink"
+            ]
         },
         {
             "id": 9,
             "replacement": "r:::tools/clang/spanify/tests/trailing-comma-original.cc:::1311:::0:::",
+            "replacements": [
+                "r:::tools/clang/spanify/tests/trailing-comma-original.cc:::1311:::0:::"
+            ],
             "size_info_available": null,
             "visited": true,
             "debug_info": {
                 "rewrite_applied": true,
                 "original_is_buffer": false,
                 "original_size_info_available": null
-            }
+            },
+            "node_types": []
         },
         {
             "id": 10,
             "replacement": "r:::tools/clang/spanify/tests/trailing-comma-original.cc:::1622:::11:::std::array<A, 6> a_6 = {",
+            "replacements": [
+                "r:::tools/clang/spanify/tests/trailing-comma-original.cc:::1622:::11:::std::array<A, 6> a_6 = {",
+                "include-system-header:::tools/clang/spanify/tests/trailing-comma-original.cc:::-1:::-1:::array",
+                "r:::tools/clang/spanify/tests/trailing-comma-original.cc:::1683:::1:::,}}"
+            ],
             "size_info_available": true,
             "visited": true,
             "debug_info": {
                 "rewrite_applied": true,
                 "original_is_buffer": false,
                 "original_size_info_available": null
-            }
+            },
+            "node_types": [
+                "source",
+                "sink"
+            ]
         },
         {
             "id": 11,
             "replacement": "r:::tools/clang/spanify/tests/trailing-comma-original.cc:::1622:::0:::",
+            "replacements": [
+                "r:::tools/clang/spanify/tests/trailing-comma-original.cc:::1622:::0:::"
+            ],
             "size_info_available": null,
             "visited": true,
             "debug_info": {
                 "rewrite_applied": true,
                 "original_is_buffer": false,
                 "original_size_info_available": null
-            }
+            },
+            "node_types": []
         },
         {
             "id": 12,
             "replacement": "r:::tools/clang/spanify/tests/trailing-comma-original.cc:::1907:::25:::std::array<A, 6> a_6_with_new_line = {",
+            "replacements": [
+                "r:::tools/clang/spanify/tests/trailing-comma-original.cc:::1907:::25:::std::array<A, 6> a_6_with_new_line = {",
+                "include-system-header:::tools/clang/spanify/tests/trailing-comma-original.cc:::-1:::-1:::array",
+                "r:::tools/clang/spanify/tests/trailing-comma-original.cc:::1994:::1:::,}}"
+            ],
             "size_info_available": true,
             "visited": true,
             "debug_info": {
                 "rewrite_applied": true,
                 "original_is_buffer": false,
                 "original_size_info_available": null
-            }
+            },
+            "node_types": [
+                "source",
+                "sink"
+            ]
         },
         {
             "id": 13,
             "replacement": "r:::tools/clang/spanify/tests/trailing-comma-original.cc:::1907:::0:::",
+            "replacements": [
+                "r:::tools/clang/spanify/tests/trailing-comma-original.cc:::1907:::0:::"
+            ],
             "size_info_available": null,
             "visited": true,
             "debug_info": {
                 "rewrite_applied": true,
                 "original_is_buffer": false,
                 "original_size_info_available": null
-            }
+            },
+            "node_types": []
         },
         {
             "id": 14,
             "replacement": "r:::tools/clang/spanify/tests/trailing-comma-original.cc:::2219:::31:::std::array<A, 5> a_5_with_trailing_comma = {",
+            "replacements": [
+                "r:::tools/clang/spanify/tests/trailing-comma-original.cc:::2219:::31:::std::array<A, 5> a_5_with_trailing_comma = {",
+                "include-system-header:::tools/clang/spanify/tests/trailing-comma-original.cc:::-1:::-1:::array",
+                "r:::tools/clang/spanify/tests/trailing-comma-original.cc:::2301:::1:::}}"
+            ],
             "size_info_available": true,
             "visited": true,
             "debug_info": {
                 "rewrite_applied": true,
                 "original_is_buffer": false,
                 "original_size_info_available": null
-            }
+            },
+            "node_types": [
+                "source",
+                "sink"
+            ]
         },
         {
             "id": 15,
             "replacement": "r:::tools/clang/spanify/tests/trailing-comma-original.cc:::2219:::0:::",
+            "replacements": [
+                "r:::tools/clang/spanify/tests/trailing-comma-original.cc:::2219:::0:::"
+            ],
             "size_info_available": null,
             "visited": true,
             "debug_info": {
                 "rewrite_applied": true,
                 "original_is_buffer": false,
                 "original_size_info_available": null
-            }
+            },
+            "node_types": []
         },
         {
             "id": 16,
             "replacement": "r:::tools/clang/spanify/tests/trailing-comma-original.cc:::2534:::33:::std::array<A, 5> a_5_with_trailing_comma_2 = {",
+            "replacements": [
+                "r:::tools/clang/spanify/tests/trailing-comma-original.cc:::2534:::33:::std::array<A, 5> a_5_with_trailing_comma_2 = {",
+                "include-system-header:::tools/clang/spanify/tests/trailing-comma-original.cc:::-1:::-1:::array",
+                "r:::tools/clang/spanify/tests/trailing-comma-original.cc:::2647:::1:::}}"
+            ],
             "size_info_available": true,
             "visited": true,
             "debug_info": {
                 "rewrite_applied": true,
                 "original_is_buffer": false,
                 "original_size_info_available": null
-            }
+            },
+            "node_types": [
+                "source",
+                "sink"
+            ]
         },
         {
             "id": 17,
             "replacement": "r:::tools/clang/spanify/tests/trailing-comma-original.cc:::2534:::0:::",
+            "replacements": [
+                "r:::tools/clang/spanify/tests/trailing-comma-original.cc:::2534:::0:::"
+            ],
             "size_info_available": null,
             "visited": true,
             "debug_info": {
                 "rewrite_applied": true,
                 "original_is_buffer": false,
                 "original_size_info_available": null
-            }
+            },
+            "node_types": []
         }
     ],
     "links": [

@@ -3,90 +3,138 @@
         {
             "id": 0,
             "replacement": "r:::tools/clang/spanify/tests/char-array-with-string-literal-original.cc:::361:::16:::const std::string_view buf",
+            "replacements": [
+                "r:::tools/clang/spanify/tests/char-array-with-string-literal-original.cc:::361:::16:::const std::string_view buf",
+                "include-system-header:::tools/clang/spanify/tests/char-array-with-string-literal-original.cc:::-1:::-1:::string_view"
+            ],
             "size_info_available": true,
             "visited": true,
             "debug_info": {
                 "rewrite_applied": true,
                 "original_is_buffer": false,
                 "original_size_info_available": null
-            }
+            },
+            "node_types": [
+                "source",
+                "sink"
+            ]
         },
         {
             "id": 1,
             "replacement": "r:::tools/clang/spanify/tests/char-array-with-string-literal-original.cc:::361:::0:::",
+            "replacements": [
+                "r:::tools/clang/spanify/tests/char-array-with-string-literal-original.cc:::361:::0:::"
+            ],
             "size_info_available": null,
             "visited": true,
             "debug_info": {
                 "rewrite_applied": true,
                 "original_is_buffer": false,
                 "original_size_info_available": null
-            }
+            },
+            "node_types": []
         },
         {
             "id": 2,
             "replacement": "r:::tools/clang/spanify/tests/char-array-with-string-literal-original.cc:::504:::20:::const std::wstring_view buf2",
+            "replacements": [
+                "r:::tools/clang/spanify/tests/char-array-with-string-literal-original.cc:::504:::20:::const std::wstring_view buf2",
+                "include-system-header:::tools/clang/spanify/tests/char-array-with-string-literal-original.cc:::-1:::-1:::string_view"
+            ],
             "size_info_available": true,
             "visited": true,
             "debug_info": {
                 "rewrite_applied": true,
                 "original_is_buffer": false,
                 "original_size_info_available": null
-            }
+            },
+            "node_types": [
+                "source",
+                "sink"
+            ]
         },
         {
             "id": 3,
             "replacement": "r:::tools/clang/spanify/tests/char-array-with-string-literal-original.cc:::504:::0:::",
+            "replacements": [
+                "r:::tools/clang/spanify/tests/char-array-with-string-literal-original.cc:::504:::0:::"
+            ],
             "size_info_available": null,
             "visited": true,
             "debug_info": {
                 "rewrite_applied": true,
                 "original_is_buffer": false,
                 "original_size_info_available": null
-            }
+            },
+            "node_types": []
         },
         {
             "id": 4,
             "replacement": "r:::tools/clang/spanify/tests/char-array-with-string-literal-original.cc:::655:::21:::const std::u16string_view buf4",
+            "replacements": [
+                "r:::tools/clang/spanify/tests/char-array-with-string-literal-original.cc:::655:::21:::const std::u16string_view buf4",
+                "include-system-header:::tools/clang/spanify/tests/char-array-with-string-literal-original.cc:::-1:::-1:::string_view"
+            ],
             "size_info_available": true,
             "visited": true,
             "debug_info": {
                 "rewrite_applied": true,
                 "original_is_buffer": false,
                 "original_size_info_available": null
-            }
+            },
+            "node_types": [
+                "source",
+                "sink"
+            ]
         },
         {
             "id": 5,
             "replacement": "r:::tools/clang/spanify/tests/char-array-with-string-literal-original.cc:::655:::0:::",
+            "replacements": [
+                "r:::tools/clang/spanify/tests/char-array-with-string-literal-original.cc:::655:::0:::"
+            ],
             "size_info_available": null,
             "visited": true,
             "debug_info": {
                 "rewrite_applied": true,
                 "original_is_buffer": false,
                 "original_size_info_available": null
-            }
+            },
+            "node_types": []
         },
         {
             "id": 6,
             "replacement": "r:::tools/clang/spanify/tests/char-array-with-string-literal-original.cc:::807:::21:::const std::u32string_view buf5",
+            "replacements": [
+                "r:::tools/clang/spanify/tests/char-array-with-string-literal-original.cc:::807:::21:::const std::u32string_view buf5",
+                "include-system-header:::tools/clang/spanify/tests/char-array-with-string-literal-original.cc:::-1:::-1:::string_view"
+            ],
             "size_info_available": true,
             "visited": true,
             "debug_info": {
                 "rewrite_applied": true,
                 "original_is_buffer": false,
                 "original_size_info_available": null
-            }
+            },
+            "node_types": [
+                "source",
+                "sink"
+            ]
         },
         {
             "id": 7,
             "replacement": "r:::tools/clang/spanify/tests/char-array-with-string-literal-original.cc:::807:::0:::",
+            "replacements": [
+                "r:::tools/clang/spanify/tests/char-array-with-string-literal-original.cc:::807:::0:::"
+            ],
             "size_info_available": null,
             "visited": true,
             "debug_info": {
                 "rewrite_applied": true,
                 "original_is_buffer": false,
                 "original_size_info_available": null
-            }
+            },
+            "node_types": []
         }
     ],
     "links": [

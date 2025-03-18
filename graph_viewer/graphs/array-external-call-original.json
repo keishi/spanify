@@ -3,178 +3,276 @@
         {
             "id": 0,
             "replacement": "r:::tools/clang/spanify/tests/array-external-call-original.cc:::636:::0:::.data()",
+            "replacements": [
+                "r:::tools/clang/spanify/tests/array-external-call-original.cc:::636:::0:::.data()"
+            ],
             "size_info_available": null,
             "visited": false,
             "debug_info": {
                 "rewrite_applied": true,
                 "original_is_buffer": false,
                 "original_size_info_available": null
-            }
+            },
+            "node_types": [
+                "dependent"
+            ]
         },
         {
             "id": 1,
             "replacement": "r:::tools/clang/spanify/tests/array-external-call-original.cc:::498:::0:::",
+            "replacements": [
+                "r:::tools/clang/spanify/tests/array-external-call-original.cc:::498:::0:::"
+            ],
             "size_info_available": null,
             "visited": true,
             "debug_info": {
                 "rewrite_applied": true,
                 "original_is_buffer": false,
                 "original_size_info_available": null
-            }
+            },
+            "node_types": []
         },
         {
             "id": 2,
             "replacement": "r:::tools/clang/spanify/tests/array-external-call-original.cc:::641:::0:::.data()",
+            "replacements": [
+                "r:::tools/clang/spanify/tests/array-external-call-original.cc:::641:::0:::.data()"
+            ],
             "size_info_available": null,
             "visited": false,
             "debug_info": {
                 "rewrite_applied": true,
                 "original_is_buffer": false,
                 "original_size_info_available": null
-            }
+            },
+            "node_types": [
+                "dependent"
+            ]
         },
         {
             "id": 3,
             "replacement": "r:::tools/clang/spanify/tests/array-external-call-original.cc:::365:::0:::",
+            "replacements": [
+                "r:::tools/clang/spanify/tests/array-external-call-original.cc:::365:::0:::"
+            ],
             "size_info_available": null,
             "visited": true,
             "debug_info": {
                 "rewrite_applied": true,
                 "original_is_buffer": false,
                 "original_size_info_available": null
-            }
+            },
+            "node_types": []
         },
         {
             "id": 4,
             "replacement": "r:::tools/clang/spanify/tests/array-external-call-original.cc:::365:::12:::auto buf = std::to_array<int>(",
+            "replacements": [
+                "r:::tools/clang/spanify/tests/array-external-call-original.cc:::365:::12:::auto buf = std::to_array<int>(",
+                "include-system-header:::tools/clang/spanify/tests/array-external-call-original.cc:::-1:::-1:::array",
+                "r:::tools/clang/spanify/tests/array-external-call-original.cc:::388:::1:::})"
+            ],
             "size_info_available": true,
             "visited": true,
             "debug_info": {
                 "rewrite_applied": true,
                 "original_is_buffer": false,
                 "original_size_info_available": null
-            }
+            },
+            "node_types": [
+                "source",
+                "sink"
+            ]
         },
         {
             "id": 5,
             "replacement": "r:::tools/clang/spanify/tests/array-external-call-original.cc:::498:::14:::auto buf2 = std::to_array<char>(",
+            "replacements": [
+                "r:::tools/clang/spanify/tests/array-external-call-original.cc:::498:::14:::auto buf2 = std::to_array<char>(",
+                "include-system-header:::tools/clang/spanify/tests/array-external-call-original.cc:::-1:::-1:::array",
+                "r:::tools/clang/spanify/tests/array-external-call-original.cc:::526:::1:::})"
+            ],
             "size_info_available": true,
             "visited": true,
             "debug_info": {
                 "rewrite_applied": true,
                 "original_is_buffer": false,
                 "original_size_info_available": null
-            }
+            },
+            "node_types": [
+                "source",
+                "sink"
+            ]
         },
         {
             "id": 6,
             "replacement": "r:::tools/clang/spanify/tests/array-external-call-original.cc:::1100:::0:::.data()",
+            "replacements": [
+                "r:::tools/clang/spanify/tests/array-external-call-original.cc:::1100:::0:::.data()"
+            ],
             "size_info_available": null,
             "visited": false,
             "debug_info": {
                 "rewrite_applied": true,
                 "original_is_buffer": false,
                 "original_size_info_available": null
-            }
+            },
+            "node_types": [
+                "dependent"
+            ]
         },
         {
             "id": 7,
             "replacement": "r:::tools/clang/spanify/tests/array-external-call-original.cc:::956:::0:::",
+            "replacements": [
+                "r:::tools/clang/spanify/tests/array-external-call-original.cc:::956:::0:::"
+            ],
             "size_info_available": null,
             "visited": true,
             "debug_info": {
                 "rewrite_applied": true,
                 "original_is_buffer": false,
                 "original_size_info_available": null
-            }
+            },
+            "node_types": []
         },
         {
             "id": 8,
             "replacement": "r:::tools/clang/spanify/tests/array-external-call-original.cc:::858:::6:::base::span<char>",
+            "replacements": [
+                "r:::tools/clang/spanify/tests/array-external-call-original.cc:::858:::6:::base::span<char>",
+                "include-user-header:::tools/clang/spanify/tests/array-external-call-original.cc:::-1:::-1:::base/containers/span.h"
+            ],
             "size_info_available": null,
             "visited": false,
             "debug_info": {
                 "rewrite_applied": false,
                 "original_is_buffer": false,
                 "original_size_info_available": null
-            }
+            },
+            "node_types": []
         },
         {
             "id": 9,
             "replacement": "r:::tools/clang/spanify/tests/array-external-call-original.cc:::1096:::0:::<empty>",
+            "replacements": [
+                "r:::tools/clang/spanify/tests/array-external-call-original.cc:::1096:::0:::<empty>",
+                "include-user-header:::tools/clang/spanify/tests/array-external-call-original.cc:::-1:::-1:::base/containers/span.h"
+            ],
             "size_info_available": true,
             "visited": false,
             "debug_info": {
                 "rewrite_applied": false,
                 "original_is_buffer": false,
                 "original_size_info_available": null
-            }
+            },
+            "node_types": [
+                "sink"
+            ]
         },
         {
             "id": 10,
             "replacement": "r:::tools/clang/spanify/tests/array-external-call-original.cc:::956:::13:::std::array<char, 10> data",
+            "replacements": [
+                "r:::tools/clang/spanify/tests/array-external-call-original.cc:::956:::13:::std::array<char, 10> data",
+                "include-system-header:::tools/clang/spanify/tests/array-external-call-original.cc:::-1:::-1:::array"
+            ],
             "size_info_available": true,
             "visited": true,
             "debug_info": {
                 "rewrite_applied": true,
                 "original_is_buffer": false,
                 "original_size_info_available": null
-            }
+            },
+            "node_types": [
+                "source",
+                "sink"
+            ]
         },
         {
             "id": 11,
             "replacement": "r:::tools/clang/spanify/tests/array-external-call-original.cc:::1181:::13:::std::array<char, 10> data",
+            "replacements": [
+                "r:::tools/clang/spanify/tests/array-external-call-original.cc:::1181:::13:::std::array<char, 10> data",
+                "include-system-header:::tools/clang/spanify/tests/array-external-call-original.cc:::-1:::-1:::array"
+            ],
             "size_info_available": true,
             "visited": true,
             "debug_info": {
                 "rewrite_applied": true,
                 "original_is_buffer": false,
                 "original_size_info_available": null
-            }
+            },
+            "node_types": [
+                "source",
+                "sink"
+            ]
         },
         {
             "id": 12,
             "replacement": "r:::tools/clang/spanify/tests/array-external-call-original.cc:::1181:::0:::",
+            "replacements": [
+                "r:::tools/clang/spanify/tests/array-external-call-original.cc:::1181:::0:::"
+            ],
             "size_info_available": null,
             "visited": true,
             "debug_info": {
                 "rewrite_applied": true,
                 "original_is_buffer": false,
                 "original_size_info_available": null
-            }
+            },
+            "node_types": []
         },
         {
             "id": 13,
             "replacement": "r:::tools/clang/spanify/tests/array-external-call-original.cc:::1684:::16:::const std::string_view buf",
+            "replacements": [
+                "r:::tools/clang/spanify/tests/array-external-call-original.cc:::1684:::16:::const std::string_view buf",
+                "include-system-header:::tools/clang/spanify/tests/array-external-call-original.cc:::-1:::-1:::string_view"
+            ],
             "size_info_available": true,
             "visited": true,
             "debug_info": {
                 "rewrite_applied": true,
                 "original_is_buffer": false,
                 "original_size_info_available": null
-            }
+            },
+            "node_types": [
+                "source",
+                "sink"
+            ]
         },
         {
             "id": 14,
             "replacement": "r:::tools/clang/spanify/tests/array-external-call-original.cc:::1684:::0:::",
+            "replacements": [
+                "r:::tools/clang/spanify/tests/array-external-call-original.cc:::1684:::0:::"
+            ],
             "size_info_available": null,
             "visited": true,
             "debug_info": {
                 "rewrite_applied": true,
                 "original_is_buffer": false,
                 "original_size_info_available": null
-            }
+            },
+            "node_types": []
         },
         {
             "id": 15,
             "replacement": "r:::tools/clang/spanify/tests/array-external-call-original.cc:::1778:::0:::.data()",
+            "replacements": [
+                "r:::tools/clang/spanify/tests/array-external-call-original.cc:::1778:::0:::.data()"
+            ],
             "size_info_available": null,
             "visited": false,
             "debug_info": {
                 "rewrite_applied": true,
                 "original_is_buffer": false,
                 "original_size_info_available": null
-            }
+            },
+            "node_types": [
+                "dependent"
+            ]
         }
     ],
     "links": [

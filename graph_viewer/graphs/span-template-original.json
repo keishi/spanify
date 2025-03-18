@@ -3,24 +3,36 @@
         {
             "id": 0,
             "replacement": "r:::tools/clang/spanify/tests/span-template-original.cc:::426:::3:::base::span<int>",
+            "replacements": [
+                "r:::tools/clang/spanify/tests/span-template-original.cc:::426:::3:::base::span<int>",
+                "include-user-header:::tools/clang/spanify/tests/span-template-original.cc:::-1:::-1:::base/containers/span.h"
+            ],
             "size_info_available": null,
             "visited": false,
             "debug_info": {
                 "rewrite_applied": false,
                 "original_is_buffer": false,
                 "original_size_info_available": null
-            }
+            },
+            "node_types": []
         },
         {
             "id": 1,
             "replacement": "r:::tools/clang/spanify/tests/span-template-original.cc:::506:::0:::<empty>",
+            "replacements": [
+                "r:::tools/clang/spanify/tests/span-template-original.cc:::506:::0:::<empty>",
+                "include-user-header:::tools/clang/spanify/tests/span-template-original.cc:::-1:::-1:::base/containers/span.h"
+            ],
             "size_info_available": true,
             "visited": false,
             "debug_info": {
                 "rewrite_applied": false,
                 "original_is_buffer": false,
                 "original_size_info_available": null
-            }
+            },
+            "node_types": [
+                "sink"
+            ]
         }
     ],
     "links": [

@@ -254,10 +254,13 @@ class ArrowDrawer {
     const baseCost = (1 - alignmentFrom) + (1 - alignmentTo);
     let cost = baseCost;
 
-    // Penalty if the distance is too short. - REMOVED
+    // Penalty if the distance is too short.
+    if (distance < 50) {
+      cost += 20; // penalty if distance is too short
+    }
 
     // Add distance as a direct cost component.
-    cost += distance;
+    cost += distance * 0.01; // Reduced weight for distance
 
     // Penalty if either anchor point is outside the canvas.
     if (fromAnchor.x < 0 || fromAnchor.y < 0 ||
@@ -268,6 +271,14 @@ class ArrowDrawer {
       toAnchor.x > containerRect.width || toAnchor.y > containerRect.height) {
       cost += 10;
     }
+
+    // New penalty: check angle between fromAnchor.ideal and connection
+    const idealDotConnection = this._dot(fromAnchor.ideal, connectionNorm);
+    if (idealDotConnection < 0) { // Penalize if angle is > 90 deg
+      cost += 30;
+    }
+
+
     // Penalty if the candidate path (approximated by the straight line) covers the target rect.
     const midX = (fromAnchor.x + toAnchor.x) / 2;
     const midY = (fromAnchor.y + toAnchor.y) / 2;
@@ -275,8 +286,8 @@ class ArrowDrawer {
     if (midX > targetRect.left + margin &&
       midX < targetRect.right - margin &&
       midY > targetRect.top + margin &&
-      midY > targetRect.bottom - margin) {
-      cost += 5; // penalty if midpoint is inside target rect
+      midY < targetRect.bottom - margin) {
+      cost += 50; // penalty if midpoint is inside target rect
     }
     return { cost, distance };
   }
@@ -329,24 +340,46 @@ class ArrowDrawer {
     for (const [fromKey, fromAnchor] of Object.entries(fromAnchors)) {
       for (const [toKey, toAnchor] of Object.entries(toAnchors)) {
         const { cost, distance } = this._evaluateCandidate(fromKey, fromAnchor, toKey, toAnchor, targetRect, containerRect);
-        // For our purposes, we can also add a slight penalty if the candidate doesn't match our desired relative arrangement.
-        // For example, if the centers indicate vertically adjacent rects (|dx| < |dy|), we prefer left/right anchors.
-        const dx = toCenter.x - fromCenter.x;
-        const dy = toCenter.y - fromCenter.y;
+        // Compute differences between the candidate anchor positions.
+        const dx = toAnchor.x - fromAnchor.x;
+        const dy = toAnchor.y - fromAnchor.y;
         let relPenalty = 0;
-        if (Math.abs(dx) < Math.abs(dy)) {
-          // Vertically adjacent: prefer left/right.
-          if (!(fromKey === 'left' || fromKey === 'right')) relPenalty += 1;
-          if (!(toKey === 'left' || toKey === 'right')) relPenalty += 1;
+        const relPenaltyIncrement = 20;
+
+        if (Math.abs(dx) >= Math.abs(dy)) {
+          // For a predominantly horizontal connection:
+          if (dx > 0) {
+            if (fromKey !== 'right') relPenalty += relPenaltyIncrement;
+            if (toKey !== 'left') relPenalty += relPenaltyIncrement;
+          } else {
+            if (fromKey !== 'left') relPenalty += relPenaltyIncrement;
+            if (toKey !== 'right') relPenalty += relPenaltyIncrement;
+          }
         } else {
-          // Horizontally adjacent: prefer top/bottom.
-          if (!(fromKey === 'top' || fromKey === 'bottom')) relPenalty += 1;
-          if (!(toKey === 'top' || toKey === 'bottom')) relPenalty += 1;
+          // For a predominantly vertical connection, favor bottom-to-top:
+          if (fromKey !== 'bottom') relPenalty += relPenaltyIncrement;
+          if (toKey !== 'top') relPenalty += relPenaltyIncrement;
+          // Apply a bonus if the candidate is exactly bottom-to-top.
+          if (fromKey === 'bottom' && toKey === 'top') {
+            relPenalty -= 10;
+          }
         }
+
+        // Extra adjustment: if the horizontal separation is very small (e.g. < 70 pixels),
+        // add an extra penalty—unless the candidate is our desired "bottom-to-top".
+        if (Math.abs(dx) < 70) {
+          if (!(fromKey === 'bottom' && toKey === 'top')) {
+            relPenalty += 50;
+          }
+        }
+
         const totalCost = cost + relPenalty;
+        console.log(`from: ${fromKey}, to: ${toKey}, cost: ${cost}, distance: ${distance}, relPenalty: ${relPenalty}, totalCost: ${totalCost}`); // Enhanced logging
+        console.log(`fromCenter x:${fromCenter.x}, y:${fromCenter.y}, toCenter x:${toCenter.x}, y:${toCenter.y}`);
         if (totalCost < bestCost) {
           bestCost = totalCost;
           bestPair = { fromKey, toKey, fromAnchor, toAnchor, distance, totalCost };
+          console.log(`[DEBUG-LOOP] New best pair found: from: ${fromKey}, to: ${toKey}, totalCost: ${totalCost}`); // ADDED DEBUG LOG
         }
       }
     }
@@ -415,6 +448,47 @@ class ArrowDrawer {
     const tangent = tangentAtOffsetFromEnd(start, cp1, cp2, end, 10);
     const angleDeg = Math.atan2(tangent.y, tangent.x) * 180 / Math.PI;
     marker.setAttribute("orient", angleDeg);
+
+    if (debug) {
+      // Draw control points and anchor points
+      const debugGroup = this.svgCanvas.createGroup({ id: 'debug-group' });
+      const createDebugCircle = (cx, cy, color) => {
+        const circle = this.svgCanvas._createSVGElement('circle', {
+          cx,
+          cy,
+          r: 3,
+          fill: color,
+        });
+        debugGroup.appendChild(circle);
+      };
+
+      // Draw control points
+      createDebugCircle(cp1.x, cp1.y, 'red');
+      createDebugCircle(cp2.x, cp2.y, 'red');
+
+      // Draw lines to control points
+      const createDebugLine = (x1, y1, x2, y2, color) => {
+        const line = this.svgCanvas._createSVGElement('line', {
+          x1,
+          y1,
+          x2,
+          y2,
+          stroke: color,
+          'stroke-width': 1,
+        });
+        debugGroup.appendChild(line);
+      };
+
+      createDebugLine(start.x, start.y, cp1.x, cp1.y, 'red');
+      createDebugLine(end.x, end.y, cp2.x, cp2.y, 'red');
+
+      // Draw anchor points
+      Object.values(fromAnchors).forEach(anchor => createDebugCircle(anchor.x, anchor.y, 'blue'));
+      Object.values(toAnchors).forEach(anchor => createDebugCircle(anchor.x, anchor.y, 'blue'));
+
+      console.log(`cp1 x:${cp1.x} y:${cp1.y}`);
+      console.log(`cp2 x:${cp2.x} y:${cp2.y}`);
+    }
 
     return arrowPath;
   }
@@ -487,6 +561,10 @@ class ArrowDrawer {
     this.svgCanvas.svg.querySelectorAll('path').forEach(path => path.remove());
     while (this.svgCanvas.defs.firstChild) {
       this.svgCanvas.defs.removeChild(this.svgCanvas.defs.firstChild);
+    }
+    const debugGroup = this.svgCanvas.svg.querySelector('#debug-group');
+    if (debugGroup) {
+      debugGroup.remove();
     }
   }
 }

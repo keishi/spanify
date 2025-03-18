@@ -3,310 +3,474 @@
         {
             "id": 0,
             "replacement": "r:::tools/clang/spanify/tests/raw-ptr-fields-original.cc:::562:::7:::base::raw_span",
+            "replacements": [
+                "r:::tools/clang/spanify/tests/raw-ptr-fields-original.cc:::562:::7:::base::raw_span",
+                "include-user-header:::tools/clang/spanify/tests/raw-ptr-fields-original.cc:::-1:::-1:::base/memory/raw_span.h"
+            ],
             "size_info_available": true,
             "visited": true,
             "debug_info": {
                 "rewrite_applied": true,
                 "original_is_buffer": false,
                 "original_size_info_available": null
-            }
+            },
+            "node_types": []
         },
         {
             "id": 1,
             "replacement": "r:::tools/clang/spanify/tests/raw-ptr-fields-original.cc:::193:::5:::base::span<int>",
+            "replacements": [
+                "r:::tools/clang/spanify/tests/raw-ptr-fields-original.cc:::193:::5:::base::span<int>",
+                "include-user-header:::tools/clang/spanify/tests/raw-ptr-fields-original.cc:::-1:::-1:::base/containers/span.h"
+            ],
             "size_info_available": true,
             "visited": true,
             "debug_info": {
                 "rewrite_applied": true,
                 "original_is_buffer": false,
                 "original_size_info_available": null
-            }
+            },
+            "node_types": []
         },
         {
             "id": 2,
             "replacement": "r:::tools/clang/spanify/tests/raw-ptr-fields-original.cc:::807:::4:::base::span<int>",
+            "replacements": [
+                "r:::tools/clang/spanify/tests/raw-ptr-fields-original.cc:::807:::4:::base::span<int>",
+                "include-user-header:::tools/clang/spanify/tests/raw-ptr-fields-original.cc:::-1:::-1:::base/containers/span.h"
+            ],
             "size_info_available": true,
             "visited": true,
             "debug_info": {
                 "rewrite_applied": true,
                 "original_is_buffer": false,
                 "original_size_info_available": null
-            }
+            },
+            "node_types": []
         },
         {
             "id": 3,
             "replacement": "r:::tools/clang/spanify/tests/raw-ptr-fields-original.cc:::841:::5:::base::span<int>",
+            "replacements": [
+                "r:::tools/clang/spanify/tests/raw-ptr-fields-original.cc:::841:::5:::base::span<int>",
+                "include-user-header:::tools/clang/spanify/tests/raw-ptr-fields-original.cc:::-1:::-1:::base/containers/span.h"
+            ],
             "size_info_available": true,
             "visited": true,
             "debug_info": {
                 "rewrite_applied": true,
                 "original_is_buffer": false,
                 "original_size_info_available": null
-            }
+            },
+            "node_types": [
+                "source"
+            ]
         },
         {
             "id": 4,
             "replacement": "r:::tools/clang/spanify/tests/raw-ptr-fields-original.cc:::988:::11:::base::span<const int>",
+            "replacements": [
+                "r:::tools/clang/spanify/tests/raw-ptr-fields-original.cc:::988:::11:::base::span<const int>",
+                "include-user-header:::tools/clang/spanify/tests/raw-ptr-fields-original.cc:::-1:::-1:::base/containers/span.h"
+            ],
             "size_info_available": null,
             "visited": false,
             "debug_info": {
                 "rewrite_applied": false,
                 "original_is_buffer": false,
                 "original_size_info_available": null
-            }
+            },
+            "node_types": []
         },
         {
             "id": 5,
             "replacement": "r:::tools/clang/spanify/tests/raw-ptr-fields-original.cc:::911:::4:::base::span<int>",
+            "replacements": [
+                "r:::tools/clang/spanify/tests/raw-ptr-fields-original.cc:::911:::4:::base::span<int>",
+                "include-user-header:::tools/clang/spanify/tests/raw-ptr-fields-original.cc:::-1:::-1:::base/containers/span.h"
+            ],
             "size_info_available": true,
             "visited": true,
             "debug_info": {
                 "rewrite_applied": true,
                 "original_is_buffer": false,
                 "original_size_info_available": null
-            }
+            },
+            "node_types": []
         },
         {
             "id": 6,
             "replacement": "r:::tools/clang/spanify/tests/raw-ptr-fields-original.cc:::1010:::6:::",
+            "replacements": [
+                "r:::tools/clang/spanify/tests/raw-ptr-fields-original.cc:::1010:::6:::",
+                "include-user-header:::tools/clang/spanify/tests/raw-ptr-fields-original.cc:::-1:::-1:::base/containers/span.h"
+            ],
             "size_info_available": null,
             "visited": false,
             "debug_info": {
                 "rewrite_applied": true,
                 "original_is_buffer": false,
                 "original_size_info_available": null
-            }
+            },
+            "node_types": [
+                "dependent"
+            ]
         },
         {
             "id": 7,
             "replacement": "r:::tools/clang/spanify/tests/raw-ptr-fields-original.cc:::1135:::7:::{}",
+            "replacements": [
+                "r:::tools/clang/spanify/tests/raw-ptr-fields-original.cc:::1135:::7:::{}",
+                "include-user-header:::tools/clang/spanify/tests/raw-ptr-fields-original.cc:::-1:::-1:::base/containers/span.h"
+            ],
             "size_info_available": true,
             "visited": true,
             "debug_info": {
                 "rewrite_applied": true,
                 "original_is_buffer": false,
                 "original_size_info_available": null
-            }
+            },
+            "node_types": [
+                "sink"
+            ]
         },
         {
             "id": 8,
             "replacement": "r:::tools/clang/spanify/tests/raw-ptr-fields-original.cc:::855:::5:::base::span<int>",
+            "replacements": [
+                "r:::tools/clang/spanify/tests/raw-ptr-fields-original.cc:::855:::5:::base::span<int>",
+                "include-user-header:::tools/clang/spanify/tests/raw-ptr-fields-original.cc:::-1:::-1:::base/containers/span.h"
+            ],
             "size_info_available": null,
             "visited": false,
             "debug_info": {
                 "rewrite_applied": false,
                 "original_is_buffer": false,
                 "original_size_info_available": null
-            }
+            },
+            "node_types": []
         },
         {
             "id": 9,
             "replacement": "r:::tools/clang/spanify/tests/raw-ptr-fields-original.cc:::1144:::7:::{}",
+            "replacements": [
+                "r:::tools/clang/spanify/tests/raw-ptr-fields-original.cc:::1144:::7:::{}",
+                "include-user-header:::tools/clang/spanify/tests/raw-ptr-fields-original.cc:::-1:::-1:::base/containers/span.h"
+            ],
             "size_info_available": true,
             "visited": false,
             "debug_info": {
                 "rewrite_applied": false,
                 "original_is_buffer": false,
                 "original_size_info_available": null
-            }
+            },
+            "node_types": [
+                "sink"
+            ]
         },
         {
             "id": 10,
             "replacement": "r:::tools/clang/spanify/tests/raw-ptr-fields-original.cc:::1253:::11:::base::span<const int>",
+            "replacements": [
+                "r:::tools/clang/spanify/tests/raw-ptr-fields-original.cc:::1253:::11:::base::span<const int>",
+                "include-user-header:::tools/clang/spanify/tests/raw-ptr-fields-original.cc:::-1:::-1:::base/containers/span.h"
+            ],
             "size_info_available": true,
             "visited": true,
             "debug_info": {
                 "rewrite_applied": true,
                 "original_is_buffer": false,
                 "original_size_info_available": null
-            }
+            },
+            "node_types": [
+                "source"
+            ]
         },
         {
             "id": 11,
             "replacement": "r:::tools/clang/spanify/tests/raw-ptr-fields-original.cc:::1300:::7:::{}",
+            "replacements": [
+                "r:::tools/clang/spanify/tests/raw-ptr-fields-original.cc:::1300:::7:::{}",
+                "include-user-header:::tools/clang/spanify/tests/raw-ptr-fields-original.cc:::-1:::-1:::base/containers/span.h"
+            ],
             "size_info_available": true,
             "visited": false,
             "debug_info": {
                 "rewrite_applied": false,
                 "original_is_buffer": false,
                 "original_size_info_available": null
-            }
+            },
+            "node_types": [
+                "sink"
+            ]
         },
         {
             "id": 12,
             "replacement": "r:::tools/clang/spanify/tests/raw-ptr-fields-original.cc:::1473:::11:::base::span<const int>",
+            "replacements": [
+                "r:::tools/clang/spanify/tests/raw-ptr-fields-original.cc:::1473:::11:::base::span<const int>",
+                "include-user-header:::tools/clang/spanify/tests/raw-ptr-fields-original.cc:::-1:::-1:::base/containers/span.h"
+            ],
             "size_info_available": true,
             "visited": true,
             "debug_info": {
                 "rewrite_applied": true,
                 "original_is_buffer": false,
                 "original_size_info_available": null
-            }
+            },
+            "node_types": []
         },
         {
             "id": 13,
             "replacement": "r:::tools/clang/spanify/tests/raw-ptr-fields-original.cc:::1496:::6:::",
+            "replacements": [
+                "r:::tools/clang/spanify/tests/raw-ptr-fields-original.cc:::1496:::6:::",
+                "include-user-header:::tools/clang/spanify/tests/raw-ptr-fields-original.cc:::-1:::-1:::base/containers/span.h"
+            ],
             "size_info_available": null,
             "visited": false,
             "debug_info": {
                 "rewrite_applied": true,
                 "original_is_buffer": false,
                 "original_size_info_available": null
-            }
+            },
+            "node_types": [
+                "dependent"
+            ]
         },
         {
             "id": 14,
             "replacement": "r:::tools/clang/spanify/tests/raw-ptr-fields-original.cc:::1578:::17:::const base::span<const int>",
+            "replacements": [
+                "r:::tools/clang/spanify/tests/raw-ptr-fields-original.cc:::1578:::17:::const base::span<const int>",
+                "include-user-header:::tools/clang/spanify/tests/raw-ptr-fields-original.cc:::-1:::-1:::base/containers/span.h"
+            ],
             "size_info_available": true,
             "visited": true,
             "debug_info": {
                 "rewrite_applied": true,
                 "original_is_buffer": false,
                 "original_size_info_available": null
-            }
+            },
+            "node_types": []
         },
         {
             "id": 15,
             "replacement": "r:::tools/clang/spanify/tests/raw-ptr-fields-original.cc:::1678:::12:::base::span<const int>",
+            "replacements": [
+                "r:::tools/clang/spanify/tests/raw-ptr-fields-original.cc:::1678:::12:::base::span<const int>",
+                "include-user-header:::tools/clang/spanify/tests/raw-ptr-fields-original.cc:::-1:::-1:::base/containers/span.h"
+            ],
             "size_info_available": true,
             "visited": true,
             "debug_info": {
                 "rewrite_applied": true,
                 "original_is_buffer": false,
                 "original_size_info_available": null
-            }
+            },
+            "node_types": []
         },
         {
             "id": 16,
             "replacement": "r:::tools/clang/spanify/tests/raw-ptr-fields-original.cc:::1779:::18:::const base::span<const int>",
+            "replacements": [
+                "r:::tools/clang/spanify/tests/raw-ptr-fields-original.cc:::1779:::18:::const base::span<const int>",
+                "include-user-header:::tools/clang/spanify/tests/raw-ptr-fields-original.cc:::-1:::-1:::base/containers/span.h"
+            ],
             "size_info_available": true,
             "visited": true,
             "debug_info": {
                 "rewrite_applied": true,
                 "original_is_buffer": false,
                 "original_size_info_available": null
-            }
+            },
+            "node_types": [
+                "source"
+            ]
         },
         {
             "id": 17,
             "replacement": "r:::tools/clang/spanify/tests/raw-ptr-fields-original.cc:::1952:::5:::base::span<int>",
+            "replacements": [
+                "r:::tools/clang/spanify/tests/raw-ptr-fields-original.cc:::1952:::5:::base::span<int>",
+                "include-user-header:::tools/clang/spanify/tests/raw-ptr-fields-original.cc:::-1:::-1:::base/containers/span.h"
+            ],
             "size_info_available": true,
             "visited": true,
             "debug_info": {
                 "rewrite_applied": true,
                 "original_is_buffer": false,
                 "original_size_info_available": null
-            }
+            },
+            "node_types": []
         },
         {
             "id": 18,
             "replacement": "r:::tools/clang/spanify/tests/raw-ptr-fields-original.cc:::1963:::7:::{}",
+            "replacements": [
+                "r:::tools/clang/spanify/tests/raw-ptr-fields-original.cc:::1963:::7:::{}",
+                "include-user-header:::tools/clang/spanify/tests/raw-ptr-fields-original.cc:::-1:::-1:::base/containers/span.h"
+            ],
             "size_info_available": true,
             "visited": true,
             "debug_info": {
                 "rewrite_applied": true,
                 "original_is_buffer": false,
                 "original_size_info_available": null
-            }
+            },
+            "node_types": [
+                "sink"
+            ]
         },
         {
             "id": 19,
             "replacement": "r:::tools/clang/spanify/tests/raw-ptr-fields-original.cc:::2048:::5:::base::span<int>",
+            "replacements": [
+                "r:::tools/clang/spanify/tests/raw-ptr-fields-original.cc:::2048:::5:::base::span<int>",
+                "include-user-header:::tools/clang/spanify/tests/raw-ptr-fields-original.cc:::-1:::-1:::base/containers/span.h"
+            ],
             "size_info_available": true,
             "visited": true,
             "debug_info": {
                 "rewrite_applied": true,
                 "original_is_buffer": false,
                 "original_size_info_available": null
-            }
+            },
+            "node_types": [
+                "source"
+            ]
         },
         {
             "id": 20,
             "replacement": "r:::tools/clang/spanify/tests/raw-ptr-fields-original.cc:::2359:::7:::base::raw_span",
+            "replacements": [
+                "r:::tools/clang/spanify/tests/raw-ptr-fields-original.cc:::2359:::7:::base::raw_span",
+                "include-user-header:::tools/clang/spanify/tests/raw-ptr-fields-original.cc:::-1:::-1:::base/memory/raw_span.h"
+            ],
             "size_info_available": true,
             "visited": true,
             "debug_info": {
                 "rewrite_applied": true,
                 "original_is_buffer": false,
                 "original_size_info_available": null
-            }
+            },
+            "node_types": [
+                "source"
+            ]
         },
         {
             "id": 21,
             "replacement": "r:::tools/clang/spanify/tests/raw-ptr-fields-original.cc:::2172:::5:::base::span<int>",
+            "replacements": [
+                "r:::tools/clang/spanify/tests/raw-ptr-fields-original.cc:::2172:::5:::base::span<int>",
+                "include-user-header:::tools/clang/spanify/tests/raw-ptr-fields-original.cc:::-1:::-1:::base/containers/span.h"
+            ],
             "size_info_available": true,
             "visited": true,
             "debug_info": {
                 "rewrite_applied": true,
                 "original_is_buffer": false,
                 "original_size_info_available": null
-            }
+            },
+            "node_types": []
         },
         {
             "id": 22,
             "replacement": "r:::tools/clang/spanify/tests/raw-ptr-fields-original.cc:::2200:::4:::base::span<int>",
+            "replacements": [
+                "r:::tools/clang/spanify/tests/raw-ptr-fields-original.cc:::2200:::4:::base::span<int>",
+                "include-user-header:::tools/clang/spanify/tests/raw-ptr-fields-original.cc:::-1:::-1:::base/containers/span.h"
+            ],
             "size_info_available": null,
             "visited": false,
             "debug_info": {
                 "rewrite_applied": false,
                 "original_is_buffer": false,
                 "original_size_info_available": null
-            }
+            },
+            "node_types": []
         },
         {
             "id": 23,
             "replacement": "r:::tools/clang/spanify/tests/raw-ptr-fields-original.cc:::2445:::7:::{}",
+            "replacements": [
+                "r:::tools/clang/spanify/tests/raw-ptr-fields-original.cc:::2445:::7:::{}",
+                "include-user-header:::tools/clang/spanify/tests/raw-ptr-fields-original.cc:::-1:::-1:::base/containers/span.h"
+            ],
             "size_info_available": true,
             "visited": true,
             "debug_info": {
                 "rewrite_applied": true,
                 "original_is_buffer": false,
                 "original_size_info_available": null
-            }
+            },
+            "node_types": [
+                "sink"
+            ]
         },
         {
             "id": 24,
             "replacement": "r:::tools/clang/spanify/tests/raw-ptr-fields-original.cc:::501:::4:::base::span<int>",
+            "replacements": [
+                "r:::tools/clang/spanify/tests/raw-ptr-fields-original.cc:::501:::4:::base::span<int>",
+                "include-user-header:::tools/clang/spanify/tests/raw-ptr-fields-original.cc:::-1:::-1:::base/containers/span.h"
+            ],
             "size_info_available": true,
             "visited": true,
             "debug_info": {
                 "rewrite_applied": true,
                 "original_is_buffer": false,
                 "original_size_info_available": null
-            }
+            },
+            "node_types": []
         },
         {
             "id": 25,
             "replacement": "r:::tools/clang/spanify/tests/raw-ptr-fields-original.cc:::532:::5:::base::span<int>",
+            "replacements": [
+                "r:::tools/clang/spanify/tests/raw-ptr-fields-original.cc:::532:::5:::base::span<int>",
+                "include-user-header:::tools/clang/spanify/tests/raw-ptr-fields-original.cc:::-1:::-1:::base/containers/span.h"
+            ],
             "size_info_available": true,
             "visited": true,
             "debug_info": {
                 "rewrite_applied": true,
                 "original_is_buffer": false,
                 "original_size_info_available": null
-            }
+            },
+            "node_types": []
         },
         {
             "id": 26,
             "replacement": "r:::tools/clang/spanify/tests/raw-ptr-fields-original.cc:::546:::5:::base::span<int>",
+            "replacements": [
+                "r:::tools/clang/spanify/tests/raw-ptr-fields-original.cc:::546:::5:::base::span<int>",
+                "include-user-header:::tools/clang/spanify/tests/raw-ptr-fields-original.cc:::-1:::-1:::base/containers/span.h"
+            ],
             "size_info_available": null,
             "visited": false,
             "debug_info": {
                 "rewrite_applied": false,
                 "original_is_buffer": false,
                 "original_size_info_available": null
-            }
+            },
+            "node_types": []
         },
         {
             "id": 27,
             "replacement": "r:::tools/clang/spanify/tests/raw-ptr-fields-original.cc:::220:::4:::base::span<int>",
+            "replacements": [
+                "r:::tools/clang/spanify/tests/raw-ptr-fields-original.cc:::220:::4:::base::span<int>",
+                "include-user-header:::tools/clang/spanify/tests/raw-ptr-fields-original.cc:::-1:::-1:::base/containers/span.h"
+            ],
             "size_info_available": true,
             "visited": true,
             "debug_info": {
                 "rewrite_applied": true,
                 "original_is_buffer": false,
                 "original_size_info_available": null
-            }
+            },
+            "node_types": []
         }
     ],
     "links": [
@@ -320,11 +484,11 @@
         },
         {
             "source": 2,
-            "target": 24
+            "target": 3
         },
         {
             "source": 2,
-            "target": 3
+            "target": 24
         },
         {
             "source": 3,
@@ -344,11 +508,11 @@
         },
         {
             "source": 5,
-            "target": 0
+            "target": 27
         },
         {
             "source": 5,
-            "target": 27
+            "target": 0
         },
         {
             "source": 6,
@@ -356,7 +520,7 @@
         },
         {
             "source": 8,
-            "target": 26
+            "target": 9
         },
         {
             "source": 8,
@@ -364,7 +528,7 @@
         },
         {
             "source": 8,
-            "target": 9
+            "target": 26
         },
         {
             "source": 10,

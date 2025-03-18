@@ -3,89 +3,134 @@
         {
             "id": 0,
             "replacement": "r:::tools/clang/spanify/tests/header-original.cc:::384:::5:::base::span<int>",
+            "replacements": [
+                "r:::tools/clang/spanify/tests/header-original.cc:::384:::5:::base::span<int>",
+                "include-user-header:::tools/clang/spanify/tests/header-original.cc:::-1:::-1:::base/containers/span.h"
+            ],
             "size_info_available": true,
             "visited": true,
             "debug_info": {
                 "rewrite_applied": true,
                 "original_is_buffer": false,
                 "original_size_info_available": null
-            }
+            },
+            "node_types": [
+                "source"
+            ]
         },
         {
             "id": 1,
             "replacement": "r:::tools/clang/spanify/tests/header-original.cc:::862:::7:::",
+            "replacements": [
+                "r:::tools/clang/spanify/tests/header-original.cc:::862:::7:::",
+                "include-user-header:::tools/clang/spanify/tests/header-original.cc:::-1:::-1:::base/containers/span.h"
+            ],
             "size_info_available": true,
             "visited": true,
             "debug_info": {
                 "rewrite_applied": true,
                 "original_is_buffer": false,
                 "original_size_info_available": null
-            }
+            },
+            "node_types": [
+                "sink"
+            ]
         },
         {
             "id": 2,
             "replacement": "r:::tools/clang/spanify/tests/header-original.h:::774:::5:::base::span<int>",
+            "replacements": [
+                "r:::tools/clang/spanify/tests/header-original.h:::774:::5:::base::span<int>",
+                "include-user-header:::tools/clang/spanify/tests/header-original.h:::-1:::-1:::base/containers/span.h"
+            ],
             "size_info_available": null,
             "visited": false,
             "debug_info": {
                 "rewrite_applied": false,
                 "original_is_buffer": false,
                 "original_size_info_available": null
-            }
+            },
+            "node_types": []
         },
         {
             "id": 3,
             "replacement": "r:::tools/clang/spanify/tests/header-original.cc:::1108:::7:::",
+            "replacements": [
+                "r:::tools/clang/spanify/tests/header-original.cc:::1108:::7:::",
+                "include-user-header:::tools/clang/spanify/tests/header-original.cc:::-1:::-1:::base/containers/span.h"
+            ],
             "size_info_available": true,
             "visited": false,
             "debug_info": {
                 "rewrite_applied": false,
                 "original_is_buffer": false,
                 "original_size_info_available": null
-            }
+            },
+            "node_types": [
+                "sink"
+            ]
         },
         {
             "id": 4,
             "replacement": "r:::tools/clang/spanify/tests/header-original.cc:::615:::5:::base::span<int>",
+            "replacements": [
+                "r:::tools/clang/spanify/tests/header-original.cc:::615:::5:::base::span<int>",
+                "include-user-header:::tools/clang/spanify/tests/header-original.cc:::-1:::-1:::base/containers/span.h"
+            ],
             "size_info_available": true,
             "visited": true,
             "debug_info": {
                 "rewrite_applied": true,
                 "original_is_buffer": false,
                 "original_size_info_available": null
-            }
+            },
+            "node_types": [
+                "source"
+            ]
         },
         {
             "id": 5,
             "replacement": "r:::tools/clang/spanify/tests/header-original.cc:::1224:::7:::",
+            "replacements": [
+                "r:::tools/clang/spanify/tests/header-original.cc:::1224:::7:::",
+                "include-user-header:::tools/clang/spanify/tests/header-original.cc:::-1:::-1:::base/containers/span.h"
+            ],
             "size_info_available": true,
             "visited": true,
             "debug_info": {
                 "rewrite_applied": true,
                 "original_is_buffer": false,
                 "original_size_info_available": null
-            }
+            },
+            "node_types": [
+                "sink"
+            ]
         },
         {
             "id": 6,
             "replacement": "r:::tools/clang/spanify/tests/header-original.h:::562:::5:::base::span<int>",
+            "replacements": [
+                "r:::tools/clang/spanify/tests/header-original.h:::562:::5:::base::span<int>",
+                "include-user-header:::tools/clang/spanify/tests/header-original.h:::-1:::-1:::base/containers/span.h"
+            ],
             "size_info_available": true,
             "visited": true,
             "debug_info": {
                 "rewrite_applied": true,
                 "original_is_buffer": false,
                 "original_size_info_available": null
-            }
+            },
+            "node_types": []
         }
     ],
     "links": [
         {
             "source": 0,
-            "target": 6
+            "target": 1
         },
         {
             "source": 0,
-            "target": 1
+            "target": 6
         },
         {
             "source": 2,

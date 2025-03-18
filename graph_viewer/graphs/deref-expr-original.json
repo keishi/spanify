@@ -3,123 +3,194 @@
         {
             "id": 0,
             "replacement": "r:::tools/clang/spanify/tests/deref-expr-original.cc:::253:::7:::member[0]",
+            "replacements": [
+                "r:::tools/clang/spanify/tests/deref-expr-original.cc:::253:::7:::member[0]"
+            ],
             "size_info_available": null,
             "visited": false,
             "debug_info": {
                 "rewrite_applied": true,
                 "original_is_buffer": false,
                 "original_size_info_available": null
-            }
+            },
+            "node_types": [
+                "dependent"
+            ]
         },
         {
             "id": 1,
             "replacement": "r:::tools/clang/spanify/tests/deref-expr-original.cc:::362:::6:::base::span<char>",
+            "replacements": [
+                "r:::tools/clang/spanify/tests/deref-expr-original.cc:::362:::6:::base::span<char>",
+                "include-user-header:::tools/clang/spanify/tests/deref-expr-original.cc:::-1:::-1:::base/containers/span.h"
+            ],
             "size_info_available": true,
             "visited": true,
             "debug_info": {
                 "rewrite_applied": true,
                 "original_is_buffer": false,
                 "original_size_info_available": null
-            }
+            },
+            "node_types": [
+                "source"
+            ]
         },
         {
             "id": 2,
             "replacement": "r:::tools/clang/spanify/tests/deref-expr-original.cc:::507:::6:::param[0]",
+            "replacements": [
+                "r:::tools/clang/spanify/tests/deref-expr-original.cc:::507:::6:::param[0]"
+            ],
             "size_info_available": null,
             "visited": false,
             "debug_info": {
                 "rewrite_applied": true,
                 "original_is_buffer": false,
                 "original_size_info_available": null
-            }
+            },
+            "node_types": [
+                "dependent"
+            ]
         },
         {
             "id": 3,
             "replacement": "r:::tools/clang/spanify/tests/deref-expr-original.cc:::446:::6:::base::span<char>",
+            "replacements": [
+                "r:::tools/clang/spanify/tests/deref-expr-original.cc:::446:::6:::base::span<char>",
+                "include-user-header:::tools/clang/spanify/tests/deref-expr-original.cc:::-1:::-1:::base/containers/span.h"
+            ],
             "size_info_available": true,
             "visited": true,
             "debug_info": {
                 "rewrite_applied": true,
                 "original_is_buffer": false,
                 "original_size_info_available": null
-            }
+            },
+            "node_types": [
+                "source"
+            ]
         },
         {
             "id": 4,
             "replacement": "r:::tools/clang/spanify/tests/deref-expr-original.cc:::642:::5:::base::span<char>",
+            "replacements": [
+                "r:::tools/clang/spanify/tests/deref-expr-original.cc:::642:::5:::base::span<char>",
+                "include-user-header:::tools/clang/spanify/tests/deref-expr-original.cc:::-1:::-1:::base/containers/span.h"
+            ],
             "size_info_available": true,
             "visited": true,
             "debug_info": {
                 "rewrite_applied": true,
                 "original_is_buffer": false,
                 "original_size_info_available": null
-            }
+            },
+            "node_types": []
         },
         {
             "id": 5,
             "replacement": "r:::tools/clang/spanify/tests/deref-expr-original.cc:::717:::7:::{}",
+            "replacements": [
+                "r:::tools/clang/spanify/tests/deref-expr-original.cc:::717:::7:::{}",
+                "include-user-header:::tools/clang/spanify/tests/deref-expr-original.cc:::-1:::-1:::base/containers/span.h"
+            ],
             "size_info_available": true,
             "visited": true,
             "debug_info": {
                 "rewrite_applied": true,
                 "original_is_buffer": false,
                 "original_size_info_available": null
-            }
+            },
+            "node_types": [
+                "sink"
+            ]
         },
         {
             "id": 6,
             "replacement": "r:::tools/clang/spanify/tests/deref-expr-original.cc:::891:::7:::",
+            "replacements": [
+                "r:::tools/clang/spanify/tests/deref-expr-original.cc:::891:::7:::",
+                "include-user-header:::tools/clang/spanify/tests/deref-expr-original.cc:::-1:::-1:::base/containers/span.h"
+            ],
             "size_info_available": true,
             "visited": true,
             "debug_info": {
                 "rewrite_applied": true,
                 "original_is_buffer": false,
                 "original_size_info_available": null
-            }
+            },
+            "node_types": [
+                "sink"
+            ]
         },
         {
             "id": 7,
             "replacement": "r:::tools/clang/spanify/tests/deref-expr-original.cc:::820:::7:::",
+            "replacements": [
+                "r:::tools/clang/spanify/tests/deref-expr-original.cc:::820:::7:::",
+                "include-user-header:::tools/clang/spanify/tests/deref-expr-original.cc:::-1:::-1:::base/containers/span.h"
+            ],
             "size_info_available": true,
             "visited": true,
             "debug_info": {
                 "rewrite_applied": true,
                 "original_is_buffer": false,
                 "original_size_info_available": null
-            }
+            },
+            "node_types": [
+                "sink"
+            ]
         },
         {
             "id": 8,
             "replacement": "r:::tools/clang/spanify/tests/deref-expr-original.cc:::904:::6:::base::span<char>",
+            "replacements": [
+                "r:::tools/clang/spanify/tests/deref-expr-original.cc:::904:::6:::base::span<char>",
+                "include-user-header:::tools/clang/spanify/tests/deref-expr-original.cc:::-1:::-1:::base/containers/span.h"
+            ],
             "size_info_available": true,
             "visited": true,
             "debug_info": {
                 "rewrite_applied": true,
                 "original_is_buffer": false,
                 "original_size_info_available": null
-            }
+            },
+            "node_types": [
+                "source"
+            ]
         },
         {
             "id": 9,
             "replacement": "r:::tools/clang/spanify/tests/deref-expr-original.cc:::1057:::6:::get()[0]",
+            "replacements": [
+                "r:::tools/clang/spanify/tests/deref-expr-original.cc:::1057:::6:::get()[0]"
+            ],
             "size_info_available": null,
             "visited": false,
             "debug_info": {
                 "rewrite_applied": true,
                 "original_is_buffer": false,
                 "original_size_info_available": null
-            }
+            },
+            "node_types": [
+                "dependent"
+            ]
         },
         {
             "id": 10,
             "replacement": "r:::tools/clang/spanify/tests/deref-expr-original.cc:::1140:::11:::get(index)[0]",
+            "replacements": [
+                "r:::tools/clang/spanify/tests/deref-expr-original.cc:::1140:::11:::get(index)[0]"
+            ],
             "size_info_available": null,
             "visited": false,
             "debug_info": {
                 "rewrite_applied": true,
                 "original_is_buffer": false,
                 "original_size_info_available": null
-            }
+            },
+            "node_types": [
+                "dependent"
+            ]
         }
     ],
     "links": [

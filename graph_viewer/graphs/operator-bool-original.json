@@ -3,68 +3,109 @@
         {
             "id": 0,
             "replacement": "r:::tools/clang/spanify/tests/operator-bool-original.cc:::576:::0:::.size()",
+            "replacements": [
+                "r:::tools/clang/spanify/tests/operator-bool-original.cc:::576:::0:::.size()"
+            ],
             "size_info_available": null,
             "visited": false,
             "debug_info": {
                 "rewrite_applied": true,
                 "original_is_buffer": false,
                 "original_size_info_available": null
-            }
+            },
+            "node_types": [
+                "dependent"
+            ]
         },
         {
             "id": 1,
             "replacement": "r:::tools/clang/spanify/tests/operator-bool-original.cc:::417:::8:::base::span<Handle>",
+            "replacements": [
+                "r:::tools/clang/spanify/tests/operator-bool-original.cc:::417:::8:::base::span<Handle>",
+                "include-user-header:::tools/clang/spanify/tests/operator-bool-original.cc:::-1:::-1:::base/containers/span.h"
+            ],
             "size_info_available": true,
             "visited": true,
             "debug_info": {
                 "rewrite_applied": true,
                 "original_is_buffer": false,
                 "original_size_info_available": null
-            }
+            },
+            "node_types": [
+                "source"
+            ]
         },
         {
             "id": 2,
             "replacement": "r:::tools/clang/spanify/tests/operator-bool-original.cc:::764:::0:::<empty>",
+            "replacements": [
+                "r:::tools/clang/spanify/tests/operator-bool-original.cc:::764:::0:::<empty>",
+                "include-user-header:::tools/clang/spanify/tests/operator-bool-original.cc:::-1:::-1:::base/containers/span.h"
+            ],
             "size_info_available": true,
             "visited": true,
             "debug_info": {
                 "rewrite_applied": true,
                 "original_is_buffer": false,
                 "original_size_info_available": null
-            }
+            },
+            "node_types": [
+                "sink"
+            ]
         },
         {
             "id": 3,
             "replacement": "r:::tools/clang/spanify/tests/operator-bool-original.cc:::781:::7:::{}",
+            "replacements": [
+                "r:::tools/clang/spanify/tests/operator-bool-original.cc:::781:::7:::{}",
+                "include-user-header:::tools/clang/spanify/tests/operator-bool-original.cc:::-1:::-1:::base/containers/span.h"
+            ],
             "size_info_available": true,
             "visited": true,
             "debug_info": {
                 "rewrite_applied": true,
                 "original_is_buffer": false,
                 "original_size_info_available": null
-            }
+            },
+            "node_types": [
+                "sink"
+            ]
         },
         {
             "id": 4,
             "replacement": "r:::tools/clang/spanify/tests/operator-bool-original.cc:::798:::7:::{}",
+            "replacements": [
+                "r:::tools/clang/spanify/tests/operator-bool-original.cc:::798:::7:::{}",
+                "include-user-header:::tools/clang/spanify/tests/operator-bool-original.cc:::-1:::-1:::base/containers/span.h"
+            ],
             "size_info_available": true,
             "visited": true,
             "debug_info": {
                 "rewrite_applied": true,
                 "original_is_buffer": false,
                 "original_size_info_available": null
-            }
+            },
+            "node_types": [
+                "sink"
+            ]
         },
         {
             "id": 5,
             "replacement": "r:::tools/clang/spanify/tests/operator-bool-original.cc:::815:::0:::<empty>",
+            "replacements": [
+                "r:::tools/clang/spanify/tests/operator-bool-original.cc:::815:::0:::<empty>",
+                "include-user-header:::tools/clang/spanify/tests/operator-bool-original.cc:::-1:::-1:::base/containers/span.h"
+            ],
             "size_info_available": true,
             "visited": true,
             "debug_info": {
                 "rewrite_applied": true,
                 "original_is_buffer": false,
                 "original_size_info_available": null
-            }
+            },
+            "node_types": [
+                "sink"
+            ]
         }
     ],
     "links": [
@@ -74,19 +115,19 @@
         },
         {
             "source": 1,
-            "target": 4
-        },
-        {
-            "source": 1,
-            "target": 2
-        },
-        {
-            "source": 1,
             "target": 3
         },
         {
             "source": 1,
+            "target": 4
+        },
+        {
+            "source": 1,
             "target": 5
+        },
+        {
+            "source": 1,
+            "target": 2
         }
     ],
     "source": {

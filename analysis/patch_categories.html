@@ -1,0 +1,2826 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Patch Analysis Categories</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 20px;
+            color: #333;
+        }
+        h1 {
+            color: #2c3e50;
+            border-bottom: 2px solid #3498db;
+            padding-bottom: 10px;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+        }
+        th {
+            background-color: #3498db;
+            color: white;
+            text-align: left;
+            padding: 12px;
+        }
+        td {
+            border: 1px solid #ddd;
+            padding: 10px;
+        }
+        tr:nth-child(even) {
+            background-color: #f2f2f2;
+        }
+        tr:hover {
+            background-color: #e9f7fe;
+        }
+        a {
+            color: #3498db;
+            text-decoration: none;
+            margin-right: 15px;
+        }
+        a:hover {
+            text-decoration: underline;
+        }
+        .category-header {
+            background-color: #2c3e50;
+            color: white;
+            padding: 10px;
+            font-weight: bold;
+        }
+        .patch-count {
+            color: #7f8c8d;
+            font-size: 0.9em;
+        }
+        .patch-item {
+            margin-bottom: 8px;
+        }
+        .analysis-link {
+            color: #3498db;
+        }
+        .input-link {
+            color: #e74c3c;
+        }
+    </style>
+</head>
+<body>
+    <h1>Patch Analysis Categories</h1>
+    <p>Summary of patches grouped by category</p>
+    <table>
+        <tr>
+            <th>Category</th>
+            <th>Patches</th>
+        </tr>
+
+        <tr>
+            <td class="category-header">Pointer passed into spanified function parameter. <span class="patch-count">(37 patches)</span></td>
+            <td>
+                <div class="patch-item">
+                    <a href="2025_03_14_patch_98_analysis.md" class="analysis-link">Analysis</a>
+                    <a href="2025_03_14_patch_98.md" class="input-link">Input</a>
+                    Patch 98
+                </div>
+                <div class="patch-item">
+                    <a href="2025_03_14_patch_181_analysis.md" class="analysis-link">Analysis</a>
+                    <a href="2025_03_14_patch_181.md" class="input-link">Input</a>
+                    Patch 181
+                </div>
+                <div class="patch-item">
+                    <a href="2025_03_14_patch_276_analysis.md" class="analysis-link">Analysis</a>
+                    <a href="2025_03_14_patch_276.md" class="input-link">Input</a>
+                    Patch 276
+                </div>
+                <div class="patch-item">
+                    <a href="2025_03_15_patch_277_analysis.md" class="analysis-link">Analysis</a>
+                    <a href="2025_03_15_patch_277.md" class="input-link">Input</a>
+                    Patch 277
+                </div>
+                <div class="patch-item">
+                    <a href="2025_03_15_patch_295_analysis.md" class="analysis-link">Analysis</a>
+                    <a href="2025_03_15_patch_295.md" class="input-link">Input</a>
+                    Patch 295
+                </div>
+                <div class="patch-item">
+                    <a href="2025_03_14_patch_304_analysis.md" class="analysis-link">Analysis</a>
+                    <a href="2025_03_14_patch_304.md" class="input-link">Input</a>
+                    Patch 304
+                </div>
+                <div class="patch-item">
+                    <a href="2025_03_14_patch_312_analysis.md" class="analysis-link">Analysis</a>
+                    <a href="2025_03_14_patch_312.md" class="input-link">Input</a>
+                    Patch 312
+                </div>
+                <div class="patch-item">
+                    <a href="2025_03_15_patch_366_analysis.md" class="analysis-link">Analysis</a>
+                    <a href="2025_03_15_patch_366.md" class="input-link">Input</a>
+                    Patch 366
+                </div>
+                <div class="patch-item">
+                    <a href="2025_03_14_patch_378_analysis.md" class="analysis-link">Analysis</a>
+                    <a href="2025_03_14_patch_378.md" class="input-link">Input</a>
+                    Patch 378
+                </div>
+                <div class="patch-item">
+                    <a href="2025_03_16_patch_493_analysis.md" class="analysis-link">Analysis</a>
+                    <a href="2025_03_16_patch_493.md" class="input-link">Input</a>
+                    Patch 493
+                </div>
+                <div class="patch-item">
+                    <a href="2025_03_16_patch_624_analysis.md" class="analysis-link">Analysis</a>
+                    <a href="2025_03_16_patch_624.md" class="input-link">Input</a>
+                    Patch 624
+                </div>
+                <div class="patch-item">
+                    <a href="2025_03_15_patch_660_analysis.md" class="analysis-link">Analysis</a>
+                    <a href="2025_03_15_patch_660.md" class="input-link">Input</a>
+                    Patch 660
+                </div>
+                <div class="patch-item">
+                    <a href="2025_03_16_patch_905_analysis.md" class="analysis-link">Analysis</a>
+                    <a href="2025_03_16_patch_905.md" class="input-link">Input</a>
+                    Patch 905
+                </div>
+                <div class="patch-item">
+                    <a href="2025_03_16_patch_919_analysis.md" class="analysis-link">Analysis</a>
+                    <a href="2025_03_16_patch_919.md" class="input-link">Input</a>
+                    Patch 919
+                </div>
+                <div class="patch-item">
+                    <a href="2025_03_14_patch_934_analysis.md" class="analysis-link">Analysis</a>
+                    <a href="2025_03_14_patch_934.md" class="input-link">Input</a>
+                    Patch 934
+                </div>
+                <div class="patch-item">
+                    <a href="2025_03_14_patch_1007_analysis.md" class="analysis-link">Analysis</a>
+                    <a href="2025_03_14_patch_1007.md" class="input-link">Input</a>
+                    Patch 1007
+                </div>
+                <div class="patch-item">
+                    <a href="2025_03_14_patch_1020_analysis.md" class="analysis-link">Analysis</a>
+                    <a href="2025_03_14_patch_1020.md" class="input-link">Input</a>
+                    Patch 1020
+                </div>
+                <div class="patch-item">
+                    <a href="2025_03_14_patch_1079_analysis.md" class="analysis-link">Analysis</a>
+                    <a href="2025_03_14_patch_1079.md" class="input-link">Input</a>
+                    Patch 1079
+                </div>
+                <div class="patch-item">
+                    <a href="2025_03_16_patch_1127_analysis.md" class="analysis-link">Analysis</a>
+                    <a href="2025_03_16_patch_1127.md" class="input-link">Input</a>
+                    Patch 1127
+                </div>
+                <div class="patch-item">
+                    <a href="2025_03_14_patch_1130_analysis.md" class="analysis-link">Analysis</a>
+                    <a href="2025_03_14_patch_1130.md" class="input-link">Input</a>
+                    Patch 1130
+                </div>
+                <div class="patch-item">
+                    <a href="2025_03_14_patch_1384_analysis.md" class="analysis-link">Analysis</a>
+                    <a href="2025_03_14_patch_1384.md" class="input-link">Input</a>
+                    Patch 1384
+                </div>
+                <div class="patch-item">
+                    <a href="2025_03_16_patch_1440_analysis.md" class="analysis-link">Analysis</a>
+                    <a href="2025_03_16_patch_1440.md" class="input-link">Input</a>
+                    Patch 1440
+                </div>
+                <div class="patch-item">
+                    <a href="2025_03_14_patch_1500_analysis.md" class="analysis-link">Analysis</a>
+                    <a href="2025_03_14_patch_1500.md" class="input-link">Input</a>
+                    Patch 1500
+                </div>
+                <div class="patch-item">
+                    <a href="2025_03_14_patch_1519_analysis.md" class="analysis-link">Analysis</a>
+                    <a href="2025_03_14_patch_1519.md" class="input-link">Input</a>
+                    Patch 1519
+                </div>
+                <div class="patch-item">
+                    <a href="2025_03_13_patch_1585_analysis.md" class="analysis-link">Analysis</a>
+                    <a href="2025_03_13_patch_1585.md" class="input-link">Input</a>
+                    Patch 1585
+                </div>
+                <div class="patch-item">
+                    <a href="2025_03_14_patch_1630_analysis.md" class="analysis-link">Analysis</a>
+                    <a href="2025_03_14_patch_1630.md" class="input-link">Input</a>
+                    Patch 1630
+                </div>
+                <div class="patch-item">
+                    <a href="2025_03_14_patch_1704_analysis.md" class="analysis-link">Analysis</a>
+                    <a href="2025_03_14_patch_1704.md" class="input-link">Input</a>
+                    Patch 1704
+                </div>
+                <div class="patch-item">
+                    <a href="2025_03_14_patch_1758_analysis.md" class="analysis-link">Analysis</a>
+                    <a href="2025_03_14_patch_1758.md" class="input-link">Input</a>
+                    Patch 1758
+                </div>
+                <div class="patch-item">
+                    <a href="2025_03_14_patch_1759_analysis.md" class="analysis-link">Analysis</a>
+                    <a href="2025_03_14_patch_1759.md" class="input-link">Input</a>
+                    Patch 1759
+                </div>
+                <div class="patch-item">
+                    <a href="2025_03_14_patch_1762_analysis.md" class="analysis-link">Analysis</a>
+                    <a href="2025_03_14_patch_1762.md" class="input-link">Input</a>
+                    Patch 1762
+                </div>
+                <div class="patch-item">
+                    <a href="2025_03_14_patch_1790_analysis.md" class="analysis-link">Analysis</a>
+                    <a href="2025_03_14_patch_1790.md" class="input-link">Input</a>
+                    Patch 1790
+                </div>
+                <div class="patch-item">
+                    <a href="2025_03_14_patch_1795_analysis.md" class="analysis-link">Analysis</a>
+                    <a href="2025_03_14_patch_1795.md" class="input-link">Input</a>
+                    Patch 1795
+                </div>
+                <div class="patch-item">
+                    <a href="2025_03_15_patch_1856_analysis.md" class="analysis-link">Analysis</a>
+                    <a href="2025_03_15_patch_1856.md" class="input-link">Input</a>
+                    Patch 1856
+                </div>
+                <div class="patch-item">
+                    <a href="2025_03_15_patch_1940_analysis.md" class="analysis-link">Analysis</a>
+                    <a href="2025_03_15_patch_1940.md" class="input-link">Input</a>
+                    Patch 1940
+                </div>
+                <div class="patch-item">
+                    <a href="2025_03_14_patch_1941_analysis.md" class="analysis-link">Analysis</a>
+                    <a href="2025_03_14_patch_1941.md" class="input-link">Input</a>
+                    Patch 1941
+                </div>
+                <div class="patch-item">
+                    <a href="2025_03_14_patch_1978_analysis.md" class="analysis-link">Analysis</a>
+                    <a href="2025_03_14_patch_1978.md" class="input-link">Input</a>
+                    Patch 1978
+                </div>
+                <div class="patch-item">
+                    <a href="2025_03_15_patch_1978_analysis.md" class="analysis-link">Analysis</a>
+                    <a href="2025_03_15_patch_1978.md" class="input-link">Input</a>
+                    Patch 1978
+                </div>
+            </td>
+        </tr>
+
+        <tr>
+            <td class="category-header">Rewriter needs to avoid spanifying functions if it requires spanifying excluded code. <span class="patch-count">(34 patches)</span></td>
+            <td>
+                <div class="patch-item">
+                    <a href="2025_03_14_patch_55_analysis.md" class="analysis-link">Analysis</a>
+                    <a href="2025_03_14_patch_55.md" class="input-link">Input</a>
+                    Patch 55
+                </div>
+                <div class="patch-item">
+                    <a href="2025_03_14_patch_103_analysis.md" class="analysis-link">Analysis</a>
+                    <a href="2025_03_14_patch_103.md" class="input-link">Input</a>
+                    Patch 103
+                </div>
+                <div class="patch-item">
+                    <a href="2025_03_14_patch_116_analysis.md" class="analysis-link">Analysis</a>
+                    <a href="2025_03_14_patch_116.md" class="input-link">Input</a>
+                    Patch 116
+                </div>
+                <div class="patch-item">
+                    <a href="2025_03_14_patch_311_analysis.md" class="analysis-link">Analysis</a>
+                    <a href="2025_03_14_patch_311.md" class="input-link">Input</a>
+                    Patch 311
+                </div>
+                <div class="patch-item">
+                    <a href="2025_03_14_patch_415_analysis.md" class="analysis-link">Analysis</a>
+                    <a href="2025_03_14_patch_415.md" class="input-link">Input</a>
+                    Patch 415
+                </div>
+                <div class="patch-item">
+                    <a href="2025_03_14_patch_424_analysis.md" class="analysis-link">Analysis</a>
+                    <a href="2025_03_14_patch_424.md" class="input-link">Input</a>
+                    Patch 424
+                </div>
+                <div class="patch-item">
+                    <a href="2025_03_15_patch_432_analysis.md" class="analysis-link">Analysis</a>
+                    <a href="2025_03_15_patch_432.md" class="input-link">Input</a>
+                    Patch 432
+                </div>
+                <div class="patch-item">
+                    <a href="2025_03_14_patch_437_analysis.md" class="analysis-link">Analysis</a>
+                    <a href="2025_03_14_patch_437.md" class="input-link">Input</a>
+                    Patch 437
+                </div>
+                <div class="patch-item">
+                    <a href="2025_03_14_patch_438_analysis.md" class="analysis-link">Analysis</a>
+                    <a href="2025_03_14_patch_438.md" class="input-link">Input</a>
+                    Patch 438
+                </div>
+                <div class="patch-item">
+                    <a href="2025_03_14_patch_439_analysis.md" class="analysis-link">Analysis</a>
+                    <a href="2025_03_14_patch_439.md" class="input-link">Input</a>
+                    Patch 439
+                </div>
+                <div class="patch-item">
+                    <a href="2025_03_14_patch_448_analysis.md" class="analysis-link">Analysis</a>
+                    <a href="2025_03_14_patch_448.md" class="input-link">Input</a>
+                    Patch 448
+                </div>
+                <div class="patch-item">
+                    <a href="2025_03_14_patch_450_analysis.md" class="analysis-link">Analysis</a>
+                    <a href="2025_03_14_patch_450.md" class="input-link">Input</a>
+                    Patch 450
+                </div>
+                <div class="patch-item">
+                    <a href="2025_03_14_patch_456_analysis.md" class="analysis-link">Analysis</a>
+                    <a href="2025_03_14_patch_456.md" class="input-link">Input</a>
+                    Patch 456
+                </div>
+                <div class="patch-item">
+                    <a href="2025_03_14_patch_699_analysis.md" class="analysis-link">Analysis</a>
+                    <a href="2025_03_14_patch_699.md" class="input-link">Input</a>
+                    Patch 699
+                </div>
+                <div class="patch-item">
+                    <a href="2025_03_15_patch_764_analysis.md" class="analysis-link">Analysis</a>
+                    <a href="2025_03_15_patch_764.md" class="input-link">Input</a>
+                    Patch 764
+                </div>
+                <div class="patch-item">
+                    <a href="2025_03_14_patch_786_analysis.md" class="analysis-link">Analysis</a>
+                    <a href="2025_03_14_patch_786.md" class="input-link">Input</a>
+                    Patch 786
+                </div>
+                <div class="patch-item">
+                    <a href="2025_03_14_patch_901_analysis.md" class="analysis-link">Analysis</a>
+                    <a href="2025_03_14_patch_901.md" class="input-link">Input</a>
+                    Patch 901
+                </div>
+                <div class="patch-item">
+                    <a href="2025_03_14_patch_922_analysis.md" class="analysis-link">Analysis</a>
+                    <a href="2025_03_14_patch_922.md" class="input-link">Input</a>
+                    Patch 922
+                </div>
+                <div class="patch-item">
+                    <a href="2025_03_15_patch_1009_analysis.md" class="analysis-link">Analysis</a>
+                    <a href="2025_03_15_patch_1009.md" class="input-link">Input</a>
+                    Patch 1009
+                </div>
+                <div class="patch-item">
+                    <a href="2025_03_14_patch_1033_analysis.md" class="analysis-link">Analysis</a>
+                    <a href="2025_03_14_patch_1033.md" class="input-link">Input</a>
+                    Patch 1033
+                </div>
+                <div class="patch-item">
+                    <a href="2025_03_14_patch_1042_analysis.md" class="analysis-link">Analysis</a>
+                    <a href="2025_03_14_patch_1042.md" class="input-link">Input</a>
+                    Patch 1042
+                </div>
+                <div class="patch-item">
+                    <a href="2025_03_15_patch_1079_analysis.md" class="analysis-link">Analysis</a>
+                    <a href="2025_03_15_patch_1079.md" class="input-link">Input</a>
+                    Patch 1079
+                </div>
+                <div class="patch-item">
+                    <a href="2025_03_14_patch_1134_analysis.md" class="analysis-link">Analysis</a>
+                    <a href="2025_03_14_patch_1134.md" class="input-link">Input</a>
+                    Patch 1134
+                </div>
+                <div class="patch-item">
+                    <a href="2025_03_14_patch_1335_analysis.md" class="analysis-link">Analysis</a>
+                    <a href="2025_03_14_patch_1335.md" class="input-link">Input</a>
+                    Patch 1335
+                </div>
+                <div class="patch-item">
+                    <a href="2025_03_15_patch_1429_analysis.md" class="analysis-link">Analysis</a>
+                    <a href="2025_03_15_patch_1429.md" class="input-link">Input</a>
+                    Patch 1429
+                </div>
+                <div class="patch-item">
+                    <a href="2025_03_14_patch_1436_analysis.md" class="analysis-link">Analysis</a>
+                    <a href="2025_03_14_patch_1436.md" class="input-link">Input</a>
+                    Patch 1436
+                </div>
+                <div class="patch-item">
+                    <a href="2025_03_14_patch_1502_analysis.md" class="analysis-link">Analysis</a>
+                    <a href="2025_03_14_patch_1502.md" class="input-link">Input</a>
+                    Patch 1502
+                </div>
+                <div class="patch-item">
+                    <a href="2025_03_14_patch_1503_analysis.md" class="analysis-link">Analysis</a>
+                    <a href="2025_03_14_patch_1503.md" class="input-link">Input</a>
+                    Patch 1503
+                </div>
+                <div class="patch-item">
+                    <a href="2025_03_14_patch_1508_analysis.md" class="analysis-link">Analysis</a>
+                    <a href="2025_03_14_patch_1508.md" class="input-link">Input</a>
+                    Patch 1508
+                </div>
+                <div class="patch-item">
+                    <a href="2025_03_14_patch_1510_analysis.md" class="analysis-link">Analysis</a>
+                    <a href="2025_03_14_patch_1510.md" class="input-link">Input</a>
+                    Patch 1510
+                </div>
+                <div class="patch-item">
+                    <a href="2025_03_14_patch_1525_analysis.md" class="analysis-link">Analysis</a>
+                    <a href="2025_03_14_patch_1525.md" class="input-link">Input</a>
+                    Patch 1525
+                </div>
+                <div class="patch-item">
+                    <a href="2025_03_14_patch_1650_analysis.md" class="analysis-link">Analysis</a>
+                    <a href="2025_03_14_patch_1650.md" class="input-link">Input</a>
+                    Patch 1650
+                </div>
+                <div class="patch-item">
+                    <a href="2025_03_14_patch_1781_analysis.md" class="analysis-link">Analysis</a>
+                    <a href="2025_03_14_patch_1781.md" class="input-link">Input</a>
+                    Patch 1781
+                </div>
+                <div class="patch-item">
+                    <a href="2025_03_15_patch_1997_analysis.md" class="analysis-link">Analysis</a>
+                    <a href="2025_03_15_patch_1997.md" class="input-link">Input</a>
+                    Patch 1997
+                </div>
+            </td>
+        </tr>
+
+        <tr>
+            <td class="category-header">Rewriter needs to generate code to construct a span from the return value of a third_party function. <span class="patch-count">(28 patches)</span></td>
+            <td>
+                <div class="patch-item">
+                    <a href="2025_03_14_patch_19_analysis.md" class="analysis-link">Analysis</a>
+                    <a href="2025_03_14_patch_19.md" class="input-link">Input</a>
+                    Patch 19
+                </div>
+                <div class="patch-item">
+                    <a href="2025_03_14_patch_20_analysis.md" class="analysis-link">Analysis</a>
+                    <a href="2025_03_14_patch_20.md" class="input-link">Input</a>
+                    Patch 20
+                </div>
+                <div class="patch-item">
+                    <a href="2025_03_14_patch_24_analysis.md" class="analysis-link">Analysis</a>
+                    <a href="2025_03_14_patch_24.md" class="input-link">Input</a>
+                    Patch 24
+                </div>
+                <div class="patch-item">
+                    <a href="2025_03_14_patch_33_analysis.md" class="analysis-link">Analysis</a>
+                    <a href="2025_03_14_patch_33.md" class="input-link">Input</a>
+                    Patch 33
+                </div>
+                <div class="patch-item">
+                    <a href="2025_03_14_patch_35_analysis.md" class="analysis-link">Analysis</a>
+                    <a href="2025_03_14_patch_35.md" class="input-link">Input</a>
+                    Patch 35
+                </div>
+                <div class="patch-item">
+                    <a href="2025_03_14_patch_54_analysis.md" class="analysis-link">Analysis</a>
+                    <a href="2025_03_14_patch_54.md" class="input-link">Input</a>
+                    Patch 54
+                </div>
+                <div class="patch-item">
+                    <a href="2025_03_14_patch_57_analysis.md" class="analysis-link">Analysis</a>
+                    <a href="2025_03_14_patch_57.md" class="input-link">Input</a>
+                    Patch 57
+                </div>
+                <div class="patch-item">
+                    <a href="2025_03_14_patch_71_analysis.md" class="analysis-link">Analysis</a>
+                    <a href="2025_03_14_patch_71.md" class="input-link">Input</a>
+                    Patch 71
+                </div>
+                <div class="patch-item">
+                    <a href="2025_03_15_patch_97_analysis.md" class="analysis-link">Analysis</a>
+                    <a href="2025_03_15_patch_97.md" class="input-link">Input</a>
+                    Patch 97
+                </div>
+                <div class="patch-item">
+                    <a href="2025_03_15_patch_124_analysis.md" class="analysis-link">Analysis</a>
+                    <a href="2025_03_15_patch_124.md" class="input-link">Input</a>
+                    Patch 124
+                </div>
+                <div class="patch-item">
+                    <a href="2025_03_16_patch_352_analysis.md" class="analysis-link">Analysis</a>
+                    <a href="2025_03_16_patch_352.md" class="input-link">Input</a>
+                    Patch 352
+                </div>
+                <div class="patch-item">
+                    <a href="2025_03_16_patch_447_analysis.md" class="analysis-link">Analysis</a>
+                    <a href="2025_03_16_patch_447.md" class="input-link">Input</a>
+                    Patch 447
+                </div>
+                <div class="patch-item">
+                    <a href="2025_03_14_patch_574_analysis.md" class="analysis-link">Analysis</a>
+                    <a href="2025_03_14_patch_574.md" class="input-link">Input</a>
+                    Patch 574
+                </div>
+                <div class="patch-item">
+                    <a href="2025_03_14_patch_592_analysis.md" class="analysis-link">Analysis</a>
+                    <a href="2025_03_14_patch_592.md" class="input-link">Input</a>
+                    Patch 592
+                </div>
+                <div class="patch-item">
+                    <a href="2025_03_14_patch_691_analysis.md" class="analysis-link">Analysis</a>
+                    <a href="2025_03_14_patch_691.md" class="input-link">Input</a>
+                    Patch 691
+                </div>
+                <div class="patch-item">
+                    <a href="2025_03_14_patch_731_analysis.md" class="analysis-link">Analysis</a>
+                    <a href="2025_03_14_patch_731.md" class="input-link">Input</a>
+                    Patch 731
+                </div>
+                <div class="patch-item">
+                    <a href="2025_03_16_patch_1074_analysis.md" class="analysis-link">Analysis</a>
+                    <a href="2025_03_16_patch_1074.md" class="input-link">Input</a>
+                    Patch 1074
+                </div>
+                <div class="patch-item">
+                    <a href="2025_03_15_patch_1125_analysis.md" class="analysis-link">Analysis</a>
+                    <a href="2025_03_15_patch_1125.md" class="input-link">Input</a>
+                    Patch 1125
+                </div>
+                <div class="patch-item">
+                    <a href="2025_03_14_patch_1131_analysis.md" class="analysis-link">Analysis</a>
+                    <a href="2025_03_14_patch_1131.md" class="input-link">Input</a>
+                    Patch 1131
+                </div>
+                <div class="patch-item">
+                    <a href="2025_03_16_patch_1375_analysis.md" class="analysis-link">Analysis</a>
+                    <a href="2025_03_16_patch_1375.md" class="input-link">Input</a>
+                    Patch 1375
+                </div>
+                <div class="patch-item">
+                    <a href="2025_03_16_patch_1378_analysis.md" class="analysis-link">Analysis</a>
+                    <a href="2025_03_16_patch_1378.md" class="input-link">Input</a>
+                    Patch 1378
+                </div>
+                <div class="patch-item">
+                    <a href="2025_03_15_patch_1386_analysis.md" class="analysis-link">Analysis</a>
+                    <a href="2025_03_15_patch_1386.md" class="input-link">Input</a>
+                    Patch 1386
+                </div>
+                <div class="patch-item">
+                    <a href="2025_03_14_patch_1466_analysis.md" class="analysis-link">Analysis</a>
+                    <a href="2025_03_14_patch_1466.md" class="input-link">Input</a>
+                    Patch 1466
+                </div>
+                <div class="patch-item">
+                    <a href="2025_03_14_patch_1468_analysis.md" class="analysis-link">Analysis</a>
+                    <a href="2025_03_14_patch_1468.md" class="input-link">Input</a>
+                    Patch 1468
+                </div>
+                <div class="patch-item">
+                    <a href="2025_03_14_patch_1608_analysis.md" class="analysis-link">Analysis</a>
+                    <a href="2025_03_14_patch_1608.md" class="input-link">Input</a>
+                    Patch 1608
+                </div>
+                <div class="patch-item">
+                    <a href="2025_03_15_patch_1791_analysis.md" class="analysis-link">Analysis</a>
+                    <a href="2025_03_15_patch_1791.md" class="input-link">Input</a>
+                    Patch 1791
+                </div>
+                <div class="patch-item">
+                    <a href="2025_03_14_patch_1845_analysis.md" class="analysis-link">Analysis</a>
+                    <a href="2025_03_14_patch_1845.md" class="input-link">Input</a>
+                    Patch 1845
+                </div>
+                <div class="patch-item">
+                    <a href="2025_03_15_patch_2006_analysis.md" class="analysis-link">Analysis</a>
+                    <a href="2025_03_15_patch_2006.md" class="input-link">Input</a>
+                    Patch 2006
+                </div>
+            </td>
+        </tr>
+
+        <tr>
+            <td class="category-header">Rewriter needs to cast argument to base::span::subspan() to an unsigned value. <span class="patch-count">(27 patches)</span></td>
+            <td>
+                <div class="patch-item">
+                    <a href="2025_03_14_patch_18_analysis.md" class="analysis-link">Analysis</a>
+                    <a href="2025_03_14_patch_18.md" class="input-link">Input</a>
+                    Patch 18
+                </div>
+                <div class="patch-item">
+                    <a href="2025_03_14_patch_60_analysis.md" class="analysis-link">Analysis</a>
+                    <a href="2025_03_14_patch_60.md" class="input-link">Input</a>
+                    Patch 60
+                </div>
+                <div class="patch-item">
+                    <a href="2025_03_14_patch_62_analysis.md" class="analysis-link">Analysis</a>
+                    <a href="2025_03_14_patch_62.md" class="input-link">Input</a>
+                    Patch 62
+                </div>
+                <div class="patch-item">
+                    <a href="2025_03_14_patch_161_analysis.md" class="analysis-link">Analysis</a>
+                    <a href="2025_03_14_patch_161.md" class="input-link">Input</a>
+                    Patch 161
+                </div>
+                <div class="patch-item">
+                    <a href="2025_03_14_patch_201_analysis.md" class="analysis-link">Analysis</a>
+                    <a href="2025_03_14_patch_201.md" class="input-link">Input</a>
+                    Patch 201
+                </div>
+                <div class="patch-item">
+                    <a href="2025_03_14_patch_313_analysis.md" class="analysis-link">Analysis</a>
+                    <a href="2025_03_14_patch_313.md" class="input-link">Input</a>
+                    Patch 313
+                </div>
+                <div class="patch-item">
+                    <a href="2025_03_16_patch_336_analysis.md" class="analysis-link">Analysis</a>
+                    <a href="2025_03_16_patch_336.md" class="input-link">Input</a>
+                    Patch 336
+                </div>
+                <div class="patch-item">
+                    <a href="2025_03_15_patch_381_analysis.md" class="analysis-link">Analysis</a>
+                    <a href="2025_03_15_patch_381.md" class="input-link">Input</a>
+                    Patch 381
+                </div>
+                <div class="patch-item">
+                    <a href="2025_03_14_patch_484_analysis.md" class="analysis-link">Analysis</a>
+                    <a href="2025_03_14_patch_484.md" class="input-link">Input</a>
+                    Patch 484
+                </div>
+                <div class="patch-item">
+                    <a href="2025_03_13_patch_590_analysis.md" class="analysis-link">Analysis</a>
+                    <a href="2025_03_13_patch_590.md" class="input-link">Input</a>
+                    Patch 590
+                </div>
+                <div class="patch-item">
+                    <a href="2025_03_15_patch_598_analysis.md" class="analysis-link">Analysis</a>
+                    <a href="2025_03_15_patch_598.md" class="input-link">Input</a>
+                    Patch 598
+                </div>
+                <div class="patch-item">
+                    <a href="2025_03_14_patch_667_analysis.md" class="analysis-link">Analysis</a>
+                    <a href="2025_03_14_patch_667.md" class="input-link">Input</a>
+                    Patch 667
+                </div>
+                <div class="patch-item">
+                    <a href="2025_03_14_patch_693_analysis.md" class="analysis-link">Analysis</a>
+                    <a href="2025_03_14_patch_693.md" class="input-link">Input</a>
+                    Patch 693
+                </div>
+                <div class="patch-item">
+                    <a href="2025_03_15_patch_723_analysis.md" class="analysis-link">Analysis</a>
+                    <a href="2025_03_15_patch_723.md" class="input-link">Input</a>
+                    Patch 723
+                </div>
+                <div class="patch-item">
+                    <a href="2025_03_14_patch_726_analysis.md" class="analysis-link">Analysis</a>
+                    <a href="2025_03_14_patch_726.md" class="input-link">Input</a>
+                    Patch 726
+                </div>
+                <div class="patch-item">
+                    <a href="2025_03_14_patch_759_analysis.md" class="analysis-link">Analysis</a>
+                    <a href="2025_03_14_patch_759.md" class="input-link">Input</a>
+                    Patch 759
+                </div>
+                <div class="patch-item">
+                    <a href="2025_03_16_patch_790_analysis.md" class="analysis-link">Analysis</a>
+                    <a href="2025_03_16_patch_790.md" class="input-link">Input</a>
+                    Patch 790
+                </div>
+                <div class="patch-item">
+                    <a href="2025_03_16_patch_863_analysis.md" class="analysis-link">Analysis</a>
+                    <a href="2025_03_16_patch_863.md" class="input-link">Input</a>
+                    Patch 863
+                </div>
+                <div class="patch-item">
+                    <a href="2025_03_14_patch_1006_analysis.md" class="analysis-link">Analysis</a>
+                    <a href="2025_03_14_patch_1006.md" class="input-link">Input</a>
+                    Patch 1006
+                </div>
+                <div class="patch-item">
+                    <a href="2025_03_14_patch_1258_analysis.md" class="analysis-link">Analysis</a>
+                    <a href="2025_03_14_patch_1258.md" class="input-link">Input</a>
+                    Patch 1258
+                </div>
+                <div class="patch-item">
+                    <a href="2025_03_14_patch_1261_analysis.md" class="analysis-link">Analysis</a>
+                    <a href="2025_03_14_patch_1261.md" class="input-link">Input</a>
+                    Patch 1261
+                </div>
+                <div class="patch-item">
+                    <a href="2025_03_14_patch_1262_analysis.md" class="analysis-link">Analysis</a>
+                    <a href="2025_03_14_patch_1262.md" class="input-link">Input</a>
+                    Patch 1262
+                </div>
+                <div class="patch-item">
+                    <a href="2025_03_14_patch_1390_analysis.md" class="analysis-link">Analysis</a>
+                    <a href="2025_03_14_patch_1390.md" class="input-link">Input</a>
+                    Patch 1390
+                </div>
+                <div class="patch-item">
+                    <a href="2025_03_14_patch_1493_analysis.md" class="analysis-link">Analysis</a>
+                    <a href="2025_03_14_patch_1493.md" class="input-link">Input</a>
+                    Patch 1493
+                </div>
+                <div class="patch-item">
+                    <a href="2025_03_14_patch_1582_analysis.md" class="analysis-link">Analysis</a>
+                    <a href="2025_03_14_patch_1582.md" class="input-link">Input</a>
+                    Patch 1582
+                </div>
+                <div class="patch-item">
+                    <a href="2025_03_14_patch_1837_analysis.md" class="analysis-link">Analysis</a>
+                    <a href="2025_03_14_patch_1837.md" class="input-link">Input</a>
+                    Patch 1837
+                </div>
+                <div class="patch-item">
+                    <a href="2025_03_14_patch_1849_analysis.md" class="analysis-link">Analysis</a>
+                    <a href="2025_03_14_patch_1849.md" class="input-link">Input</a>
+                    Patch 1849
+                </div>
+            </td>
+        </tr>
+
+        <tr>
+            <td class="category-header">Overlapping replacements between RewriteArraySizeof and AppendDataCall. <span class="patch-count">(17 patches)</span></td>
+            <td>
+                <div class="patch-item">
+                    <a href="2025_03_16_patch_131_analysis.md" class="analysis-link">Analysis</a>
+                    <a href="2025_03_16_patch_131.md" class="input-link">Input</a>
+                    Patch 131
+                </div>
+                <div class="patch-item">
+                    <a href="2025_03_14_patch_138_analysis.md" class="analysis-link">Analysis</a>
+                    <a href="2025_03_14_patch_138.md" class="input-link">Input</a>
+                    Patch 138
+                </div>
+                <div class="patch-item">
+                    <a href="2025_03_14_patch_234_analysis.md" class="analysis-link">Analysis</a>
+                    <a href="2025_03_14_patch_234.md" class="input-link">Input</a>
+                    Patch 234
+                </div>
+                <div class="patch-item">
+                    <a href="2025_03_14_patch_347_analysis.md" class="analysis-link">Analysis</a>
+                    <a href="2025_03_14_patch_347.md" class="input-link">Input</a>
+                    Patch 347
+                </div>
+                <div class="patch-item">
+                    <a href="2025_03_14_patch_348_analysis.md" class="analysis-link">Analysis</a>
+                    <a href="2025_03_14_patch_348.md" class="input-link">Input</a>
+                    Patch 348
+                </div>
+                <div class="patch-item">
+                    <a href="2025_03_14_patch_467_analysis.md" class="analysis-link">Analysis</a>
+                    <a href="2025_03_14_patch_467.md" class="input-link">Input</a>
+                    Patch 467
+                </div>
+                <div class="patch-item">
+                    <a href="2025_03_14_patch_490_analysis.md" class="analysis-link">Analysis</a>
+                    <a href="2025_03_14_patch_490.md" class="input-link">Input</a>
+                    Patch 490
+                </div>
+                <div class="patch-item">
+                    <a href="2025_03_14_patch_946_analysis.md" class="analysis-link">Analysis</a>
+                    <a href="2025_03_14_patch_946.md" class="input-link">Input</a>
+                    Patch 946
+                </div>
+                <div class="patch-item">
+                    <a href="2025_03_14_patch_997_analysis.md" class="analysis-link">Analysis</a>
+                    <a href="2025_03_14_patch_997.md" class="input-link">Input</a>
+                    Patch 997
+                </div>
+                <div class="patch-item">
+                    <a href="2025_03_15_patch_1153_analysis.md" class="analysis-link">Analysis</a>
+                    <a href="2025_03_15_patch_1153.md" class="input-link">Input</a>
+                    Patch 1153
+                </div>
+                <div class="patch-item">
+                    <a href="2025_03_16_patch_1426_analysis.md" class="analysis-link">Analysis</a>
+                    <a href="2025_03_16_patch_1426.md" class="input-link">Input</a>
+                    Patch 1426
+                </div>
+                <div class="patch-item">
+                    <a href="2025_03_14_patch_1635_analysis.md" class="analysis-link">Analysis</a>
+                    <a href="2025_03_14_patch_1635.md" class="input-link">Input</a>
+                    Patch 1635
+                </div>
+                <div class="patch-item">
+                    <a href="2025_03_14_patch_1860_analysis.md" class="analysis-link">Analysis</a>
+                    <a href="2025_03_14_patch_1860.md" class="input-link">Input</a>
+                    Patch 1860
+                </div>
+                <div class="patch-item">
+                    <a href="2025_03_14_patch_1865_analysis.md" class="analysis-link">Analysis</a>
+                    <a href="2025_03_14_patch_1865.md" class="input-link">Input</a>
+                    Patch 1865
+                </div>
+                <div class="patch-item">
+                    <a href="2025_03_14_patch_1866_analysis.md" class="analysis-link">Analysis</a>
+                    <a href="2025_03_14_patch_1866.md" class="input-link">Input</a>
+                    Patch 1866
+                </div>
+                <div class="patch-item">
+                    <a href="2025_03_14_patch_1870_analysis.md" class="analysis-link">Analysis</a>
+                    <a href="2025_03_14_patch_1870.md" class="input-link">Input</a>
+                    Patch 1870
+                </div>
+                <div class="patch-item">
+                    <a href="2025_03_14_patch_2023_analysis.md" class="analysis-link">Analysis</a>
+                    <a href="2025_03_14_patch_2023.md" class="input-link">Input</a>
+                    Patch 2023
+                </div>
+            </td>
+        </tr>
+
+        <tr>
+            <td class="category-header">Rewriter encountered a case where it failed to add .data() when converting a C-style array to std::array in a third_party function call. <span class="patch-count">(15 patches)</span></td>
+            <td>
+                <div class="patch-item">
+                    <a href="2025_03_14_patch_9_analysis.md" class="analysis-link">Analysis</a>
+                    <a href="2025_03_14_patch_9.md" class="input-link">Input</a>
+                    Patch 9
+                </div>
+                <div class="patch-item">
+                    <a href="2025_03_14_patch_310_analysis.md" class="analysis-link">Analysis</a>
+                    <a href="2025_03_14_patch_310.md" class="input-link">Input</a>
+                    Patch 310
+                </div>
+                <div class="patch-item">
+                    <a href="2025_03_15_patch_423_analysis.md" class="analysis-link">Analysis</a>
+                    <a href="2025_03_15_patch_423.md" class="input-link">Input</a>
+                    Patch 423
+                </div>
+                <div class="patch-item">
+                    <a href="2025_03_14_patch_491_analysis.md" class="analysis-link">Analysis</a>
+                    <a href="2025_03_14_patch_491.md" class="input-link">Input</a>
+                    Patch 491
+                </div>
+                <div class="patch-item">
+                    <a href="2025_03_14_patch_607_analysis.md" class="analysis-link">Analysis</a>
+                    <a href="2025_03_14_patch_607.md" class="input-link">Input</a>
+                    Patch 607
+                </div>
+                <div class="patch-item">
+                    <a href="2025_03_14_patch_643_analysis.md" class="analysis-link">Analysis</a>
+                    <a href="2025_03_14_patch_643.md" class="input-link">Input</a>
+                    Patch 643
+                </div>
+                <div class="patch-item">
+                    <a href="2025_03_14_patch_649_analysis.md" class="analysis-link">Analysis</a>
+                    <a href="2025_03_14_patch_649.md" class="input-link">Input</a>
+                    Patch 649
+                </div>
+                <div class="patch-item">
+                    <a href="2025_03_14_patch_687_analysis.md" class="analysis-link">Analysis</a>
+                    <a href="2025_03_14_patch_687.md" class="input-link">Input</a>
+                    Patch 687
+                </div>
+                <div class="patch-item">
+                    <a href="2025_03_14_patch_749_analysis.md" class="analysis-link">Analysis</a>
+                    <a href="2025_03_14_patch_749.md" class="input-link">Input</a>
+                    Patch 749
+                </div>
+                <div class="patch-item">
+                    <a href="2025_03_16_patch_771_analysis.md" class="analysis-link">Analysis</a>
+                    <a href="2025_03_16_patch_771.md" class="input-link">Input</a>
+                    Patch 771
+                </div>
+                <div class="patch-item">
+                    <a href="2025_03_14_patch_910_analysis.md" class="analysis-link">Analysis</a>
+                    <a href="2025_03_14_patch_910.md" class="input-link">Input</a>
+                    Patch 910
+                </div>
+                <div class="patch-item">
+                    <a href="2025_03_14_patch_950_analysis.md" class="analysis-link">Analysis</a>
+                    <a href="2025_03_14_patch_950.md" class="input-link">Input</a>
+                    Patch 950
+                </div>
+                <div class="patch-item">
+                    <a href="2025_03_15_patch_1308_analysis.md" class="analysis-link">Analysis</a>
+                    <a href="2025_03_15_patch_1308.md" class="input-link">Input</a>
+                    Patch 1308
+                </div>
+                <div class="patch-item">
+                    <a href="2025_03_15_patch_1423_analysis.md" class="analysis-link">Analysis</a>
+                    <a href="2025_03_15_patch_1423.md" class="input-link">Input</a>
+                    Patch 1423
+                </div>
+                <div class="patch-item">
+                    <a href="2025_03_14_patch_1534_analysis.md" class="analysis-link">Analysis</a>
+                    <a href="2025_03_14_patch_1534.md" class="input-link">Input</a>
+                    Patch 1534
+                </div>
+            </td>
+        </tr>
+
+        <tr>
+            <td class="category-header">Rewriter is including system headers inside a C++ class declaration, leading to syntax errors. <span class="patch-count">(11 patches)</span></td>
+            <td>
+                <div class="patch-item">
+                    <a href="2025_03_16_patch_160_analysis.md" class="analysis-link">Analysis</a>
+                    <a href="2025_03_16_patch_160.md" class="input-link">Input</a>
+                    Patch 160
+                </div>
+                <div class="patch-item">
+                    <a href="2025_03_14_patch_586_analysis.md" class="analysis-link">Analysis</a>
+                    <a href="2025_03_14_patch_586.md" class="input-link">Input</a>
+                    Patch 586
+                </div>
+                <div class="patch-item">
+                    <a href="2025_03_14_patch_722_analysis.md" class="analysis-link">Analysis</a>
+                    <a href="2025_03_14_patch_722.md" class="input-link">Input</a>
+                    Patch 722
+                </div>
+                <div class="patch-item">
+                    <a href="2025_03_15_patch_943_analysis.md" class="analysis-link">Analysis</a>
+                    <a href="2025_03_15_patch_943.md" class="input-link">Input</a>
+                    Patch 943
+                </div>
+                <div class="patch-item">
+                    <a href="2025_03_15_patch_954_analysis.md" class="analysis-link">Analysis</a>
+                    <a href="2025_03_15_patch_954.md" class="input-link">Input</a>
+                    Patch 954
+                </div>
+                <div class="patch-item">
+                    <a href="2025_03_15_patch_1076_analysis.md" class="analysis-link">Analysis</a>
+                    <a href="2025_03_15_patch_1076.md" class="input-link">Input</a>
+                    Patch 1076
+                </div>
+                <div class="patch-item">
+                    <a href="2025_03_14_patch_1116_analysis.md" class="analysis-link">Analysis</a>
+                    <a href="2025_03_14_patch_1116.md" class="input-link">Input</a>
+                    Patch 1116
+                </div>
+                <div class="patch-item">
+                    <a href="2025_03_14_patch_1407_analysis.md" class="analysis-link">Analysis</a>
+                    <a href="2025_03_14_patch_1407.md" class="input-link">Input</a>
+                    Patch 1407
+                </div>
+                <div class="patch-item">
+                    <a href="2025_03_14_patch_1671_analysis.md" class="analysis-link">Analysis</a>
+                    <a href="2025_03_14_patch_1671.md" class="input-link">Input</a>
+                    Patch 1671
+                </div>
+                <div class="patch-item">
+                    <a href="2025_03_14_patch_1674_analysis.md" class="analysis-link">Analysis</a>
+                    <a href="2025_03_14_patch_1674.md" class="input-link">Input</a>
+                    Patch 1674
+                </div>
+                <div class="patch-item">
+                    <a href="2025_03_14_patch_1677_analysis.md" class="analysis-link">Analysis</a>
+                    <a href="2025_03_14_patch_1677.md" class="input-link">Input</a>
+                    Patch 1677
+                </div>
+            </td>
+        </tr>
+
+        <tr>
+            <td class="category-header">Rewriter needs to add .data() to arrayified `char[]` variable used with std::string. <span class="patch-count">(11 patches)</span></td>
+            <td>
+                <div class="patch-item">
+                    <a href="2025_03_14_patch_172_analysis.md" class="analysis-link">Analysis</a>
+                    <a href="2025_03_14_patch_172.md" class="input-link">Input</a>
+                    Patch 172
+                </div>
+                <div class="patch-item">
+                    <a href="2025_03_14_patch_209_analysis.md" class="analysis-link">Analysis</a>
+                    <a href="2025_03_14_patch_209.md" class="input-link">Input</a>
+                    Patch 209
+                </div>
+                <div class="patch-item">
+                    <a href="2025_03_14_patch_266_analysis.md" class="analysis-link">Analysis</a>
+                    <a href="2025_03_14_patch_266.md" class="input-link">Input</a>
+                    Patch 266
+                </div>
+                <div class="patch-item">
+                    <a href="2025_03_14_patch_401_analysis.md" class="analysis-link">Analysis</a>
+                    <a href="2025_03_14_patch_401.md" class="input-link">Input</a>
+                    Patch 401
+                </div>
+                <div class="patch-item">
+                    <a href="2025_03_14_patch_953_analysis.md" class="analysis-link">Analysis</a>
+                    <a href="2025_03_14_patch_953.md" class="input-link">Input</a>
+                    Patch 953
+                </div>
+                <div class="patch-item">
+                    <a href="2025_03_14_patch_970_analysis.md" class="analysis-link">Analysis</a>
+                    <a href="2025_03_14_patch_970.md" class="input-link">Input</a>
+                    Patch 970
+                </div>
+                <div class="patch-item">
+                    <a href="2025_03_15_patch_1003_analysis.md" class="analysis-link">Analysis</a>
+                    <a href="2025_03_15_patch_1003.md" class="input-link">Input</a>
+                    Patch 1003
+                </div>
+                <div class="patch-item">
+                    <a href="2025_03_14_patch_1148_analysis.md" class="analysis-link">Analysis</a>
+                    <a href="2025_03_14_patch_1148.md" class="input-link">Input</a>
+                    Patch 1148
+                </div>
+                <div class="patch-item">
+                    <a href="2025_03_15_patch_1451_analysis.md" class="analysis-link">Analysis</a>
+                    <a href="2025_03_15_patch_1451.md" class="input-link">Input</a>
+                    Patch 1451
+                </div>
+                <div class="patch-item">
+                    <a href="2025_03_14_patch_1574_analysis.md" class="analysis-link">Analysis</a>
+                    <a href="2025_03_14_patch_1574.md" class="input-link">Input</a>
+                    Patch 1574
+                </div>
+                <div class="patch-item">
+                    <a href="2025_03_14_patch_1653_analysis.md" class="analysis-link">Analysis</a>
+                    <a href="2025_03_14_patch_1653.md" class="input-link">Input</a>
+                    Patch 1653
+                </div>
+            </td>
+        </tr>
+
+        <tr>
+            <td class="category-header">Conflict between ".data()" and ".subspan()" replacements. <span class="patch-count">(8 patches)</span></td>
+            <td>
+                <div class="patch-item">
+                    <a href="2025_03_14_patch_131_analysis.md" class="analysis-link">Analysis</a>
+                    <a href="2025_03_14_patch_131.md" class="input-link">Input</a>
+                    Patch 131
+                </div>
+                <div class="patch-item">
+                    <a href="2025_03_14_patch_291_analysis.md" class="analysis-link">Analysis</a>
+                    <a href="2025_03_14_patch_291.md" class="input-link">Input</a>
+                    Patch 291
+                </div>
+                <div class="patch-item">
+                    <a href="2025_03_14_patch_412_analysis.md" class="analysis-link">Analysis</a>
+                    <a href="2025_03_14_patch_412.md" class="input-link">Input</a>
+                    Patch 412
+                </div>
+                <div class="patch-item">
+                    <a href="2025_03_14_patch_506_analysis.md" class="analysis-link">Analysis</a>
+                    <a href="2025_03_14_patch_506.md" class="input-link">Input</a>
+                    Patch 506
+                </div>
+                <div class="patch-item">
+                    <a href="2025_03_14_patch_511_analysis.md" class="analysis-link">Analysis</a>
+                    <a href="2025_03_14_patch_511.md" class="input-link">Input</a>
+                    Patch 511
+                </div>
+                <div class="patch-item">
+                    <a href="2025_03_14_patch_605_analysis.md" class="analysis-link">Analysis</a>
+                    <a href="2025_03_14_patch_605.md" class="input-link">Input</a>
+                    Patch 605
+                </div>
+                <div class="patch-item">
+                    <a href="2025_03_14_patch_707_analysis.md" class="analysis-link">Analysis</a>
+                    <a href="2025_03_14_patch_707.md" class="input-link">Input</a>
+                    Patch 707
+                </div>
+                <div class="patch-item">
+                    <a href="2025_03_14_patch_1892_analysis.md" class="analysis-link">Analysis</a>
+                    <a href="2025_03_14_patch_1892.md" class="input-link">Input</a>
+                    Patch 1892
+                </div>
+            </td>
+        </tr>
+
+        <tr>
+            <td class="category-header">Rewriter needs to nullptr initialization of spanified member field to {}. <span class="patch-count">(7 patches)</span></td>
+            <td>
+                <div class="patch-item">
+                    <a href="2025_03_14_patch_384_analysis.md" class="analysis-link">Analysis</a>
+                    <a href="2025_03_14_patch_384.md" class="input-link">Input</a>
+                    Patch 384
+                </div>
+                <div class="patch-item">
+                    <a href="2025_03_14_patch_522_analysis.md" class="analysis-link">Analysis</a>
+                    <a href="2025_03_14_patch_522.md" class="input-link">Input</a>
+                    Patch 522
+                </div>
+                <div class="patch-item">
+                    <a href="2025_03_14_patch_1066_analysis.md" class="analysis-link">Analysis</a>
+                    <a href="2025_03_14_patch_1066.md" class="input-link">Input</a>
+                    Patch 1066
+                </div>
+                <div class="patch-item">
+                    <a href="2025_03_14_patch_1165_analysis.md" class="analysis-link">Analysis</a>
+                    <a href="2025_03_14_patch_1165.md" class="input-link">Input</a>
+                    Patch 1165
+                </div>
+                <div class="patch-item">
+                    <a href="2025_03_14_patch_1206_analysis.md" class="analysis-link">Analysis</a>
+                    <a href="2025_03_14_patch_1206.md" class="input-link">Input</a>
+                    Patch 1206
+                </div>
+                <div class="patch-item">
+                    <a href="2025_03_14_patch_1209_analysis.md" class="analysis-link">Analysis</a>
+                    <a href="2025_03_14_patch_1209.md" class="input-link">Input</a>
+                    Patch 1209
+                </div>
+                <div class="patch-item">
+                    <a href="2025_03_14_patch_1687_analysis.md" class="analysis-link">Analysis</a>
+                    <a href="2025_03_14_patch_1687.md" class="input-link">Input</a>
+                    Patch 1687
+                </div>
+            </td>
+        </tr>
+
+        <tr>
+            <td class="category-header">Rewriter needs to handle address of a spanified variable passed into a function. <span class="patch-count">(7 patches)</span></td>
+            <td>
+                <div class="patch-item">
+                    <a href="2025_03_14_patch_416_analysis.md" class="analysis-link">Analysis</a>
+                    <a href="2025_03_14_patch_416.md" class="input-link">Input</a>
+                    Patch 416
+                </div>
+                <div class="patch-item">
+                    <a href="2025_03_14_patch_815_analysis.md" class="analysis-link">Analysis</a>
+                    <a href="2025_03_14_patch_815.md" class="input-link">Input</a>
+                    Patch 815
+                </div>
+                <div class="patch-item">
+                    <a href="2025_03_14_patch_984_analysis.md" class="analysis-link">Analysis</a>
+                    <a href="2025_03_14_patch_984.md" class="input-link">Input</a>
+                    Patch 984
+                </div>
+                <div class="patch-item">
+                    <a href="2025_03_16_patch_1187_analysis.md" class="analysis-link">Analysis</a>
+                    <a href="2025_03_16_patch_1187.md" class="input-link">Input</a>
+                    Patch 1187
+                </div>
+                <div class="patch-item">
+                    <a href="2025_03_14_patch_1452_analysis.md" class="analysis-link">Analysis</a>
+                    <a href="2025_03_14_patch_1452.md" class="input-link">Input</a>
+                    Patch 1452
+                </div>
+                <div class="patch-item">
+                    <a href="2025_03_14_patch_1682_analysis.md" class="analysis-link">Analysis</a>
+                    <a href="2025_03_14_patch_1682.md" class="input-link">Input</a>
+                    Patch 1682
+                </div>
+                <div class="patch-item">
+                    <a href="2025_03_14_patch_1909_analysis.md" class="analysis-link">Analysis</a>
+                    <a href="2025_03_14_patch_1909.md" class="input-link">Input</a>
+                    Patch 1909
+                </div>
+            </td>
+        </tr>
+
+        <tr>
+            <td class="category-header">Rewriter needs to add .data() when converting a C-style array to std::array in a third_party function call. <span class="patch-count">(2 patches)</span></td>
+            <td>
+                <div class="patch-item">
+                    <a href="2025_03_14_patch_228_analysis.md" class="analysis-link">Analysis</a>
+                    <a href="2025_03_14_patch_228.md" class="input-link">Input</a>
+                    Patch 228
+                </div>
+                <div class="patch-item">
+                    <a href="2025_03_15_patch_1638_analysis.md" class="analysis-link">Analysis</a>
+                    <a href="2025_03_15_patch_1638.md" class="input-link">Input</a>
+                    Patch 1638
+                </div>
+            </td>
+        </tr>
+
+        <tr>
+            <td class="category-header">Rewriter needs to generate code to construct a span from a raw pointer. <span class="patch-count">(2 patches)</span></td>
+            <td>
+                <div class="patch-item">
+                    <a href="2025_03_16_patch_805_analysis.md" class="analysis-link">Analysis</a>
+                    <a href="2025_03_16_patch_805.md" class="input-link">Input</a>
+                    Patch 805
+                </div>
+                <div class="patch-item">
+                    <a href="2025_03_14_patch_1760_analysis.md" class="analysis-link">Analysis</a>
+                    <a href="2025_03_14_patch_1760.md" class="input-link">Input</a>
+                    Patch 1760
+                </div>
+            </td>
+        </tr>
+
+        <tr>
+            <td class="category-header">Rewriter needs to generate code to construct a span from a raw pointer and a size. <span class="patch-count">(2 patches)</span></td>
+            <td>
+                <div class="patch-item">
+                    <a href="2025_03_14_patch_619_analysis.md" class="analysis-link">Analysis</a>
+                    <a href="2025_03_14_patch_619.md" class="input-link">Input</a>
+                    Patch 619
+                </div>
+                <div class="patch-item">
+                    <a href="2025_03_14_patch_1226_analysis.md" class="analysis-link">Analysis</a>
+                    <a href="2025_03_14_patch_1226.md" class="input-link">Input</a>
+                    Patch 1226
+                </div>
+            </td>
+        </tr>
+
+        <tr>
+            <td class="category-header">Overlapping replacements between EraseMemberCall and EraseMemberCall. <span class="patch-count">(2 patches)</span></td>
+            <td>
+                <div class="patch-item">
+                    <a href="2025_03_14_patch_94_analysis.md" class="analysis-link">Analysis</a>
+                    <a href="2025_03_14_patch_94.md" class="input-link">Input</a>
+                    Patch 94
+                </div>
+                <div class="patch-item">
+                    <a href="2025_03_14_patch_892_analysis.md" class="analysis-link">Analysis</a>
+                    <a href="2025_03_14_patch_892.md" class="input-link">Input</a>
+                    Patch 892
+                </div>
+            </td>
+        </tr>
+
+        <tr>
+            <td class="category-header">Rewriter needs to add .data() to arrayified variable used as a pointer. <span class="patch-count">(1 patches)</span></td>
+            <td>
+                <div class="patch-item">
+                    <a href="2025_03_14_patch_332_analysis.md" class="analysis-link">Analysis</a>
+                    <a href="2025_03_14_patch_332.md" class="input-link">Input</a>
+                    Patch 332
+                </div>
+            </td>
+        </tr>
+
+        <tr>
+            <td class="category-header">Rewriter needs to avoid spanifying variables used in reinterpret_cast. <span class="patch-count">(1 patches)</span></td>
+            <td>
+                <div class="patch-item">
+                    <a href="2025_03_14_patch_250_analysis.md" class="analysis-link">Analysis</a>
+                    <a href="2025_03_14_patch_250.md" class="input-link">Input</a>
+                    Patch 250
+                </div>
+            </td>
+        </tr>
+
+        <tr>
+            <td class="category-header">Rewriter needs to construct a span from a raw pointer. <span class="patch-count">(1 patches)</span></td>
+            <td>
+                <div class="patch-item">
+                    <a href="2025_03_14_patch_1179_analysis.md" class="analysis-link">Analysis</a>
+                    <a href="2025_03_14_patch_1179.md" class="input-link">Input</a>
+                    Patch 1179
+                </div>
+            </td>
+        </tr>
+
+        <tr>
+            <td class="category-header">Rewriter needs to rewrite function parameter to accept `std::array` instead of `T[]`. <span class="patch-count">(1 patches)</span></td>
+            <td>
+                <div class="patch-item">
+                    <a href="2025_03_14_patch_1109_analysis.md" class="analysis-link">Analysis</a>
+                    <a href="2025_03_14_patch_1109.md" class="input-link">Input</a>
+                    Patch 1109
+                </div>
+            </td>
+        </tr>
+
+        <tr>
+            <td class="category-header">Rewriter needs to handle `char[]` converted to `std::array` variable used with `std::string`. <span class="patch-count">(1 patches)</span></td>
+            <td>
+                <div class="patch-item">
+                    <a href="2025_03_14_patch_85_analysis.md" class="analysis-link">Analysis</a>
+                    <a href="2025_03_14_patch_85.md" class="input-link">Input</a>
+                    Patch 85
+                </div>
+            </td>
+        </tr>
+
+        <tr>
+            <td class="category-header">Rewriter needs to properly handle arrayified variables when calling `memcpy` or other functions. <span class="patch-count">(1 patches)</span></td>
+            <td>
+                <div class="patch-item">
+                    <a href="2025_03_13_patch_1367_analysis.md" class="analysis-link">Analysis</a>
+                    <a href="2025_03_13_patch_1367.md" class="input-link">Input</a>
+                    Patch 1367
+                </div>
+            </td>
+        </tr>
+
+        <tr>
+            <td class="category-header">Rewriter needs to spanify a pointer using `.data()` or `.get()` when the original variable is an object and not a pointer. <span class="patch-count">(1 patches)</span></td>
+            <td>
+                <div class="patch-item">
+                    <a href="2025_03_14_patch_125_analysis.md" class="analysis-link">Analysis</a>
+                    <a href="2025_03_14_patch_125.md" class="input-link">Input</a>
+                    Patch 125
+                </div>
+            </td>
+        </tr>
+
+        <tr>
+            <td class="category-header">Rewriter needs to use a constructor with .data() for spanification of raw pointer return values from third_party functions. <span class="patch-count">(1 patches)</span></td>
+            <td>
+                <div class="patch-item">
+                    <a href="2025_03_14_patch_1260_analysis.md" class="analysis-link">Analysis</a>
+                    <a href="2025_03_14_patch_1260.md" class="input-link">Input</a>
+                    Patch 1260
+                </div>
+            </td>
+        </tr>
+
+        <tr>
+            <td class="category-header">Rewriter needs to handle iterator invalidation in range-based for loops. <span class="patch-count">(1 patches)</span></td>
+            <td>
+                <div class="patch-item">
+                    <a href="2025_03_14_patch_1029_analysis.md" class="analysis-link">Analysis</a>
+                    <a href="2025_03_14_patch_1029.md" class="input-link">Input</a>
+                    Patch 1029
+                </div>
+            </td>
+        </tr>
+
+        <tr>
+            <td class="category-header">Rewriter needs to generate code to construct a span from a variable converted to std::array when that variable is passed to a third_party function. <span class="patch-count">(1 patches)</span></td>
+            <td>
+                <div class="patch-item">
+                    <a href="2025_03_14_patch_1435_analysis.md" class="analysis-link">Analysis</a>
+                    <a href="2025_03_14_patch_1435.md" class="input-link">Input</a>
+                    Patch 1435
+                </div>
+            </td>
+        </tr>
+
+        <tr>
+            <td class="category-header">Rewriter needs to handle `data.sha256_digest + crypto::kSHA256Length` where the `span` type is on the left hand side. <span class="patch-count">(1 patches)</span></td>
+            <td>
+                <div class="patch-item">
+                    <a href="2025_03_14_patch_1619_analysis.md" class="analysis-link">Analysis</a>
+                    <a href="2025_03_14_patch_1619.md" class="input-link">Input</a>
+                    Patch 1619
+                </div>
+            </td>
+        </tr>
+
+        <tr>
+            <td class="category-header">Rewriter needs to add .data() to `char[]` converted to std::array passed to `base::StringPrintf`. <span class="patch-count">(1 patches)</span></td>
+            <td>
+                <div class="patch-item">
+                    <a href="2025_03_16_patch_976_analysis.md" class="analysis-link">Analysis</a>
+                    <a href="2025_03_16_patch_976.md" class="input-link">Input</a>
+                    Patch 976
+                </div>
+            </td>
+        </tr>
+
+        <tr>
+            <td class="category-header">Rewriter used `base::span` but it needs `std::span` in this context. <span class="patch-count">(1 patches)</span></td>
+            <td>
+                <div class="patch-item">
+                    <a href="2025_03_14_patch_229_analysis.md" class="analysis-link">Analysis</a>
+                    <a href="2025_03_14_patch_229.md" class="input-link">Input</a>
+                    Patch 229
+                </div>
+            </td>
+        </tr>
+
+        <tr>
+            <td class="category-header">Rewriter made incorrect change to static_assert. <span class="patch-count">(1 patches)</span></td>
+            <td>
+                <div class="patch-item">
+                    <a href="2025_03_14_patch_874_analysis.md" class="analysis-link">Analysis</a>
+                    <a href="2025_03_14_patch_874.md" class="input-link">Input</a>
+                    Patch 874
+                </div>
+            </td>
+        </tr>
+
+        <tr>
+            <td class="category-header">Rewriter needs to generate code to construct a span from a pointer. <span class="patch-count">(1 patches)</span></td>
+            <td>
+                <div class="patch-item">
+                    <a href="2025_03_15_patch_1061_analysis.md" class="analysis-link">Analysis</a>
+                    <a href="2025_03_15_patch_1061.md" class="input-link">Input</a>
+                    Patch 1061
+                </div>
+            </td>
+        </tr>
+
+        <tr>
+            <td class="category-header">Rewriter needs to use make_span() to construct a `span` from a raw pointer. <span class="patch-count">(1 patches)</span></td>
+            <td>
+                <div class="patch-item">
+                    <a href="2025_03_14_patch_1420_analysis.md" class="analysis-link">Analysis</a>
+                    <a href="2025_03_14_patch_1420.md" class="input-link">Input</a>
+                    Patch 1420
+                </div>
+            </td>
+        </tr>
+
+        <tr>
+            <td class="category-header">Rewriter needs to `.data()` call when spanified `GLuint*` is passed to generated code. <span class="patch-count">(1 patches)</span></td>
+            <td>
+                <div class="patch-item">
+                    <a href="2025_03_16_patch_1176_analysis.md" class="analysis-link">Analysis</a>
+                    <a href="2025_03_16_patch_1176.md" class="input-link">Input</a>
+                    Patch 1176
+                </div>
+            </td>
+        </tr>
+
+        <tr>
+            <td class="category-header">Rewriter needs to add `.data()` when spanifying functions with array members. <span class="patch-count">(1 patches)</span></td>
+            <td>
+                <div class="patch-item">
+                    <a href="2025_03_14_patch_1637_analysis.md" class="analysis-link">Analysis</a>
+                    <a href="2025_03_14_patch_1637.md" class="input-link">Input</a>
+                    Patch 1637
+                </div>
+            </td>
+        </tr>
+
+        <tr>
+            <td class="category-header">Rewriter needs to spanify a function, but failed to spanify a call site. <span class="patch-count">(1 patches)</span></td>
+            <td>
+                <div class="patch-item">
+                    <a href="2025_03_14_patch_1591_analysis.md" class="analysis-link">Analysis</a>
+                    <a href="2025_03_14_patch_1591.md" class="input-link">Input</a>
+                    Patch 1591
+                </div>
+            </td>
+        </tr>
+
+        <tr>
+            <td class="category-header">Rewriter needs to handle .data() to arrayified `char[]` variable used with `testing::ElementsAreArray`. <span class="patch-count">(1 patches)</span></td>
+            <td>
+                <div class="patch-item">
+                    <a href="2025_03_14_patch_1834_analysis.md" class="analysis-link">Analysis</a>
+                    <a href="2025_03_14_patch_1834.md" class="input-link">Input</a>
+                    Patch 1834
+                </div>
+            </td>
+        </tr>
+
+        <tr>
+            <td class="category-header">Rewriter needs to handle spanified `base::span` variable in code where span element is used with an arithmetic operator. <span class="patch-count">(1 patches)</span></td>
+            <td>
+                <div class="patch-item">
+                    <a href="2025_03_14_patch_1844_analysis.md" class="analysis-link">Analysis</a>
+                    <a href="2025_03_14_patch_1844.md" class="input-link">Input</a>
+                    Patch 1844
+                </div>
+            </td>
+        </tr>
+
+        <tr>
+            <td class="category-header">Rewriter introduced missing braces. <span class="patch-count">(1 patches)</span></td>
+            <td>
+                <div class="patch-item">
+                    <a href="2025_03_14_patch_2008_analysis.md" class="analysis-link">Analysis</a>
+                    <a href="2025_03_14_patch_2008.md" class="input-link">Input</a>
+                    Patch 2008
+                </div>
+            </td>
+        </tr>
+
+        <tr>
+            <td class="category-header">Rewriter needs to generate code to specialize `IPC::ParamTraits` for `std::array`. <span class="patch-count">(1 patches)</span></td>
+            <td>
+                <div class="patch-item">
+                    <a href="2025_03_14_patch_460_analysis.md" class="analysis-link">Analysis</a>
+                    <a href="2025_03_14_patch_460.md" class="input-link">Input</a>
+                    Patch 460
+                </div>
+            </td>
+        </tr>
+
+        <tr>
+            <td class="category-header">Rewriter encountered a case where it failed to add .data() when converting a C-style array to std::array in a system function call. <span class="patch-count">(1 patches)</span></td>
+            <td>
+                <div class="patch-item">
+                    <a href="2025_03_14_patch_1247_analysis.md" class="analysis-link">Analysis</a>
+                    <a href="2025_03_14_patch_1247.md" class="input-link">Input</a>
+                    Patch 1247
+                </div>
+            </td>
+        </tr>
+
+        <tr>
+            <td class="category-header">Rewriter needs to consider argument types when calling functions. <span class="patch-count">(1 patches)</span></td>
+            <td>
+                <div class="patch-item">
+                    <a href="2025_03_14_patch_1237_analysis.md" class="analysis-link">Analysis</a>
+                    <a href="2025_03_14_patch_1237.md" class="input-link">Input</a>
+                    Patch 1237
+                </div>
+            </td>
+        </tr>
+
+        <tr>
+            <td class="category-header">Rewriter needs to generate code to construct a span from the return value of a C-style array. <span class="patch-count">(1 patches)</span></td>
+            <td>
+                <div class="patch-item">
+                    <a href="2025_03_14_patch_868_analysis.md" class="analysis-link">Analysis</a>
+                    <a href="2025_03_14_patch_868.md" class="input-link">Input</a>
+                    Patch 868
+                </div>
+            </td>
+        </tr>
+
+        <tr>
+            <td class="category-header">The rewriter created code that accesses private members. <span class="patch-count">(1 patches)</span></td>
+            <td>
+                <div class="patch-item">
+                    <a href="2025_03_14_patch_235_analysis.md" class="analysis-link">Analysis</a>
+                    <a href="2025_03_14_patch_235.md" class="input-link">Input</a>
+                    Patch 235
+                </div>
+            </td>
+        </tr>
+
+        <tr>
+            <td class="category-header">Rewriter needs to use `std::size` instead of `.size()` when declaring the size of a `static const char[]` array that relies on a spanified `.size()` method. <span class="patch-count">(1 patches)</span></td>
+            <td>
+                <div class="patch-item">
+                    <a href="2025_03_14_patch_895_analysis.md" class="analysis-link">Analysis</a>
+                    <a href="2025_03_14_patch_895.md" class="input-link">Input</a>
+                    Patch 895
+                </div>
+            </td>
+        </tr>
+
+        <tr>
+            <td class="category-header">Rewriter needs to generate code to use initializer lists with nested braces for multi-dimensional arrays when initializing with std::array. <span class="patch-count">(1 patches)</span></td>
+            <td>
+                <div class="patch-item">
+                    <a href="2025_03_14_patch_202_analysis.md" class="analysis-link">Analysis</a>
+                    <a href="2025_03_14_patch_202.md" class="input-link">Input</a>
+                    Patch 202
+                </div>
+            </td>
+        </tr>
+
+        <tr>
+            <td class="category-header">Rewriter needs to generate code to construct a span when iterating over C-style arrays. <span class="patch-count">(1 patches)</span></td>
+            <td>
+                <div class="patch-item">
+                    <a href="2025_03_14_patch_1017_analysis.md" class="analysis-link">Analysis</a>
+                    <a href="2025_03_14_patch_1017.md" class="input-link">Input</a>
+                    Patch 1017
+                </div>
+            </td>
+        </tr>
+
+        <tr>
+            <td class="category-header">Rewriter needs to properly handle pointer arithmetic when base::span is used. <span class="patch-count">(1 patches)</span></td>
+            <td>
+                <div class="patch-item">
+                    <a href="2025_03_14_patch_1439_analysis.md" class="analysis-link">Analysis</a>
+                    <a href="2025_03_14_patch_1439.md" class="input-link">Input</a>
+                    Patch 1439
+                </div>
+            </td>
+        </tr>
+
+        <tr>
+            <td class="category-header">Rewriter needs to support implicit conversion from raw pointer to base::span. <span class="patch-count">(1 patches)</span></td>
+            <td>
+                <div class="patch-item">
+                    <a href="2025_03_14_patch_1980_analysis.md" class="analysis-link">Analysis</a>
+                    <a href="2025_03_14_patch_1980.md" class="input-link">Input</a>
+                    Patch 1980
+                </div>
+            </td>
+        </tr>
+
+        <tr>
+            <td class="category-header">Rewriter needs to generate code to construct a span from the function parameter. <span class="patch-count">(1 patches)</span></td>
+            <td>
+                <div class="patch-item">
+                    <a href="2025_03_14_patch_46_analysis.md" class="analysis-link">Analysis</a>
+                    <a href="2025_03_14_patch_46.md" class="input-link">Input</a>
+                    Patch 46
+                </div>
+            </td>
+        </tr>
+
+        <tr>
+            <td class="category-header">Rewriter needs to create a span from a C-style array. <span class="patch-count">(1 patches)</span></td>
+            <td>
+                <div class="patch-item">
+                    <a href="2025_03_14_patch_1025_analysis.md" class="analysis-link">Analysis</a>
+                    <a href="2025_03_14_patch_1025.md" class="input-link">Input</a>
+                    Patch 1025
+                </div>
+            </td>
+        </tr>
+
+        <tr>
+            <td class="category-header">Rewriter needs to avoid spanifying functions that have `void` type. <span class="patch-count">(1 patches)</span></td>
+            <td>
+                <div class="patch-item">
+                    <a href="2025_03_14_patch_95_analysis.md" class="analysis-link">Analysis</a>
+                    <a href="2025_03_14_patch_95.md" class="input-link">Input</a>
+                    Patch 95
+                </div>
+            </td>
+        </tr>
+
+        <tr>
+            <td class="category-header">Rewriter needs to avoid spanifying pointer variables used in reinterpret_cast. <span class="patch-count">(1 patches)</span></td>
+            <td>
+                <div class="patch-item">
+                    <a href="2025_03_14_patch_120_analysis.md" class="analysis-link">Analysis</a>
+                    <a href="2025_03_14_patch_120.md" class="input-link">Input</a>
+                    Patch 120
+                </div>
+            </td>
+        </tr>
+
+        <tr>
+            <td class="category-header">Rewriter needs to use `.data()` when accessing members of a spanified variable. <span class="patch-count">(1 patches)</span></td>
+            <td>
+                <div class="patch-item">
+                    <a href="2025_03_14_patch_1030_analysis.md" class="analysis-link">Analysis</a>
+                    <a href="2025_03_14_patch_1030.md" class="input-link">Input</a>
+                    Patch 1030
+                </div>
+            </td>
+        </tr>
+
+        <tr>
+            <td class="category-header">Rewriter needs to add .data() to spanified variable used with pointer arithmetic. <span class="patch-count">(1 patches)</span></td>
+            <td>
+                <div class="patch-item">
+                    <a href="2025_03_15_patch_192_analysis.md" class="analysis-link">Analysis</a>
+                    <a href="2025_03_15_patch_192.md" class="input-link">Input</a>
+                    Patch 192
+                </div>
+            </td>
+        </tr>
+
+        <tr>
+            <td class="category-header">Rewriter needs to use .data() on the source argument of memcpy when the destination is not a std::array. <span class="patch-count">(1 patches)</span></td>
+            <td>
+                <div class="patch-item">
+                    <a href="2025_03_14_patch_1279_analysis.md" class="analysis-link">Analysis</a>
+                    <a href="2025_03_14_patch_1279.md" class="input-link">Input</a>
+                    Patch 1279
+                </div>
+            </td>
+        </tr>
+
+        <tr>
+            <td class="category-header">Rewriter needs to construct a span from a raw pointer returned by `new`. <span class="patch-count">(1 patches)</span></td>
+            <td>
+                <div class="patch-item">
+                    <a href="2025_03_16_patch_193_analysis.md" class="analysis-link">Analysis</a>
+                    <a href="2025_03_16_patch_193.md" class="input-link">Input</a>
+                    Patch 193
+                </div>
+            </td>
+        </tr>
+
+        <tr>
+            <td class="category-header">Rewriter needs to generate correct code for `AtomicWriterMemcpy` with `base::span` argument. <span class="patch-count">(1 patches)</span></td>
+            <td>
+                <div class="patch-item">
+                    <a href="2025_03_16_patch_1068_analysis.md" class="analysis-link">Analysis</a>
+                    <a href="2025_03_16_patch_1068.md" class="input-link">Input</a>
+                    Patch 1068
+                </div>
+            </td>
+        </tr>
+
+        <tr>
+            <td class="category-header">Rewriter needs to add .data() to arrayified variable used with third_party function. <span class="patch-count">(1 patches)</span></td>
+            <td>
+                <div class="patch-item">
+                    <a href="2025_03_15_patch_1884_analysis.md" class="analysis-link">Analysis</a>
+                    <a href="2025_03_15_patch_1884.md" class="input-link">Input</a>
+                    Patch 1884
+                </div>
+            </td>
+        </tr>
+
+        <tr>
+            <td class="category-header">Rewriter needs to add .data() to arrayified `char[]` variable used with std::vector. <span class="patch-count">(1 patches)</span></td>
+            <td>
+                <div class="patch-item">
+                    <a href="2025_03_14_patch_255_analysis.md" class="analysis-link">Analysis</a>
+                    <a href="2025_03_14_patch_255.md" class="input-link">Input</a>
+                    Patch 255
+                </div>
+            </td>
+        </tr>
+
+        <tr>
+            <td class="category-header">Rewriter needs to use checked types with array access. <span class="patch-count">(1 patches)</span></td>
+            <td>
+                <div class="patch-item">
+                    <a href="2025_03_14_patch_1698_analysis.md" class="analysis-link">Analysis</a>
+                    <a href="2025_03_14_patch_1698.md" class="input-link">Input</a>
+                    Patch 1698
+                </div>
+            </td>
+        </tr>
+
+        <tr>
+            <td class="category-header">Rewriter needs to add `.data()` to arrayified variable used with `.subspan()`. <span class="patch-count">(1 patches)</span></td>
+            <td>
+                <div class="patch-item">
+                    <a href="2025_03_16_patch_1333_analysis.md" class="analysis-link">Analysis</a>
+                    <a href="2025_03_16_patch_1333.md" class="input-link">Input</a>
+                    Patch 1333
+                </div>
+            </td>
+        </tr>
+
+        <tr>
+            <td class="category-header">Rewriter needs to handle base::span with iterators correctly. <span class="patch-count">(1 patches)</span></td>
+            <td>
+                <div class="patch-item">
+                    <a href="2025_03_14_patch_550_analysis.md" class="analysis-link">Analysis</a>
+                    <a href="2025_03_14_patch_550.md" class="input-link">Input</a>
+                    Patch 550
+                </div>
+            </td>
+        </tr>
+
+        <tr>
+            <td class="category-header">Bad cast with `reinterpret_cast`. <span class="patch-count">(1 patches)</span></td>
+            <td>
+                <div class="patch-item">
+                    <a href="2025_03_14_patch_249_analysis.md" class="analysis-link">Analysis</a>
+                    <a href="2025_03_14_patch_249.md" class="input-link">Input</a>
+                    Patch 249
+                </div>
+            </td>
+        </tr>
+
+        <tr>
+            <td class="category-header">Rewriter needs to avoid spanifying functions if it requires C++23 features. <span class="patch-count">(1 patches)</span></td>
+            <td>
+                <div class="patch-item">
+                    <a href="2025_03_15_patch_480_analysis.md" class="analysis-link">Analysis</a>
+                    <a href="2025_03_15_patch_480.md" class="input-link">Input</a>
+                    Patch 480
+                </div>
+            </td>
+        </tr>
+
+        <tr>
+            <td class="category-header">Rewriter needs to use ".data()" to pass data from a `std::array` to span. <span class="patch-count">(1 patches)</span></td>
+            <td>
+                <div class="patch-item">
+                    <a href="2025_03_14_patch_1796_analysis.md" class="analysis-link">Analysis</a>
+                    <a href="2025_03_14_patch_1796.md" class="input-link">Input</a>
+                    Patch 1796
+                </div>
+            </td>
+        </tr>
+
+        <tr>
+            <td class="category-header">Rewriter needs to add .data() to arrayified `char[]` variable used with `base::UmaHistogramEnumeration`. <span class="patch-count">(1 patches)</span></td>
+            <td>
+                <div class="patch-item">
+                    <a href="2025_03_14_patch_899_analysis.md" class="analysis-link">Analysis</a>
+                    <a href="2025_03_14_patch_899.md" class="input-link">Input</a>
+                    Patch 899
+                </div>
+            </td>
+        </tr>
+
+        <tr>
+            <td class="category-header">Rewriter needs to construct a span from the return value of a third_party function. <span class="patch-count">(1 patches)</span></td>
+            <td>
+                <div class="patch-item">
+                    <a href="2025_03_14_patch_928_analysis.md" class="analysis-link">Analysis</a>
+                    <a href="2025_03_14_patch_928.md" class="input-link">Input</a>
+                    Patch 928
+                </div>
+            </td>
+        </tr>
+
+        <tr>
+            <td class="category-header">Rewriter needs to generate correct syntax when using `.subspan` on `std::array` <span class="patch-count">(1 patches)</span></td>
+            <td>
+                <div class="patch-item">
+                    <a href="2025_03_16_patch_1138_analysis.md" class="analysis-link">Analysis</a>
+                    <a href="2025_03_16_patch_1138.md" class="input-link">Input</a>
+                    Patch 1138
+                </div>
+            </td>
+        </tr>
+
+        <tr>
+            <td class="category-header">Rewriter needs to pass argument to base::span constructor without a cast. <span class="patch-count">(1 patches)</span></td>
+            <td>
+                <div class="patch-item">
+                    <a href="2025_03_15_patch_1216_analysis.md" class="analysis-link">Analysis</a>
+                    <a href="2025_03_15_patch_1216.md" class="input-link">Input</a>
+                    Patch 1216
+                </div>
+            </td>
+        </tr>
+
+        <tr>
+            <td class="category-header">Rewriter needs to make `constexpr std::array` static. <span class="patch-count">(1 patches)</span></td>
+            <td>
+                <div class="patch-item">
+                    <a href="2025_03_14_patch_1736_analysis.md" class="analysis-link">Analysis</a>
+                    <a href="2025_03_14_patch_1736.md" class="input-link">Input</a>
+                    Patch 1736
+                </div>
+            </td>
+        </tr>
+
+        <tr>
+            <td class="category-header">Rewriter needs to avoid spanifying functions that return `char**`. <span class="patch-count">(1 patches)</span></td>
+            <td>
+                <div class="patch-item">
+                    <a href="2025_03_15_patch_1581_analysis.md" class="analysis-link">Analysis</a>
+                    <a href="2025_03_15_patch_1581.md" class="input-link">Input</a>
+                    Patch 1581
+                </div>
+            </td>
+        </tr>
+
+        <tr>
+            <td class="category-header">Rewriter needs to avoid generating assignment operations on `std::array` when the array is a const member. <span class="patch-count">(1 patches)</span></td>
+            <td>
+                <div class="patch-item">
+                    <a href="2025_03_16_patch_1260_analysis.md" class="analysis-link">Analysis</a>
+                    <a href="2025_03_16_patch_1260.md" class="input-link">Input</a>
+                    Patch 1260
+                </div>
+            </td>
+        </tr>
+
+        <tr>
+            <td class="category-header">Rewriter needs to use . instead of -> when calling methods/fields on a `base::span` object. <span class="patch-count">(1 patches)</span></td>
+            <td>
+                <div class="patch-item">
+                    <a href="2025_03_14_patch_849_analysis.md" class="analysis-link">Analysis</a>
+                    <a href="2025_03_14_patch_849.md" class="input-link">Input</a>
+                    Patch 849
+                </div>
+            </td>
+        </tr>
+
+        <tr>
+            <td class="category-header">Rewriter needs to add .data() when modifying pointer arithmetic on arrayified variables. <span class="patch-count">(1 patches)</span></td>
+            <td>
+                <div class="patch-item">
+                    <a href="2025_03_14_patch_2007_analysis.md" class="analysis-link">Analysis</a>
+                    <a href="2025_03_14_patch_2007.md" class="input-link">Input</a>
+                    Patch 2007
+                </div>
+            </td>
+        </tr>
+
+        <tr>
+            <td class="category-header">Rewriter made incorrect replacement after refactoring code to use std::array. <span class="patch-count">(1 patches)</span></td>
+            <td>
+                <div class="patch-item">
+                    <a href="2025_03_14_patch_1248_analysis.md" class="analysis-link">Analysis</a>
+                    <a href="2025_03_14_patch_1248.md" class="input-link">Input</a>
+                    Patch 1248
+                </div>
+            </td>
+        </tr>
+
+        <tr>
+            <td class="category-header">Rewriter failed to propagate changes from field to usage. <span class="patch-count">(1 patches)</span></td>
+            <td>
+                <div class="patch-item">
+                    <a href="2025_03_14_patch_1879_analysis.md" class="analysis-link">Analysis</a>
+                    <a href="2025_03_14_patch_1879.md" class="input-link">Input</a>
+                    Patch 1879
+                </div>
+            </td>
+        </tr>
+
+        <tr>
+            <td class="category-header">Rewriter needs to construct a span from a C-style array. <span class="patch-count">(1 patches)</span></td>
+            <td>
+                <div class="patch-item">
+                    <a href="2025_03_14_patch_1789_analysis.md" class="analysis-link">Analysis</a>
+                    <a href="2025_03_14_patch_1789.md" class="input-link">Input</a>
+                    Patch 1789
+                </div>
+            </td>
+        </tr>
+
+        <tr>
+            <td class="category-header">Rewriter needs to pass the address of a stack allocated std::array to memcpy. <span class="patch-count">(1 patches)</span></td>
+            <td>
+                <div class="patch-item">
+                    <a href="2025_03_13_patch_1158_analysis.md" class="analysis-link">Analysis</a>
+                    <a href="2025_03_13_patch_1158.md" class="input-link">Input</a>
+                    Patch 1158
+                </div>
+            </td>
+        </tr>
+
+        <tr>
+            <td class="category-header">Rewriter should account for `.data()` call when spanifying `std::array` member field <span class="patch-count">(1 patches)</span></td>
+            <td>
+                <div class="patch-item">
+                    <a href="2025_03_14_patch_728_analysis.md" class="analysis-link">Analysis</a>
+                    <a href="2025_03_14_patch_728.md" class="input-link">Input</a>
+                    Patch 728
+                </div>
+            </td>
+        </tr>
+
+        <tr>
+            <td class="category-header">Rewriter needs to generate code to construct a span from an IOBuffer. <span class="patch-count">(1 patches)</span></td>
+            <td>
+                <div class="patch-item">
+                    <a href="2025_03_14_patch_1401_analysis.md" class="analysis-link">Analysis</a>
+                    <a href="2025_03_14_patch_1401.md" class="input-link">Input</a>
+                    Patch 1401
+                </div>
+            </td>
+        </tr>
+
+        <tr>
+            <td class="category-header">Rewriter produced incorrect code for constructing a span from a variable's address. <span class="patch-count">(1 patches)</span></td>
+            <td>
+                <div class="patch-item">
+                    <a href="2025_03_14_patch_136_analysis.md" class="analysis-link">Analysis</a>
+                    <a href="2025_03_14_patch_136.md" class="input-link">Input</a>
+                    Patch 136
+                </div>
+            </td>
+        </tr>
+
+        <tr>
+            <td class="category-header">Rewriter needs to prevent function inlining in span if it contains .data() call <span class="patch-count">(1 patches)</span></td>
+            <td>
+                <div class="patch-item">
+                    <a href="2025_03_15_patch_1892_analysis.md" class="analysis-link">Analysis</a>
+                    <a href="2025_03_15_patch_1892.md" class="input-link">Input</a>
+                    Patch 1892
+                </div>
+            </td>
+        </tr>
+
+        <tr>
+            <td class="category-header">Rewriter needs to avoid reinterpret_cast from span to pointer. <span class="patch-count">(1 patches)</span></td>
+            <td>
+                <div class="patch-item">
+                    <a href="2025_03_14_patch_118_analysis.md" class="analysis-link">Analysis</a>
+                    <a href="2025_03_14_patch_118.md" class="input-link">Input</a>
+                    Patch 118
+                </div>
+            </td>
+        </tr>
+
+        <tr>
+            <td class="category-header">Rewriter needs to avoid adding `.data()` when spanifying a function parameter and that variable is used with glUniformMatrix4fv. <span class="patch-count">(1 patches)</span></td>
+            <td>
+                <div class="patch-item">
+                    <a href="2025_03_15_patch_127_analysis.md" class="analysis-link">Analysis</a>
+                    <a href="2025_03_15_patch_127.md" class="input-link">Input</a>
+                    Patch 127
+                </div>
+            </td>
+        </tr>
+
+        <tr>
+            <td class="category-header">Rewriter generated invalid code for constructing a span from an anonymous struct. <span class="patch-count">(1 patches)</span></td>
+            <td>
+                <div class="patch-item">
+                    <a href="2025_03_16_patch_13_analysis.md" class="analysis-link">Analysis</a>
+                    <a href="2025_03_16_patch_13.md" class="input-link">Input</a>
+                    Patch 13
+                </div>
+            </td>
+        </tr>
+
+        <tr>
+            <td class="category-header">Rewriter needs to generate code to construct a span from the address of a variable and a constant size. <span class="patch-count">(1 patches)</span></td>
+            <td>
+                <div class="patch-item">
+                    <a href="2025_03_14_patch_1485_analysis.md" class="analysis-link">Analysis</a>
+                    <a href="2025_03_14_patch_1485.md" class="input-link">Input</a>
+                    Patch 1485
+                </div>
+            </td>
+        </tr>
+
+        <tr>
+            <td class="category-header">Rewriter needs to support void type when rewriting raw pointer type to base::span. <span class="patch-count">(1 patches)</span></td>
+            <td>
+                <div class="patch-item">
+                    <a href="2025_03_15_patch_793_analysis.md" class="analysis-link">Analysis</a>
+                    <a href="2025_03_15_patch_793.md" class="input-link">Input</a>
+                    Patch 793
+                </div>
+            </td>
+        </tr>
+
+        <tr>
+            <td class="category-header">Rewriter failed to correctly convert a pointer to a span. <span class="patch-count">(1 patches)</span></td>
+            <td>
+                <div class="patch-item">
+                    <a href="2025_03_14_patch_1819_analysis.md" class="analysis-link">Analysis</a>
+                    <a href="2025_03_14_patch_1819.md" class="input-link">Input</a>
+                    Patch 1819
+                </div>
+            </td>
+        </tr>
+
+        <tr>
+            <td class="category-header">Rewriter is producing invalid reinterpret_cast from span to pointer. <span class="patch-count">(1 patches)</span></td>
+            <td>
+                <div class="patch-item">
+                    <a href="2025_03_16_patch_1194_analysis.md" class="analysis-link">Analysis</a>
+                    <a href="2025_03_16_patch_1194.md" class="input-link">Input</a>
+                    Patch 1194
+                </div>
+            </td>
+        </tr>
+
+        <tr>
+            <td class="category-header">Rewriter needs to handle std::array used in pointer arithmetic. <span class="patch-count">(1 patches)</span></td>
+            <td>
+                <div class="patch-item">
+                    <a href="2025_03_14_patch_1244_analysis.md" class="analysis-link">Analysis</a>
+                    <a href="2025_03_14_patch_1244.md" class="input-link">Input</a>
+                    Patch 1244
+                </div>
+            </td>
+        </tr>
+
+        <tr>
+            <td class="category-header">Rewriter needs to add explicit braces in multidimensional array initialization. <span class="patch-count">(1 patches)</span></td>
+            <td>
+                <div class="patch-item">
+                    <a href="2025_03_14_patch_30_analysis.md" class="analysis-link">Analysis</a>
+                    <a href="2025_03_14_patch_30.md" class="input-link">Input</a>
+                    Patch 30
+                </div>
+            </td>
+        </tr>
+
+        <tr>
+            <td class="category-header">Rewriter needs to avoid creating a span from a malloc'ed pointer directly. <span class="patch-count">(1 patches)</span></td>
+            <td>
+                <div class="patch-item">
+                    <a href="2025_03_16_patch_664_analysis.md" class="analysis-link">Analysis</a>
+                    <a href="2025_03_16_patch_664.md" class="input-link">Input</a>
+                    Patch 664
+                </div>
+            </td>
+        </tr>
+
+        <tr>
+            <td class="category-header">Rewriter needs to handle implicit conversion to base::span. <span class="patch-count">(1 patches)</span></td>
+            <td>
+                <div class="patch-item">
+                    <a href="2025_03_14_patch_859_analysis.md" class="analysis-link">Analysis</a>
+                    <a href="2025_03_14_patch_859.md" class="input-link">Input</a>
+                    Patch 859
+                </div>
+            </td>
+        </tr>
+
+        <tr>
+            <td class="category-header">Rewriter needs to handle spanified `uint8_t*` variable used with third_party openssl `CBB_finish` function. <span class="patch-count">(1 patches)</span></td>
+            <td>
+                <div class="patch-item">
+                    <a href="2025_03_14_patch_8_analysis.md" class="analysis-link">Analysis</a>
+                    <a href="2025_03_14_patch_8.md" class="input-link">Input</a>
+                    Patch 8
+                </div>
+            </td>
+        </tr>
+
+        <tr>
+            <td class="category-header">Rewriter needs to avoid redefining variables. <span class="patch-count">(1 patches)</span></td>
+            <td>
+                <div class="patch-item">
+                    <a href="2025_03_14_patch_1480_analysis.md" class="analysis-link">Analysis</a>
+                    <a href="2025_03_14_patch_1480.md" class="input-link">Input</a>
+                    Patch 1480
+                </div>
+            </td>
+        </tr>
+
+        <tr>
+            <td class="category-header">Rewriter needs to add `.data()` when performing pointer arithmetic on a spanified variable. <span class="patch-count">(1 patches)</span></td>
+            <td>
+                <div class="patch-item">
+                    <a href="2025_03_14_patch_289_analysis.md" class="analysis-link">Analysis</a>
+                    <a href="2025_03_14_patch_289.md" class="input-link">Input</a>
+                    Patch 289
+                </div>
+            </td>
+        </tr>
+
+        <tr>
+            <td class="category-header">Rewriter needs to avoid rewriting if the replacement causes errors. <span class="patch-count">(1 patches)</span></td>
+            <td>
+                <div class="patch-item">
+                    <a href="2025_03_15_patch_1450_analysis.md" class="analysis-link">Analysis</a>
+                    <a href="2025_03_15_patch_1450.md" class="input-link">Input</a>
+                    Patch 1450
+                </div>
+            </td>
+        </tr>
+
+        <tr>
+            <td class="category-header">Rewriter needs to use .data() when `base::span` is used in pointer arithmetic. <span class="patch-count">(1 patches)</span></td>
+            <td>
+                <div class="patch-item">
+                    <a href="2025_03_14_patch_1967_analysis.md" class="analysis-link">Analysis</a>
+                    <a href="2025_03_14_patch_1967.md" class="input-link">Input</a>
+                    Patch 1967
+                </div>
+            </td>
+        </tr>
+
+        <tr>
+            <td class="category-header">Rewriter needs to add `.data()` to arrayified `char[]` variable used with std::string. <span class="patch-count">(1 patches)</span></td>
+            <td>
+                <div class="patch-item">
+                    <a href="2025_03_14_patch_508_analysis.md" class="analysis-link">Analysis</a>
+                    <a href="2025_03_14_patch_508.md" class="input-link">Input</a>
+                    Patch 508
+                </div>
+            </td>
+        </tr>
+
+        <tr>
+            <td class="category-header">Rewriter needs to correctly handle spans of references. <span class="patch-count">(1 patches)</span></td>
+            <td>
+                <div class="patch-item">
+                    <a href="2025_03_14_patch_261_analysis.md" class="analysis-link">Analysis</a>
+                    <a href="2025_03_14_patch_261.md" class="input-link">Input</a>
+                    Patch 261
+                </div>
+            </td>
+        </tr>
+
+        <tr>
+            <td class="category-header">Rewriter should not introduce code that violates existing linting rules. <span class="patch-count">(1 patches)</span></td>
+            <td>
+                <div class="patch-item">
+                    <a href="2025_03_14_patch_820_analysis.md" class="analysis-link">Analysis</a>
+                    <a href="2025_03_14_patch_820.md" class="input-link">Input</a>
+                    Patch 820
+                </div>
+            </td>
+        </tr>
+
+        <tr>
+            <td class="category-header">Rewriter needs to ensure that bound arguments types match after array to std::array rewrite. <span class="patch-count">(1 patches)</span></td>
+            <td>
+                <div class="patch-item">
+                    <a href="2025_03_16_patch_1122_analysis.md" class="analysis-link">Analysis</a>
+                    <a href="2025_03_16_patch_1122.md" class="input-link">Input</a>
+                    Patch 1122
+                </div>
+            </td>
+        </tr>
+
+        <tr>
+            <td class="category-header">Rewriter needs to rewrite iterator loops to work with arrayified variables. <span class="patch-count">(1 patches)</span></td>
+            <td>
+                <div class="patch-item">
+                    <a href="2025_03_14_patch_1018_analysis.md" class="analysis-link">Analysis</a>
+                    <a href="2025_03_14_patch_1018.md" class="input-link">Input</a>
+                    Patch 1018
+                </div>
+            </td>
+        </tr>
+
+        <tr>
+            <td class="category-header">Rewriter needs to add .data() when converting a C-style array to base::span. <span class="patch-count">(1 patches)</span></td>
+            <td>
+                <div class="patch-item">
+                    <a href="2025_03_14_patch_1343_analysis.md" class="analysis-link">Analysis</a>
+                    <a href="2025_03_14_patch_1343.md" class="input-link">Input</a>
+                    Patch 1343
+                </div>
+            </td>
+        </tr>
+
+        <tr>
+            <td class="category-header">Rewriter needs to ensure type compatibility when incrementing the loop iterator after spanification. <span class="patch-count">(1 patches)</span></td>
+            <td>
+                <div class="patch-item">
+                    <a href="2025_03_14_patch_611_analysis.md" class="analysis-link">Analysis</a>
+                    <a href="2025_03_14_patch_611.md" class="input-link">Input</a>
+                    Patch 611
+                </div>
+            </td>
+        </tr>
+
+        <tr>
+            <td class="category-header">Rewriter needs to transform C-style arrays into pointers when calling third_party code. <span class="patch-count">(1 patches)</span></td>
+            <td>
+                <div class="patch-item">
+                    <a href="2025_03_16_patch_939_analysis.md" class="analysis-link">Analysis</a>
+                    <a href="2025_03_16_patch_939.md" class="input-link">Input</a>
+                    Patch 939
+                </div>
+            </td>
+        </tr>
+
+        <tr>
+            <td class="category-header">Rewriter needs to generate correct initialization code for `std::array` when replacing a C-style array. <span class="patch-count">(1 patches)</span></td>
+            <td>
+                <div class="patch-item">
+                    <a href="2025_03_14_patch_2019_analysis.md" class="analysis-link">Analysis</a>
+                    <a href="2025_03_14_patch_2019.md" class="input-link">Input</a>
+                    Patch 2019
+                </div>
+            </td>
+        </tr>
+
+        <tr>
+            <td class="category-header">Rewriter needs to avoid reinterpret_cast from 'base::span' to 'uintptr_t'. <span class="patch-count">(1 patches)</span></td>
+            <td>
+                <div class="patch-item">
+                    <a href="2025_03_15_patch_1183_analysis.md" class="analysis-link">Analysis</a>
+                    <a href="2025_03_15_patch_1183.md" class="input-link">Input</a>
+                    Patch 1183
+                </div>
+            </td>
+        </tr>
+
+        <tr>
+            <td class="category-header">Rewriter needs to avoid spanifying fields if it requires spanifying excluded code. <span class="patch-count">(1 patches)</span></td>
+            <td>
+                <div class="patch-item">
+                    <a href="2025_03_14_patch_789_analysis.md" class="analysis-link">Analysis</a>
+                    <a href="2025_03_14_patch_789.md" class="input-link">Input</a>
+                    Patch 789
+                </div>
+            </td>
+        </tr>
+
+        <tr>
+            <td class="category-header">Rewriter needs to handle conversion from C-style array to span. <span class="patch-count">(1 patches)</span></td>
+            <td>
+                <div class="patch-item">
+                    <a href="2025_03_14_patch_323_analysis.md" class="analysis-link">Analysis</a>
+                    <a href="2025_03_14_patch_323.md" class="input-link">Input</a>
+                    Patch 323
+                </div>
+            </td>
+        </tr>
+
+        <tr>
+            <td class="category-header">Rewriter needs to avoid using reinterpret_cast with span. <span class="patch-count">(1 patches)</span></td>
+            <td>
+                <div class="patch-item">
+                    <a href="2025_03_16_patch_1193_analysis.md" class="analysis-link">Analysis</a>
+                    <a href="2025_03_16_patch_1193.md" class="input-link">Input</a>
+                    Patch 1193
+                </div>
+            </td>
+        </tr>
+
+        <tr>
+            <td class="category-header">Overlapping replacements due to multiple variable declaration. <span class="patch-count">(1 patches)</span></td>
+            <td>
+                <div class="patch-item">
+                    <a href="2025_03_14_patch_231_analysis.md" class="analysis-link">Analysis</a>
+                    <a href="2025_03_14_patch_231.md" class="input-link">Input</a>
+                    Patch 231
+                </div>
+            </td>
+        </tr>
+
+        <tr>
+            <td class="category-header">Rewriter needs to add .data() to arrayified `char[]` variable used with std::find. <span class="patch-count">(1 patches)</span></td>
+            <td>
+                <div class="patch-item">
+                    <a href="2025_03_14_patch_1416_analysis.md" class="analysis-link">Analysis</a>
+                    <a href="2025_03_14_patch_1416.md" class="input-link">Input</a>
+                    Patch 1416
+                </div>
+            </td>
+        </tr>
+
+        <tr>
+            <td class="category-header">Rewriter needs to handle string constants correctly. <span class="patch-count">(1 patches)</span></td>
+            <td>
+                <div class="patch-item">
+                    <a href="2025_03_14_patch_292_analysis.md" class="analysis-link">Analysis</a>
+                    <a href="2025_03_14_patch_292.md" class="input-link">Input</a>
+                    Patch 292
+                </div>
+            </td>
+        </tr>
+
+        <tr>
+            <td class="category-header">Rewriter needs to use a compatible type when iterating over container with span. <span class="patch-count">(1 patches)</span></td>
+            <td>
+                <div class="patch-item">
+                    <a href="2025_03_14_patch_1024_analysis.md" class="analysis-link">Analysis</a>
+                    <a href="2025_03_14_patch_1024.md" class="input-link">Input</a>
+                    Patch 1024
+                </div>
+            </td>
+        </tr>
+
+        <tr>
+            <td class="category-header">Rewriter needs to account for existing casts to `unsigned char*` when spanifying. <span class="patch-count">(1 patches)</span></td>
+            <td>
+                <div class="patch-item">
+                    <a href="2025_03_14_patch_920_analysis.md" class="analysis-link">Analysis</a>
+                    <a href="2025_03_14_patch_920.md" class="input-link">Input</a>
+                    Patch 920
+                </div>
+            </td>
+        </tr>
+
+        <tr>
+            <td class="category-header">Rewriter needs to generate code to construct a span from the raw pointer variable used in function call. <span class="patch-count">(1 patches)</span></td>
+            <td>
+                <div class="patch-item">
+                    <a href="2025_03_15_patch_903_analysis.md" class="analysis-link">Analysis</a>
+                    <a href="2025_03_15_patch_903.md" class="input-link">Input</a>
+                    Patch 903
+                </div>
+            </td>
+        </tr>
+
+        <tr>
+            <td class="category-header">Rewriter needs to avoid pointer arithmetic on spanified variables. <span class="patch-count">(1 patches)</span></td>
+            <td>
+                <div class="patch-item">
+                    <a href="2025_03_14_patch_1782_analysis.md" class="analysis-link">Analysis</a>
+                    <a href="2025_03_14_patch_1782.md" class="input-link">Input</a>
+                    Patch 1782
+                </div>
+            </td>
+        </tr>
+
+        <tr>
+            <td class="category-header">The rewriter is not handling implicit conversions from raw pointers to `base::span`. <span class="patch-count">(1 patches)</span></td>
+            <td>
+                <div class="patch-item">
+                    <a href="2025_03_15_patch_1107_analysis.md" class="analysis-link">Analysis</a>
+                    <a href="2025_03_15_patch_1107.md" class="input-link">Input</a>
+                    Patch 1107
+                </div>
+            </td>
+        </tr>
+
+        <tr>
+            <td class="category-header">Rewriter needs to handle spanified variables being passed to functions expecting `uint8_t**` <span class="patch-count">(1 patches)</span></td>
+            <td>
+                <div class="patch-item">
+                    <a href="2025_03_14_patch_534_analysis.md" class="analysis-link">Analysis</a>
+                    <a href="2025_03_14_patch_534.md" class="input-link">Input</a>
+                    Patch 534
+                </div>
+            </td>
+        </tr>
+
+        <tr>
+            <td class="category-header">Rewriter needs to handle conversion from std::array to pointer when calling memcpy. <span class="patch-count">(1 patches)</span></td>
+            <td>
+                <div class="patch-item">
+                    <a href="2025_03_14_patch_1877_analysis.md" class="analysis-link">Analysis</a>
+                    <a href="2025_03_14_patch_1877.md" class="input-link">Input</a>
+                    Patch 1877
+                </div>
+            </td>
+        </tr>
+
+        <tr>
+            <td class="category-header">Rewriter needs to account for `std::to_array` when generating the `std::end` iterator <span class="patch-count">(1 patches)</span></td>
+            <td>
+                <div class="patch-item">
+                    <a href="2025_03_14_patch_70_analysis.md" class="analysis-link">Analysis</a>
+                    <a href="2025_03_14_patch_70.md" class="input-link">Input</a>
+                    Patch 70
+                </div>
+            </td>
+        </tr>
+
+        <tr>
+            <td class="category-header">Rewriter needs to preserve the signedness of the underlying type when using std::array. <span class="patch-count">(1 patches)</span></td>
+            <td>
+                <div class="patch-item">
+                    <a href="2025_03_15_patch_1948_analysis.md" class="analysis-link">Analysis</a>
+                    <a href="2025_03_15_patch_1948.md" class="input-link">Input</a>
+                    Patch 1948
+                </div>
+            </td>
+        </tr>
+
+        <tr>
+            <td class="category-header">Rewriter needs to add `.data()` when converting an argument to base::span, but the argument is used in a macro. <span class="patch-count">(1 patches)</span></td>
+            <td>
+                <div class="patch-item">
+                    <a href="2025_03_15_patch_427_analysis.md" class="analysis-link">Analysis</a>
+                    <a href="2025_03_15_patch_427.md" class="input-link">Input</a>
+                    Patch 427
+                </div>
+            </td>
+        </tr>
+
+        <tr>
+            <td class="category-header">Rewriter needs to provide a size argument to `std::array`. <span class="patch-count">(1 patches)</span></td>
+            <td>
+                <div class="patch-item">
+                    <a href="2025_03_14_patch_621_analysis.md" class="analysis-link">Analysis</a>
+                    <a href="2025_03_14_patch_621.md" class="input-link">Input</a>
+                    Patch 621
+                </div>
+            </td>
+        </tr>
+
+        <tr>
+            <td class="category-header">Rewriter caused invalid initialization of a nested array within `std::array`. <span class="patch-count">(1 patches)</span></td>
+            <td>
+                <div class="patch-item">
+                    <a href="2025_03_14_patch_371_analysis.md" class="analysis-link">Analysis</a>
+                    <a href="2025_03_14_patch_371.md" class="input-link">Input</a>
+                    Patch 371
+                </div>
+            </td>
+        </tr>
+
+        <tr>
+            <td class="category-header">Rewriter is using system headers inside a C++ class declaration, leading to syntax errors. <span class="patch-count">(1 patches)</span></td>
+            <td>
+                <div class="patch-item">
+                    <a href="2025_03_14_patch_468_analysis.md" class="analysis-link">Analysis</a>
+                    <a href="2025_03_14_patch_468.md" class="input-link">Input</a>
+                    Patch 468
+                </div>
+            </td>
+        </tr>
+
+        <tr>
+            <td class="category-header">Rewriter needs to call constructor when arrayifying a variable. <span class="patch-count">(1 patches)</span></td>
+            <td>
+                <div class="patch-item">
+                    <a href="2025_03_13_patch_454_analysis.md" class="analysis-link">Analysis</a>
+                    <a href="2025_03_13_patch_454.md" class="input-link">Input</a>
+                    Patch 454
+                </div>
+            </td>
+        </tr>
+
+        <tr>
+            <td class="category-header">Uncategorized <span class="patch-count">(1 patches)</span></td>
+            <td>
+                <div class="patch-item">
+                    <a href="2025_03_16_patch_1347_analysis.md" class="analysis-link">Analysis</a>
+                    <a href="2025_03_16_patch_1347.md" class="input-link">Input</a>
+                    Patch 1347
+                </div>
+            </td>
+        </tr>
+
+        <tr>
+            <td class="category-header">Rewriter needs to handle address of an arrayified variable passed into a function. <span class="patch-count">(1 patches)</span></td>
+            <td>
+                <div class="patch-item">
+                    <a href="2025_03_16_patch_1183_analysis.md" class="analysis-link">Analysis</a>
+                    <a href="2025_03_16_patch_1183.md" class="input-link">Input</a>
+                    Patch 1183
+                </div>
+            </td>
+        </tr>
+
+        <tr>
+            <td class="category-header">Rewriter needs to use braces around initialization of subobject in array initialization. <span class="patch-count">(1 patches)</span></td>
+            <td>
+                <div class="patch-item">
+                    <a href="2025_03_15_patch_763_analysis.md" class="analysis-link">Analysis</a>
+                    <a href="2025_03_15_patch_763.md" class="input-link">Input</a>
+                    Patch 763
+                </div>
+            </td>
+        </tr>
+
+        <tr>
+            <td class="category-header">Rewriter needs to generate .data() to access the underlying pointer from span in pointer arithmetic. <span class="patch-count">(1 patches)</span></td>
+            <td>
+                <div class="patch-item">
+                    <a href="2025_03_14_patch_157_analysis.md" class="analysis-link">Analysis</a>
+                    <a href="2025_03_14_patch_157.md" class="input-link">Input</a>
+                    Patch 157
+                </div>
+            </td>
+        </tr>
+
+        <tr>
+            <td class="category-header">Rewriter needs to support conversion from std::array<const char*> to base::span<char* const> <span class="patch-count">(1 patches)</span></td>
+            <td>
+                <div class="patch-item">
+                    <a href="2025_03_14_patch_1770_analysis.md" class="analysis-link">Analysis</a>
+                    <a href="2025_03_14_patch_1770.md" class="input-link">Input</a>
+                    Patch 1770
+                </div>
+            </td>
+        </tr>
+
+        <tr>
+            <td class="category-header">Rewriter needs to support implicit conversion from vector to span. <span class="patch-count">(1 patches)</span></td>
+            <td>
+                <div class="patch-item">
+                    <a href="2025_03_16_patch_119_analysis.md" class="analysis-link">Analysis</a>
+                    <a href="2025_03_16_patch_119.md" class="input-link">Input</a>
+                    Patch 119
+                </div>
+            </td>
+        </tr>
+
+        <tr>
+            <td class="category-header">Rewriter needs to use .data() to get a pointer from the span before doing pointer arithmetic. <span class="patch-count">(1 patches)</span></td>
+            <td>
+                <div class="patch-item">
+                    <a href="2025_03_14_patch_302_analysis.md" class="analysis-link">Analysis</a>
+                    <a href="2025_03_14_patch_302.md" class="input-link">Input</a>
+                    Patch 302
+                </div>
+            </td>
+        </tr>
+
+        <tr>
+            <td class="category-header">Rewriter needs to correctly handle accessing std::array member with std::extent. <span class="patch-count">(1 patches)</span></td>
+            <td>
+                <div class="patch-item">
+                    <a href="2025_03_14_patch_66_analysis.md" class="analysis-link">Analysis</a>
+                    <a href="2025_03_14_patch_66.md" class="input-link">Input</a>
+                    Patch 66
+                </div>
+            </td>
+        </tr>
+
+        <tr>
+            <td class="category-header">Rewriter needs to use fully qualified name inside std::to_array. <span class="patch-count">(1 patches)</span></td>
+            <td>
+                <div class="patch-item">
+                    <a href="2025_03_14_patch_740_analysis.md" class="analysis-link">Analysis</a>
+                    <a href="2025_03_14_patch_740.md" class="input-link">Input</a>
+                    Patch 740
+                </div>
+            </td>
+        </tr>
+
+        <tr>
+            <td class="category-header">Rewriter encountered a case where it failed to add .data() when converting a C-style array to std::array in memcmp. <span class="patch-count">(1 patches)</span></td>
+            <td>
+                <div class="patch-item">
+                    <a href="2025_03_16_patch_40_analysis.md" class="analysis-link">Analysis</a>
+                    <a href="2025_03_16_patch_40.md" class="input-link">Input</a>
+                    Patch 40
+                </div>
+            </td>
+        </tr>
+
+        <tr>
+            <td class="category-header">Rewriter introduced invalid syntax by attempting to specify an anonymous struct inline in a type declaration. <span class="patch-count">(1 patches)</span></td>
+            <td>
+                <div class="patch-item">
+                    <a href="2025_03_14_patch_288_analysis.md" class="analysis-link">Analysis</a>
+                    <a href="2025_03_14_patch_288.md" class="input-link">Input</a>
+                    Patch 288
+                </div>
+            </td>
+        </tr>
+
+        <tr>
+            <td class="category-header">Rewriter needs to add .data() when converting a C-style array to std::array in a non-third_party function call. <span class="patch-count">(1 patches)</span></td>
+            <td>
+                <div class="patch-item">
+                    <a href="2025_03_14_patch_637_analysis.md" class="analysis-link">Analysis</a>
+                    <a href="2025_03_14_patch_637.md" class="input-link">Input</a>
+                    Patch 637
+                </div>
+            </td>
+        </tr>
+
+        <tr>
+            <td class="category-header">Rewriter needs to avoid use of iterators on base::span <span class="patch-count">(1 patches)</span></td>
+            <td>
+                <div class="patch-item">
+                    <a href="2025_03_14_patch_542_analysis.md" class="analysis-link">Analysis</a>
+                    <a href="2025_03_14_patch_542.md" class="input-link">Input</a>
+                    Patch 542
+                </div>
+            </td>
+        </tr>
+
+        <tr>
+            <td class="category-header">Rewriter needs to add .data() to arrayified `char[]` variable used with std::string subspan(). <span class="patch-count">(1 patches)</span></td>
+            <td>
+                <div class="patch-item">
+                    <a href="2025_03_14_patch_694_analysis.md" class="analysis-link">Analysis</a>
+                    <a href="2025_03_14_patch_694.md" class="input-link">Input</a>
+                    Patch 694
+                </div>
+            </td>
+        </tr>
+
+        <tr>
+            <td class="category-header">Rewriter needs to recognize arrayified variable and use .data() on that to pass to function call. <span class="patch-count">(1 patches)</span></td>
+            <td>
+                <div class="patch-item">
+                    <a href="2025_03_14_patch_669_analysis.md" class="analysis-link">Analysis</a>
+                    <a href="2025_03_14_patch_669.md" class="input-link">Input</a>
+                    Patch 669
+                </div>
+            </td>
+        </tr>
+
+        <tr>
+            <td class="category-header">Rewriter needs to add .data() when calling spanified functions with C-style arrays. <span class="patch-count">(1 patches)</span></td>
+            <td>
+                <div class="patch-item">
+                    <a href="2025_03_14_patch_1784_analysis.md" class="analysis-link">Analysis</a>
+                    <a href="2025_03_14_patch_1784.md" class="input-link">Input</a>
+                    Patch 1784
+                </div>
+            </td>
+        </tr>
+
+        <tr>
+            <td class="category-header">Rewriter needs to account for `std::string_view` -> `base::span<uint8_t>` conversion. <span class="patch-count">(1 patches)</span></td>
+            <td>
+                <div class="patch-item">
+                    <a href="2025_03_15_patch_849_analysis.md" class="analysis-link">Analysis</a>
+                    <a href="2025_03_15_patch_849.md" class="input-link">Input</a>
+                    Patch 849
+                </div>
+            </td>
+        </tr>
+
+        <tr>
+            <td class="category-header">Rewriter needs to use .data() to access raw pointer in iterator loops for spanified code. <span class="patch-count">(1 patches)</span></td>
+            <td>
+                <div class="patch-item">
+                    <a href="2025_03_14_patch_325_analysis.md" class="analysis-link">Analysis</a>
+                    <a href="2025_03_14_patch_325.md" class="input-link">Input</a>
+                    Patch 325
+                </div>
+            </td>
+        </tr>
+
+        <tr>
+            <td class="category-header">Rewriter needs to handle `.data()` when calling non-third-party methods on C-style arrays. <span class="patch-count">(1 patches)</span></td>
+            <td>
+                <div class="patch-item">
+                    <a href="2025_03_14_patch_688_analysis.md" class="analysis-link">Analysis</a>
+                    <a href="2025_03_14_patch_688.md" class="input-link">Input</a>
+                    Patch 688
+                </div>
+            </td>
+        </tr>
+
+        <tr>
+            <td class="category-header">Rewriter needs to create an iterator from `std::begin()` and `std::end()` <span class="patch-count">(1 patches)</span></td>
+            <td>
+                <div class="patch-item">
+                    <a href="2025_03_15_patch_886_analysis.md" class="analysis-link">Analysis</a>
+                    <a href="2025_03_15_patch_886.md" class="input-link">Input</a>
+                    Patch 886
+                </div>
+            </td>
+        </tr>
+
+        <tr>
+            <td class="category-header">Rewriter needs to add .data() when converting a `std::array` to a raw pointer in a system library function call. <span class="patch-count">(1 patches)</span></td>
+            <td>
+                <div class="patch-item">
+                    <a href="2025_03_14_patch_1052_analysis.md" class="analysis-link">Analysis</a>
+                    <a href="2025_03_14_patch_1052.md" class="input-link">Input</a>
+                    Patch 1052
+                </div>
+            </td>
+        </tr>
+
+        <tr>
+            <td class="category-header">Rewriter needs to avoid pointer arithmetic on spans and account for size. <span class="patch-count">(1 patches)</span></td>
+            <td>
+                <div class="patch-item">
+                    <a href="2025_03_16_patch_681_analysis.md" class="analysis-link">Analysis</a>
+                    <a href="2025_03_16_patch_681.md" class="input-link">Input</a>
+                    Patch 681
+                </div>
+            </td>
+        </tr>
+
+        <tr>
+            <td class="category-header">Rewriter needs to add .data() to arrayified `char[]` variable used with std::span. <span class="patch-count">(1 patches)</span></td>
+            <td>
+                <div class="patch-item">
+                    <a href="2025_03_15_patch_623_analysis.md" class="analysis-link">Analysis</a>
+                    <a href="2025_03_15_patch_623.md" class="input-link">Input</a>
+                    Patch 623
+                </div>
+            </td>
+        </tr>
+
+        <tr>
+            <td class="category-header">Rewriter needs to check for the existence of subspan() method before adding it. <span class="patch-count">(1 patches)</span></td>
+            <td>
+                <div class="patch-item">
+                    <a href="2025_03_14_patch_1098_analysis.md" class="analysis-link">Analysis</a>
+                    <a href="2025_03_14_patch_1098.md" class="input-link">Input</a>
+                    Patch 1098
+                </div>
+            </td>
+        </tr>
+
+        <tr>
+            <td class="category-header">Rewriter needs to construct a span from the raw pointer and size rather than assigning the pointer directly. <span class="patch-count">(1 patches)</span></td>
+            <td>
+                <div class="patch-item">
+                    <a href="2025_03_14_patch_1129_analysis.md" class="analysis-link">Analysis</a>
+                    <a href="2025_03_14_patch_1129.md" class="input-link">Input</a>
+                    Patch 1129
+                </div>
+            </td>
+        </tr>
+
+        <tr>
+            <td class="category-header">Rewriter needs to initialize of spanified member field to {}. <span class="patch-count">(1 patches)</span></td>
+            <td>
+                <div class="patch-item">
+                    <a href="2025_03_16_patch_302_analysis.md" class="analysis-link">Analysis</a>
+                    <a href="2025_03_16_patch_302.md" class="input-link">Input</a>
+                    Patch 302
+                </div>
+            </td>
+        </tr>
+
+        <tr>
+            <td class="category-header">Rewriter needs to handle array types for `byte_span_from_cstring`. <span class="patch-count">(1 patches)</span></td>
+            <td>
+                <div class="patch-item">
+                    <a href="2025_03_15_patch_1595_analysis.md" class="analysis-link">Analysis</a>
+                    <a href="2025_03_15_patch_1595.md" class="input-link">Input</a>
+                    Patch 1595
+                </div>
+            </td>
+        </tr>
+
+        <tr>
+            <td class="category-header">Rewriter needs to account for arithmetic operations between `std::array` and `size_t`. <span class="patch-count">(1 patches)</span></td>
+            <td>
+                <div class="patch-item">
+                    <a href="2025_03_15_patch_1054_analysis.md" class="analysis-link">Analysis</a>
+                    <a href="2025_03_15_patch_1054.md" class="input-link">Input</a>
+                    Patch 1054
+                </div>
+            </td>
+        </tr>
+
+        <tr>
+            <td class="category-header">Rewriter needs to use .data() on results of getBuffer(). <span class="patch-count">(1 patches)</span></td>
+            <td>
+                <div class="patch-item">
+                    <a href="2025_03_14_patch_194_analysis.md" class="analysis-link">Analysis</a>
+                    <a href="2025_03_14_patch_194.md" class="input-link">Input</a>
+                    Patch 194
+                </div>
+            </td>
+        </tr>
+
+        <tr>
+            <td class="category-header">Rewriter needs to support member field assignment on `std::array` variables. <span class="patch-count">(1 patches)</span></td>
+            <td>
+                <div class="patch-item">
+                    <a href="2025_03_14_patch_350_analysis.md" class="analysis-link">Analysis</a>
+                    <a href="2025_03_14_patch_350.md" class="input-link">Input</a>
+                    Patch 350
+                </div>
+            </td>
+        </tr>
+
+        <tr>
+            <td class="category-header">Span conversion caused unused variable. <span class="patch-count">(1 patches)</span></td>
+            <td>
+                <div class="patch-item">
+                    <a href="2025_03_14_patch_995_analysis.md" class="analysis-link">Analysis</a>
+                    <a href="2025_03_14_patch_995.md" class="input-link">Input</a>
+                    Patch 995
+                </div>
+            </td>
+        </tr>
+
+        <tr>
+            <td class="category-header">Rewriter needs to avoid spanifying return value of third_party function where resulting span is not compatible. <span class="patch-count">(1 patches)</span></td>
+            <td>
+                <div class="patch-item">
+                    <a href="2025_03_14_patch_284_analysis.md" class="analysis-link">Analysis</a>
+                    <a href="2025_03_14_patch_284.md" class="input-link">Input</a>
+                    Patch 284
+                </div>
+            </td>
+        </tr>
+
+        <tr>
+            <td class="category-header">Rewriter needs to add `.data()` to arrayified `char[]` variable used with `base::StartsWith`. <span class="patch-count">(1 patches)</span></td>
+            <td>
+                <div class="patch-item">
+                    <a href="2025_03_14_patch_152_analysis.md" class="analysis-link">Analysis</a>
+                    <a href="2025_03_14_patch_152.md" class="input-link">Input</a>
+                    Patch 152
+                </div>
+            </td>
+        </tr>
+
+        <tr>
+            <td class="category-header">Rewriter is adding std::array without a specified size. <span class="patch-count">(1 patches)</span></td>
+            <td>
+                <div class="patch-item">
+                    <a href="2025_03_14_patch_1112_analysis.md" class="analysis-link">Analysis</a>
+                    <a href="2025_03_14_patch_1112.md" class="input-link">Input</a>
+                    Patch 1112
+                </div>
+            </td>
+        </tr>
+    </table>
+</body>
+</html>

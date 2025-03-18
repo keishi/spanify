@@ -3,167 +3,254 @@
         {
             "id": 0,
             "replacement": "r:::tools/clang/spanify/tests/fct-decl-tests-original.cc:::754:::3:::base::span<S>",
+            "replacements": [
+                "r:::tools/clang/spanify/tests/fct-decl-tests-original.cc:::754:::3:::base::span<S>",
+                "include-user-header:::tools/clang/spanify/tests/fct-decl-tests-original.cc:::-1:::-1:::base/containers/span.h"
+            ],
             "size_info_available": true,
             "visited": true,
             "debug_info": {
                 "rewrite_applied": true,
                 "original_is_buffer": false,
                 "original_size_info_available": null
-            }
+            },
+            "node_types": []
         },
         {
             "id": 1,
             "replacement": "r:::tools/clang/spanify/tests/fct-decl-tests-original.cc:::586:::3:::base::span<S>",
+            "replacements": [
+                "r:::tools/clang/spanify/tests/fct-decl-tests-original.cc:::586:::3:::base::span<S>",
+                "include-user-header:::tools/clang/spanify/tests/fct-decl-tests-original.cc:::-1:::-1:::base/containers/span.h"
+            ],
             "size_info_available": true,
             "visited": true,
             "debug_info": {
                 "rewrite_applied": true,
                 "original_is_buffer": false,
                 "original_size_info_available": null
-            }
+            },
+            "node_types": []
         },
         {
             "id": 2,
             "replacement": "r:::tools/clang/spanify/tests/fct-decl-tests-original.cc:::314:::9:::base::span<const S>",
+            "replacements": [
+                "r:::tools/clang/spanify/tests/fct-decl-tests-original.cc:::314:::9:::base::span<const S>",
+                "include-user-header:::tools/clang/spanify/tests/fct-decl-tests-original.cc:::-1:::-1:::base/containers/span.h"
+            ],
             "size_info_available": true,
             "visited": true,
             "debug_info": {
                 "rewrite_applied": true,
                 "original_is_buffer": false,
                 "original_size_info_available": null
-            }
+            },
+            "node_types": []
         },
         {
             "id": 3,
             "replacement": "r:::tools/clang/spanify/tests/fct-decl-tests-original.cc:::339:::3:::base::span<S>",
+            "replacements": [
+                "r:::tools/clang/spanify/tests/fct-decl-tests-original.cc:::339:::3:::base::span<S>",
+                "include-user-header:::tools/clang/spanify/tests/fct-decl-tests-original.cc:::-1:::-1:::base/containers/span.h"
+            ],
             "size_info_available": null,
             "visited": false,
             "debug_info": {
                 "rewrite_applied": false,
                 "original_is_buffer": false,
                 "original_size_info_available": null
-            }
+            },
+            "node_types": []
         },
         {
             "id": 4,
             "replacement": "r:::tools/clang/spanify/tests/fct-decl-tests-original.cc:::829:::2:::base::span<S>",
+            "replacements": [
+                "r:::tools/clang/spanify/tests/fct-decl-tests-original.cc:::829:::2:::base::span<S>",
+                "include-user-header:::tools/clang/spanify/tests/fct-decl-tests-original.cc:::-1:::-1:::base/containers/span.h"
+            ],
             "size_info_available": true,
             "visited": true,
             "debug_info": {
                 "rewrite_applied": true,
                 "original_is_buffer": false,
                 "original_size_info_available": null
-            }
+            },
+            "node_types": [
+                "source"
+            ]
         },
         {
             "id": 5,
             "replacement": "r:::tools/clang/spanify/tests/fct-decl-tests-original.cc:::1172:::2:::base::span<S>",
+            "replacements": [
+                "r:::tools/clang/spanify/tests/fct-decl-tests-original.cc:::1172:::2:::base::span<S>",
+                "include-user-header:::tools/clang/spanify/tests/fct-decl-tests-original.cc:::-1:::-1:::base/containers/span.h"
+            ],
             "size_info_available": true,
             "visited": true,
             "debug_info": {
                 "rewrite_applied": true,
                 "original_is_buffer": false,
                 "original_size_info_available": null
-            }
+            },
+            "node_types": []
         },
         {
             "id": 6,
             "replacement": "r:::tools/clang/spanify/tests/fct-decl-tests-original.cc:::1238:::7:::{}",
+            "replacements": [
+                "r:::tools/clang/spanify/tests/fct-decl-tests-original.cc:::1238:::7:::{}",
+                "include-user-header:::tools/clang/spanify/tests/fct-decl-tests-original.cc:::-1:::-1:::base/containers/span.h"
+            ],
             "size_info_available": true,
             "visited": true,
             "debug_info": {
                 "rewrite_applied": true,
                 "original_is_buffer": false,
                 "original_size_info_available": null
-            }
+            },
+            "node_types": [
+                "sink"
+            ]
         },
         {
             "id": 7,
             "replacement": "r:::tools/clang/spanify/tests/fct-decl-tests-original.cc:::1536:::7:::base::raw_span",
+            "replacements": [
+                "r:::tools/clang/spanify/tests/fct-decl-tests-original.cc:::1536:::7:::base::raw_span",
+                "include-user-header:::tools/clang/spanify/tests/fct-decl-tests-original.cc:::-1:::-1:::base/memory/raw_span.h"
+            ],
             "size_info_available": true,
             "visited": true,
             "debug_info": {
                 "rewrite_applied": true,
                 "original_is_buffer": false,
                 "original_size_info_available": null
-            }
+            },
+            "node_types": [
+                "source"
+            ]
         },
         {
             "id": 8,
             "replacement": "r:::tools/clang/spanify/tests/fct-decl-tests-original.cc:::1796:::7:::{}",
+            "replacements": [
+                "r:::tools/clang/spanify/tests/fct-decl-tests-original.cc:::1796:::7:::{}",
+                "include-user-header:::tools/clang/spanify/tests/fct-decl-tests-original.cc:::-1:::-1:::base/containers/span.h"
+            ],
             "size_info_available": true,
             "visited": true,
             "debug_info": {
                 "rewrite_applied": true,
                 "original_is_buffer": false,
                 "original_size_info_available": null
-            }
+            },
+            "node_types": [
+                "sink"
+            ]
         },
         {
             "id": 9,
             "replacement": "r:::tools/clang/spanify/tests/fct-decl-tests-original.cc:::1642:::7:::{}",
+            "replacements": [
+                "r:::tools/clang/spanify/tests/fct-decl-tests-original.cc:::1642:::7:::{}",
+                "include-user-header:::tools/clang/spanify/tests/fct-decl-tests-original.cc:::-1:::-1:::base/containers/span.h"
+            ],
             "size_info_available": true,
             "visited": true,
             "debug_info": {
                 "rewrite_applied": true,
                 "original_is_buffer": false,
                 "original_size_info_available": null
-            }
+            },
+            "node_types": [
+                "sink"
+            ]
         },
         {
             "id": 10,
             "replacement": "r:::tools/clang/spanify/tests/fct-decl-tests-original.cc:::679:::2:::base::span<S>",
+            "replacements": [
+                "r:::tools/clang/spanify/tests/fct-decl-tests-original.cc:::679:::2:::base::span<S>",
+                "include-user-header:::tools/clang/spanify/tests/fct-decl-tests-original.cc:::-1:::-1:::base/containers/span.h"
+            ],
             "size_info_available": true,
             "visited": true,
             "debug_info": {
                 "rewrite_applied": true,
                 "original_is_buffer": false,
                 "original_size_info_available": null
-            }
+            },
+            "node_types": []
         },
         {
             "id": 11,
             "replacement": "r:::tools/clang/spanify/tests/fct-decl-tests-original.cc:::1098:::2:::base::span<S>",
+            "replacements": [
+                "r:::tools/clang/spanify/tests/fct-decl-tests-original.cc:::1098:::2:::base::span<S>",
+                "include-user-header:::tools/clang/spanify/tests/fct-decl-tests-original.cc:::-1:::-1:::base/containers/span.h"
+            ],
             "size_info_available": true,
             "visited": true,
             "debug_info": {
                 "rewrite_applied": true,
                 "original_is_buffer": false,
                 "original_size_info_available": null
-            }
+            },
+            "node_types": []
         },
         {
             "id": 12,
             "replacement": "r:::tools/clang/spanify/tests/fct-decl-tests-original.cc:::1355:::9:::base::span<const S>",
+            "replacements": [
+                "r:::tools/clang/spanify/tests/fct-decl-tests-original.cc:::1355:::9:::base::span<const S>",
+                "include-user-header:::tools/clang/spanify/tests/fct-decl-tests-original.cc:::-1:::-1:::base/containers/span.h"
+            ],
             "size_info_available": true,
             "visited": true,
             "debug_info": {
                 "rewrite_applied": true,
                 "original_is_buffer": false,
                 "original_size_info_available": null
-            }
+            },
+            "node_types": [
+                "source"
+            ]
         },
         {
             "id": 13,
             "replacement": "r:::tools/clang/spanify/tests/fct-decl-tests-original.cc:::1380:::3:::base::span<S>",
+            "replacements": [
+                "r:::tools/clang/spanify/tests/fct-decl-tests-original.cc:::1380:::3:::base::span<S>",
+                "include-user-header:::tools/clang/spanify/tests/fct-decl-tests-original.cc:::-1:::-1:::base/containers/span.h"
+            ],
             "size_info_available": null,
             "visited": false,
             "debug_info": {
                 "rewrite_applied": false,
                 "original_is_buffer": false,
                 "original_size_info_available": null
-            }
+            },
+            "node_types": []
         },
         {
             "id": 14,
             "replacement": "r:::tools/clang/spanify/tests/fct-decl-tests-original.cc:::442:::7:::base::raw_span",
+            "replacements": [
+                "r:::tools/clang/spanify/tests/fct-decl-tests-original.cc:::442:::7:::base::raw_span",
+                "include-user-header:::tools/clang/spanify/tests/fct-decl-tests-original.cc:::-1:::-1:::base/memory/raw_span.h"
+            ],
             "size_info_available": true,
             "visited": true,
             "debug_info": {
                 "rewrite_applied": true,
                 "original_is_buffer": false,
                 "original_size_info_available": null
-            }
+            },
+            "node_types": []
         }
     ],
     "links": [
@@ -205,11 +292,11 @@
         },
         {
             "source": 5,
-            "target": 10
+            "target": 6
         },
         {
             "source": 5,
-            "target": 6
+            "target": 10
         },
         {
             "source": 7,

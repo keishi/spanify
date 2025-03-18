@@ -3,288 +3,450 @@
         {
             "id": 0,
             "replacement": "r:::tools/clang/spanify/tests/structs-with-inline-arrays-original.cc:::998:::48:::struct TestCases {\u0000    int val;\u0000  };\u0000const std::array<TestCases, 4> kTestCases = {",
+            "replacements": [
+                "r:::tools/clang/spanify/tests/structs-with-inline-arrays-original.cc:::998:::48:::struct TestCases {\u0000    int val;\u0000  };\u0000const std::array<TestCases, 4> kTestCases = {",
+                "include-system-header:::tools/clang/spanify/tests/structs-with-inline-arrays-original.cc:::-1:::-1:::array",
+                "r:::tools/clang/spanify/tests/structs-with-inline-arrays-original.cc:::1065:::1:::}}"
+            ],
             "size_info_available": true,
             "visited": true,
             "debug_info": {
                 "rewrite_applied": true,
                 "original_is_buffer": false,
                 "original_size_info_available": null
-            }
+            },
+            "node_types": [
+                "source",
+                "sink"
+            ]
         },
         {
             "id": 1,
             "replacement": "r:::tools/clang/spanify/tests/structs-with-inline-arrays-original.cc:::998:::0:::",
+            "replacements": [
+                "r:::tools/clang/spanify/tests/structs-with-inline-arrays-original.cc:::998:::0:::"
+            ],
             "size_info_available": null,
             "visited": true,
             "debug_info": {
                 "rewrite_applied": true,
                 "original_is_buffer": false,
                 "original_size_info_available": null
-            }
+            },
+            "node_types": []
         },
         {
             "id": 2,
             "replacement": "r:::tools/clang/spanify/tests/structs-with-inline-arrays-original.cc:::1291:::48:::struct GTestCases {\u0000    int val;\u0000  };\u0000const std::array<GTestCases, 4> gTestCases = {",
+            "replacements": [
+                "r:::tools/clang/spanify/tests/structs-with-inline-arrays-original.cc:::1291:::48:::struct GTestCases {\u0000    int val;\u0000  };\u0000const std::array<GTestCases, 4> gTestCases = {",
+                "include-system-header:::tools/clang/spanify/tests/structs-with-inline-arrays-original.cc:::-1:::-1:::array",
+                "r:::tools/clang/spanify/tests/structs-with-inline-arrays-original.cc:::1358:::1:::}}"
+            ],
             "size_info_available": true,
             "visited": true,
             "debug_info": {
                 "rewrite_applied": true,
                 "original_is_buffer": false,
                 "original_size_info_available": null
-            }
+            },
+            "node_types": [
+                "source",
+                "sink"
+            ]
         },
         {
             "id": 3,
             "replacement": "r:::tools/clang/spanify/tests/structs-with-inline-arrays-original.cc:::1291:::0:::",
+            "replacements": [
+                "r:::tools/clang/spanify/tests/structs-with-inline-arrays-original.cc:::1291:::0:::"
+            ],
             "size_info_available": null,
             "visited": true,
             "debug_info": {
                 "rewrite_applied": true,
                 "original_is_buffer": false,
                 "original_size_info_available": null
-            }
+            },
+            "node_types": []
         },
         {
             "id": 4,
             "replacement": "r:::tools/clang/spanify/tests/structs-with-inline-arrays-original.cc:::1575:::45:::struct Knights {\u0000    int val;\u0000  };\u0000const std::array<Knights, 4> knights = {",
+            "replacements": [
+                "r:::tools/clang/spanify/tests/structs-with-inline-arrays-original.cc:::1575:::45:::struct Knights {\u0000    int val;\u0000  };\u0000const std::array<Knights, 4> knights = {",
+                "include-system-header:::tools/clang/spanify/tests/structs-with-inline-arrays-original.cc:::-1:::-1:::array",
+                "r:::tools/clang/spanify/tests/structs-with-inline-arrays-original.cc:::1639:::1:::}}"
+            ],
             "size_info_available": true,
             "visited": true,
             "debug_info": {
                 "rewrite_applied": true,
                 "original_is_buffer": false,
                 "original_size_info_available": null
-            }
+            },
+            "node_types": [
+                "source",
+                "sink"
+            ]
         },
         {
             "id": 5,
             "replacement": "r:::tools/clang/spanify/tests/structs-with-inline-arrays-original.cc:::1575:::0:::",
+            "replacements": [
+                "r:::tools/clang/spanify/tests/structs-with-inline-arrays-original.cc:::1575:::0:::"
+            ],
             "size_info_available": null,
             "visited": true,
             "debug_info": {
                 "rewrite_applied": true,
                 "original_is_buffer": false,
                 "original_size_info_available": null
-            }
+            },
+            "node_types": []
         },
         {
             "id": 6,
             "replacement": "r:::tools/clang/spanify/tests/structs-with-inline-arrays-original.cc:::809:::40:::struct FuncBuffer {\u0000    int val;\u0000  };\u0000std::array<FuncBuffer, 4> func_buffer",
+            "replacements": [
+                "r:::tools/clang/spanify/tests/structs-with-inline-arrays-original.cc:::809:::40:::struct FuncBuffer {\u0000    int val;\u0000  };\u0000std::array<FuncBuffer, 4> func_buffer",
+                "include-system-header:::tools/clang/spanify/tests/structs-with-inline-arrays-original.cc:::-1:::-1:::array"
+            ],
             "size_info_available": true,
             "visited": true,
             "debug_info": {
                 "rewrite_applied": true,
                 "original_is_buffer": false,
                 "original_size_info_available": null
-            }
+            },
+            "node_types": [
+                "source",
+                "sink"
+            ]
         },
         {
             "id": 7,
             "replacement": "r:::tools/clang/spanify/tests/structs-with-inline-arrays-original.cc:::809:::0:::",
+            "replacements": [
+                "r:::tools/clang/spanify/tests/structs-with-inline-arrays-original.cc:::809:::0:::"
+            ],
             "size_info_available": null,
             "visited": true,
             "debug_info": {
                 "rewrite_applied": true,
                 "original_is_buffer": false,
                 "original_size_info_available": null
-            }
+            },
+            "node_types": []
         },
         {
             "id": 8,
             "replacement": "r:::tools/clang/spanify/tests/structs-with-inline-arrays-original.cc:::1838:::56:::struct funcHasName {\u0000    int val;\u0000  };\u0000std::array<funcHasName, 4> funcNamedBuffer",
+            "replacements": [
+                "r:::tools/clang/spanify/tests/structs-with-inline-arrays-original.cc:::1838:::56:::struct funcHasName {\u0000    int val;\u0000  };\u0000std::array<funcHasName, 4> funcNamedBuffer",
+                "include-system-header:::tools/clang/spanify/tests/structs-with-inline-arrays-original.cc:::-1:::-1:::array"
+            ],
             "size_info_available": true,
             "visited": true,
             "debug_info": {
                 "rewrite_applied": true,
                 "original_is_buffer": false,
                 "original_size_info_available": null
-            }
+            },
+            "node_types": [
+                "source",
+                "sink"
+            ]
         },
         {
             "id": 9,
             "replacement": "r:::tools/clang/spanify/tests/structs-with-inline-arrays-original.cc:::1838:::0:::",
+            "replacements": [
+                "r:::tools/clang/spanify/tests/structs-with-inline-arrays-original.cc:::1838:::0:::"
+            ],
             "size_info_available": null,
             "visited": true,
             "debug_info": {
                 "rewrite_applied": true,
                 "original_is_buffer": false,
                 "original_size_info_available": null
-            }
+            },
+            "node_types": []
         },
         {
             "id": 10,
             "replacement": "r:::tools/clang/spanify/tests/structs-with-inline-arrays-original.cc:::1983:::42:::std::array<funcHasName, 4> funcNamedBufferButNotInline",
+            "replacements": [
+                "r:::tools/clang/spanify/tests/structs-with-inline-arrays-original.cc:::1983:::42:::std::array<funcHasName, 4> funcNamedBufferButNotInline",
+                "include-system-header:::tools/clang/spanify/tests/structs-with-inline-arrays-original.cc:::-1:::-1:::array"
+            ],
             "size_info_available": true,
             "visited": true,
             "debug_info": {
                 "rewrite_applied": true,
                 "original_is_buffer": false,
                 "original_size_info_available": null
-            }
+            },
+            "node_types": [
+                "source",
+                "sink"
+            ]
         },
         {
             "id": 11,
             "replacement": "r:::tools/clang/spanify/tests/structs-with-inline-arrays-original.cc:::1983:::0:::",
+            "replacements": [
+                "r:::tools/clang/spanify/tests/structs-with-inline-arrays-original.cc:::1983:::0:::"
+            ],
             "size_info_available": null,
             "visited": true,
             "debug_info": {
                 "rewrite_applied": true,
                 "original_is_buffer": false,
                 "original_size_info_available": null
-            }
+            },
+            "node_types": []
         },
         {
             "id": 12,
             "replacement": "r:::tools/clang/spanify/tests/structs-with-inline-arrays-original.cc:::2200:::56:::struct FuncBuffer2 {\u0000    int val;\u0000  };\u0000static const auto func_buffer2 = std::to_array<FuncBuffer2>(",
+            "replacements": [
+                "r:::tools/clang/spanify/tests/structs-with-inline-arrays-original.cc:::2200:::56:::struct FuncBuffer2 {\u0000    int val;\u0000  };\u0000static const auto func_buffer2 = std::to_array<FuncBuffer2>(",
+                "include-system-header:::tools/clang/spanify/tests/structs-with-inline-arrays-original.cc:::-1:::-1:::array",
+                "r:::tools/clang/spanify/tests/structs-with-inline-arrays-original.cc:::2275:::1:::})"
+            ],
             "size_info_available": true,
             "visited": true,
             "debug_info": {
                 "rewrite_applied": true,
                 "original_is_buffer": false,
                 "original_size_info_available": null
-            }
+            },
+            "node_types": [
+                "source",
+                "sink"
+            ]
         },
         {
             "id": 13,
             "replacement": "r:::tools/clang/spanify/tests/structs-with-inline-arrays-original.cc:::2200:::0:::",
+            "replacements": [
+                "r:::tools/clang/spanify/tests/structs-with-inline-arrays-original.cc:::2200:::0:::"
+            ],
             "size_info_available": null,
             "visited": true,
             "debug_info": {
                 "rewrite_applied": true,
                 "original_is_buffer": false,
                 "original_size_info_available": null
-            }
+            },
+            "node_types": []
         },
         {
             "id": 14,
             "replacement": "r:::tools/clang/spanify/tests/structs-with-inline-arrays-original.cc:::2429:::62:::struct FuncBufferWithComment {\u0000    int val;  // Comment\u0000  };\u0000std::array<FuncBufferWithComment, 4> funcBufferWithComment",
+            "replacements": [
+                "r:::tools/clang/spanify/tests/structs-with-inline-arrays-original.cc:::2429:::62:::struct FuncBufferWithComment {\u0000    int val;  // Comment\u0000  };\u0000std::array<FuncBufferWithComment, 4> funcBufferWithComment",
+                "include-system-header:::tools/clang/spanify/tests/structs-with-inline-arrays-original.cc:::-1:::-1:::array"
+            ],
             "size_info_available": true,
             "visited": true,
             "debug_info": {
                 "rewrite_applied": true,
                 "original_is_buffer": false,
                 "original_size_info_available": null
-            }
+            },
+            "node_types": [
+                "source",
+                "sink"
+            ]
         },
         {
             "id": 15,
             "replacement": "r:::tools/clang/spanify/tests/structs-with-inline-arrays-original.cc:::2429:::0:::",
+            "replacements": [
+                "r:::tools/clang/spanify/tests/structs-with-inline-arrays-original.cc:::2429:::0:::"
+            ],
             "size_info_available": null,
             "visited": true,
             "debug_info": {
                 "rewrite_applied": true,
                 "original_is_buffer": false,
                 "original_size_info_available": null
-            }
+            },
+            "node_types": []
         },
         {
             "id": 16,
             "replacement": "r:::tools/clang/spanify/tests/structs-with-inline-arrays-original.cc:::2696:::57:::class UnnamedClassBuffer {\u0000   public:\u0000    int val;\u0000  };\u0000std::array<UnnamedClassBuffer, 4> unnamedClassBuffer",
+            "replacements": [
+                "r:::tools/clang/spanify/tests/structs-with-inline-arrays-original.cc:::2696:::57:::class UnnamedClassBuffer {\u0000   public:\u0000    int val;\u0000  };\u0000std::array<UnnamedClassBuffer, 4> unnamedClassBuffer",
+                "include-system-header:::tools/clang/spanify/tests/structs-with-inline-arrays-original.cc:::-1:::-1:::array"
+            ],
             "size_info_available": true,
             "visited": true,
             "debug_info": {
                 "rewrite_applied": true,
                 "original_is_buffer": false,
                 "original_size_info_available": null
-            }
+            },
+            "node_types": [
+                "source",
+                "sink"
+            ]
         },
         {
             "id": 17,
             "replacement": "r:::tools/clang/spanify/tests/structs-with-inline-arrays-original.cc:::2696:::0:::",
+            "replacements": [
+                "r:::tools/clang/spanify/tests/structs-with-inline-arrays-original.cc:::2696:::0:::"
+            ],
             "size_info_available": null,
             "visited": true,
             "debug_info": {
                 "rewrite_applied": true,
                 "original_is_buffer": false,
                 "original_size_info_available": null
-            }
+            },
+            "node_types": []
         },
         {
             "id": 18,
             "replacement": "r:::tools/clang/spanify/tests/structs-with-inline-arrays-original.cc:::2962:::62:::union UnnamedUnionBuffer {\u0000    int val;\u0000    float fval;\u0000  };\u0000std::array<UnnamedUnionBuffer, 4> unnamedUnionBuffer",
+            "replacements": [
+                "r:::tools/clang/spanify/tests/structs-with-inline-arrays-original.cc:::2962:::62:::union UnnamedUnionBuffer {\u0000    int val;\u0000    float fval;\u0000  };\u0000std::array<UnnamedUnionBuffer, 4> unnamedUnionBuffer",
+                "include-system-header:::tools/clang/spanify/tests/structs-with-inline-arrays-original.cc:::-1:::-1:::array"
+            ],
             "size_info_available": true,
             "visited": true,
             "debug_info": {
                 "rewrite_applied": true,
                 "original_is_buffer": false,
                 "original_size_info_available": null
-            }
+            },
+            "node_types": [
+                "source",
+                "sink"
+            ]
         },
         {
             "id": 19,
             "replacement": "r:::tools/clang/spanify/tests/structs-with-inline-arrays-original.cc:::2962:::0:::",
+            "replacements": [
+                "r:::tools/clang/spanify/tests/structs-with-inline-arrays-original.cc:::2962:::0:::"
+            ],
             "size_info_available": null,
             "visited": true,
             "debug_info": {
                 "rewrite_applied": true,
                 "original_is_buffer": false,
                 "original_size_info_available": null
-            }
+            },
+            "node_types": []
         },
         {
             "id": 20,
             "replacement": "r:::tools/clang/spanify/tests/structs-with-inline-arrays-original.cc:::3202:::75:::struct NestedStructBuffer {\u0000    struct {\u0000      int val;\u0000    } inner;\u0000  };\u0000std::array<NestedStructBuffer, 4> nestedStructBuffer",
+            "replacements": [
+                "r:::tools/clang/spanify/tests/structs-with-inline-arrays-original.cc:::3202:::75:::struct NestedStructBuffer {\u0000    struct {\u0000      int val;\u0000    } inner;\u0000  };\u0000std::array<NestedStructBuffer, 4> nestedStructBuffer",
+                "include-system-header:::tools/clang/spanify/tests/structs-with-inline-arrays-original.cc:::-1:::-1:::array"
+            ],
             "size_info_available": true,
             "visited": true,
             "debug_info": {
                 "rewrite_applied": true,
                 "original_is_buffer": false,
                 "original_size_info_available": null
-            }
+            },
+            "node_types": [
+                "source",
+                "sink"
+            ]
         },
         {
             "id": 21,
             "replacement": "r:::tools/clang/spanify/tests/structs-with-inline-arrays-original.cc:::3202:::0:::",
+            "replacements": [
+                "r:::tools/clang/spanify/tests/structs-with-inline-arrays-original.cc:::3202:::0:::"
+            ],
             "size_info_available": null,
             "visited": true,
             "debug_info": {
                 "rewrite_applied": true,
                 "original_is_buffer": false,
                 "original_size_info_available": null
-            }
+            },
+            "node_types": []
         },
         {
             "id": 22,
             "replacement": "r:::tools/clang/spanify/tests/structs-with-inline-arrays-original.cc:::4127:::71:::struct MyGlobalStruct1 {\u0000  int val;\u0000};\u0000const std::array<MyGlobalStruct1, 1 + 2> my_global_struct1 = {",
+            "replacements": [
+                "r:::tools/clang/spanify/tests/structs-with-inline-arrays-original.cc:::4127:::71:::struct MyGlobalStruct1 {\u0000  int val;\u0000};\u0000const std::array<MyGlobalStruct1, 1 + 2> my_global_struct1 = {",
+                "include-system-header:::tools/clang/spanify/tests/structs-with-inline-arrays-original.cc:::-1:::-1:::array",
+                "r:::tools/clang/spanify/tests/structs-with-inline-arrays-original.cc:::4227:::1:::}}"
+            ],
             "size_info_available": true,
             "visited": true,
             "debug_info": {
                 "rewrite_applied": true,
                 "original_is_buffer": false,
                 "original_size_info_available": null
-            }
+            },
+            "node_types": [
+                "source",
+                "sink"
+            ]
         },
         {
             "id": 23,
             "replacement": "r:::tools/clang/spanify/tests/structs-with-inline-arrays-original.cc:::4127:::0:::",
+            "replacements": [
+                "r:::tools/clang/spanify/tests/structs-with-inline-arrays-original.cc:::4127:::0:::"
+            ],
             "size_info_available": null,
             "visited": true,
             "debug_info": {
                 "rewrite_applied": true,
                 "original_is_buffer": false,
                 "original_size_info_available": null
-            }
+            },
+            "node_types": []
         },
         {
             "id": 24,
             "replacement": "r:::tools/clang/spanify/tests/structs-with-inline-arrays-original.cc:::4544:::60:::struct MyGlobalStruct2 {\u0000  int val;\u0000};\u0000auto my_global_struct2 = std::to_array<MyGlobalStruct2>(",
+            "replacements": [
+                "r:::tools/clang/spanify/tests/structs-with-inline-arrays-original.cc:::4544:::60:::struct MyGlobalStruct2 {\u0000  int val;\u0000};\u0000auto my_global_struct2 = std::to_array<MyGlobalStruct2>(",
+                "include-system-header:::tools/clang/spanify/tests/structs-with-inline-arrays-original.cc:::-1:::-1:::array",
+                "r:::tools/clang/spanify/tests/structs-with-inline-arrays-original.cc:::4633:::1:::})"
+            ],
             "size_info_available": true,
             "visited": true,
             "debug_info": {
                 "rewrite_applied": true,
                 "original_is_buffer": false,
                 "original_size_info_available": null
-            }
+            },
+            "node_types": [
+                "source",
+                "sink"
+            ]
         },
         {
             "id": 25,
             "replacement": "r:::tools/clang/spanify/tests/structs-with-inline-arrays-original.cc:::4544:::0:::",
+            "replacements": [
+                "r:::tools/clang/spanify/tests/structs-with-inline-arrays-original.cc:::4544:::0:::"
+            ],
             "size_info_available": null,
             "visited": true,
             "debug_info": {
                 "rewrite_applied": true,
                 "original_is_buffer": false,
                 "original_size_info_available": null
-            }
+            },
+            "node_types": []
         }
     ],
     "links": [

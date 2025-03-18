@@ -3,123 +3,192 @@
         {
             "id": 0,
             "replacement": "r:::tools/clang/spanify/tests/initializers-original.cc:::605:::7:::base::raw_span",
+            "replacements": [
+                "r:::tools/clang/spanify/tests/initializers-original.cc:::605:::7:::base::raw_span",
+                "include-user-header:::tools/clang/spanify/tests/initializers-original.cc:::-1:::-1:::base/memory/raw_span.h"
+            ],
             "size_info_available": true,
             "visited": true,
             "debug_info": {
                 "rewrite_applied": true,
                 "original_is_buffer": false,
                 "original_size_info_available": null
-            }
+            },
+            "node_types": [
+                "source"
+            ]
         },
         {
             "id": 1,
             "replacement": "r:::tools/clang/spanify/tests/initializers-original.cc:::285:::5:::base::span<int>",
+            "replacements": [
+                "r:::tools/clang/spanify/tests/initializers-original.cc:::285:::5:::base::span<int>",
+                "include-user-header:::tools/clang/spanify/tests/initializers-original.cc:::-1:::-1:::base/containers/span.h"
+            ],
             "size_info_available": true,
             "visited": true,
             "debug_info": {
                 "rewrite_applied": true,
                 "original_is_buffer": false,
                 "original_size_info_available": null
-            }
+            },
+            "node_types": []
         },
         {
             "id": 2,
             "replacement": "r:::tools/clang/spanify/tests/initializers-original.cc:::391:::4:::base::span<int>",
+            "replacements": [
+                "r:::tools/clang/spanify/tests/initializers-original.cc:::391:::4:::base::span<int>",
+                "include-user-header:::tools/clang/spanify/tests/initializers-original.cc:::-1:::-1:::base/containers/span.h"
+            ],
             "size_info_available": null,
             "visited": false,
             "debug_info": {
                 "rewrite_applied": false,
                 "original_is_buffer": false,
                 "original_size_info_available": null
-            }
+            },
+            "node_types": []
         },
         {
             "id": 3,
             "replacement": "r:::tools/clang/spanify/tests/initializers-original.cc:::501:::4:::base::span<int>",
+            "replacements": [
+                "r:::tools/clang/spanify/tests/initializers-original.cc:::501:::4:::base::span<int>",
+                "include-user-header:::tools/clang/spanify/tests/initializers-original.cc:::-1:::-1:::base/containers/span.h"
+            ],
             "size_info_available": null,
             "visited": false,
             "debug_info": {
                 "rewrite_applied": false,
                 "original_is_buffer": false,
                 "original_size_info_available": null
-            }
+            },
+            "node_types": []
         },
         {
             "id": 4,
             "replacement": "r:::tools/clang/spanify/tests/initializers-original.cc:::527:::6:::",
+            "replacements": [
+                "r:::tools/clang/spanify/tests/initializers-original.cc:::527:::6:::",
+                "include-user-header:::tools/clang/spanify/tests/initializers-original.cc:::-1:::-1:::base/containers/span.h"
+            ],
             "size_info_available": null,
             "visited": false,
             "debug_info": {
                 "rewrite_applied": true,
                 "original_is_buffer": false,
                 "original_size_info_available": null
-            }
+            },
+            "node_types": [
+                "dependent"
+            ]
         },
         {
             "id": 5,
             "replacement": "r:::tools/clang/spanify/tests/initializers-original.cc:::812:::5:::base::span<int>",
+            "replacements": [
+                "r:::tools/clang/spanify/tests/initializers-original.cc:::812:::5:::base::span<int>",
+                "include-user-header:::tools/clang/spanify/tests/initializers-original.cc:::-1:::-1:::base/containers/span.h"
+            ],
             "size_info_available": true,
             "visited": true,
             "debug_info": {
                 "rewrite_applied": true,
                 "original_is_buffer": false,
                 "original_size_info_available": null
-            }
+            },
+            "node_types": []
         },
         {
             "id": 6,
             "replacement": "r:::tools/clang/spanify/tests/initializers-original.cc:::823:::0:::<empty>",
+            "replacements": [
+                "r:::tools/clang/spanify/tests/initializers-original.cc:::823:::0:::<empty>",
+                "include-user-header:::tools/clang/spanify/tests/initializers-original.cc:::-1:::-1:::base/containers/span.h"
+            ],
             "size_info_available": true,
             "visited": true,
             "debug_info": {
                 "rewrite_applied": true,
                 "original_is_buffer": false,
                 "original_size_info_available": null
-            }
+            },
+            "node_types": [
+                "sink"
+            ]
         },
         {
             "id": 7,
             "replacement": "r:::tools/clang/spanify/tests/initializers-original.cc:::994:::7:::",
+            "replacements": [
+                "r:::tools/clang/spanify/tests/initializers-original.cc:::994:::7:::",
+                "include-user-header:::tools/clang/spanify/tests/initializers-original.cc:::-1:::-1:::base/containers/span.h"
+            ],
             "size_info_available": true,
             "visited": true,
             "debug_info": {
                 "rewrite_applied": true,
                 "original_is_buffer": false,
                 "original_size_info_available": null
-            }
+            },
+            "node_types": [
+                "sink"
+            ]
         },
         {
             "id": 8,
             "replacement": "r:::tools/clang/spanify/tests/initializers-original.cc:::695:::5:::base::span<int>",
+            "replacements": [
+                "r:::tools/clang/spanify/tests/initializers-original.cc:::695:::5:::base::span<int>",
+                "include-user-header:::tools/clang/spanify/tests/initializers-original.cc:::-1:::-1:::base/containers/span.h"
+            ],
             "size_info_available": true,
             "visited": true,
             "debug_info": {
                 "rewrite_applied": true,
                 "original_is_buffer": false,
                 "original_size_info_available": null
-            }
+            },
+            "node_types": [
+                "source"
+            ]
         },
         {
             "id": 9,
             "replacement": "r:::tools/clang/spanify/tests/initializers-original.cc:::1145:::7:::",
+            "replacements": [
+                "r:::tools/clang/spanify/tests/initializers-original.cc:::1145:::7:::",
+                "include-user-header:::tools/clang/spanify/tests/initializers-original.cc:::-1:::-1:::base/containers/span.h"
+            ],
             "size_info_available": true,
             "visited": true,
             "debug_info": {
                 "rewrite_applied": true,
                 "original_is_buffer": false,
                 "original_size_info_available": null
-            }
+            },
+            "node_types": [
+                "sink"
+            ]
         },
         {
             "id": 10,
             "replacement": "r:::tools/clang/spanify/tests/initializers-original.cc:::1159:::7:::",
+            "replacements": [
+                "r:::tools/clang/spanify/tests/initializers-original.cc:::1159:::7:::",
+                "include-user-header:::tools/clang/spanify/tests/initializers-original.cc:::-1:::-1:::base/containers/span.h"
+            ],
             "size_info_available": true,
             "visited": true,
             "debug_info": {
                 "rewrite_applied": true,
                 "original_is_buffer": false,
                 "original_size_info_available": null
-            }
+            },
+            "node_types": [
+                "sink"
+            ]
         }
     ],
     "links": [
@@ -129,11 +198,11 @@
         },
         {
             "source": 1,
-            "target": 7
+            "target": 5
         },
         {
             "source": 1,
-            "target": 5
+            "target": 7
         },
         {
             "source": 2,
@@ -153,11 +222,11 @@
         },
         {
             "source": 8,
-            "target": 9
+            "target": 10
         },
         {
             "source": 8,
-            "target": 10
+            "target": 9
         }
     ],
     "source": {

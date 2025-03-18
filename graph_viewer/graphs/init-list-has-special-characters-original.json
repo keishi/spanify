@@ -3,24 +3,37 @@
         {
             "id": 0,
             "replacement": "r:::tools/clang/spanify/tests/init-list-has-special-characters-original.cc:::336:::20:::auto buf = std::to_array<const char *>(",
+            "replacements": [
+                "r:::tools/clang/spanify/tests/init-list-has-special-characters-original.cc:::336:::20:::auto buf = std::to_array<const char *>(",
+                "include-system-header:::tools/clang/spanify/tests/init-list-has-special-characters-original.cc:::-1:::-1:::array",
+                "r:::tools/clang/spanify/tests/init-list-has-special-characters-original.cc:::401:::1:::,})"
+            ],
             "size_info_available": true,
             "visited": true,
             "debug_info": {
                 "rewrite_applied": true,
                 "original_is_buffer": false,
                 "original_size_info_available": null
-            }
+            },
+            "node_types": [
+                "source",
+                "sink"
+            ]
         },
         {
             "id": 1,
             "replacement": "r:::tools/clang/spanify/tests/init-list-has-special-characters-original.cc:::336:::0:::",
+            "replacements": [
+                "r:::tools/clang/spanify/tests/init-list-has-special-characters-original.cc:::336:::0:::"
+            ],
             "size_info_available": null,
             "visited": true,
             "debug_info": {
                 "rewrite_applied": true,
                 "original_is_buffer": false,
                 "original_size_info_available": null
-            }
+            },
+            "node_types": []
         }
     ],
     "links": [

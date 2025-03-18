@@ -3,409 +3,631 @@
         {
             "id": 0,
             "replacement": "r:::tools/clang/spanify/tests/macro-definitions-multiple-files-original.cc:::879:::0:::.size()",
+            "replacements": [
+                "r:::tools/clang/spanify/tests/macro-definitions-multiple-files-original.cc:::879:::0:::.size()"
+            ],
             "size_info_available": null,
             "visited": false,
             "debug_info": {
                 "rewrite_applied": false,
                 "original_is_buffer": false,
                 "original_size_info_available": null
-            }
+            },
+            "node_types": [
+                "dependent"
+            ]
         },
         {
             "id": 1,
             "replacement": "r:::tools/clang/spanify/tests/macro-definitions-multiple-files-original.cc:::829:::6:::base::span<bool>",
+            "replacements": [
+                "r:::tools/clang/spanify/tests/macro-definitions-multiple-files-original.cc:::829:::6:::base::span<bool>",
+                "include-user-header:::tools/clang/spanify/tests/macro-definitions-multiple-files-original.cc:::-1:::-1:::base/containers/span.h"
+            ],
             "size_info_available": null,
             "visited": false,
             "debug_info": {
                 "rewrite_applied": false,
                 "original_is_buffer": false,
                 "original_size_info_available": null
-            }
+            },
+            "node_types": []
         },
         {
             "id": 2,
             "replacement": "r:::tools/clang/spanify/tests/macro-definitions-multiple-files-original.cc:::887:::18:::really_deprecated[0]",
+            "replacements": [
+                "r:::tools/clang/spanify/tests/macro-definitions-multiple-files-original.cc:::887:::18:::really_deprecated[0]"
+            ],
             "size_info_available": null,
             "visited": false,
             "debug_info": {
                 "rewrite_applied": false,
                 "original_is_buffer": false,
                 "original_size_info_available": null
-            }
+            },
+            "node_types": [
+                "dependent"
+            ]
         },
         {
             "id": 3,
             "replacement": "r:::tools/clang/spanify/tests/macro-definitions-multiple-files-original.cc:::947:::23:::base::span<const struct nlmsghdr>",
+            "replacements": [
+                "r:::tools/clang/spanify/tests/macro-definitions-multiple-files-original.cc:::947:::23:::base::span<const struct nlmsghdr>",
+                "include-user-header:::tools/clang/spanify/tests/macro-definitions-multiple-files-original.cc:::-1:::-1:::base/containers/span.h"
+            ],
             "size_info_available": null,
             "visited": false,
             "debug_info": {
                 "rewrite_applied": false,
                 "original_is_buffer": false,
                 "original_size_info_available": null
-            }
+            },
+            "node_types": []
         },
         {
             "id": 4,
             "replacement": "r:::tools/clang/spanify/tests/macro-definitions-multiple-files-original.cc:::747:::23:::base::span<const struct nlmsghdr>",
+            "replacements": [
+                "r:::tools/clang/spanify/tests/macro-definitions-multiple-files-original.cc:::747:::23:::base::span<const struct nlmsghdr>",
+                "include-user-header:::tools/clang/spanify/tests/macro-definitions-multiple-files-original.cc:::-1:::-1:::base/containers/span.h"
+            ],
             "size_info_available": false,
             "visited": false,
             "debug_info": {
                 "rewrite_applied": false,
                 "original_is_buffer": false,
                 "original_size_info_available": null
-            }
+            },
+            "node_types": [
+                "source"
+            ]
         },
         {
             "id": 5,
             "replacement": "r:::tools/clang/spanify/tests/macro-definitions-multiple-files-original.cc:::1107:::2:::base::span<T>",
+            "replacements": [
+                "r:::tools/clang/spanify/tests/macro-definitions-multiple-files-original.cc:::1107:::2:::base::span<T>",
+                "include-user-header:::tools/clang/spanify/tests/macro-definitions-multiple-files-original.cc:::-1:::-1:::base/containers/span.h"
+            ],
             "size_info_available": null,
             "visited": false,
             "debug_info": {
                 "rewrite_applied": false,
                 "original_is_buffer": false,
                 "original_size_info_available": null
-            }
+            },
+            "node_types": []
         },
         {
             "id": 6,
             "replacement": "r:::tools/clang/spanify/tests/macro-definitions-multiple-files-original.cc:::1135:::23:::base::span<const struct nlmsghdr>",
+            "replacements": [
+                "r:::tools/clang/spanify/tests/macro-definitions-multiple-files-original.cc:::1135:::23:::base::span<const struct nlmsghdr>",
+                "include-user-header:::tools/clang/spanify/tests/macro-definitions-multiple-files-original.cc:::-1:::-1:::base/containers/span.h"
+            ],
             "size_info_available": false,
             "visited": false,
             "debug_info": {
                 "rewrite_applied": false,
                 "original_is_buffer": false,
                 "original_size_info_available": null
-            }
+            },
+            "node_types": [
+                "source"
+            ]
         },
         {
             "id": 7,
             "replacement": "r:::tools/clang/spanify/tests/macro-definitions-multiple-files-original.cc:::1270:::7:::{}",
+            "replacements": [
+                "r:::tools/clang/spanify/tests/macro-definitions-multiple-files-original.cc:::1270:::7:::{}",
+                "include-user-header:::tools/clang/spanify/tests/macro-definitions-multiple-files-original.cc:::-1:::-1:::base/containers/span.h"
+            ],
             "size_info_available": true,
             "visited": false,
             "debug_info": {
                 "rewrite_applied": false,
                 "original_is_buffer": false,
                 "original_size_info_available": null
-            }
+            },
+            "node_types": [
+                "sink"
+            ]
         },
         {
             "id": 8,
             "replacement": "r:::tools/clang/spanify/tests/macro-definitions-multiple-files-original.cc:::1826:::0:::.size()",
+            "replacements": [
+                "r:::tools/clang/spanify/tests/macro-definitions-multiple-files-original.cc:::1826:::0:::.size()"
+            ],
             "size_info_available": null,
             "visited": false,
             "debug_info": {
                 "rewrite_applied": true,
                 "original_is_buffer": false,
                 "original_size_info_available": null
-            }
+            },
+            "node_types": [
+                "dependent"
+            ]
         },
         {
             "id": 9,
             "replacement": "r:::tools/clang/spanify/tests/macro-definitions-multiple-files-original.cc:::1787:::6:::base::span<int *>",
+            "replacements": [
+                "r:::tools/clang/spanify/tests/macro-definitions-multiple-files-original.cc:::1787:::6:::base::span<int *>",
+                "include-user-header:::tools/clang/spanify/tests/macro-definitions-multiple-files-original.cc:::-1:::-1:::base/containers/span.h"
+            ],
             "size_info_available": true,
             "visited": true,
             "debug_info": {
                 "rewrite_applied": true,
                 "original_is_buffer": false,
                 "original_size_info_available": null
-            }
+            },
+            "node_types": [
+                "source"
+            ]
         },
         {
             "id": 10,
             "replacement": "r:::tools/clang/spanify/tests/macro-definitions-multiple-files-original.cc:::1925:::14:::base::span<std::size_t *>",
+            "replacements": [
+                "r:::tools/clang/spanify/tests/macro-definitions-multiple-files-original.cc:::1925:::14:::base::span<std::size_t *>",
+                "include-user-header:::tools/clang/spanify/tests/macro-definitions-multiple-files-original.cc:::-1:::-1:::base/containers/span.h"
+            ],
             "size_info_available": null,
             "visited": false,
             "debug_info": {
                 "rewrite_applied": false,
                 "original_is_buffer": false,
                 "original_size_info_available": null
-            }
+            },
+            "node_types": []
         },
         {
             "id": 11,
             "replacement": "r:::tools/clang/spanify/tests/macro-definitions-multiple-files-original.cc:::2013:::14:::base::span<std::size_t *>",
+            "replacements": [
+                "r:::tools/clang/spanify/tests/macro-definitions-multiple-files-original.cc:::2013:::14:::base::span<std::size_t *>",
+                "include-user-header:::tools/clang/spanify/tests/macro-definitions-multiple-files-original.cc:::-1:::-1:::base/containers/span.h"
+            ],
             "size_info_available": null,
             "visited": false,
             "debug_info": {
                 "rewrite_applied": false,
                 "original_is_buffer": false,
                 "original_size_info_available": null
-            }
+            },
+            "node_types": []
         },
         {
             "id": 12,
             "replacement": "r:::tools/clang/spanify/tests/macro-definitions-multiple-files-original.cc:::2068:::8:::new_ptr[0]",
+            "replacements": [
+                "r:::tools/clang/spanify/tests/macro-definitions-multiple-files-original.cc:::2068:::8:::new_ptr[0]"
+            ],
             "size_info_available": null,
             "visited": false,
             "debug_info": {
                 "rewrite_applied": false,
                 "original_is_buffer": false,
                 "original_size_info_available": null
-            }
+            },
+            "node_types": [
+                "dependent"
+            ]
         },
         {
             "id": 13,
             "replacement": "r:::tools/clang/spanify/tests/macro-definitions-multiple-files-original.cc:::2101:::8:::new_ptr[0]",
+            "replacements": [
+                "r:::tools/clang/spanify/tests/macro-definitions-multiple-files-original.cc:::2101:::8:::new_ptr[0]"
+            ],
             "size_info_available": null,
             "visited": false,
             "debug_info": {
                 "rewrite_applied": false,
                 "original_is_buffer": false,
                 "original_size_info_available": null
-            }
+            },
+            "node_types": [
+                "dependent"
+            ]
         },
         {
             "id": 14,
             "replacement": "r:::tools/clang/spanify/tests/macro-definitions-multiple-files-original.cc:::2142:::10:::new_ptr_2[0]",
+            "replacements": [
+                "r:::tools/clang/spanify/tests/macro-definitions-multiple-files-original.cc:::2142:::10:::new_ptr_2[0]"
+            ],
             "size_info_available": null,
             "visited": false,
             "debug_info": {
                 "rewrite_applied": false,
                 "original_is_buffer": false,
                 "original_size_info_available": null
-            }
+            },
+            "node_types": [
+                "dependent"
+            ]
         },
         {
             "id": 15,
             "replacement": "r:::tools/clang/spanify/tests/macro-definitions-multiple-files-original.cc:::2303:::6:::base::span<int *>",
+            "replacements": [
+                "r:::tools/clang/spanify/tests/macro-definitions-multiple-files-original.cc:::2303:::6:::base::span<int *>",
+                "include-user-header:::tools/clang/spanify/tests/macro-definitions-multiple-files-original.cc:::-1:::-1:::base/containers/span.h"
+            ],
             "size_info_available": true,
             "visited": true,
             "debug_info": {
                 "rewrite_applied": true,
                 "original_is_buffer": false,
                 "original_size_info_available": null
-            }
+            },
+            "node_types": []
         },
         {
             "id": 16,
             "replacement": "r:::tools/clang/spanify/tests/macro-definitions-multiple-files-original.cc:::2341:::0:::<empty>",
+            "replacements": [
+                "r:::tools/clang/spanify/tests/macro-definitions-multiple-files-original.cc:::2341:::0:::<empty>",
+                "include-user-header:::tools/clang/spanify/tests/macro-definitions-multiple-files-original.cc:::-1:::-1:::base/containers/span.h"
+            ],
             "size_info_available": true,
             "visited": true,
             "debug_info": {
                 "rewrite_applied": true,
                 "original_is_buffer": false,
                 "original_size_info_available": null
-            }
+            },
+            "node_types": [
+                "sink"
+            ]
         },
         {
             "id": 17,
             "replacement": "r:::tools/clang/spanify/tests/macro-definitions-multiple-files-original.cc:::2832:::11:::base::span<const int>",
+            "replacements": [
+                "r:::tools/clang/spanify/tests/macro-definitions-multiple-files-original.cc:::2832:::11:::base::span<const int>",
+                "include-user-header:::tools/clang/spanify/tests/macro-definitions-multiple-files-original.cc:::-1:::-1:::base/containers/span.h"
+            ],
             "size_info_available": null,
             "visited": false,
             "debug_info": {
                 "rewrite_applied": false,
                 "original_is_buffer": false,
                 "original_size_info_available": null
-            }
+            },
+            "node_types": []
         },
         {
             "id": 18,
             "replacement": "r:::tools/clang/spanify/tests/macro-definitions-multiple-files-original.cc:::2849:::7:::{}",
+            "replacements": [
+                "r:::tools/clang/spanify/tests/macro-definitions-multiple-files-original.cc:::2849:::7:::{}",
+                "include-user-header:::tools/clang/spanify/tests/macro-definitions-multiple-files-original.cc:::-1:::-1:::base/containers/span.h"
+            ],
             "size_info_available": true,
             "visited": false,
             "debug_info": {
                 "rewrite_applied": false,
                 "original_is_buffer": false,
                 "original_size_info_available": null
-            }
+            },
+            "node_types": [
+                "sink"
+            ]
         },
         {
             "id": 19,
             "replacement": "r:::tools/clang/spanify/tests/macro-definitions-multiple-files-original.cc:::3273:::11:::base::span<const int>",
+            "replacements": [
+                "r:::tools/clang/spanify/tests/macro-definitions-multiple-files-original.cc:::3273:::11:::base::span<const int>",
+                "include-user-header:::tools/clang/spanify/tests/macro-definitions-multiple-files-original.cc:::-1:::-1:::base/containers/span.h"
+            ],
             "size_info_available": null,
             "visited": false,
             "debug_info": {
                 "rewrite_applied": false,
                 "original_is_buffer": false,
                 "original_size_info_available": null
-            }
+            },
+            "node_types": []
         },
         {
             "id": 20,
             "replacement": "r:::tools/clang/spanify/tests/macro-definitions-multiple-files-original.cc:::3290:::7:::{}",
+            "replacements": [
+                "r:::tools/clang/spanify/tests/macro-definitions-multiple-files-original.cc:::3290:::7:::{}",
+                "include-user-header:::tools/clang/spanify/tests/macro-definitions-multiple-files-original.cc:::-1:::-1:::base/containers/span.h"
+            ],
             "size_info_available": true,
             "visited": false,
             "debug_info": {
                 "rewrite_applied": false,
                 "original_is_buffer": false,
                 "original_size_info_available": null
-            }
+            },
+            "node_types": [
+                "sink"
+            ]
         },
         {
             "id": 21,
             "replacement": "r:::tools/clang/spanify/tests/macro-definitions-multiple-files-original.cc:::3315:::0:::.size()",
+            "replacements": [
+                "r:::tools/clang/spanify/tests/macro-definitions-multiple-files-original.cc:::3315:::0:::.size()"
+            ],
             "size_info_available": null,
             "visited": false,
             "debug_info": {
                 "rewrite_applied": false,
                 "original_is_buffer": false,
                 "original_size_info_available": null
-            }
+            },
+            "node_types": [
+                "dependent"
+            ]
         },
         {
             "id": 22,
             "replacement": "r:::tools/clang/spanify/tests/macro-definitions-multiple-files-original.cc:::3076:::20:::base::span<const Entry *const>",
+            "replacements": [
+                "r:::tools/clang/spanify/tests/macro-definitions-multiple-files-original.cc:::3076:::20:::base::span<const Entry *const>",
+                "include-user-header:::tools/clang/spanify/tests/macro-definitions-multiple-files-original.cc:::-1:::-1:::base/containers/span.h"
+            ],
             "size_info_available": null,
             "visited": false,
             "debug_info": {
                 "rewrite_applied": false,
                 "original_is_buffer": false,
                 "original_size_info_available": null
-            }
+            },
+            "node_types": []
         },
         {
             "id": 23,
             "replacement": "r:::tools/clang/spanify/tests/macro-definitions-multiple-files-original.cc:::3634:::11:::base::span<const int>",
+            "replacements": [
+                "r:::tools/clang/spanify/tests/macro-definitions-multiple-files-original.cc:::3634:::11:::base::span<const int>",
+                "include-user-header:::tools/clang/spanify/tests/macro-definitions-multiple-files-original.cc:::-1:::-1:::base/containers/span.h"
+            ],
             "size_info_available": null,
             "visited": false,
             "debug_info": {
                 "rewrite_applied": false,
                 "original_is_buffer": false,
                 "original_size_info_available": null
-            }
+            },
+            "node_types": []
         },
         {
             "id": 24,
             "replacement": "r:::tools/clang/spanify/tests/macro-definitions-multiple-files-original.cc:::3651:::7:::{}",
+            "replacements": [
+                "r:::tools/clang/spanify/tests/macro-definitions-multiple-files-original.cc:::3651:::7:::{}",
+                "include-user-header:::tools/clang/spanify/tests/macro-definitions-multiple-files-original.cc:::-1:::-1:::base/containers/span.h"
+            ],
             "size_info_available": true,
             "visited": false,
             "debug_info": {
                 "rewrite_applied": false,
                 "original_is_buffer": false,
                 "original_size_info_available": null
-            }
+            },
+            "node_types": [
+                "sink"
+            ]
         },
         {
             "id": 25,
             "replacement": "r:::tools/clang/spanify/tests/macro-definitions-multiple-files-original.cc:::2781:::13:::base::span<const Entry>",
+            "replacements": [
+                "r:::tools/clang/spanify/tests/macro-definitions-multiple-files-original.cc:::2781:::13:::base::span<const Entry>",
+                "include-user-header:::tools/clang/spanify/tests/macro-definitions-multiple-files-original.cc:::-1:::-1:::base/containers/span.h"
+            ],
             "size_info_available": null,
             "visited": false,
             "debug_info": {
                 "rewrite_applied": false,
                 "original_is_buffer": false,
                 "original_size_info_available": null
-            }
+            },
+            "node_types": []
         },
         {
             "id": 26,
             "replacement": "r:::tools/clang/spanify/tests/macro-definitions-multiple-files-original.cc:::5278:::13:::base::span<const Entry>",
+            "replacements": [
+                "r:::tools/clang/spanify/tests/macro-definitions-multiple-files-original.cc:::5278:::13:::base::span<const Entry>",
+                "include-user-header:::tools/clang/spanify/tests/macro-definitions-multiple-files-original.cc:::-1:::-1:::base/containers/span.h"
+            ],
             "size_info_available": null,
             "visited": false,
             "debug_info": {
                 "rewrite_applied": false,
                 "original_is_buffer": false,
                 "original_size_info_available": null
-            }
+            },
+            "node_types": []
         },
         {
             "id": 27,
             "replacement": "r:::tools/clang/spanify/tests/macro-definitions-multiple-files-original.cc:::5656:::13:::base::span<const Entry>",
+            "replacements": [
+                "r:::tools/clang/spanify/tests/macro-definitions-multiple-files-original.cc:::5656:::13:::base::span<const Entry>",
+                "include-user-header:::tools/clang/spanify/tests/macro-definitions-multiple-files-original.cc:::-1:::-1:::base/containers/span.h"
+            ],
             "size_info_available": null,
             "visited": false,
             "debug_info": {
                 "rewrite_applied": false,
                 "original_is_buffer": false,
                 "original_size_info_available": null
-            }
+            },
+            "node_types": []
         },
         {
             "id": 28,
             "replacement": "r:::tools/clang/spanify/tests/macro-definitions-multiple-files-original.cc:::6149:::20:::base::span<const Entry *const>",
+            "replacements": [
+                "r:::tools/clang/spanify/tests/macro-definitions-multiple-files-original.cc:::6149:::20:::base::span<const Entry *const>",
+                "include-user-header:::tools/clang/spanify/tests/macro-definitions-multiple-files-original.cc:::-1:::-1:::base/containers/span.h"
+            ],
             "size_info_available": true,
             "visited": true,
             "debug_info": {
                 "rewrite_applied": true,
                 "original_is_buffer": false,
                 "original_size_info_available": null
-            }
+            },
+            "node_types": [
+                "source"
+            ]
         },
         {
             "id": 29,
             "replacement": "r:::tools/clang/spanify/tests/macro-definitions-multiple-files-original.cc:::6191:::7:::",
+            "replacements": [
+                "r:::tools/clang/spanify/tests/macro-definitions-multiple-files-original.cc:::6191:::7:::",
+                "include-user-header:::tools/clang/spanify/tests/macro-definitions-multiple-files-original.cc:::-1:::-1:::base/containers/span.h"
+            ],
             "size_info_available": true,
             "visited": true,
             "debug_info": {
                 "rewrite_applied": true,
                 "original_is_buffer": false,
                 "original_size_info_available": null
-            }
+            },
+            "node_types": [
+                "sink"
+            ]
         },
         {
             "id": 30,
             "replacement": "r:::tools/clang/spanify/tests/macro-definitions-multiple-files-original.cc:::6457:::20:::base::span<const Entry *const>",
+            "replacements": [
+                "r:::tools/clang/spanify/tests/macro-definitions-multiple-files-original.cc:::6457:::20:::base::span<const Entry *const>",
+                "include-user-header:::tools/clang/spanify/tests/macro-definitions-multiple-files-original.cc:::-1:::-1:::base/containers/span.h"
+            ],
             "size_info_available": true,
             "visited": true,
             "debug_info": {
                 "rewrite_applied": true,
                 "original_is_buffer": false,
                 "original_size_info_available": null
-            }
+            },
+            "node_types": [
+                "source"
+            ]
         },
         {
             "id": 31,
             "replacement": "r:::tools/clang/spanify/tests/macro-definitions-multiple-files-original.cc:::6499:::7:::",
+            "replacements": [
+                "r:::tools/clang/spanify/tests/macro-definitions-multiple-files-original.cc:::6499:::7:::",
+                "include-user-header:::tools/clang/spanify/tests/macro-definitions-multiple-files-original.cc:::-1:::-1:::base/containers/span.h"
+            ],
             "size_info_available": true,
             "visited": true,
             "debug_info": {
                 "rewrite_applied": true,
                 "original_is_buffer": false,
                 "original_size_info_available": null
-            }
+            },
+            "node_types": [
+                "sink"
+            ]
         },
         {
             "id": 32,
             "replacement": "r:::tools/clang/spanify/tests/macro-definitions-multiple-files-original.cc:::6849:::20:::base::span<const Entry *const>",
+            "replacements": [
+                "r:::tools/clang/spanify/tests/macro-definitions-multiple-files-original.cc:::6849:::20:::base::span<const Entry *const>",
+                "include-user-header:::tools/clang/spanify/tests/macro-definitions-multiple-files-original.cc:::-1:::-1:::base/containers/span.h"
+            ],
             "size_info_available": true,
             "visited": true,
             "debug_info": {
                 "rewrite_applied": true,
                 "original_is_buffer": false,
                 "original_size_info_available": null
-            }
+            },
+            "node_types": []
         },
         {
             "id": 33,
             "replacement": "r:::tools/clang/spanify/tests/macro-definitions-multiple-files-original.cc:::6891:::7:::",
+            "replacements": [
+                "r:::tools/clang/spanify/tests/macro-definitions-multiple-files-original.cc:::6891:::7:::",
+                "include-user-header:::tools/clang/spanify/tests/macro-definitions-multiple-files-original.cc:::-1:::-1:::base/containers/span.h"
+            ],
             "size_info_available": true,
             "visited": true,
             "debug_info": {
                 "rewrite_applied": true,
                 "original_is_buffer": false,
                 "original_size_info_available": null
-            }
+            },
+            "node_types": [
+                "sink"
+            ]
         },
         {
             "id": 34,
             "replacement": "r:::tools/clang/spanify/tests/macro-definitions-multiple-files-original.cc:::3496:::20:::base::span<const Entry *const>",
+            "replacements": [
+                "r:::tools/clang/spanify/tests/macro-definitions-multiple-files-original.cc:::3496:::20:::base::span<const Entry *const>",
+                "include-user-header:::tools/clang/spanify/tests/macro-definitions-multiple-files-original.cc:::-1:::-1:::base/containers/span.h"
+            ],
             "size_info_available": true,
             "visited": true,
             "debug_info": {
                 "rewrite_applied": true,
                 "original_is_buffer": false,
                 "original_size_info_available": null
-            }
+            },
+            "node_types": [
+                "source"
+            ]
         },
         {
             "id": 35,
             "replacement": "r:::tools/clang/spanify/tests/macro-definitions-multiple-files-original.cc:::7106:::20:::base::span<const Entry *const>",
+            "replacements": [
+                "r:::tools/clang/spanify/tests/macro-definitions-multiple-files-original.cc:::7106:::20:::base::span<const Entry *const>",
+                "include-user-header:::tools/clang/spanify/tests/macro-definitions-multiple-files-original.cc:::-1:::-1:::base/containers/span.h"
+            ],
             "size_info_available": true,
             "visited": true,
             "debug_info": {
                 "rewrite_applied": true,
                 "original_is_buffer": false,
                 "original_size_info_available": null
-            }
+            },
+            "node_types": []
         },
         {
             "id": 36,
             "replacement": "r:::tools/clang/spanify/tests/macro-definitions-multiple-files-original.cc:::7148:::7:::",
+            "replacements": [
+                "r:::tools/clang/spanify/tests/macro-definitions-multiple-files-original.cc:::7148:::7:::",
+                "include-user-header:::tools/clang/spanify/tests/macro-definitions-multiple-files-original.cc:::-1:::-1:::base/containers/span.h"
+            ],
             "size_info_available": true,
             "visited": true,
             "debug_info": {
                 "rewrite_applied": true,
                 "original_is_buffer": false,
                 "original_size_info_available": null
-            }
+            },
+            "node_types": [
+                "sink"
+            ]
         }
     ],
     "links": [
@@ -423,11 +645,11 @@
         },
         {
             "source": 5,
-            "target": 6
+            "target": 7
         },
         {
             "source": 5,
-            "target": 7
+            "target": 6
         },
         {
             "source": 8,
@@ -507,11 +729,11 @@
         },
         {
             "source": 34,
-            "target": 32
+            "target": 35
         },
         {
             "source": 34,
-            "target": 35
+            "target": 32
         },
         {
             "source": 35,
